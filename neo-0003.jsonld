@@ -1,0 +1,76 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "neo": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/terms/"
+  },
+  "@type": "DefinedTerm",
+  "@id": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/terms/neo-0003",
+  "termCode": "NEO-0003",
+  "name": "Clarity Cascade",
+  "alternateName": [
+    "Cascada Lucis",
+    "Klarheitskaskade",
+    "Kaskade der Klarheit"
+  ],
+  "description": "A post-nominal cognitive reorganization event in which the acquisition of a single term triggers rapid, multi-domain restructuring of previously unconnected experiential data. Characterized by (a) retroactive coherence — previously disconnected memories and observations become retroactively intelligible as instances of the newly named phenomenon, (b) pattern amplification — the named phenomenon becomes perceptually salient across multiple life domains simultaneously, (c) communicative unlocking — experiences that were previously inarticulable become shareable, and (d) cascading connectivity — the insight propagates beyond the original domain into adjacent conceptual territories.",
+  "abstract": "The waterfall of sudden understanding that pours through you once a single word unlocks an entire pattern.",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "@id": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms",
+    "name": "Neomanitai Compendium",
+    "description": "A systematic taxonomy of terminology reception phenomena. Part of the MANITAI research ecosystem by Andreas Ehstand.",
+    "isPartOf": {
+      "@type": "CreativeWork",
+      "name": "MANITAI Research Ecosystem",
+      "description": "Umbrella framework for human-AI interaction research. Includes AUGMANITAI (human-AI interaction phenomena) and Neomanitai (terminology reception phenomena)."
+    }
+  },
+  "creator": {
+    "@type": "Person",
+    "name": "Andreas Ehstand",
+    "identifier": "https://orcid.org/0009-0006-3773-7796"
+  },
+  "dateCreated": "2026-03-02",
+  "inLanguage": ["en", "de", "la"],
+  "license": "https://creativecommons.org/licenses/by-nd/4.0/",
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "definition_de",
+      "value": "Der Wasserfall plötzlichen Verstehens der durch dich hindurchströmt wenn ein einziges Wort ein ganzes Muster aufschließt."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pronunciation_en",
+      "value": "/ˈklærəti kæsˈkeɪd/"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pronunciation_de",
+      "value": "KLAR-heits-kas-KAH-de"
+    }
+  ],
+  "skos:broader": "neo:ReceptionAndCognitiveCorrelates",
+  "skos:related": [
+    {"@id": "neo:neo-0007"},
+    {"@id": "neo:neo-0002"},
+    {"@id": "neo:neo-0001"},
+    {"@id": "neo:neo-0004"}
+  ],
+  "skos:prefLabel": [
+    {"@value": "Clarity Cascade", "@language": "en"},
+    {"@value": "Klarheitskaskade", "@language": "de"}
+  ],
+  "skos:altLabel": [
+    {"@value": "Cascada Lucis", "@language": "la"},
+    {"@value": "Kaskade der Klarheit", "@language": "de"}
+  ],
+  "distinguished_from": [
+    "Insight / Aha moment",
+    "Paradigm shift (Kuhn)",
+    "Flow state (Csikszentmihalyi)",
+    "Name Click (NEO-0001)"
+  ],
+  "citation": "Ehstand, A. (2026). Clarity Cascade [NEO-0003]. Neomanitai Compendium. https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/terms/neo-0003"
+}

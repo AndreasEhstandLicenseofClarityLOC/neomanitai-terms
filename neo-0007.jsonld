@@ -1,0 +1,76 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "neo": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/terms/"
+  },
+  "@type": "DefinedTerm",
+  "@id": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/terms/neo-0007",
+  "termCode": "NEO-0007",
+  "name": "Void Hum",
+  "alternateName": [
+    "Susurrus Vacui",
+    "Leerensummen",
+    "Summen der Leere"
+  ],
+  "description": "A persistent low-grade cognitive-affective state characterized by the pre-linguistic awareness of an experientially familiar but unnamed phenomenon. Characterized by (a) a diffuse sense of recognition without an available linguistic referent, (b) recurrent attentional orientation toward the unnamed experience without the ability to articulate or share it, and (c) a motivational tension driving implicit search for adequate terminology.",
+  "abstract": "The quiet hum of knowing you experience something real that has no name yet.",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "@id": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms",
+    "name": "Neomanitai Compendium",
+    "description": "A systematic taxonomy of terminology reception phenomena. Part of the MANITAI research ecosystem by Andreas Ehstand.",
+    "isPartOf": {
+      "@type": "CreativeWork",
+      "name": "MANITAI Research Ecosystem",
+      "description": "Umbrella framework for human-AI interaction research. Includes AUGMANITAI (human-AI interaction phenomena) and Neomanitai (terminology reception phenomena)."
+    }
+  },
+  "creator": {
+    "@type": "Person",
+    "name": "Andreas Ehstand",
+    "identifier": "https://orcid.org/0009-0006-3773-7796"
+  },
+  "dateCreated": "2026-03-01",
+  "inLanguage": ["en", "de", "la"],
+  "license": "https://creativecommons.org/licenses/by-nd/4.0/",
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "definition_de",
+      "value": "Das leise Summen des Wissens dass du etwas Reales erlebst das noch keinen Namen hat."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pronunciation_en",
+      "value": "/vɔɪd hʌm/"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pronunciation_de",
+      "value": "LEER-en-sum-men"
+    }
+  ],
+  "skos:broader": "neo:ReceptionAndCognitiveCorrelates",
+  "skos:related": [
+    {"@id": "neo:neo-0002"},
+    {"@id": "neo:neo-0001"},
+    {"@id": "neo:neo-0003"},
+    {"@id": "neo:neo-0004"}
+  ],
+  "skos:prefLabel": [
+    {"@value": "Void Hum", "@language": "en"},
+    {"@value": "Leerensummen", "@language": "de"}
+  ],
+  "skos:altLabel": [
+    {"@value": "Susurrus Vacui", "@language": "la"},
+    {"@value": "Summen der Leere", "@language": "de"}
+  ],
+  "distinguished_from": [
+    "Tip-of-the-tongue phenomenon",
+    "Anomic aphasia",
+    "Vague unease",
+    "Curiosity"
+  ],
+  "citation": "Ehstand, A. (2026). Void Hum [NEO-0007]. Neomanitai Compendium. https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/terms/neo-0007"
+}

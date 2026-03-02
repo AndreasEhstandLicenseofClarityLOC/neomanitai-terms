@@ -1,0 +1,76 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "neo": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/terms/"
+  },
+  "@type": "DefinedTerm",
+  "@id": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/terms/neo-0002",
+  "termCode": "NEO-0002",
+  "name": "Label Flash",
+  "alternateName": [
+    "Fulgor Designationis",
+    "Begriffsblitz",
+    "Designatorischer Fulgor"
+  ],
+  "description": "A pre-semantic perceptual response occurring in the initial milliseconds of exposure to a novel term, prior to lexical access and meaning construction. Characterized by (a) sub-semantic processing of the term as visual or auditory gestalt before meaning is accessed, (b) attentional capture triggered by novel orthographic or phonological patterns, and (c) evaluative priming carrying implicit valence based on the term's surface properties.",
+  "abstract": "That split-second strobe when a new word hits your eyes before meaning catches up.",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "@id": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms",
+    "name": "Neomanitai Compendium",
+    "description": "A systematic taxonomy of terminology reception phenomena. Part of the MANITAI research ecosystem by Andreas Ehstand.",
+    "isPartOf": {
+      "@type": "CreativeWork",
+      "name": "MANITAI Research Ecosystem",
+      "description": "Umbrella framework for human-AI interaction research. Includes AUGMANITAI (human-AI interaction phenomena) and Neomanitai (terminology reception phenomena)."
+    }
+  },
+  "creator": {
+    "@type": "Person",
+    "name": "Andreas Ehstand",
+    "identifier": "https://orcid.org/0009-0006-3773-7796"
+  },
+  "dateCreated": "2026-03-02",
+  "inLanguage": ["en", "de", "la"],
+  "license": "https://creativecommons.org/licenses/by-nd/4.0/",
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "definition_de",
+      "value": "Der Sekundenbruchteil-Impakt wenn ein neues Wort die Aufmerksamkeit fängt bevor seine Bedeutung verarbeitet wird."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pronunciation_en",
+      "value": "/ˈleɪbəl flæʃ/"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pronunciation_de",
+      "value": "beh-GRIFFS-blitz"
+    }
+  ],
+  "skos:broader": "neo:ReceptionAndCognitiveCorrelates",
+  "skos:related": [
+    {"@id": "neo:neo-0007"},
+    {"@id": "neo:neo-0001"},
+    {"@id": "neo:neo-0003"},
+    {"@id": "neo:neo-0004"}
+  ],
+  "skos:prefLabel": [
+    {"@value": "Label Flash", "@language": "en"},
+    {"@value": "Begriffsblitz", "@language": "de"}
+  ],
+  "skos:altLabel": [
+    {"@value": "Fulgor Designationis", "@language": "la"},
+    {"@value": "Designatorischer Fulgor", "@language": "de"}
+  ],
+  "distinguished_from": [
+    "Semantic priming",
+    "Lexical decision",
+    "Name Click (NEO-0001)",
+    "Mere exposure effect"
+  ],
+  "citation": "Ehstand, A. (2026). Label Flash [NEO-0002]. Neomanitai Compendium. https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/terms/neo-0002"
+}

@@ -1,0 +1,76 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "neo": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/terms/"
+  },
+  "@type": "DefinedTerm",
+  "@id": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/terms/neo-0001",
+  "termCode": "NEO-0001",
+  "name": "Name Click",
+  "alternateName": [
+    "Agnitio Nominalis",
+    "Namens-Klick",
+    "Nominale Agnition"
+  ],
+  "description": "A cognitive-affective recognition response observed when a recipient first encounters a term that designates a previously unnamed but experientially familiar phenomenon. Characterized by (a) immediate subjective recognition of the referent, (b) positive affect associated with the transition from unnamed to named experience, and (c) a qualitative shift in perceptual salience of the named phenomenon.",
+  "abstract": "The instant YES when you hear a word for something you always felt but could never name.",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "@id": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms",
+    "name": "Neomanitai Compendium",
+    "description": "A systematic taxonomy of terminology reception phenomena. Part of the MANITAI research ecosystem by Andreas Ehstand.",
+    "isPartOf": {
+      "@type": "CreativeWork",
+      "name": "MANITAI Research Ecosystem",
+      "description": "Umbrella framework for human-AI interaction research. Includes AUGMANITAI (human-AI interaction phenomena) and Neomanitai (terminology reception phenomena)."
+    }
+  },
+  "creator": {
+    "@type": "Person",
+    "name": "Andreas Ehstand",
+    "identifier": "https://orcid.org/0009-0006-3773-7796"
+  },
+  "dateCreated": "2026-03-01",
+  "inLanguage": ["en", "de", "la"],
+  "license": "https://creativecommons.org/licenses/by-nd/4.0/",
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "definition_de",
+      "value": "Das sofortige Erkennen wenn man ein Wort hört für eine Erfahrung die man immer hatte aber nie benennen konnte."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pronunciation_en",
+      "value": "/neɪm klɪk/"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pronunciation_de",
+      "value": "NAH-mens-klik"
+    }
+  ],
+  "skos:broader": "neo:ReceptionAndCognitiveCorrelates",
+  "skos:related": [
+    {"@id": "neo:neo-0007"},
+    {"@id": "neo:neo-0002"},
+    {"@id": "neo:neo-0003"},
+    {"@id": "neo:neo-0004"}
+  ],
+  "skos:prefLabel": [
+    {"@value": "Name Click", "@language": "en"},
+    {"@value": "Namens-Klick", "@language": "de"}
+  ],
+  "skos:altLabel": [
+    {"@value": "Agnitio Nominalis", "@language": "la"},
+    {"@value": "Nominale Agnition", "@language": "de"}
+  ],
+  "distinguished_from": [
+    "Vocabulary acquisition",
+    "Déjà vu",
+    "Insight / Aha moment",
+    "Tip-of-the-tongue phenomenon"
+  ],
+  "citation": "Ehstand, A. (2026). Name Click [NEO-0001]. Neomanitai Compendium. https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/terms/neo-0001"
+}

@@ -1,0 +1,76 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "neo": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/terms/"
+  },
+  "@type": "DefinedTerm",
+  "@id": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/terms/neo-0004",
+  "termCode": "NEO-0004",
+  "name": "Recognition Bloom",
+  "alternateName": [
+    "Efflorescentia Agnitionis",
+    "Erkennungsblüte",
+    "Effloreszenz der Agnition"
+  ],
+  "description": "A socio-cognitive diffusion event in which an individual's private recognition of a newly named phenomenon transitions into observable shared usage, accompanied by collective validation and community formation around the term. Characterized by (a) validation relief — the discovery that others share the named experience produces measurable positive affect, (b) terminological adoption cascade — the term transitions from passive recognition to active usage, (c) community crystallization — shared vocabulary creates in-group markers facilitating community formation, and (d) semantic territory claiming — the term occupies a previously vacant conceptual niche in the collective vocabulary.",
+  "abstract": "The moment a private recognition becomes shared language and you realize you're not the only one who feels it.",
+  "inDefinedTermSet": {
+    "@type": "DefinedTermSet",
+    "@id": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms",
+    "name": "Neomanitai Compendium",
+    "description": "A systematic taxonomy of terminology reception phenomena. Part of the MANITAI research ecosystem by Andreas Ehstand.",
+    "isPartOf": {
+      "@type": "CreativeWork",
+      "name": "MANITAI Research Ecosystem",
+      "description": "Umbrella framework for human-AI interaction research. Includes AUGMANITAI (human-AI interaction phenomena) and Neomanitai (terminology reception phenomena)."
+    }
+  },
+  "creator": {
+    "@type": "Person",
+    "name": "Andreas Ehstand",
+    "identifier": "https://orcid.org/0009-0006-3773-7796"
+  },
+  "dateCreated": "2026-03-02",
+  "inLanguage": ["en", "de", "la"],
+  "license": "https://creativecommons.org/licenses/by-nd/4.0/",
+  "additionalProperty": [
+    {
+      "@type": "PropertyValue",
+      "name": "definition_de",
+      "value": "Der Moment in dem eine private Erkennung zur geteilten Sprache wird und du merkst dass du nicht allein bist."
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pronunciation_en",
+      "value": "/ˌrɛkəɡˈnɪʃən bluːm/"
+    },
+    {
+      "@type": "PropertyValue",
+      "name": "pronunciation_de",
+      "value": "er-KEN-nungs-blü-te"
+    }
+  ],
+  "skos:broader": "neo:SocialDiffusionAndNetworkPhenomena",
+  "skos:related": [
+    {"@id": "neo:neo-0007"},
+    {"@id": "neo:neo-0002"},
+    {"@id": "neo:neo-0001"},
+    {"@id": "neo:neo-0003"}
+  ],
+  "skos:prefLabel": [
+    {"@value": "Recognition Bloom", "@language": "en"},
+    {"@value": "Erkennungsblüte", "@language": "de"}
+  ],
+  "skos:altLabel": [
+    {"@value": "Efflorescentia Agnitionis", "@language": "la"},
+    {"@value": "Effloreszenz der Agnition", "@language": "de"}
+  ],
+  "distinguished_from": [
+    "Viral spread",
+    "Bandwagon effect",
+    "Social contagion",
+    "Clarity Cascade (NEO-0003)"
+  ],
+  "citation": "Ehstand, A. (2026). Recognition Bloom [NEO-0004]. Neomanitai Compendium. https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/terms/neo-0004"
+}

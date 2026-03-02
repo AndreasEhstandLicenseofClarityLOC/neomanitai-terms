@@ -1,0 +1,27 @@
+cff-version: 1.2.0
+title: "Neomanitai Compendium: A Taxonomy of Terminology Reception Phenomena"
+message: "If you use this taxonomy, please cite it using the metadata from this file."
+type: dataset
+authors:
+  - family-names: Ehstand
+    given-names: Andreas
+    orcid: "https://orcid.org/0009-0006-3773-7796"
+repository-code: "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms"
+license: CC-BY-ND-4.0
+version: "1.0"
+date-released: "2026-03-02"
+keywords:
+  - terminology
+  - neologism
+  - cognitive linguistics
+  - terminology reception
+  - naming phenomena
+  - neomanitai
+  - augmanitai
+  - manitai
+  - human-AI interaction
+abstract: >-
+  The Neomanitai Compendium is a systematic taxonomy of cognitive, affective,
+  and perceptual phenomena observed during human reception of novel terminology.
+  Definitions follow ISO 704, ISO 1087, and ISO 30042 standards. Part of the
+  MANITAI research ecosystem by Andreas Ehstand.

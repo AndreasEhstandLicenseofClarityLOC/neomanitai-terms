@@ -1,0 +1,67 @@
+{
+  "@context": {
+    "@vocab": "https://schema.org/",
+    "skos": "http://www.w3.org/2004/02/skos/core#",
+    "neo": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/blob/main/terms/"
+  },
+  "@type": "DefinedTermSet",
+  "@id": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms",
+  "name": "Neomanitai Compendium",
+  "description": "A systematic taxonomy of cognitive, affective, and perceptual phenomena observed during human reception of novel terminology. Definitions follow ISO 704, ISO 1087, and ISO 30042 standards. Part of the MANITAI research ecosystem by Andreas Ehstand.",
+  "creator": {
+    "@type": "Person",
+    "name": "Andreas Ehstand",
+    "identifier": "https://orcid.org/0009-0006-3773-7796"
+  },
+  "license": "https://creativecommons.org/licenses/by-nd/4.0/",
+  "dateCreated": "2026-03-02",
+  "version": "1.0",
+  "inLanguage": ["en", "de", "la"],
+  "isPartOf": {
+    "@type": "CreativeWork",
+    "name": "MANITAI Research Ecosystem",
+    "description": "Umbrella framework for human-AI interaction research by Andreas Ehstand. Includes AUGMANITAI (human-AI interaction phenomena) and Neomanitai (terminology reception phenomena)."
+  },
+  "hasDefinedTerm": [
+    {
+      "@type": "DefinedTerm",
+      "termCode": "NEO-0007",
+      "name": "Void Hum",
+      "alternateName": ["Susurrus Vacui", "Leerensummen"],
+      "description": "A persistent low-grade cognitive-affective state characterized by the pre-linguistic awareness of an experientially familiar but unnamed phenomenon.",
+      "url": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/blob/main/terms/neo-0007.jsonld"
+    },
+    {
+      "@type": "DefinedTerm",
+      "termCode": "NEO-0002",
+      "name": "Label Flash",
+      "alternateName": ["Fulgor Designationis", "Begriffsblitz"],
+      "description": "A pre-semantic perceptual response occurring in the initial milliseconds of exposure to a novel term, prior to lexical access and meaning construction.",
+      "url": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/blob/main/terms/neo-0002.jsonld"
+    },
+    {
+      "@type": "DefinedTerm",
+      "termCode": "NEO-0001",
+      "name": "Name Click",
+      "alternateName": ["Agnitio Nominalis", "Namens-Klick"],
+      "description": "A cognitive-affective recognition response observed when a recipient first encounters a term that designates a previously unnamed but experientially familiar phenomenon.",
+      "url": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/blob/main/terms/neo-0001.jsonld"
+    },
+    {
+      "@type": "DefinedTerm",
+      "termCode": "NEO-0003",
+      "name": "Clarity Cascade",
+      "alternateName": ["Cascada Lucis", "Klarheitskaskade"],
+      "description": "A post-nominal cognitive reorganization event in which the acquisition of a single term triggers rapid, multi-domain restructuring of previously unconnected experiential data.",
+      "url": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/blob/main/terms/neo-0003.jsonld"
+    },
+    {
+      "@type": "DefinedTerm",
+      "termCode": "NEO-0004",
+      "name": "Recognition Bloom",
+      "alternateName": ["Efflorescentia Agnitionis", "Erkennungsblüte"],
+      "description": "A socio-cognitive diffusion event in which an individual's private recognition of a newly named phenomenon transitions into observable shared usage, accompanied by collective validation and community formation.",
+      "url": "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/blob/main/terms/neo-0004.jsonld"
+    }
+  ]
+}

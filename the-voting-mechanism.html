@@ -34,7 +34,6 @@
 <meta name='DC.language' content='en'>
 <meta name='DC.rights' content='CC BY-NC-ND 4.0'>
 
-
 <link rel='alternate' hreflang='x-default' href='https://augmanitai.com/the-voting-mechanism.html'>
 <link rel='alternate' hreflang='en' href='https://augmanitai.com/the-voting-mechanism.html'>
 <link rel='alternate' hreflang='de' href='https://augmanitai.com/the-voting-mechanism.html'>
@@ -473,24 +472,6 @@ footer a:hover { color:var(--magenta); text-decoration:underline; }
 .status-dot.ok { background:var(--green); box-shadow:0 0 8px rgba(57,255,20,0.5); animation: dotPulse 2.5s infinite; }
 @keyframes dotPulse { 0%,100%{box-shadow:0 0 4px rgba(57,255,20,0.3)} 50%{box-shadow:0 0 14px rgba(57,255,20,0.7)} }
 
-/* === MOBILE === */
-@media(max-width:640px) {
-  .meta-grid { grid-template-columns:1fr; }
-  .status-grid { grid-template-columns:1fr; }
-  .container { padding:16px 12px; }
-  h1 { font-size:2em; }
-  .motto-text { font-size:1.1em; }
-  .glow-card { padding:16px 18px; }
-  .why-block { padding:18px 20px; }
-  .why-points li { font-size:.88em; }
-}
-@media(max-width:480px) {
-  h1 { font-size:1.7em; }
-  .glow-card p { font-size:1em; }
-  .faq-body { font-size:.95em; }
-  .motto-text { font-size:1em; }
-  .why-block { padding:16px 16px; }
-}
 /* === FOCUS STATES === */
 .cite-tab:focus-visible, .disc-tab:focus-visible, .copy-btn:focus-visible, .share-fab:focus-visible,
 .faq-item summary:focus-visible, .disclaimer-toggle summary:focus-visible {
@@ -499,13 +480,95 @@ footer a:hover { color:var(--magenta); text-decoration:underline; }
   box-shadow: 0 0 12px rgba(0,229,255,0.3);
 }
 
-@media (hover: none) {
-  .glow-card:hover, .faq-item:hover, .meta-card:hover, .why-block:hover {
-    transform:none !important;
-    box-shadow:none !important;
-  }
-  .why-points li:hover { padding-left:24px; }
+  
+/* === ENHANCED MOBILE V11.2 === */
+@media(max-width:768px) {
+  /* Hero section - term name BIG and dominant */
+  .hero { padding: 20px 0 16px; }
+  h1 { font-size: clamp(1.8em, 7vw, 2.8em); letter-spacing: -0.02em; }
+
+  /* Tagline/subtitle prominent */
+  .tagline-en { font-size: 1.1em !important; margin-bottom: 4px; }
+  .tagline-de { font-size: 0.95em !important; }
+
+  /* Glow cards - tighter on mobile */
+  .glow-card { padding: 16px 16px; margin-bottom: 16px; }
+  .glow-card p { font-size: 1em; line-height: 1.6; }
+  .glow-card .label { font-size: 0.7em; }
+
+  /* WHY block compact but readable */
+  .why-block { padding: 14px 14px; margin-bottom: 16px; }
+  .why-points li { font-size: 0.88em; padding: 6px 0 6px 20px; }
+
+  /* Container breathing room */
+  .container { padding: 14px 12px; }
+
+  /* Meta grid single column */
+  .meta-grid, .status-grid { grid-template-columns: 1fr; gap: 8px; }
+  .meta-card { padding: 10px 12px; }
+
+  /* Motto banner smaller */
+  .motto-banner { padding: 10px 12px; margin-bottom: 14px; }
+  .motto-text { font-size: 0.95em; }
+
+  /* FAQ items */
+  .faq-item { margin-bottom: 8px; }
+  .faq-item summary { font-size: 0.95em; padding: 12px 14px; }
+  .faq-body { padding: 10px 14px; font-size: 0.92em; }
+
+  /* Citation tabs */
+  .cite-tabs { flex-wrap: wrap; gap: 4px; }
+  .cite-tab { font-size: 0.75em; padding: 4px 10px; }
+
+  /* Disclaimer compact */
+  .disclaimer-toggle { font-size: 0.72em; }
+
+  /* Share FAB position */
+  .share-fab { bottom: 16px; right: 16px; width: 44px; height: 44px; font-size: 1.1em; }
+
+  /* Reduce mesh-bg intensity on mobile for performance */
+  .mesh-bg { opacity: 0.4; }
+
+  /* Particles less intense on mobile */
+  .particles { opacity: 0.5; }
 }
+
+@media(max-width:480px) {
+  h1 { font-size: clamp(1.5em, 8vw, 2.2em); }
+  .hero { padding: 14px 0 10px; }
+  .tagline-en { font-size: 1em !important; }
+  .tagline-de { font-size: 0.88em !important; }
+  .glow-card { padding: 14px 12px; border-radius: 10px; }
+  .glow-card p { font-size: 0.95em; }
+  .why-block { padding: 12px 12px; }
+  .container { padding: 10px 8px; }
+  .motto-text { font-size: 0.85em; }
+  .meta-card { font-size: 0.85em; }
+  .faq-item summary { font-size: 0.9em; }
+
+  /* Prevent horizontal scroll */
+  body { overflow-x: hidden; }
+  .container { overflow-x: hidden; }
+}
+
+@media(max-width:360px) {
+  h1 { font-size: 1.4em; }
+  .glow-card { padding: 12px 10px; }
+  .container { padding: 8px 6px; }
+}
+
+/* Touch-friendly targets */
+@media (hover: none) and (pointer: coarse) {
+  .glow-card:hover, .faq-item:hover, .meta-card:hover, .why-block:hover {
+    transform: none !important;
+    box-shadow: none !important;
+  }
+  .why-points li:hover { padding-left: 24px; }
+  .faq-item summary { min-height: 44px; display: flex; align-items: center; }
+  .cite-tab { min-height: 36px; }
+  .share-fab { min-width: 48px; min-height: 48px; }
+}
+
   </style>
 </head>
 <body>
@@ -526,7 +589,6 @@ footer a:hover { color:var(--magenta); text-decoration:underline; }
   <div class='status-item'><span class='status-dot ok'></span> Generated: 2026-03-16</div>
 </div>
 </div>
-
 
     <header>
       <div class='domain-pill'>
@@ -753,8 +815,6 @@ window.addEventListener('scroll', () => {
   if (bar) bar.style.width = pct + '%';
 });
 
-
-  
 // Floating particles
 (function() {
   var container = document.getElementById('particles');

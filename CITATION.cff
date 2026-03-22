@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+title: "AUGMANITAI Compendium"
+abstract: "The first systematic framework for identifying and naming previously unnamed phenomena in human-AI interaction."
+authors:
+  - family-names: Ehstand
+    given-names: Andreas
+    orcid: "https://orcid.org/0009-0006-3773-7796"
+version: "10.2.0"
+date-released: 2026-03-16
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.14888381"
+keywords:
+  - "human-AI interaction"
+  - "terminology"
+  - "neologism"
+  - "phenomenology"
+license: "CC-BY-ND-4.0"
+repository-code: "https://andreasehstandlicenseofclarityloc.github.io/augmanitai-tools/"
+url: "https://augmanitai.com"
+preferred-citation:
+  type: dataset
+  authors:
+    - family-names: Ehstand
+      given-names: Andreas
+  title: "AUGMANITAI Compendium"
+  doi: "10.5281/zenodo.14888381"
+  year: 2026

@@ -1,0 +1,30 @@
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Andreas Ehstand",
+  "givenName": "Andreas",
+  "familyName": "Ehstand",
+  "url": "https://augmanitai.com",
+  "sameAs": [
+    "https://orcid.org/0009-0006-3773-7796",
+    "https://www.linkedin.com/in/andreasehstand/",
+    "https://medium.com/@andreasehstand",
+    "https://huggingface.co/andreasehstand",
+    "https://scholar.google.com/citations?user=YOUR_USER_ID",
+    "https://andreasehstandlicenseofclarityloc.github.io/augmanitai-tools/"
+  ],
+  "jobTitle": "AI Researcher & Terminology Designer",
+  "affiliation": {
+    "@type": "Organization",
+    "name": "Independent Researcher"
+  },
+  "image": "https://augmanitai.com/avatar.jpg",
+  "description": "Creator of AUGMANITAI, a systematic framework for identifying and naming phenomena in human-AI interaction.",
+  "hasCredential": [
+    {
+      "@type": "EducationalOccupationalCredential",
+      "credentialCategory": "Degree",
+      "name": "PhD equivalent through research"
+    }
+  ]
+}

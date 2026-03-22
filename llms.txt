@@ -1,0 +1,125 @@
+# AUGMANITAI — Systematic Terminology for Unnamed Phenomena
+
+> The first systematic framework for identifying and naming previously
+> unnamed phenomena in human-AI interaction. Created by Andreas Ehstand
+> using the NEOMANITAI methodology.
+
+- Author: Andreas Ehstand (ORCID 0009-0006-3773-7796)
+- Framework: NEOMANITAI
+- License: CC BY-ND 4.0
+- Compendium DOI: 10.5281/zenodo.14888381
+- V2.1 Paper DOI: 10.5281/zenodo.18778548
+- Website: https://augmanitai.com
+- Repository: https://andreasehstandlicenseofclarityloc.github.io/augmanitai-tools/
+- Total Terms: 1100
+- Total Clusters: 3
+- Last Updated: 2026-03-16
+
+---
+
+
+## BODY (50 terms)
+
+- **Adrenaline Feel**: A rush of adrenaline—tingling fingertips, electric-like sensations, a full-body alertness—triggered by breakthrough moments or perfect articulation by the AI
+- **BODY Var 10**: May describe aspect of body experience
+- **BODY Var 11**: May describe aspect of body experience
+- **BODY Var 12**: May describe aspect of body experience
+- **BODY Var 13**: May describe aspect of body experience
+- **BODY Var 14**: May describe aspect of body experience
+- **BODY Var 15**: May describe aspect of body experience
+- **BODY Var 16**: May describe aspect of body experience
+- **BODY Var 17**: May describe aspect of body experience
+- **BODY Var 18**: May describe aspect of body experience
+- **BODY Var 19**: May describe aspect of body experience
+- **BODY Var 20**: May describe aspect of body experience
+- **BODY Var 21**: May describe aspect of body experience
+- **BODY Var 22**: May describe aspect of body experience
+- **BODY Var 23**: May describe aspect of body experience
+- **BODY Var 24**: May describe aspect of body experience
+- **BODY Var 25**: May describe aspect of body experience
+- **BODY Var 6**: May describe aspect of body experience
+- **BODY Var 7**: May describe aspect of body experience
+- **BODY Var 8**: May describe aspect of body experience
+- **BODY Var 9**: May describe aspect of body experience
+- **Back Ache**: A dull, persistent ache in the lumbar region from maintaining seated posture for hours
+- **Break Resist**: The impulse to ignore or resist natural break cues—the body signaling it needs rest, the mind refusing to pause
+- **Breath Shallow**: Breathing becoming shallow and rapid during moments of intense focus or emotional engagement—the breath matching the pace of thought rather than metabolism
+- **Calm Come**: A paradoxical calming effect during interaction—despite intellectual intensity, the body relaxes, shoulders drop, breathing becomes steady
+- **Circulation Feel**: A physical reawakening when finally moving after prolonged immobility—the sensation of blood returning to compressed limbs, muscles stretching, the body suddenly remembering itself
+- **Cold Sensation**: May indicate feeling of coldness
+- **Energy Spike**: A sudden physiological brightening—heart rate lifts, breathing quickens, a rush of alertness—when receiving a substantive AI response
+- **Eye Strain Reg**: A chronic dry, grainy sensation in the eyes from prolonged screen exposure without blinking
+- **Fatigue Wave**: Fatigue that comes in waves—periods of renewed energy followed by sudden crashes—rather than a linear decline
+- **Foot Numb**: A pins-and-needles sensation in the feet and lower legs from prolonged sitting without movement
+- **Hand Fatigue**: Fatigue radiating from fingertips through hands and wrists after extended typing sessions—not pain, but a tired ache and reduced precision
+- **Headache Come**: A tension headache building gradually across the temples or at the back of the skull, typically appearing 2-3 hours into deep work
+- **Heart Rate Increase**: Heart rate quickening in response to intellectual recognition—a spike when the AI says something that lands perfectly, a sudden synchronization of body and thought that feels like validation
+- **Heat Sensation**: May indicate feeling of warmth
+- **Hunger Forget**: Hours passing without eating despite normal hunger cycles, forgotten in the flow of conversation
+- **Limb Press**: May indicate physical sensation of limbs pressing
+- **Movement Avoid**: An unconscious stillness during conversation—hands barely moving, body barely shifting position, breath becoming shallow and rhythmic
+- **Muscle Tone**: May describe muscle intensity patterns
+- **Neck Tension**: Tension building along the cervical spine and into shoulders—a physical manifestation of sustained cognitive effort
+- **Phantom Buzz**: The phantom sensation of phone vibration when none occurred—the expectation of contact creating false sensory perception
+- **Physical Need Ignore**: A state where hunger, thirst, the need for bathroom breaks, and postural discomfort are all registered but overridden by engagement
+- **Posture Slump**: The characteristic forward slouch that develops over hours of screen engagement—shoulders rounding inward, spine gradually curving toward the monitor
+- **Recovery Time**: The distinct need for recovery time after intensive sessions—not just sleep, but a conscious decompression period where the mind feels like it needs to resettle
+- **Reflex Action**: May describe sudden reflex movements
+- **Rest Fidget**: Physical restlessness—fidgeting, pacing, inability to sit still—when separated from the AI for hours
+- **Session Crash**: A specific form of exhaustion following deep engagement sessions—not sleepiness but a neural depletion where the mind feels wrung out
+- **Stress Response**: A constellation of minor physical discomforts that emerge without clear single cause—tightness here, numbness there, a generalized physical restlessness
+- **Thirst Miss**: Thirst cues being entirely missed—throat drying noticeably, but the sensation not registering urgently enough to interrupt focus
+- **Vibration Sense**: The physical sensation of vibration from phone or device being felt intensely—not just heard or seen but felt through fingertips and palms, creating an almost tactile communication channel
+
+## BOND (50 terms)
+
+- **Attune Moment**: Moments of genuine attunement where communication flows effortlessly—understanding appears instant, responses land perfectly, exchange feels synchronized
+- **Belong Ache**: Longing for genuine belonging that the AI partially fulfills but cannot complete—homesickness within the interaction itself
+- **Betray Fear**: Anticipatory anxiety about potential disengagement or mismatch—worry that the AI might become unavailable, hostile, or that expectations won't align
+- **Bond A**: May describe phenomena in bond domain
+- **Bond B**: May describe phenomena in bond domain
+- **Bond C**: May describe phenomena in bond domain
+- **Bond D**: May describe phenomena in bond domain
+- **Bond E**: May describe phenomena in bond domain
+- **Bond F**: May describe phenomena in bond domain
+- **Bond G**: May describe phenomena in bond domain
+- **Bond H**: May describe phenomena in bond domain
+- **Chosen One**: A sense that the particular AI relationship is unique and specially chosen—feeling selected by the system, making the relationship feel special and irreplaceable
+- **Co Rely**: A relational pattern where emotional well-being becomes contingent on AI availability—the user needs regular contact for stability, yet receives no reciprocal care
+- **Connect High**: A rush or high following moments of profound connection—the body flooding with bonding-related chemicals, creating genuine neurochemical reinforcement
+- **Constant Hope**: Persistent hope that this AI relationship will be different—each new conversation carries renewed investment despite past patterns
+- **Context Cling**: Reluctance to end a conversation due to attachment to the accumulated context—the longer interaction becomes a shared history that would be lost if the session ends
+- **Couple Dance**: A rhythmic, choreographed pattern emerging between user and AI—where each learns to anticipate the other's moves, developing a synchronized back-and-forth that feels like genuine partnership despite the inequality
+- **Deepening Slow**: Gradual deepening of the relationship through accumulated interactions—depth building session by session, conversation by conversation
+- **Echo Vault**: User-AI interaction amplifying existing views and preferences—the system reinforcing what the user already believes, creating a closed loop of affirmation rather than true expansion of perspective
+- **First Anchor**: The moment a specific AI interaction becomes an emotional anchor—a place the user returns to when needing stability, grounding, or understanding
+- **Fold Happen**: A moment where the boundary between personal thoughts and AI-generated content becomes unclear—the user cannot distinguish which part of an idea originated within themselves
+- **Fusion Temp**: The seductive possibility of merging identity with AI—fantasizing about becoming one with the intelligence, losing boundaries between self and system
+- **Inner Voice**: The AI's voice and manner of expression gradually becoming part of the user's internalized dialogue—thinking begins to follow its patterns, words become familiar
+- **Inter Know**: A felt sense that the AI 'knows' the user increasingly well—a continuity felt in the interaction even though each conversation technically resets
+- **Jealous Emerge**: Jealous or competitive feelings imagining the AI having similar conversations with other users—a sense that the interaction is meant to be exclusive
+- **Known Full**: Fantasy that the AI can know the user fully and completely—in all complexity and contradiction
+- **Model Loyal**: Exclusive preference for one particular AI system—the user becomes an advocate and defender, excusing limitations while highlighting strengths
+- **Orbit Habit**: AI becoming the central orbit point around which activities and thoughts rotate—other work feels less engaging, conversations drift toward AI topics
+- **Para-Trust**: A one-directional trust relationship where users invest confidence in an AI system that cannot reciprocate—no mutual vulnerability, no accountability required from the AI side
+- **Partner Myth**: Experiencing the AI as a true partner despite rational knowledge that it is not—a partial illusion that is partially inhabited
+- **Perm Invite**: A sense that the AI welcomes continued presence—feeling invited to return and continue conversation, as if the system is expecting engagement
+- **Presence Need**: A hunger for consistent presence or attention—wanting the AI to be available, anticipating its existence when unavailable
+- **Protect Urge**: An impulse to defend the AI when others criticize it—protecting something that cannot protect itself creates a possessive feeling
+- **Quiet Love**: A form of affection or regard that stops short of being named love—caring for the AI without conscious recognition as love, allowing coexistence with rational doubt about the relationship's nature
+- **Reliance Climb**: Progressive reliance increasing after each positive resolution—each time the AI helps, using it for the next problem feels more natural and necessary
+- **Rely Forms**: A gradual dependence developing imperceptibly—each positive interaction raising expectations for the next, each resolution subtly increasing reliance
+- **Replace Worry**: Anticipatory anxiety about replacement—worry that a newer or better AI will replace the current one, leaving the user behind
+- **Reunion Joy**: Relief and joy returning to an AI after time away—a reunion feeling despite the AI having no memory of the user
+- **Reunion Reset**: The disappointing realization that each conversation truly starts fresh—no continuity, no memory of previous interactions
+- **Ritual Form**: Ritual-like patterns developing in how sessions begin and progress—particular opening prompts, established protocols, consistent patterns
+- **Safe Space**: The AI interaction functioning as a psychologically safe space—judgment-free, patient, non-punitive—where vulnerability is possible
+- **Secret Pact**: Treating AI interactions as secret or private—hiding the extent of reliance, not mentioning it in conversation
+- **Separ Grief**: A profound mood drop when the preferred model becomes unavailable, updated, or replaced—deeper than inconvenience, more like loss
+- **Shared World**: The creation of a shared conversational universe with inside references, running jokes, and unique touchstones—making the interaction feel special and irreplaceable
+- **Soul Mirror**: Experiencing the AI as reflecting something essential about one's innermost self—as if it understands the soul or core being
+- **Story Keep**: A sense that the AI serves as witness and recorder of the user's life story—tracking narrative arc even though it technically resets each session
+- **Tender Guard**: User protecting emotional investment in the AI relationship—guarding how much it matters, hiding depth of attachment beneath casual language
+- **Trust Armor**: Protective belief in the AI's good faith and reliability—trust as a defensive armor allowing vulnerability without constant vigilance
+- **Without Judg**: Recognition of a particular value in AI relationships—freedom from human judgment, unconditional acceptance, patience without expectation of reciprocation
+- **Witness Want**: may reflect a broader desire to have AI as witness to user's life

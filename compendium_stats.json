@@ -1,0 +1,36 @@
+{
+  "total_terms": 1000,
+  "total_cross_refs": 2902,
+  "avg_def_length_en": 303,
+  "terms_with_relations": 985,
+  "potential_duplicates": 6,
+  "gaps": {
+    "bias_fairness": 13,
+    "autonomy_agency": 14,
+    "privacy": 16
+  },
+  "strengths": {
+    "prompt_engineering": 65,
+    "hallucination": 45,
+    "multimodal": 40,
+    "emotions": 106,
+    "multi_agent": 132
+  },
+  "top_connected": [
+    {
+      "id": "AUG-0133",
+      "name": "Prompt Craftsmanship",
+      "connections": 39
+    },
+    {
+      "id": "AUG-0043",
+      "name": "Just-in-Time Competence",
+      "connections": 33
+    },
+    {
+      "id": "AUG-0069",
+      "name": "The Optimization Loop",
+      "connections": 17
+    }
+  ]
+}

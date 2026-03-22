@@ -1,0 +1,61 @@
+{
+  "title": "AUGMANITAI Compendium",
+  "description": "The first systematic framework for identifying and naming previously unnamed phenomena in human-AI interaction.",
+  "upload_type": "dataset",
+  "publication_type": "dataset",
+  "access_right": "open",
+  "license": "cc-by-nd",
+  "creators": [
+    {
+      "name": "Andreas Ehstand",
+      "affiliation": "Independent Researcher",
+      "orcid": "0009-0006-3773-7796"
+    }
+  ],
+  "contributors": [],
+  "keywords": [
+    "human-AI interaction",
+    "terminology",
+    "neologism",
+    "phenomenology",
+    "NEOMANITAI"
+  ],
+  "communities": [
+    {
+      "identifier": "ai-research"
+    },
+    {
+      "identifier": "terminology"
+    }
+  ],
+  "related_identifiers": [
+    {
+      "identifier": "10.5281/zenodo.18778548",
+      "relation": "isVersionOf",
+      "resource_type": "publication-article"
+    }
+  ],
+  "subjects": [
+    {
+      "term": "Artificial Intelligence",
+      "identifier": "http://www.yso.fi/onto/yso/p1234"
+    },
+    {
+      "term": "Terminology",
+      "identifier": "http://www.yso.fi/onto/yso/p5678"
+    },
+    {
+      "term": "Phenomenology",
+      "identifier": "http://www.yso.fi/onto/yso/p9012"
+    }
+  ],
+  "version": "10.2.0",
+  "language": "eng",
+  "dates": [
+    {
+      "start": "2026-03-16",
+      "end": "2026-03-16",
+      "type": "Issued"
+    }
+  ]
+}

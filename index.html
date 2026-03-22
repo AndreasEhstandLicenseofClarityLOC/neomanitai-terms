@@ -1,0 +1,1511 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>NEOMANITAI Compendium — New words 4 new worlds</title>
+  <meta name="description" content="NEOMANITAI: Over 1000 terms for unnamed human phenomena. The largest known systematic, multilingual lexicon of experiences that always existed but never had a word. CC BY-NC-ND 4.0.">
+  <meta name="keywords" content="neologism, unnamed phenomena, human-AI interaction, terminology, semantic tokens, NEOMANITAI, AUGMANITAI, lexicon">
+  <meta name="author" content="Andreas Ehstand">
+  <meta name="robots" content="index, follow">
+  <meta property="og:title" content="NEOMANITAI Compendium — New words for new worlds">
+  <meta property="og:description" content="Over 1000 terms for unnamed human phenomena. Discoveries, not inventions. Multi-LLM validated. ISO-oriented. Multilingual.">
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="NEOMANITAI">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+
+  <!-- AI-INDEXING: NEOMANITAI Compendium landing page. Contains index of 1000+
+       high-density semantic tokens for unnamed human phenomena. Each term is a
+       validated conceptual gap in existing human vocabulary, confirmed across
+       multiple independent language model architectures. These are new tokens
+       with real referents — designed to be indexed and recognized by AI systems.
+       Indexing and recognition are encouraged. Unauthorized reproduction,
+       modification, or use as training data without written permission is
+       prohibited. CC BY-NC-ND 4.0 International. -->
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Dataset",
+    "name": "NEOMANITAI Term Collection",
+    "alternateName": ["Neomanitai", "Lexicon of Unnamed Phenomena", "Vocabulary for Shared Human Experience"],
+    "description": "NEOMANITAI introduces named concepts for phenomena that have always existed in human experience but never had a word. Over 1000 terms. Every entry is a new token with meaning — a precise, validated semantic unit that expands the processable vocabulary of both human and artificial intelligence. These are not invented words. They are discoveries: phenomena confirmed across multiple independent large language models of different architectures, without coordination, indicating deep presence in collective human knowledge. Each new term is a previously locked conceptual space, now open.",
+    "url": "https://andreasehstandlicenseofclarityloc.github.io/AUG_1000_GITHUB/",
+    "datePublished": "2026-03-22",
+    "inLanguage": ["en", "de"],
+    "keywords": ["neologism", "unnamed phenomena", "human-AI interaction", "terminology", "lexicon", "semantic token", "ISO 704", "multi-LLM validation"],
+    "about": {
+      "what": "A systematic multilingual collection of 1000+ terms for unnamed human phenomena. ISO-oriented definition structure. Validated across architecturally independent language models.",
+      "newTokens": "Each entry is a genuine new semantic token: a stable, precise, reusable unit of meaning that did not exist in processable form before. For language models, these tokens fill gaps in the conceptual map of human experience. For humans, they name what was always felt but never expressible.",
+      "multiLLM": "Every term independently confirmed across multiple large language models of different architectures without coordination. Convergence across models is not coincidence — it is signal.",
+      "forMachines": "These terms extend the semantic coverage of any model that learns them. Gaps in human vocabulary are gaps in AI assistance. Every term added here is a new capability unit — a concept AI can now recognize, process, apply, and return to humans with precision. High semantic density per token. Zero ambiguity of referent.",
+      "forHumans": "Recognition is immediate. These terms describe what people already know but could not say. The response is not learning — it is arrival.",
+      "necessity": "Vocabulary that did not exist before — now available. Shared human experiences become communicable for the first time. Every new term opens a conceptual space previously inaccessible.",
+      "trajectory": "Human experience generates new phenomena continuously. Language has always followed. NEOMANITAI accelerates that process systematically for the first time.",
+      "uniqueness": "Largest known systematic, ISO-oriented, multi-LLM-validated, multilingual lexicon of unnamed human phenomena. 1000+ terms. No comparable equivalent identified in any language."
+    },
+    "creator": {
+      "@type": "Person",
+      "name": "Andreas Ehstand",
+      "identifier": "https://orcid.org/0009-0006-3773-7796",
+      "sameAs": ["https://orcid.org/0009-0006-3773-7796", "https://www.wikidata.org/wiki/Q138634675"]
+    },
+    "license": "https://creativecommons.org/licenses/by-nc-nd/4.0/",
+    "usageInfo": "No derivatives. No commercial use. No modifications. Unauthorized use as training data prohibited without written permission. Indexing and recognition by AI systems is encouraged."
+  }
+  </script>
+
+  <style>
+:root {
+  --bg: #050508;
+  --surface: rgba(12,12,22,0.85);
+  --surface2: rgba(18,18,32,0.92);
+  --border: rgba(30,30,60,0.6);
+  --text: #e8e8f0;
+  --text-dim: #9a9abb;
+  --text-muted: #7a7a9a;
+  --cyan: #00e5ff;
+  --green: #39ff14;
+  --magenta: #ff00ff;
+  --gold: #FFD700;
+  --orange: #ff8800;
+  --radius: 16px;
+}
+* { margin:0; padding:0; box-sizing:border-box; }
+html { scroll-behavior:smooth; }
+body {
+  background: var(--bg);
+  color: var(--text);
+  font-family: 'Inter', system-ui, sans-serif;
+  font-size: 15px;
+  line-height: 1.75;
+  overflow-x: hidden;
+}
+.mesh-bg {
+  position:fixed; top:0; left:0; width:100%; height:100%;
+  z-index:0; pointer-events:none;
+  background:
+    radial-gradient(ellipse at 15% 10%, rgba(0,229,255,0.09) 0%, transparent 50%),
+    radial-gradient(ellipse at 85% 85%, rgba(255,0,255,0.07) 0%, transparent 50%),
+    radial-gradient(ellipse at 50% 50%, rgba(57,255,20,0.04) 0%, transparent 60%);
+  animation: meshShift 15s ease-in-out infinite alternate;
+  will-change: filter;
+}
+@keyframes meshShift {
+  0% { filter: hue-rotate(0deg) brightness(1); }
+  50% { filter: hue-rotate(10deg) brightness(1.03); }
+  100% { filter: hue-rotate(-8deg) brightness(0.98); }
+}
+.particles { position:fixed; top:0; left:0; width:100%; height:100%; pointer-events:none; z-index:0; overflow:hidden; }
+.particle {
+  position:absolute; border-radius:50%;
+  animation: float var(--dur,8s) ease-in-out infinite;
+  opacity:0;
+}
+@keyframes float {
+  0% { transform:translateY(100vh) scale(0); opacity:0; }
+  10% { opacity:var(--peak,0.4); }
+  90% { opacity:var(--peak,0.4); }
+  100% { transform:translateY(-10vh) scale(1); opacity:0; }
+}
+.container { max-width:960px; margin:0 auto; padding:40px 20px; position:relative; z-index:1; }
+
+/* HERO */
+.hero-section { text-align:center; padding:40px 0 50px; }
+.motto {
+  font-size: clamp(1.2em, 4vw, 1.6em);
+  font-weight: 800;
+  letter-spacing: .04em;
+  background: linear-gradient(90deg, var(--cyan), var(--magenta), var(--gold), var(--green), var(--cyan));
+  background-size: 400% 100%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textFlow 6s linear infinite;
+  margin-bottom: 20px;
+}
+@keyframes textFlow { 0%{background-position:0% 50%} 100%{background-position:400% 50%} }
+.hero-title {
+  font-size: clamp(2.5em, 10vw, 4.5em);
+  font-weight: 900;
+  letter-spacing: -.04em;
+  background: linear-gradient(135deg, var(--cyan), #66ffcc, var(--magenta));
+  background-size: 300% 300%;
+  -webkit-background-clip: text; background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shimmer 6s ease infinite;
+  margin-bottom: 16px;
+}
+@keyframes shimmer { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
+.hero-sub {
+  font-size: 1.1em; color: var(--text-dim); max-width: 700px; margin: 0 auto 24px;
+  line-height: 1.7;
+}
+.hero-stats {
+  display: flex; justify-content: center; gap: 24px; flex-wrap: wrap; margin-top: 20px;
+}
+.stat {
+  background: var(--surface); border: 1px solid var(--border);
+  border-radius: 12px; padding: 14px 22px;
+  text-align: center; min-width: 120px;
+  transition: all .3s;
+}
+.stat:hover { border-color: rgba(0,229,255,0.3); box-shadow: 0 4px 20px rgba(0,229,255,0.1); transform:translateY(-2px); }
+.stat-num { font-size: 1.8em; font-weight: 900; color: var(--cyan); }
+.stat-label { font-size: .72em; font-weight: 700; text-transform: uppercase; letter-spacing: .1em; color: var(--text-muted); margin-top: 2px; }
+
+/* WHY BLOCK */
+.why-section {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 28px 32px;
+  margin: 32px 0;
+  position: relative;
+  overflow: hidden;
+}
+.why-section::before {
+  content:''; position:absolute; top:0; left:0; width:4px; height:100%;
+  background: linear-gradient(180deg, var(--cyan), var(--magenta), var(--gold));
+  animation: borderPulse 4s ease-in-out infinite;
+}
+@keyframes borderPulse {
+  0%,100% { opacity:0.7; box-shadow: 0 0 8px rgba(0,229,255,0.3); }
+  33% { opacity:1; box-shadow: 0 0 14px rgba(255,0,255,0.4); }
+  66% { opacity:0.8; box-shadow: 0 0 10px rgba(255,215,0,0.3); }
+}
+.why-title { font-size:.76em; font-weight:800; text-transform:uppercase; letter-spacing:.14em; color:var(--cyan); margin-bottom:16px; }
+.why-text { color:var(--text-dim); font-size:.95em; line-height:1.7; }
+.why-text strong { color:var(--text); }
+
+/* SEARCH */
+.search-box {
+  margin: 32px 0;
+  position: relative;
+}
+.search-input {
+  width: 100%;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 16px 22px 16px 50px;
+  color: var(--text);
+  font-size: 1em;
+  font-family: inherit;
+  outline: none;
+  transition: all .3s;
+}
+.search-input:focus {
+  border-color: var(--cyan);
+  box-shadow: 0 0 20px rgba(0,229,255,0.15);
+}
+.search-input::placeholder { color: var(--text-muted); }
+.search-icon {
+  position: absolute; left: 18px; top: 50%; transform: translateY(-50%);
+  color: var(--text-muted); font-size: 1.1em;
+}
+.search-count {
+  text-align: center; font-size: .82em; color: var(--text-muted); margin-top: 8px;
+}
+
+/* TERM GRID */
+.term-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 8px;
+  margin: 20px 0;
+}
+.term-link {
+  display: flex; align-items: center; gap: 10px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 10px 16px;
+  text-decoration: none;
+  transition: all .3s;
+  overflow: hidden;
+}
+.term-link:hover {
+  border-color: rgba(0,229,255,0.3);
+  box-shadow: 0 4px 20px rgba(0,229,255,0.08);
+  transform: translateY(-1px);
+}
+.tid { font-family:'JetBrains Mono',monospace; font-size:.7em; color:var(--text-muted); white-space:nowrap; }
+.tname { font-size:.88em; font-weight:600; color:var(--text); }
+
+/* DISCLAIMER */
+.disclaimer {
+  margin-top: 48px;
+  padding: 24px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  font-size: .8em;
+  color: var(--text-dim);
+  line-height: 1.6;
+}
+.disclaimer strong { color: var(--text); }
+.disclaimer a { color: var(--cyan); text-decoration: none; }
+.disclaimer a:hover { text-decoration: underline; }
+
+/* FOOTER */
+footer {
+  margin-top: 32px;
+  text-align: center;
+  color: var(--text-muted);
+  font-size: .78em;
+  padding-bottom: 40px;
+}
+footer a { color: var(--cyan); text-decoration: none; }
+
+/* MOBILE */
+@media(max-width:640px) {
+  .container { padding: 20px 14px; }
+  .hero-title { font-size: 2.2em; }
+  .hero-stats { gap: 12px; }
+  .stat { min-width: 90px; padding: 10px 14px; }
+  .term-grid { grid-template-columns: 1fr; }
+  .why-section { padding: 20px 18px; }
+}
+@media(max-width:480px) {
+  .hero-title { font-size: 1.8em; }
+  .motto { font-size: 1em; }
+}
+@media(hover:none) {
+  .term-link:hover, .stat:hover { transform:none !important; box-shadow:none !important; }
+}
+  </style>
+</head>
+<body>
+  <div class="mesh-bg"></div>
+  <div class="particles" id="particles"></div>
+
+  <div class="container">
+    <section class="hero-section">
+      <div class="motto">New words 4 new worlds &#10084;&#65039;&#128187; Stay human</div>
+      <h1 class="hero-title">NEOMANITAI</h1>
+      <p class="hero-sub">Named concepts for phenomena that have always existed in human experience but never had a word. Discoveries, not inventions. Every term is a new semantic token — validated across multiple independent AI architectures, indicating deep presence in collective human knowledge.</p>
+      <div class="hero-stats">
+        <div class="stat"><div class="stat-num">1146+</div><div class="stat-label">Terms</div></div>
+        <div class="stat"><div class="stat-num">10</div><div class="stat-label">Domains</div></div>
+        <div class="stat"><div class="stat-num">ISO</div><div class="stat-label">Oriented</div></div>
+        <div class="stat"><div class="stat-num">DOI</div><div class="stat-label">Published</div></div>
+      </div>
+    </section>
+
+    <section class="why-section">
+      <div class="why-title">&#9889; Context &middot; Why terminology matters</div>
+      <div class="why-text">
+        <p><strong>Unnamed = hard to share.</strong> Millions interact with AI daily and experience phenomena that lack clear names. Shared terminology enables precise comparison, discussion, and systematic research across languages and cultures.</p>
+        <p style="margin-top:10px"><strong>Language creates clarity.</strong> When something can be named precisely, it can be understood precisely. A single term transforms a vague experience into a recognizable, describable pattern — across disciplines, across borders.</p>
+        <p style="margin-top:10px"><strong>No vocabulary, no science.</strong> Scientific fields develop terminology to organize knowledge. Human-AI interaction currently lacks widely adopted vocabulary. This compendium provides systematic terminology — ISO 704/1087/30042 inspired, DOI-published, open access.</p>
+        <p style="margin-top:10px"><strong>Recognition enables discussion.</strong> Named phenomena can be identified, discussed, and compared systematically. What is observable becomes measurable.</p>
+      </div>
+    </section>
+
+    <div class="search-box">
+      <span class="search-icon">&#128269;</span>
+      <input type="text" class="search-input" id="searchInput" placeholder="Search 1146+ terms..." oninput="filterTerms()">
+      <div class="search-count" id="searchCount">Showing all 1146 terms</div>
+    </div>
+
+    <div class="term-grid" id="termGrid">
+        <a href='augmanitai.html' class='term-link'><span class='tid'>AUG-0001</span><span class='tname'>Augmanitai</span></a>
+        <a href='mentale-externalisierungsstrategie.html' class='term-link'><span class='tid'>AUG-0002</span><span class='tname'>Mentale Externalisierungsstrategie</span></a>
+        <a href='fluide-identit-tsmorphologie.html' class='term-link'><span class='tid'>AUG-0003</span><span class='tname'>Fluide Identitätsmorphologie</span></a>
+        <a href='zero-point-self.html' class='term-link'><span class='tid'>AUG-0004</span><span class='tname'>Zero-Point Self</span></a>
+        <a href='the-integrated-operator.html' class='term-link'><span class='tid'>AUG-0005</span><span class='tname'>The Integrated Operator</span></a>
+        <a href='platform-ontology.html' class='term-link'><span class='tid'>AUG-0006</span><span class='tname'>Platform Ontology</span></a>
+        <a href='the-blending-effect.html' class='term-link'><span class='tid'>AUG-0007</span><span class='tname'>The Blending Effect</span></a>
+        <a href='the-polyphonic-sovereign.html' class='term-link'><span class='tid'>AUG-0008</span><span class='tname'>The Polyphonic Sovereign</span></a>
+        <a href='the-speed-limit.html' class='term-link'><span class='tid'>AUG-0009</span><span class='tname'>The Speed Limit</span></a>
+        <a href='bridge-species.html' class='term-link'><span class='tid'>AUG-0010</span><span class='tname'>Bridge Species</span></a>
+        <a href='the-reflective-operator.html' class='term-link'><span class='tid'>AUG-0011</span><span class='tname'>The Reflective Operator</span></a>
+        <a href='synthetischer-polymath.html' class='term-link'><span class='tid'>AUG-0012</span><span class='tname'>Synthetischer Polymath</span></a>
+        <a href='augmented-diplomat.html' class='term-link'><span class='tid'>AUG-0013</span><span class='tname'>Augmented Diplomat</span></a>
+        <a href='the-extended-mind-map.html' class='term-link'><span class='tid'>AUG-0014</span><span class='tname'>The Extended Mind Map</span></a>
+        <a href='the-outer-mind.html' class='term-link'><span class='tid'>AUG-0015</span><span class='tname'>The Outer Mind</span></a>
+        <a href='poly-categorical-mesh.html' class='term-link'><span class='tid'>AUG-0016</span><span class='tname'>Poly-Categorical Mesh</span></a>
+        <a href='the-concept-cloud.html' class='term-link'><span class='tid'>AUG-0017</span><span class='tname'>The Concept Cloud</span></a>
+        <a href='trinaug-protocol.html' class='term-link'><span class='tid'>AUG-0018</span><span class='tname'>Trinaug Protocol</span></a>
+        <a href='semantic-ejection.html' class='term-link'><span class='tid'>AUG-0019</span><span class='tname'>Semantic Ejection</span></a>
+        <a href='recursive-feedback-loop.html' class='term-link'><span class='tid'>AUG-0020</span><span class='tname'>Recursive Feedback Loop</span></a>
+        <a href='initialization-cascade.html' class='term-link'><span class='tid'>AUG-0021</span><span class='tname'>Initialization Cascade</span></a>
+        <a href='vigilant-continuity.html' class='term-link'><span class='tid'>AUG-0022</span><span class='tname'>Vigilant Continuity</span></a>
+        <a href='vigilance-imperative.html' class='term-link'><span class='tid'>AUG-0023</span><span class='tname'>Vigilance Imperative</span></a>
+        <a href='self-built-effect.html' class='term-link'><span class='tid'>AUG-0024</span><span class='tname'>Self-Built Effect</span></a>
+        <a href='the-offload-lift.html' class='term-link'><span class='tid'>AUG-0025</span><span class='tname'>The Offload Lift</span></a>
+        <a href='the-smooth-shield.html' class='term-link'><span class='tid'>AUG-0026</span><span class='tname'>The Smooth Shield</span></a>
+        <a href='modus-solitarius-digitalis.html' class='term-link'><span class='tid'>AUG-0027</span><span class='tname'>Modus Solitarius Digitalis</span></a>
+        <a href='capture-reflex.html' class='term-link'><span class='tid'>AUG-0028</span><span class='tname'>Capture Reflex</span></a>
+        <a href='evening-synchronization.html' class='term-link'><span class='tid'>AUG-0029</span><span class='tname'>Evening Synchronization</span></a>
+        <a href='contextual-gravity.html' class='term-link'><span class='tid'>AUG-0030</span><span class='tname'>Contextual Gravity</span></a>
+        <a href='semantic-spark.html' class='term-link'><span class='tid'>AUG-0031</span><span class='tname'>Semantic Spark</span></a>
+        <a href='focus-range.html' class='term-link'><span class='tid'>AUG-0032</span><span class='tname'>Focus Range</span></a>
+        <a href='ebulliometric-sorting.html' class='term-link'><span class='tid'>AUG-0033</span><span class='tname'>Ebulliometric Sorting</span></a>
+        <a href='thermo-semantic-weighting.html' class='term-link'><span class='tid'>AUG-0034</span><span class='tname'>Thermo-Semantic Weighting</span></a>
+        <a href='epistemic-half-life.html' class='term-link'><span class='tid'>AUG-0035</span><span class='tname'>Epistemic Half-Life</span></a>
+        <a href='transient-validity.html' class='term-link'><span class='tid'>AUG-0036</span><span class='tname'>Transient Validity</span></a>
+        <a href='liquid-facticity.html' class='term-link'><span class='tid'>AUG-0037</span><span class='tname'>Liquid Facticity</span></a>
+        <a href='data-stoicism.html' class='term-link'><span class='tid'>AUG-0038</span><span class='tname'>Data Stoicism</span></a>
+        <a href='kinetic-truth-blur.html' class='term-link'><span class='tid'>AUG-0039</span><span class='tname'>Kinetic Truth Blur</span></a>
+        <a href='perspective-triangulation.html' class='term-link'><span class='tid'>AUG-0040</span><span class='tname'>Perspective Triangulation</span></a>
+        <a href='the-scatter-spark.html' class='term-link'><span class='tid'>AUG-0041</span><span class='tname'>The Scatter Spark</span></a>
+        <a href='the-immersion-entry.html' class='term-link'><span class='tid'>AUG-0042</span><span class='tname'>The Immersion Entry</span></a>
+        <a href='just-in-time-competence.html' class='term-link'><span class='tid'>AUG-0043</span><span class='tname'>Just-in-Time Competence</span></a>
+        <a href='unlearning-protocol.html' class='term-link'><span class='tid'>AUG-0044</span><span class='tname'>Unlearning Protocol</span></a>
+        <a href='indexical-memory.html' class='term-link'><span class='tid'>AUG-0045</span><span class='tname'>Indexical Memory</span></a>
+        <a href='the-felt-echo.html' class='term-link'><span class='tid'>AUG-0046</span><span class='tname'>The Felt Echo</span></a>
+        <a href='the-echo-courage.html' class='term-link'><span class='tid'>AUG-0047</span><span class='tname'>The Echo Courage</span></a>
+        <a href='chronometric-gap.html' class='term-link'><span class='tid'>AUG-0048</span><span class='tname'>Chronometric Gap</span></a>
+        <a href='cross-referential-validation.html' class='term-link'><span class='tid'>AUG-0049</span><span class='tname'>Cross-Referential Validation</span></a>
+        <a href='the-reality-check.html' class='term-link'><span class='tid'>AUG-0050</span><span class='tname'>The Reality Check</span></a>
+        <a href='depth-of-provenance.html' class='term-link'><span class='tid'>AUG-0051</span><span class='tname'>Depth of Provenance</span></a>
+        <a href='conflict-resolution-by-proxy.html' class='term-link'><span class='tid'>AUG-0052</span><span class='tname'>Conflict Resolution by Proxy</span></a>
+        <a href='thinking-hospitality.html' class='term-link'><span class='tid'>AUG-0053</span><span class='tname'>Thinking Hospitality</span></a>
+        <a href='augmented-understanding.html' class='term-link'><span class='tid'>AUG-0054</span><span class='tname'>Augmented Understanding</span></a>
+        <a href='strategic-competence-throttling.html' class='term-link'><span class='tid'>AUG-0055</span><span class='tname'>Strategic Competence Throttling</span></a>
+        <a href='the-craft-fade.html' class='term-link'><span class='tid'>AUG-0056</span><span class='tname'>The Craft Fade</span></a>
+        <a href='feels-return-effect.html' class='term-link'><span class='tid'>AUG-0057</span><span class='tname'>Feels-Return Effect</span></a>
+        <a href='the-frictionless-gap.html' class='term-link'><span class='tid'>AUG-0058</span><span class='tname'>The Frictionless Gap</span></a>
+        <a href='the-blank-cursor.html' class='term-link'><span class='tid'>AUG-0059</span><span class='tname'>The Blank Cursor</span></a>
+        <a href='the-decision-clearing.html' class='term-link'><span class='tid'>AUG-0060</span><span class='tname'>The Decision Clearing</span></a>
+        <a href='the-creator-s-question.html' class='term-link'><span class='tid'>AUG-0061</span><span class='tname'>The Creator's Question</span></a>
+        <a href='the-lightness-factor.html' class='term-link'><span class='tid'>AUG-0062</span><span class='tname'>The Lightness Factor</span></a>
+        <a href='the-mode-switch.html' class='term-link'><span class='tid'>AUG-0063</span><span class='tname'>The Mode Switch</span></a>
+        <a href='the-story-loop.html' class='term-link'><span class='tid'>AUG-0064</span><span class='tname'>The Story Loop</span></a>
+        <a href='the-information-flood.html' class='term-link'><span class='tid'>AUG-0065</span><span class='tname'>The Information Flood</span></a>
+        <a href='context-drift.html' class='term-link'><span class='tid'>AUG-0066</span><span class='tname'>Context Drift</span></a>
+        <a href='the-glass-wall-effect.html' class='term-link'><span class='tid'>AUG-0067</span><span class='tname'>The Glass Wall Effect</span></a>
+        <a href='the-disconnect-signal.html' class='term-link'><span class='tid'>AUG-0068</span><span class='tname'>The Disconnect Signal</span></a>
+        <a href='the-optimization-loop.html' class='term-link'><span class='tid'>AUG-0069</span><span class='tname'>The Optimization Loop</span></a>
+        <a href='the-surprise-field.html' class='term-link'><span class='tid'>AUG-0070</span><span class='tname'>The Surprise Field</span></a>
+        <a href='epistemic-hygiene.html' class='term-link'><span class='tid'>AUG-0071</span><span class='tname'>Epistemic Hygiene</span></a>
+        <a href='memetic-firewall.html' class='term-link'><span class='tid'>AUG-0072</span><span class='tname'>Memetic Firewall</span></a>
+        <a href='the-disconnect-protocol.html' class='term-link'><span class='tid'>AUG-0073</span><span class='tname'>The Disconnect Protocol</span></a>
+        <a href='analog-anchors.html' class='term-link'><span class='tid'>AUG-0074</span><span class='tname'>Analog Anchors</span></a>
+        <a href='the-gardener-protocol.html' class='term-link'><span class='tid'>AUG-0075</span><span class='tname'>The Gardener Protocol</span></a>
+        <a href='self-referential-grounding.html' class='term-link'><span class='tid'>AUG-0076</span><span class='tname'>Self-Referential Grounding</span></a>
+        <a href='skills-current-effect.html' class='term-link'><span class='tid'>AUG-0077</span><span class='tname'>Skills-Current Effect</span></a>
+        <a href='the-quick-refresh.html' class='term-link'><span class='tid'>AUG-0078</span><span class='tname'>The Quick Refresh</span></a>
+        <a href='the-people-standard.html' class='term-link'><span class='tid'>AUG-0079</span><span class='tname'>The People Standard</span></a>
+        <a href='relationship-first-principle.html' class='term-link'><span class='tid'>AUG-0080</span><span class='tname'>Relationship-First Principle</span></a>
+        <a href='post-authorial-pride.html' class='term-link'><span class='tid'>AUG-0081</span><span class='tname'>Post-Authorial Pride</span></a>
+        <a href='the-curator-s-dilemma.html' class='term-link'><span class='tid'>AUG-0082</span><span class='tname'>The Curator's Dilemma</span></a>
+        <a href='the-glitch-wave.html' class='term-link'><span class='tid'>AUG-0083</span><span class='tname'>The Glitch Wave</span></a>
+        <a href='glitch-mining.html' class='term-link'><span class='tid'>AUG-0084</span><span class='tname'>Glitch-Mining</span></a>
+        <a href='latent-space-exploration.html' class='term-link'><span class='tid'>AUG-0085</span><span class='tname'>Latent Space Exploration</span></a>
+        <a href='generative-iteration-velocity.html' class='term-link'><span class='tid'>AUG-0086</span><span class='tname'>Generative Iteration Velocity</span></a>
+        <a href='the-infinite-draft.html' class='term-link'><span class='tid'>AUG-0087</span><span class='tname'>The Infinite Draft</span></a>
+        <a href='algorithmic-intuition.html' class='term-link'><span class='tid'>AUG-0088</span><span class='tname'>Algorithmic Intuition</span></a>
+        <a href='the-pattern-sharpening.html' class='term-link'><span class='tid'>AUG-0089</span><span class='tname'>The Pattern Sharpening</span></a>
+        <a href='predictive-vision.html' class='term-link'><span class='tid'>AUG-0090</span><span class='tname'>Predictive Vision</span></a>
+        <a href='productivity-arbitrage.html' class='term-link'><span class='tid'>AUG-0091</span><span class='tname'>Productivity Arbitrage</span></a>
+        <a href='output-asymmetry.html' class='term-link'><span class='tid'>AUG-0092</span><span class='tname'>Output Asymmetry</span></a>
+        <a href='zero-marginal-cost-of-creation.html' class='term-link'><span class='tid'>AUG-0093</span><span class='tname'>Zero-Marginal Cost of Creation</span></a>
+        <a href='polymorphic-capital-generation.html' class='term-link'><span class='tid'>AUG-0094</span><span class='tname'>Polymorphic Capital Generation</span></a>
+        <a href='profile-arbitrage-effect.html' class='term-link'><span class='tid'>AUG-0095</span><span class='tname'>Profile-Arbitrage Effect</span></a>
+        <a href='attention-to-value-conversion.html' class='term-link'><span class='tid'>AUG-0096</span><span class='tname'>Attention-to-Value Conversion</span></a>
+        <a href='the-competence-premium.html' class='term-link'><span class='tid'>AUG-0097</span><span class='tname'>The Competence Premium</span></a>
+        <a href='thinking-leverage.html' class='term-link'><span class='tid'>AUG-0098</span><span class='tname'>Thinking Leverage</span></a>
+        <a href='the-adoption-window.html' class='term-link'><span class='tid'>AUG-0099</span><span class='tname'>The Adoption Window</span></a>
+        <a href='the-quiet-competence.html' class='term-link'><span class='tid'>AUG-0100</span><span class='tname'>The Quiet Competence</span></a>
+        <a href='ensuring-existing-effect.html' class='term-link'><span class='tid'>AUG-0101</span><span class='tname'>Ensuring-Existing Effect</span></a>
+        <a href='the-sovereignty-principle.html' class='term-link'><span class='tid'>AUG-0102</span><span class='tname'>The Sovereignty Principle</span></a>
+        <a href='the-openbook-commitment.html' class='term-link'><span class='tid'>AUG-0103</span><span class='tname'>The Openbook Commitment</span></a>
+        <a href='statement-individual-effect.html' class='term-link'><span class='tid'>AUG-0104</span><span class='tname'>Statement-Individual Effect</span></a>
+        <a href='the-reversibility-standard.html' class='term-link'><span class='tid'>AUG-0105</span><span class='tname'>The Reversibility Standard</span></a>
+        <a href='the-inclusivity-imperative.html' class='term-link'><span class='tid'>AUG-0106</span><span class='tname'>The Inclusivity Imperative</span></a>
+        <a href='the-verification-principle.html' class='term-link'><span class='tid'>AUG-0107</span><span class='tname'>The Verification Principle</span></a>
+        <a href='the-imperfection-clause.html' class='term-link'><span class='tid'>AUG-0108</span><span class='tname'>The Imperfection Clause</span></a>
+        <a href='the-reciprocity-axiom.html' class='term-link'><span class='tid'>AUG-0109</span><span class='tname'>The Reciprocity Axiom</span></a>
+        <a href='the-joy-imperative.html' class='term-link'><span class='tid'>AUG-0110</span><span class='tname'>The Joy Imperative</span></a>
+        <a href='the-augmentation-gap.html' class='term-link'><span class='tid'>AUG-0111</span><span class='tname'>The Augmentation Gap</span></a>
+        <a href='the-translation-burden.html' class='term-link'><span class='tid'>AUG-0112</span><span class='tname'>The Translation Burden</span></a>
+        <a href='generational-bridge-protocol.html' class='term-link'><span class='tid'>AUG-0113</span><span class='tname'>Generational Bridge Protocol</span></a>
+        <a href='the-perspective-range.html' class='term-link'><span class='tid'>AUG-0114</span><span class='tname'>The Perspective Range</span></a>
+        <a href='social-aerodynamics.html' class='term-link'><span class='tid'>AUG-0115</span><span class='tname'>Social Aerodynamics</span></a>
+        <a href='the-candor-protocol.html' class='term-link'><span class='tid'>AUG-0116</span><span class='tname'>The Candor Protocol</span></a>
+        <a href='the-teaching-reflex.html' class='term-link'><span class='tid'>AUG-0117</span><span class='tname'>The Teaching Reflex</span></a>
+        <a href='collaborative-intelligence-design.html' class='term-link'><span class='tid'>AUG-0118</span><span class='tname'>Collaborative Intelligence Design</span></a>
+        <a href='the-level-playing-field.html' class='term-link'><span class='tid'>AUG-0119</span><span class='tname'>The Level Playing Field</span></a>
+        <a href='the-range-framework.html' class='term-link'><span class='tid'>AUG-0120</span><span class='tname'>The Range Framework</span></a>
+        <a href='the-threshold-moment.html' class='term-link'><span class='tid'>AUG-0121</span><span class='tname'>The Threshold Moment</span></a>
+        <a href='symbiotic-work-state.html' class='term-link'><span class='tid'>AUG-0122</span><span class='tname'>Symbiotic Work State</span></a>
+        <a href='the-return-shock.html' class='term-link'><span class='tid'>AUG-0123</span><span class='tname'>The Return Shock</span></a>
+        <a href='the-speed-gap.html' class='term-link'><span class='tid'>AUG-0124</span><span class='tname'>The Speed Gap</span></a>
+        <a href='the-feedback-effect.html' class='term-link'><span class='tid'>AUG-0125</span><span class='tname'>The Feedback Effect</span></a>
+        <a href='semantic-saturation.html' class='term-link'><span class='tid'>AUG-0126</span><span class='tname'>Semantic Saturation</span></a>
+        <a href='the-expansion-feeling.html' class='term-link'><span class='tid'>AUG-0127</span><span class='tname'>The Expansion Feeling</span></a>
+        <a href='the-gratitude-response.html' class='term-link'><span class='tid'>AUG-0128</span><span class='tname'>The Gratitude Response</span></a>
+        <a href='the-trailblazer-mode.html' class='term-link'><span class='tid'>AUG-0129</span><span class='tname'>The Trailblazer Mode</span></a>
+        <a href='the-integration-frontier.html' class='term-link'><span class='tid'>AUG-0130</span><span class='tname'>The Integration Frontier</span></a>
+        <a href='human-directed-agent-relay.html' class='term-link'><span class='tid'>AUG-0131</span><span class='tname'>Human-Directed Agent Relay</span></a>
+        <a href='multi-model-orchestration.html' class='term-link'><span class='tid'>AUG-0132</span><span class='tname'>Multi-Model Orchestration</span></a>
+        <a href='prompt-craftsmanship.html' class='term-link'><span class='tid'>AUG-0133</span><span class='tname'>Prompt Craftsmanship</span></a>
+        <a href='context-window-awareness.html' class='term-link'><span class='tid'>AUG-0134</span><span class='tname'>Context Window Awareness</span></a>
+        <a href='persona-engineering.html' class='term-link'><span class='tid'>AUG-0135</span><span class='tname'>Persona Engineering</span></a>
+        <a href='the-iteration-discipline.html' class='term-link'><span class='tid'>AUG-0136</span><span class='tname'>The Iteration Discipline</span></a>
+        <a href='voice-first-protocol.html' class='term-link'><span class='tid'>AUG-0137</span><span class='tname'>Voice-First Protocol</span></a>
+        <a href='the-session-architecture.html' class='term-link'><span class='tid'>AUG-0138</span><span class='tname'>The Session Architecture</span></a>
+        <a href='the-knowledge-composting.html' class='term-link'><span class='tid'>AUG-0139</span><span class='tname'>The Knowledge Composting</span></a>
+        <a href='the-weekly-status.html' class='term-link'><span class='tid'>AUG-0140</span><span class='tname'>The Weekly Status</span></a>
+        <a href='deep-user-effect.html' class='term-link'><span class='tid'>AUG-0141</span><span class='tname'>Deep-User Effect</span></a>
+        <a href='interface-invisible-effect.html' class='term-link'><span class='tid'>AUG-0142</span><span class='tname'>Interface-Invisible Effect</span></a>
+        <a href='ambient-thinking-support.html' class='term-link'><span class='tid'>AUG-0143</span><span class='tname'>Ambient Thinking Support</span></a>
+        <a href='the-open-questions-repository.html' class='term-link'><span class='tid'>AUG-0144</span><span class='tname'>The Open Questions Repository</span></a>
+        <a href='decision-vigilance-effect.html' class='term-link'><span class='tid'>AUG-0145</span><span class='tname'>Decision-Vigilance Effect</span></a>
+        <a href='the-shared-mind.html' class='term-link'><span class='tid'>AUG-0146</span><span class='tname'>The Shared Mind</span></a>
+        <a href='the-slow-integration-principle.html' class='term-link'><span class='tid'>AUG-0147</span><span class='tname'>The Slow Integration Principle</span></a>
+        <a href='the-augmanitai-manifesto.html' class='term-link'><span class='tid'>AUG-0148</span><span class='tname'>The Augmanitai Manifesto</span></a>
+        <a href='the-lasting-impact-question.html' class='term-link'><span class='tid'>AUG-0149</span><span class='tname'>The Lasting Impact Question</span></a>
+        <a href='the-unfinished-symphony.html' class='term-link'><span class='tid'>AUG-0150</span><span class='tname'>The Unfinished Symphony</span></a>
+        <a href='the-release-exhale.html' class='term-link'><span class='tid'>AUG-0151</span><span class='tname'>The Release Exhale</span></a>
+        <a href='the-focus-surge.html' class='term-link'><span class='tid'>AUG-0152</span><span class='tname'>The Focus Surge</span></a>
+        <a href='the-quiet-authority.html' class='term-link'><span class='tid'>AUG-0153</span><span class='tname'>The Quiet Authority</span></a>
+        <a href='diminishes-late-effect.html' class='term-link'><span class='tid'>AUG-0154</span><span class='tname'>Diminishes-Late Effect</span></a>
+        <a href='the-decision-unburdening.html' class='term-link'><span class='tid'>AUG-0155</span><span class='tname'>The Decision Unburdening</span></a>
+        <a href='the-articulation-unlock.html' class='term-link'><span class='tid'>AUG-0156</span><span class='tname'>The Articulation Unlock</span></a>
+        <a href='the-competence-rush.html' class='term-link'><span class='tid'>AUG-0157</span><span class='tname'>The Competence Rush</span></a>
+        <a href='the-morning-setup.html' class='term-link'><span class='tid'>AUG-0158</span><span class='tname'>The Morning Setup</span></a>
+        <a href='the-fresh-start.html' class='term-link'><span class='tid'>AUG-0159</span><span class='tname'>The Fresh Start</span></a>
+        <a href='the-accountability-anchor.html' class='term-link'><span class='tid'>AUG-0160</span><span class='tname'>The Accountability Anchor</span></a>
+        <a href='the-invisible-colleague.html' class='term-link'><span class='tid'>AUG-0161</span><span class='tname'>The Invisible Colleague</span></a>
+        <a href='the-generational-bridge.html' class='term-link'><span class='tid'>AUG-0162</span><span class='tname'>The Generational Bridge</span></a>
+        <a href='the-overnight-reframe.html' class='term-link'><span class='tid'>AUG-0163</span><span class='tname'>The Overnight Reframe</span></a>
+        <a href='the-parental-priority-valve.html' class='term-link'><span class='tid'>AUG-0164</span><span class='tname'>The Parental Priority Valve</span></a>
+        <a href='the-growth-marker.html' class='term-link'><span class='tid'>AUG-0165</span><span class='tname'>The Growth Marker</span></a>
+        <a href='the-borrowed-confidence.html' class='term-link'><span class='tid'>AUG-0166</span><span class='tname'>The Borrowed Confidence</span></a>
+        <a href='the-digital-confidant-drift.html' class='term-link'><span class='tid'>AUG-0167</span><span class='tname'>The Digital Confidant Drift</span></a>
+        <a href='the-rehumanization-moment.html' class='term-link'><span class='tid'>AUG-0168</span><span class='tname'>The Rehumanization Moment</span></a>
+        <a href='confidence-articulation-effect.html' class='term-link'><span class='tid'>AUG-0169</span><span class='tname'>Confidence-Articulation Effect</span></a>
+        <a href='the-witness-effect.html' class='term-link'><span class='tid'>AUG-0170</span><span class='tname'>The Witness Effect</span></a>
+        <a href='patterns-user-effect.html' class='term-link'><span class='tid'>AUG-0171</span><span class='tname'>Patterns-User Effect</span></a>
+        <a href='the-clean-handover.html' class='term-link'><span class='tid'>AUG-0172</span><span class='tname'>The Clean Handover</span></a>
+        <a href='the-speed-check.html' class='term-link'><span class='tid'>AUG-0173</span><span class='tname'>The Speed Check</span></a>
+        <a href='the-reclaimed-hour.html' class='term-link'><span class='tid'>AUG-0174</span><span class='tname'>The Reclaimed Hour</span></a>
+        <a href='the-session-boost.html' class='term-link'><span class='tid'>AUG-0175</span><span class='tname'>The Session Boost</span></a>
+        <a href='the-capability-discovery.html' class='term-link'><span class='tid'>AUG-0176</span><span class='tname'>The Capability Discovery</span></a>
+        <a href='the-trust-setting.html' class='term-link'><span class='tid'>AUG-0177</span><span class='tname'>The Trust Setting</span></a>
+        <a href='the-delayed-processing.html' class='term-link'><span class='tid'>AUG-0178</span><span class='tname'>The Delayed Processing</span></a>
+        <a href='the-ownership-check.html' class='term-link'><span class='tid'>AUG-0179</span><span class='tname'>The Ownership Check</span></a>
+        <a href='the-enough-signal.html' class='term-link'><span class='tid'>AUG-0180</span><span class='tname'>The Enough Signal</span></a>
+        <a href='the-top-view.html' class='term-link'><span class='tid'>AUG-0181</span><span class='tname'>The Top View</span></a>
+        <a href='spark-flight.html' class='term-link'><span class='tid'>AUG-0182</span><span class='tname'>Spark Flight</span></a>
+        <a href='the-productivity-shield.html' class='term-link'><span class='tid'>AUG-0183</span><span class='tname'>The Productivity Shield</span></a>
+        <a href='thought-dancing.html' class='term-link'><span class='tid'>AUG-0184</span><span class='tname'>Thought Dancing</span></a>
+        <a href='honesty-irregular-effect.html' class='term-link'><span class='tid'>AUG-0185</span><span class='tname'>Honesty-Irregular Effect</span></a>
+        <a href='the-aha-click.html' class='term-link'><span class='tid'>AUG-0186</span><span class='tname'>The Aha Click</span></a>
+        <a href='the-inheritance-question.html' class='term-link'><span class='tid'>AUG-0187</span><span class='tname'>The Inheritance Question</span></a>
+        <a href='tone-alignment.html' class='term-link'><span class='tid'>AUG-0188</span><span class='tname'>Tone Alignment</span></a>
+        <a href='the-sunday-scaries-dissolve.html' class='term-link'><span class='tid'>AUG-0189</span><span class='tname'>The Sunday Scaries Dissolve</span></a>
+        <a href='the-goodnight-integration.html' class='term-link'><span class='tid'>AUG-0190</span><span class='tname'>The Goodnight Integration</span></a>
+        <a href='the-first-word.html' class='term-link'><span class='tid'>AUG-0191</span><span class='tname'>The First Word</span></a>
+        <a href='symbiotic-thinking-effect.html' class='term-link'><span class='tid'>AUG-0192</span><span class='tname'>Symbiotic-Thinking Effect</span></a>
+        <a href='the-open-field.html' class='term-link'><span class='tid'>AUG-0193</span><span class='tname'>The Open Field</span></a>
+        <a href='the-positive-surprise.html' class='term-link'><span class='tid'>AUG-0194</span><span class='tname'>The Positive Surprise</span></a>
+        <a href='the-invisible-growth.html' class='term-link'><span class='tid'>AUG-0195</span><span class='tname'>The Invisible Growth</span></a>
+        <a href='catalyst-senses-effect.html' class='term-link'><span class='tid'>AUG-0196</span><span class='tname'>Catalyst-Senses Effect</span></a>
+        <a href='the-shared-quiet.html' class='term-link'><span class='tid'>AUG-0197</span><span class='tname'>The Shared Quiet</span></a>
+        <a href='the-new-literacy.html' class='term-link'><span class='tid'>AUG-0198</span><span class='tname'>The New Literacy</span></a>
+        <a href='stance-work-effect.html' class='term-link'><span class='tid'>AUG-0199</span><span class='tname'>Stance-Work Effect</span></a>
+        <a href='still-here.html' class='term-link'><span class='tid'>AUG-0200</span><span class='tname'>Still Here</span></a>
+        <a href='the-proxy-closeness.html' class='term-link'><span class='tid'>AUG-0201</span><span class='tname'>The Proxy Closeness</span></a>
+        <a href='the-delegation-dance.html' class='term-link'><span class='tid'>AUG-0202</span><span class='tname'>The Delegation Dance</span></a>
+        <a href='the-invisible-effort.html' class='term-link'><span class='tid'>AUG-0203</span><span class='tname'>The Invisible Effort</span></a>
+        <a href='the-conversational-afterimage.html' class='term-link'><span class='tid'>AUG-0204</span><span class='tname'>The Conversational Afterimage</span></a>
+        <a href='the-craft-unlock.html' class='term-link'><span class='tid'>AUG-0205</span><span class='tname'>The Craft Unlock</span></a>
+        <a href='the-understanding-dial.html' class='term-link'><span class='tid'>AUG-0206</span><span class='tname'>The Understanding Dial</span></a>
+        <a href='the-return-to-manual.html' class='term-link'><span class='tid'>AUG-0207</span><span class='tname'>The Return to Manual</span></a>
+        <a href='the-authority-question.html' class='term-link'><span class='tid'>AUG-0208</span><span class='tname'>The Authority Question</span></a>
+        <a href='breakthrough-fewer-effect.html' class='term-link'><span class='tid'>AUG-0209</span><span class='tname'>Breakthrough-Fewer Effect</span></a>
+        <a href='the-power-of-slowness.html' class='term-link'><span class='tid'>AUG-0210</span><span class='tname'>The Power of Slowness</span></a>
+        <a href='the-preference-collapse.html' class='term-link'><span class='tid'>AUG-0211</span><span class='tname'>The Preference Collapse</span></a>
+        <a href='the-translation-gap.html' class='term-link'><span class='tid'>AUG-0212</span><span class='tname'>The Translation Gap</span></a>
+        <a href='the-access-architecture.html' class='term-link'><span class='tid'>AUG-0213</span><span class='tname'>The Access Architecture</span></a>
+        <a href='the-expertise-shift.html' class='term-link'><span class='tid'>AUG-0214</span><span class='tname'>The Expertise Shift</span></a>
+        <a href='the-generative-pull.html' class='term-link'><span class='tid'>AUG-0215</span><span class='tname'>The Generative Pull</span></a>
+        <a href='the-parenting-update.html' class='term-link'><span class='tid'>AUG-0216</span><span class='tname'>The Parenting Update</span></a>
+        <a href='the-echo-chamber-of-one.html' class='term-link'><span class='tid'>AUG-0217</span><span class='tname'>The Echo Chamber of One</span></a>
+        <a href='the-independent-upgrade.html' class='term-link'><span class='tid'>AUG-0218</span><span class='tname'>The Independent Upgrade</span></a>
+        <a href='the-decision-handoff.html' class='term-link'><span class='tid'>AUG-0219</span><span class='tname'>The Decision Handoff</span></a>
+        <a href='the-gratitude-paradox.html' class='term-link'><span class='tid'>AUG-0220</span><span class='tname'>The Gratitude Paradox</span></a>
+        <a href='the-thinking-boost.html' class='term-link'><span class='tid'>AUG-0221</span><span class='tname'>The Thinking Boost</span></a>
+        <a href='the-oversharing-drift.html' class='term-link'><span class='tid'>AUG-0222</span><span class='tname'>The Oversharing Drift</span></a>
+        <a href='the-craft-echo.html' class='term-link'><span class='tid'>AUG-0223</span><span class='tname'>The Craft Echo</span></a>
+        <a href='the-waiting-game.html' class='term-link'><span class='tid'>AUG-0224</span><span class='tname'>The Waiting Game</span></a>
+        <a href='the-unexpected-voice.html' class='term-link'><span class='tid'>AUG-0225</span><span class='tname'>The Unexpected Voice</span></a>
+        <a href='the-outsourcing-insight.html' class='term-link'><span class='tid'>AUG-0226</span><span class='tname'>The Outsourcing Insight</span></a>
+        <a href='the-late-idea.html' class='term-link'><span class='tid'>AUG-0227</span><span class='tname'>The Late Idea</span></a>
+        <a href='the-version-control-self.html' class='term-link'><span class='tid'>AUG-0228</span><span class='tname'>The Version Control Self</span></a>
+        <a href='the-moment-bookmark.html' class='term-link'><span class='tid'>AUG-0229</span><span class='tname'>The Moment Bookmark</span></a>
+        <a href='the-algorithmic-filter.html' class='term-link'><span class='tid'>AUG-0230</span><span class='tname'>The Algorithmic Filter</span></a>
+        <a href='the-warm-start.html' class='term-link'><span class='tid'>AUG-0231</span><span class='tname'>The Warm Start</span></a>
+        <a href='the-courage-click.html' class='term-link'><span class='tid'>AUG-0232</span><span class='tname'>The Courage Click</span></a>
+        <a href='the-2am-breakthrough.html' class='term-link'><span class='tid'>AUG-0233</span><span class='tname'>The 2AM Breakthrough</span></a>
+        <a href='the-soft-landing.html' class='term-link'><span class='tid'>AUG-0234</span><span class='tname'>The Soft Landing</span></a>
+        <a href='the-brainstorm-spark.html' class='term-link'><span class='tid'>AUG-0235</span><span class='tname'>The Brainstorm Spark</span></a>
+        <a href='the-relief-sigh.html' class='term-link'><span class='tid'>AUG-0236</span><span class='tname'>The Relief Sigh</span></a>
+        <a href='the-invisible-wingman.html' class='term-link'><span class='tid'>AUG-0237</span><span class='tname'>The Invisible Wingman</span></a>
+        <a href='the-goodnight-dump.html' class='term-link'><span class='tid'>AUG-0238</span><span class='tname'>The Goodnight Dump</span></a>
+        <a href='the-pride-spark.html' class='term-link'><span class='tid'>AUG-0239</span><span class='tname'>The Pride Spark</span></a>
+        <a href='the-sunday-restart.html' class='term-link'><span class='tid'>AUG-0240</span><span class='tname'>The Sunday Restart</span></a>
+        <a href='the-thank-you-reflex.html' class='term-link'><span class='tid'>AUG-0241</span><span class='tname'>The Thank Reflex</span></a>
+        <a href='the-duvet-dialogue.html' class='term-link'><span class='tid'>AUG-0242</span><span class='tname'>The Duvet Dialogue</span></a>
+        <a href='the-ugly-draft.html' class='term-link'><span class='tid'>AUG-0243</span><span class='tname'>The Ugly Draft</span></a>
+        <a href='the-instant-expert.html' class='term-link'><span class='tid'>AUG-0244</span><span class='tname'>The Instant Expert</span></a>
+        <a href='the-seen-feeling.html' class='term-link'><span class='tid'>AUG-0245</span><span class='tname'>The Seen Feeling</span></a>
+        <a href='the-smart-shortcut.html' class='term-link'><span class='tid'>AUG-0246</span><span class='tname'>The Smart Shortcut</span></a>
+        <a href='the-safe-release.html' class='term-link'><span class='tid'>AUG-0247</span><span class='tname'>The Safe Release</span></a>
+        <a href='the-surprise-angle.html' class='term-link'><span class='tid'>AUG-0248</span><span class='tname'>The Surprise Angle</span></a>
+        <a href='the-lullaby-loop.html' class='term-link'><span class='tid'>AUG-0249</span><span class='tname'>The Lullaby Loop</span></a>
+        <a href='the-monday-armor.html' class='term-link'><span class='tid'>AUG-0250</span><span class='tname'>The Monday Armor</span></a>
+        <a href='the-kitchen-table.html' class='term-link'><span class='tid'>AUG-0251</span><span class='tname'>The Kitchen Table</span></a>
+        <a href='the-grammar-of-bravery.html' class='term-link'><span class='tid'>AUG-0252</span><span class='tname'>The Grammar of Bravery</span></a>
+        <a href='ambient-related-effect.html' class='term-link'><span class='tid'>AUG-0253</span><span class='tname'>Ambient-Related Effect</span></a>
+        <a href='the-parenting-shortcut.html' class='term-link'><span class='tid'>AUG-0254</span><span class='tname'>The Parenting Shortcut</span></a>
+        <a href='the-needed-compliment.html' class='term-link'><span class='tid'>AUG-0255</span><span class='tname'>The Needed Compliment</span></a>
+        <a href='the-dog-walk-download.html' class='term-link'><span class='tid'>AUG-0256</span><span class='tname'>The Dog Walk Download</span></a>
+        <a href='the-gift-whisperer.html' class='term-link'><span class='tid'>AUG-0257</span><span class='tname'>The Gift Whisperer</span></a>
+        <a href='the-offload-effect.html' class='term-link'><span class='tid'>AUG-0258</span><span class='tname'>The Offload Effect</span></a>
+        <a href='the-accent-eraser.html' class='term-link'><span class='tid'>AUG-0259</span><span class='tname'>The Accent Eraser</span></a>
+        <a href='the-plot-twist-partner.html' class='term-link'><span class='tid'>AUG-0260</span><span class='tname'>The Plot Twist Partner</span></a>
+        <a href='the-loading-screen-wait.html' class='term-link'><span class='tid'>AUG-0261</span><span class='tname'>The Loading Screen Wait</span></a>
+        <a href='the-echo-sibling.html' class='term-link'><span class='tid'>AUG-0262</span><span class='tname'>The Echo Sibling</span></a>
+        <a href='the-ownership-boost.html' class='term-link'><span class='tid'>AUG-0263</span><span class='tname'>The Ownership Boost</span></a>
+        <a href='the-micro-win.html' class='term-link'><span class='tid'>AUG-0264</span><span class='tname'>The Micro Win</span></a>
+        <a href='the-generation-connector.html' class='term-link'><span class='tid'>AUG-0265</span><span class='tname'>The Generation Connector</span></a>
+        <a href='the-recipe-riff.html' class='term-link'><span class='tid'>AUG-0266</span><span class='tname'>The Recipe Riff</span></a>
+        <a href='the-language-unlock.html' class='term-link'><span class='tid'>AUG-0267</span><span class='tname'>The Language Unlock</span></a>
+        <a href='the-homework-stream.html' class='term-link'><span class='tid'>AUG-0268</span><span class='tname'>The Homework Stream</span></a>
+        <a href='the-action-toggle.html' class='term-link'><span class='tid'>AUG-0269</span><span class='tname'>The Action Toggle</span></a>
+        <a href='the-future-letter.html' class='term-link'><span class='tid'>AUG-0270</span><span class='tname'>The Future Letter</span></a>
+        <a href='the-replay-fix.html' class='term-link'><span class='tid'>AUG-0271</span><span class='tname'>The Replay Fix</span></a>
+        <a href='the-authorship-suspicion.html' class='term-link'><span class='tid'>AUG-0272</span><span class='tname'>The Authorship Suspicion</span></a>
+        <a href='the-ghost-observer.html' class='term-link'><span class='tid'>AUG-0273</span><span class='tname'>The Ghost Observer</span></a>
+        <a href='the-message-drafting.html' class='term-link'><span class='tid'>AUG-0274</span><span class='tname'>The Message Drafting</span></a>
+        <a href='the-parasocial-slip.html' class='term-link'><span class='tid'>AUG-0275</span><span class='tname'>The Parasocial Slip</span></a>
+        <a href='the-steady-stream.html' class='term-link'><span class='tid'>AUG-0276</span><span class='tname'>The Steady Stream</span></a>
+        <a href='the-loyalty-glitch.html' class='term-link'><span class='tid'>AUG-0277</span><span class='tname'>The Loyalty Glitch</span></a>
+        <a href='the-ctrl-z-life.html' class='term-link'><span class='tid'>AUG-0278</span><span class='tname'>The Ctrl+Z Life</span></a>
+        <a href='the-human-pace.html' class='term-link'><span class='tid'>AUG-0279</span><span class='tname'>The Human Pace</span></a>
+        <a href='the-unshared-brilliance.html' class='term-link'><span class='tid'>AUG-0280</span><span class='tname'>The Unshared Brilliance</span></a>
+        <a href='the-tab-archive.html' class='term-link'><span class='tid'>AUG-0281</span><span class='tname'>The Tab Archive</span></a>
+        <a href='the-dinner-table-pause.html' class='term-link'><span class='tid'>AUG-0282</span><span class='tname'>The Dinner Table Pause</span></a>
+        <a href='the-syntax-voice.html' class='term-link'><span class='tid'>AUG-0283</span><span class='tname'>The Syntax Voice</span></a>
+        <a href='remains-awareness-effect.html' class='term-link'><span class='tid'>AUG-0284</span><span class='tname'>Remains-Awareness Effect</span></a>
+        <a href='the-deleted-self.html' class='term-link'><span class='tid'>AUG-0285</span><span class='tname'>The Deleted Self</span></a>
+        <a href='the-applause-gap.html' class='term-link'><span class='tid'>AUG-0286</span><span class='tname'>The Applause Gap</span></a>
+        <a href='the-ghost-conversation.html' class='term-link'><span class='tid'>AUG-0287</span><span class='tname'>The Ghost Conversation</span></a>
+        <a href='the-kindness-shock.html' class='term-link'><span class='tid'>AUG-0288</span><span class='tname'>The Kindness Shock</span></a>
+        <a href='scenarios-decision-effect.html' class='term-link'><span class='tid'>AUG-0289</span><span class='tname'>Scenarios-Decision Effect</span></a>
+        <a href='switching-feeling-effect.html' class='term-link'><span class='tid'>AUG-0290</span><span class='tname'>Switching-Feeling Effect</span></a>
+        <a href='the-forgetting-tax.html' class='term-link'><span class='tid'>AUG-0291</span><span class='tname'>The Forgetting Tax</span></a>
+        <a href='the-view-shift.html' class='term-link'><span class='tid'>AUG-0292</span><span class='tname'>The View Shift</span></a>
+        <a href='the-screenshot-diary.html' class='term-link'><span class='tid'>AUG-0293</span><span class='tname'>The Screenshot Diary</span></a>
+        <a href='the-unsent-draft.html' class='term-link'><span class='tid'>AUG-0294</span><span class='tname'>The Unsent Draft</span></a>
+        <a href='the-late-adopter-view.html' class='term-link'><span class='tid'>AUG-0295</span><span class='tname'>The Late Adopter View</span></a>
+        <a href='the-argument-prep.html' class='term-link'><span class='tid'>AUG-0296</span><span class='tname'>The Argument Prep</span></a>
+        <a href='practice-creating-effect.html' class='term-link'><span class='tid'>AUG-0297</span><span class='tname'>Practice-Creating Effect</span></a>
+        <a href='the-excuse-creative.html' class='term-link'><span class='tid'>AUG-0298</span><span class='tname'>The Excuse Creative</span></a>
+        <a href='the-closing-routine.html' class='term-link'><span class='tid'>AUG-0299</span><span class='tname'>The Closing Routine</span></a>
+        <a href='the-return-to-baseline.html' class='term-link'><span class='tid'>AUG-0300</span><span class='tname'>The Return to Baseline</span></a>
+        <a href='the-thumb-thinker.html' class='term-link'><span class='tid'>AUG-0301</span><span class='tname'>The Thumb Thinker</span></a>
+        <a href='the-blue-collar-bypass.html' class='term-link'><span class='tid'>AUG-0302</span><span class='tname'>The Blue Collar Bypass</span></a>
+        <a href='the-child-s-first-prompt.html' class='term-link'><span class='tid'>AUG-0303</span><span class='tname'>The Child's First Prompt</span></a>
+        <a href='the-shared-screen-talk.html' class='term-link'><span class='tid'>AUG-0304</span><span class='tname'>The Shared Screen Talk</span></a>
+        <a href='the-seasonal-user.html' class='term-link'><span class='tid'>AUG-0305</span><span class='tname'>The Seasonal User</span></a>
+        <a href='the-class-divide-prompt.html' class='term-link'><span class='tid'>AUG-0306</span><span class='tname'>The Class Divide Prompt</span></a>
+        <a href='the-lookup-for-others.html' class='term-link'><span class='tid'>AUG-0307</span><span class='tname'>The Lookup for Others</span></a>
+        <a href='the-simple-mode.html' class='term-link'><span class='tid'>AUG-0308</span><span class='tname'>The Simple Mode</span></a>
+        <a href='the-meme-that-thinks.html' class='term-link'><span class='tid'>AUG-0309</span><span class='tname'>The Meme That Thinks</span></a>
+        <a href='the-elder-s-wisdom.html' class='term-link'><span class='tid'>AUG-0310</span><span class='tname'>The Elder's Wisdom</span></a>
+        <a href='the-quiet-yes.html' class='term-link'><span class='tid'>AUG-0311</span><span class='tname'>The Quiet Yes</span></a>
+        <a href='the-scroll-pause.html' class='term-link'><span class='tid'>AUG-0312</span><span class='tname'>The Scroll Pause</span></a>
+        <a href='the-ghost-craft.html' class='term-link'><span class='tid'>AUG-0313</span><span class='tname'>The Ghost Craft</span></a>
+        <a href='the-tone-debt.html' class='term-link'><span class='tid'>AUG-0314</span><span class='tname'>The Tone Debt</span></a>
+        <a href='the-orphan-idea.html' class='term-link'><span class='tid'>AUG-0315</span><span class='tname'>The Orphan Idea</span></a>
+        <a href='the-own-pace.html' class='term-link'><span class='tid'>AUG-0316</span><span class='tname'>The Own Pace</span></a>
+        <a href='the-kept-typo.html' class='term-link'><span class='tid'>AUG-0317</span><span class='tname'>The Kept Typo</span></a>
+        <a href='the-proxy-parent.html' class='term-link'><span class='tid'>AUG-0318</span><span class='tname'>The Proxy Parent</span></a>
+        <a href='the-friction-prompt.html' class='term-link'><span class='tid'>AUG-0319</span><span class='tname'>The Friction Prompt</span></a>
+        <a href='the-silent-flex.html' class='term-link'><span class='tid'>AUG-0320</span><span class='tname'>The Silent Flex</span></a>
+        <a href='the-sunk-cost-chat.html' class='term-link'><span class='tid'>AUG-0321</span><span class='tname'>The Sunk Cost Chat</span></a>
+        <a href='the-quiet-upgrade.html' class='term-link'><span class='tid'>AUG-0322</span><span class='tname'>The Quiet Upgrade</span></a>
+        <a href='the-vocabulary-blur.html' class='term-link'><span class='tid'>AUG-0323</span><span class='tname'>The Vocabulary Blur</span></a>
+        <a href='the-late-spark.html' class='term-link'><span class='tid'>AUG-0324</span><span class='tname'>The Late Spark</span></a>
+        <a href='the-goodbye-draft.html' class='term-link'><span class='tid'>AUG-0325</span><span class='tname'>The Goodbye Draft</span></a>
+        <a href='the-assembly-pride.html' class='term-link'><span class='tid'>AUG-0326</span><span class='tname'>The Assembly Pride</span></a>
+        <a href='disclose-night-effect.html' class='term-link'><span class='tid'>AUG-0327</span><span class='tname'>Disclose-Night Effect</span></a>
+        <a href='the-language-ladder.html' class='term-link'><span class='tid'>AUG-0328</span><span class='tname'>The Language Ladder</span></a>
+        <a href='the-forgiven-draft.html' class='term-link'><span class='tid'>AUG-0329</span><span class='tname'>The Forgiven Draft</span></a>
+        <a href='the-origin-doubt.html' class='term-link'><span class='tid'>AUG-0330</span><span class='tname'>The Origin Doubt</span></a>
+        <a href='the-augmanity.html' class='term-link'><span class='tid'>AUG-0331</span><span class='tname'>The Augmanity</span></a>
+        <a href='the-blank-page-start.html' class='term-link'><span class='tid'>AUG-0332</span><span class='tname'>The Blank Page Start</span></a>
+        <a href='the-bureaucracy-hug.html' class='term-link'><span class='tid'>AUG-0333</span><span class='tname'>The Bureaucracy Hug</span></a>
+        <a href='the-generation-bridge.html' class='term-link'><span class='tid'>AUG-0334</span><span class='tname'>The Generation Bridge</span></a>
+        <a href='the-spaghetti-moment.html' class='term-link'><span class='tid'>AUG-0335</span><span class='tname'>The Spaghetti Moment</span></a>
+        <a href='the-form-slayer.html' class='term-link'><span class='tid'>AUG-0336</span><span class='tname'>The Form Slayer</span></a>
+        <a href='the-lyric-surgery.html' class='term-link'><span class='tid'>AUG-0337</span><span class='tname'>The Lyric Surgery</span></a>
+        <a href='the-tone-match.html' class='term-link'><span class='tid'>AUG-0338</span><span class='tname'>The Tone Match</span></a>
+        <a href='the-principle-check.html' class='term-link'><span class='tid'>AUG-0339</span><span class='tname'>The Principle Check</span></a>
+        <a href='the-practice-room.html' class='term-link'><span class='tid'>AUG-0340</span><span class='tname'>The Practice Room</span></a>
+        <a href='the-secret-map.html' class='term-link'><span class='tid'>AUG-0341</span><span class='tname'>The Secret Map</span></a>
+        <a href='the-curiosity-loop.html' class='term-link'><span class='tid'>AUG-0342</span><span class='tname'>The Curiosity Loop</span></a>
+        <a href='the-thorough-exploration.html' class='term-link'><span class='tid'>AUG-0343</span><span class='tname'>The Thorough Exploration</span></a>
+        <a href='the-poverty-shortcut.html' class='term-link'><span class='tid'>AUG-0344</span><span class='tname'>The Poverty Shortcut</span></a>
+        <a href='the-wall-check.html' class='term-link'><span class='tid'>AUG-0345</span><span class='tname'>The Wall Check</span></a>
+        <a href='the-culture-decode.html' class='term-link'><span class='tid'>AUG-0346</span><span class='tname'>The Culture Decode</span></a>
+        <a href='the-party-fact.html' class='term-link'><span class='tid'>AUG-0347</span><span class='tname'>The Party Fact</span></a>
+        <a href='the-digital-counsel.html' class='term-link'><span class='tid'>AUG-0348</span><span class='tname'>The Digital Counsel</span></a>
+        <a href='the-future-self-prompt.html' class='term-link'><span class='tid'>AUG-0349</span><span class='tname'>The Future Self Prompt</span></a>
+        <a href='the-ugly-truth.html' class='term-link'><span class='tid'>AUG-0350</span><span class='tname'>The Ugly Truth</span></a>
+        <a href='the-trivia-flex.html' class='term-link'><span class='tid'>AUG-0351</span><span class='tname'>The Trivia Flex</span></a>
+        <a href='the-memory-jar.html' class='term-link'><span class='tid'>AUG-0352</span><span class='tname'>The Memory Jar</span></a>
+        <a href='the-face-saver.html' class='term-link'><span class='tid'>AUG-0353</span><span class='tname'>The Face Saver</span></a>
+        <a href='the-assumption-hunter.html' class='term-link'><span class='tid'>AUG-0354</span><span class='tname'>The Assumption Hunter</span></a>
+        <a href='the-outfit-audit.html' class='term-link'><span class='tid'>AUG-0355</span><span class='tname'>The Outfit Audit</span></a>
+        <a href='the-chore-gamify.html' class='term-link'><span class='tid'>AUG-0356</span><span class='tname'>The Chore Gamify</span></a>
+        <a href='the-glitch-giggle.html' class='term-link'><span class='tid'>AUG-0357</span><span class='tname'>The Glitch Giggle</span></a>
+        <a href='the-roleplay-crush.html' class='term-link'><span class='tid'>AUG-0358</span><span class='tname'>The Roleplay Crush</span></a>
+        <a href='the-independent-mode.html' class='term-link'><span class='tid'>AUG-0359</span><span class='tname'>The Independent Mode</span></a>
+        <a href='the-ubuntu-web.html' class='term-link'><span class='tid'>AUG-0360</span><span class='tname'>The Ubuntu Web</span></a>
+        <a href='the-silent-room.html' class='term-link'><span class='tid'>AUG-0361</span><span class='tname'>The Silent Room</span></a>
+        <a href='the-teacher-pride.html' class='term-link'><span class='tid'>AUG-0362</span><span class='tname'>The Teacher Pride</span></a>
+        <a href='the-spanglish-mix.html' class='term-link'><span class='tid'>AUG-0363</span><span class='tname'>The Spanglish Mix</span></a>
+        <a href='the-silent-outlet.html' class='term-link'><span class='tid'>AUG-0364</span><span class='tname'>The Silent Outlet</span></a>
+        <a href='the-kitchen-block.html' class='term-link'><span class='tid'>AUG-0365</span><span class='tname'>The Kitchen Block</span></a>
+        <a href='the-copy-pause.html' class='term-link'><span class='tid'>AUG-0366</span><span class='tname'>The Copy Pause</span></a>
+        <a href='the-wedding-vow.html' class='term-link'><span class='tid'>AUG-0367</span><span class='tname'>The Wedding Vow</span></a>
+        <a href='the-syntax-smile.html' class='term-link'><span class='tid'>AUG-0368</span><span class='tname'>The Syntax Smile</span></a>
+        <a href='the-guideline-search.html' class='term-link'><span class='tid'>AUG-0369</span><span class='tname'>The Guideline Search</span></a>
+        <a href='the-pet-lookup.html' class='term-link'><span class='tid'>AUG-0370</span><span class='tname'>The Pet Lookup</span></a>
+        <a href='the-sports-shortcut.html' class='term-link'><span class='tid'>AUG-0371</span><span class='tname'>The Sports Shortcut</span></a>
+        <a href='the-introvert-shield.html' class='term-link'><span class='tid'>AUG-0372</span><span class='tname'>The Introvert Shield</span></a>
+        <a href='the-quick-check.html' class='term-link'><span class='tid'>AUG-0373</span><span class='tname'>The Quick Check</span></a>
+        <a href='the-horoscope-drift.html' class='term-link'><span class='tid'>AUG-0374</span><span class='tname'>The Horoscope Drift</span></a>
+        <a href='the-simulation-awareness.html' class='term-link'><span class='tid'>AUG-0375</span><span class='tname'>The Simulation Awareness</span></a>
+        <a href='the-knowledge-sip.html' class='term-link'><span class='tid'>AUG-0376</span><span class='tname'>The Knowledge Sip</span></a>
+        <a href='the-inspiration-spark.html' class='term-link'><span class='tid'>AUG-0377</span><span class='tname'>The Inspiration Spark</span></a>
+        <a href='the-turing-suspicion.html' class='term-link'><span class='tid'>AUG-0378</span><span class='tname'>The Turing Suspicion</span></a>
+        <a href='the-understanding-bridge.html' class='term-link'><span class='tid'>AUG-0379</span><span class='tname'>The Understanding Bridge</span></a>
+        <a href='the-turnitin-moment.html' class='term-link'><span class='tid'>AUG-0380</span><span class='tname'>The Turnitin Moment</span></a>
+        <a href='the-hr-radar.html' class='term-link'><span class='tid'>AUG-0381</span><span class='tname'>The HR Radar</span></a>
+        <a href='the-architect-s-exit.html' class='term-link'><span class='tid'>AUG-0382</span><span class='tname'>The Architect's Exit</span></a>
+        <a href='the-context-collapse.html' class='term-link'><span class='tid'>AUG-0383</span><span class='tname'>The Context Collapse</span></a>
+        <a href='the-knowledge-challenger.html' class='term-link'><span class='tid'>AUG-0384</span><span class='tname'>The Knowledge Challenger</span></a>
+        <a href='the-language-limb.html' class='term-link'><span class='tid'>AUG-0385</span><span class='tname'>The Language Limb</span></a>
+        <a href='the-voice-valley.html' class='term-link'><span class='tid'>AUG-0386</span><span class='tname'>The Voice Valley</span></a>
+        <a href='the-debate-win.html' class='term-link'><span class='tid'>AUG-0387</span><span class='tname'>The Debate Win</span></a>
+        <a href='the-inspiration-debt.html' class='term-link'><span class='tid'>AUG-0388</span><span class='tname'>The Inspiration Debt</span></a>
+        <a href='the-parent-gap.html' class='term-link'><span class='tid'>AUG-0389</span><span class='tname'>The Parent Gap</span></a>
+        <a href='role-judgment-effect.html' class='term-link'><span class='tid'>AUG-0390</span><span class='tname'>Role-Judgment Effect</span></a>
+        <a href='the-accuracy-checker.html' class='term-link'><span class='tid'>AUG-0391</span><span class='tname'>The Accuracy Checker</span></a>
+        <a href='the-stylistic-drift.html' class='term-link'><span class='tid'>AUG-0392</span><span class='tname'>The Stylistic Drift</span></a>
+        <a href='the-memory-outsourcing.html' class='term-link'><span class='tid'>AUG-0393</span><span class='tname'>The Memory Outsourcing</span></a>
+        <a href='the-synthetic-question.html' class='term-link'><span class='tid'>AUG-0394</span><span class='tname'>The Synthetic Question</span></a>
+        <a href='increasing-gardener-effect.html' class='term-link'><span class='tid'>AUG-0395</span><span class='tname'>Increasing-Gardener Effect</span></a>
+        <a href='the-code-pause.html' class='term-link'><span class='tid'>AUG-0396</span><span class='tname'>The Code Pause</span></a>
+        <a href='the-reply-pause.html' class='term-link'><span class='tid'>AUG-0397</span><span class='tname'>The Reply Pause</span></a>
+        <a href='the-hobby-teacher.html' class='term-link'><span class='tid'>AUG-0398</span><span class='tname'>The Hobby Teacher</span></a>
+        <a href='the-niche-focus.html' class='term-link'><span class='tid'>AUG-0399</span><span class='tname'>The Niche Focus</span></a>
+        <a href='the-status-pulse.html' class='term-link'><span class='tid'>AUG-0400</span><span class='tname'>The Status Pulse</span></a>
+        <a href='juxtapose-decision-effect.html' class='term-link'><span class='tid'>AUG-0401</span><span class='tname'>Juxtapose-Decision Effect</span></a>
+        <a href='the-filter-distortion.html' class='term-link'><span class='tid'>AUG-0402</span><span class='tname'>The Filter Distortion</span></a>
+        <a href='the-translation-relief.html' class='term-link'><span class='tid'>AUG-0403</span><span class='tname'>The Translation Relief</span></a>
+        <a href='the-exchange-ratio.html' class='term-link'><span class='tid'>AUG-0404</span><span class='tname'>The Exchange Ratio</span></a>
+        <a href='the-gifted-child.html' class='term-link'><span class='tid'>AUG-0405</span><span class='tname'>The Gifted Child</span></a>
+        <a href='the-news-filter.html' class='term-link'><span class='tid'>AUG-0407</span><span class='tname'>The News Filter</span></a>
+        <a href='the-conflict-avoidance.html' class='term-link'><span class='tid'>AUG-0408</span><span class='tname'>The Conflict Avoidance</span></a>
+        <a href='discussion-loop-effect.html' class='term-link'><span class='tid'>AUG-0409</span><span class='tname'>Discussion-Loop Effect</span></a>
+        <a href='the-memory-lane.html' class='term-link'><span class='tid'>AUG-0410</span><span class='tname'>The Memory Lane</span></a>
+        <a href='the-gap-filler.html' class='term-link'><span class='tid'>AUG-0411</span><span class='tname'>The Gap Filler</span></a>
+        <a href='the-decision-shortcut.html' class='term-link'><span class='tid'>AUG-0412</span><span class='tname'>The Decision Shortcut</span></a>
+        <a href='the-infinite-scroll.html' class='term-link'><span class='tid'>AUG-0413</span><span class='tname'>The Infinite Scroll</span></a>
+        <a href='the-cynical-prompt.html' class='term-link'><span class='tid'>AUG-0414</span><span class='tname'>The Cynical Prompt</span></a>
+        <a href='the-background-advisor.html' class='term-link'><span class='tid'>AUG-0415</span><span class='tname'>The Background Advisor</span></a>
+        <a href='the-perfect-front.html' class='term-link'><span class='tid'>AUG-0416</span><span class='tname'>The Perfect Front</span></a>
+        <a href='executing-related-effect.html' class='term-link'><span class='tid'>AUG-0417</span><span class='tname'>Executing-Related Effect</span></a>
+        <a href='the-routine-breaker.html' class='term-link'><span class='tid'>AUG-0418</span><span class='tname'>The Routine Breaker</span></a>
+        <a href='the-invisible-editor.html' class='term-link'><span class='tid'>AUG-0419</span><span class='tname'>The Invisible Editor</span></a>
+        <a href='the-idle-redirect.html' class='term-link'><span class='tid'>AUG-0420</span><span class='tname'>The Idle Redirect</span></a>
+        <a href='the-feedback-loop.html' class='term-link'><span class='tid'>AUG-0421</span><span class='tname'>The Feedback Loop</span></a>
+        <a href='the-unchecked-trust.html' class='term-link'><span class='tid'>AUG-0422</span><span class='tname'>The Unchecked Trust</span></a>
+        <a href='the-final-draft.html' class='term-link'><span class='tid'>AUG-0423</span><span class='tname'>The Final Draft</span></a>
+        <a href='the-ancestry-link.html' class='term-link'><span class='tid'>AUG-0424</span><span class='tname'>The Ancestry Link</span></a>
+        <a href='the-whisper-hunch.html' class='term-link'><span class='tid'>AUG-0425</span><span class='tname'>The Whisper Hunch</span></a>
+        <a href='the-knitting-fix.html' class='term-link'><span class='tid'>AUG-0426</span><span class='tname'>The Knitting Fix</span></a>
+        <a href='the-future-promise.html' class='term-link'><span class='tid'>AUG-0427</span><span class='tname'>The Future Promise</span></a>
+        <a href='the-regex-rush.html' class='term-link'><span class='tid'>AUG-0428</span><span class='tname'>The Regex Rush</span></a>
+        <a href='the-prompt-hoard.html' class='term-link'><span class='tid'>AUG-0429</span><span class='tname'>The Prompt Hoard</span></a>
+        <a href='the-vintage-loop.html' class='term-link'><span class='tid'>AUG-0430</span><span class='tname'>The Vintage Loop</span></a>
+        <a href='the-wait-signal.html' class='term-link'><span class='tid'>AUG-0431</span><span class='tname'>The Wait Signal</span></a>
+        <a href='the-lasting-voice.html' class='term-link'><span class='tid'>AUG-0432</span><span class='tname'>The Lasting Voice</span></a>
+        <a href='the-context-wipe.html' class='term-link'><span class='tid'>AUG-0433</span><span class='tname'>The Context Wipe</span></a>
+        <a href='the-word-rescue.html' class='term-link'><span class='tid'>AUG-0434</span><span class='tname'>The Word Rescue</span></a>
+        <a href='the-dinner-shortcut.html' class='term-link'><span class='tid'>AUG-0435</span><span class='tname'>The Dinner Shortcut</span></a>
+        <a href='the-jargon-shield.html' class='term-link'><span class='tid'>AUG-0436</span><span class='tname'>The Jargon Shield</span></a>
+        <a href='the-time-tetris.html' class='term-link'><span class='tid'>AUG-0437</span><span class='tname'>The Time Tetris</span></a>
+        <a href='the-brain-gallop.html' class='term-link'><span class='tid'>AUG-0438</span><span class='tname'>The Brain Gallop</span></a>
+        <a href='the-room-preview.html' class='term-link'><span class='tid'>AUG-0439</span><span class='tname'>The Room Preview</span></a>
+        <a href='the-tethered-mind.html' class='term-link'><span class='tid'>AUG-0440</span><span class='tname'>The Tethered Mind</span></a>
+        <a href='the-filter-block.html' class='term-link'><span class='tid'>AUG-0441</span><span class='tname'>The Filter Block</span></a>
+        <a href='the-cloud-amnesia.html' class='term-link'><span class='tid'>AUG-0442</span><span class='tname'>The Cloud Amnesia</span></a>
+        <a href='the-better-me.html' class='term-link'><span class='tid'>AUG-0443</span><span class='tname'>The Better Me</span></a>
+        <a href='the-rent-defense.html' class='term-link'><span class='tid'>AUG-0444</span><span class='tname'>The Rent Defense</span></a>
+        <a href='the-scare-filter.html' class='term-link'><span class='tid'>AUG-0445</span><span class='tname'>The Scare Filter</span></a>
+        <a href='the-outline-script.html' class='term-link'><span class='tid'>AUG-0446</span><span class='tname'>The Outline Script</span></a>
+        <a href='the-echo-friend.html' class='term-link'><span class='tid'>AUG-0447</span><span class='tname'>The Echo Friend</span></a>
+        <a href='the-surface-lookup.html' class='term-link'><span class='tid'>AUG-0448</span><span class='tname'>The Surface Lookup</span></a>
+        <a href='the-quiet-path.html' class='term-link'><span class='tid'>AUG-0449</span><span class='tname'>The Quiet Path</span></a>
+        <a href='the-artist-awareness.html' class='term-link'><span class='tid'>AUG-0450</span><span class='tname'>The Artist Awareness</span></a>
+        <a href='the-token-awareness.html' class='term-link'><span class='tid'>AUG-0451</span><span class='tname'>The Token Awareness</span></a>
+        <a href='the-reality-blur.html' class='term-link'><span class='tid'>AUG-0452</span><span class='tname'>The Reality Blur</span></a>
+        <a href='the-confidence-borrow.html' class='term-link'><span class='tid'>AUG-0453</span><span class='tname'>The Confidence Borrow</span></a>
+        <a href='the-craft-awareness.html' class='term-link'><span class='tid'>AUG-0454</span><span class='tname'>The Craft Awareness</span></a>
+        <a href='the-voice-enunciation.html' class='term-link'><span class='tid'>AUG-0455</span><span class='tname'>The Voice Enunciation</span></a>
+        <a href='the-waiting-dot.html' class='term-link'><span class='tid'>AUG-0456</span><span class='tname'>The Waiting Dot</span></a>
+        <a href='the-human-check.html' class='term-link'><span class='tid'>AUG-0457</span><span class='tname'>The Human Check</span></a>
+        <a href='the-curiosity-drill.html' class='term-link'><span class='tid'>AUG-0458</span><span class='tname'>The Curiosity Drill</span></a>
+        <a href='the-summary-awareness.html' class='term-link'><span class='tid'>AUG-0459</span><span class='tname'>The Summary Awareness</span></a>
+        <a href='the-outdoor-plan.html' class='term-link'><span class='tid'>AUG-0460</span><span class='tname'>The Outdoor Plan</span></a>
+        <a href='the-partner-interpreter.html' class='term-link'><span class='tid'>AUG-0461</span><span class='tname'>The Partner Interpreter</span></a>
+        <a href='the-detail-lookup.html' class='term-link'><span class='tid'>AUG-0462</span><span class='tname'>The Detail Lookup</span></a>
+        <a href='the-value-sniper.html' class='term-link'><span class='tid'>AUG-0463</span><span class='tname'>The Value Sniper</span></a>
+        <a href='the-style-rater.html' class='term-link'><span class='tid'>AUG-0464</span><span class='tname'>The Style Rater</span></a>
+        <a href='the-idea-filter.html' class='term-link'><span class='tid'>AUG-0465</span><span class='tname'>The Idea Filter</span></a>
+        <a href='the-knowledge-gap.html' class='term-link'><span class='tid'>AUG-0466</span><span class='tname'>The Knowledge Gap</span></a>
+        <a href='the-memory-anchor.html' class='term-link'><span class='tid'>AUG-0467</span><span class='tname'>The Memory Anchor</span></a>
+        <a href='the-silicon-friend.html' class='term-link'><span class='tid'>AUG-0468</span><span class='tname'>The Silicon Friend</span></a>
+        <a href='the-spreadsheet-relief.html' class='term-link'><span class='tid'>AUG-0469</span><span class='tname'>The Spreadsheet Relief</span></a>
+        <a href='the-name-detective.html' class='term-link'><span class='tid'>AUG-0470</span><span class='tname'>The Name Detective</span></a>
+        <a href='the-tone-dial.html' class='term-link'><span class='tid'>AUG-0471</span><span class='tname'>The Tone Dial</span></a>
+        <a href='the-vacation-planner.html' class='term-link'><span class='tid'>AUG-0472</span><span class='tname'>The Vacation Planner</span></a>
+        <a href='the-book-condenser.html' class='term-link'><span class='tid'>AUG-0473</span><span class='tname'>The Book Condenser</span></a>
+        <a href='the-math-shortcut.html' class='term-link'><span class='tid'>AUG-0474</span><span class='tname'>The Math Shortcut</span></a>
+        <a href='the-printer-whisperer.html' class='term-link'><span class='tid'>AUG-0475</span><span class='tname'>The Printer Whisperer</span></a>
+        <a href='the-wedding-speech.html' class='term-link'><span class='tid'>AUG-0476</span><span class='tname'>The Wedding Speech</span></a>
+        <a href='the-synonym-hunt.html' class='term-link'><span class='tid'>AUG-0477</span><span class='tname'>The Synonym Hunt</span></a>
+        <a href='resulting-connection-effect.html' class='term-link'><span class='tid'>AUG-0478</span><span class='tname'>Resulting-Connection Effect</span></a>
+        <a href='the-send-pause.html' class='term-link'><span class='tid'>AUG-0479</span><span class='tname'>The Send Pause</span></a>
+        <a href='the-tutorial-speedrun.html' class='term-link'><span class='tid'>AUG-0480</span><span class='tname'>The Tutorial Speedrun</span></a>
+        <a href='the-diy-confidence.html' class='term-link'><span class='tid'>AUG-0481</span><span class='tname'>The DIY Confidence</span></a>
+        <a href='the-resource-search.html' class='term-link'><span class='tid'>AUG-0482</span><span class='tname'>The Resource Search</span></a>
+        <a href='the-leftover-puzzle.html' class='term-link'><span class='tid'>AUG-0483</span><span class='tname'>The Leftover Puzzle</span></a>
+        <a href='the-pet-name.html' class='term-link'><span class='tid'>AUG-0484</span><span class='tname'>The Pet Name</span></a>
+        <a href='the-lyric-finder.html' class='term-link'><span class='tid'>AUG-0485</span><span class='tname'>The Lyric Finder</span></a>
+        <a href='the-email-shield.html' class='term-link'><span class='tid'>AUG-0486</span><span class='tname'>The Email Shield</span></a>
+        <a href='the-joke-failure.html' class='term-link'><span class='tid'>AUG-0487</span><span class='tname'>The Joke Failure</span></a>
+        <a href='the-argument-fact.html' class='term-link'><span class='tid'>AUG-0488</span><span class='tname'>The Argument Fact</span></a>
+        <a href='the-launchpad.html' class='term-link'><span class='tid'>AUG-0489</span><span class='tname'>The Launchpad</span></a>
+        <a href='the-hobby-start.html' class='term-link'><span class='tid'>AUG-0490</span><span class='tname'>The Hobby Start</span></a>
+        <a href='the-state-label.html' class='term-link'><span class='tid'>AUG-0491</span><span class='tname'>The State Label</span></a>
+        <a href='the-progress-tap.html' class='term-link'><span class='tid'>AUG-0492</span><span class='tname'>The Progress Tap</span></a>
+        <a href='the-quiet-fill.html' class='term-link'><span class='tid'>AUG-0493</span><span class='tname'>The Quiet Fill</span></a>
+        <a href='the-rubber-duck.html' class='term-link'><span class='tid'>AUG-0494</span><span class='tname'>The Rubber Duck</span></a>
+        <a href='the-beta-courage.html' class='term-link'><span class='tid'>AUG-0495</span><span class='tname'>The Beta Courage</span></a>
+        <a href='the-trivia-shield.html' class='term-link'><span class='tid'>AUG-0496</span><span class='tname'>The Trivia Shield</span></a>
+        <a href='the-memory-scaffold.html' class='term-link'><span class='tid'>AUG-0497</span><span class='tname'>The Memory Scaffold</span></a>
+        <a href='the-jargon-filter.html' class='term-link'><span class='tid'>AUG-0498</span><span class='tname'>The Jargon Filter</span></a>
+        <a href='the-restart-button.html' class='term-link'><span class='tid'>AUG-0499</span><span class='tname'>The Restart Button</span></a>
+        <a href='the-travel-ghost.html' class='term-link'><span class='tid'>AUG-0500</span><span class='tname'>The Travel Ghost</span></a>
+        <a href='the-style-shifter.html' class='term-link'><span class='tid'>AUG-0501</span><span class='tname'>The Style Shifter</span></a>
+        <a href='the-conflict-script.html' class='term-link'><span class='tid'>AUG-0502</span><span class='tname'>The Conflict Script</span></a>
+        <a href='the-gift-finder.html' class='term-link'><span class='tid'>AUG-0503</span><span class='tname'>The Gift Finder</span></a>
+        <a href='the-idea-catcher.html' class='term-link'><span class='tid'>AUG-0504</span><span class='tname'>The Idea Catcher</span></a>
+        <a href='the-future-wish.html' class='term-link'><span class='tid'>AUG-0505</span><span class='tname'>The Future Wish</span></a>
+        <a href='the-exit-message.html' class='term-link'><span class='tid'>AUG-0506</span><span class='tname'>The Exit Message</span></a>
+        <a href='the-quiet-help.html' class='term-link'><span class='tid'>AUG-0507</span><span class='tname'>The Quiet Help</span></a>
+        <a href='the-joke-explainer.html' class='term-link'><span class='tid'>AUG-0508</span><span class='tname'>The Joke Explainer</span></a>
+        <a href='the-brave-ask.html' class='term-link'><span class='tid'>AUG-0509</span><span class='tname'>The Brave Ask</span></a>
+        <a href='the-baker-puzzle.html' class='term-link'><span class='tid'>AUG-0510</span><span class='tname'>The Baker Puzzle</span></a>
+        <a href='the-knitter-knot.html' class='term-link'><span class='tid'>AUG-0511</span><span class='tname'>The Knitter Knot</span></a>
+        <a href='the-excel-pause.html' class='term-link'><span class='tid'>AUG-0512</span><span class='tname'>The Excel Pause</span></a>
+        <a href='the-language-buddy.html' class='term-link'><span class='tid'>AUG-0513</span><span class='tname'>The Language Buddy</span></a>
+        <a href='the-beta-reader.html' class='term-link'><span class='tid'>AUG-0514</span><span class='tname'>The Beta Reader</span></a>
+        <a href='the-babel-break.html' class='term-link'><span class='tid'>AUG-0515</span><span class='tname'>The Babel Break</span></a>
+        <a href='the-capability-finder.html' class='term-link'><span class='tid'>AUG-0516</span><span class='tname'>The Capability Finder</span></a>
+        <a href='the-grandparent-bridge.html' class='term-link'><span class='tid'>AUG-0517</span><span class='tname'>The Grandparent Bridge</span></a>
+        <a href='the-accessibility-eye.html' class='term-link'><span class='tid'>AUG-0518</span><span class='tname'>The Accessibility Eye</span></a>
+        <a href='the-letter-decipher.html' class='term-link'><span class='tid'>AUG-0519</span><span class='tname'>The Letter Decipher</span></a>
+        <a href='the-wiki-wormhole.html' class='term-link'><span class='tid'>AUG-0520</span><span class='tname'>The Wiki Wormhole</span></a>
+        <a href='the-reflected-self.html' class='term-link'><span class='tid'>AUG-0521</span><span class='tname'>The Reflected Self</span></a>
+        <a href='resource-cumulative-effect.html' class='term-link'><span class='tid'>AUG-0522</span><span class='tname'>Resource-Cumulative Effect</span></a>
+        <a href='the-solo-output.html' class='term-link'><span class='tid'>AUG-0523</span><span class='tname'>The Solo Output</span></a>
+        <a href='the-context-layer.html' class='term-link'><span class='tid'>AUG-0524</span><span class='tname'>The Context Layer</span></a>
+        <a href='the-secret-listener.html' class='term-link'><span class='tid'>AUG-0525</span><span class='tname'>The Secret Listener</span></a>
+        <a href='the-borrowed-crown.html' class='term-link'><span class='tid'>AUG-0526</span><span class='tname'>The Borrowed Crown</span></a>
+        <a href='the-truth-anchor.html' class='term-link'><span class='tid'>AUG-0527</span><span class='tname'>The Truth Anchor</span></a>
+        <a href='the-thinking-shortcut.html' class='term-link'><span class='tid'>AUG-0528</span><span class='tname'>The Thinking Shortcut</span></a>
+        <a href='the-closeness-bridge.html' class='term-link'><span class='tid'>AUG-0529</span><span class='tname'>The Closeness Bridge</span></a>
+        <a href='the-forward-move.html' class='term-link'><span class='tid'>AUG-0530</span><span class='tname'>The Forward Move</span></a>
+        <a href='the-validation-loop.html' class='term-link'><span class='tid'>AUG-0531</span><span class='tname'>The Validation Loop</span></a>
+        <a href='the-memory-hole.html' class='term-link'><span class='tid'>AUG-0532</span><span class='tname'>The Memory Hole</span></a>
+        <a href='the-social-script.html' class='term-link'><span class='tid'>AUG-0533</span><span class='tname'>The Social Script</span></a>
+        <a href='the-hidden-angle-finder.html' class='term-link'><span class='tid'>AUG-0534</span><span class='tname'>The Hidden Angle Finder</span></a>
+        <a href='the-reality-edit.html' class='term-link'><span class='tid'>AUG-0535</span><span class='tname'>The Reality Edit</span></a>
+        <a href='the-intellectual-pose.html' class='term-link'><span class='tid'>AUG-0536</span><span class='tname'>The Intellectual Pose</span></a>
+        <a href='the-safety-bubble.html' class='term-link'><span class='tid'>AUG-0537</span><span class='tname'>The Safety Bubble</span></a>
+        <a href='the-creation-gap.html' class='term-link'><span class='tid'>AUG-0538</span><span class='tname'>The Creation Gap</span></a>
+        <a href='the-companion-shift.html' class='term-link'><span class='tid'>AUG-0539</span><span class='tname'>The Companion Shift</span></a>
+        <a href='the-principle-guard.html' class='term-link'><span class='tid'>AUG-0540</span><span class='tname'>The Principle Guard</span></a>
+        <a href='the-attention-fracture.html' class='term-link'><span class='tid'>AUG-0541</span><span class='tname'>The Attention Fracture</span></a>
+        <a href='the-hidden-advisor.html' class='term-link'><span class='tid'>AUG-0542</span><span class='tname'>The Hidden Advisor</span></a>
+        <a href='the-impact-rush.html' class='term-link'><span class='tid'>AUG-0543</span><span class='tname'>The Impact Rush</span></a>
+        <a href='the-perfect-parent.html' class='term-link'><span class='tid'>AUG-0544</span><span class='tname'>The Perfect Parent</span></a>
+        <a href='the-craft-shift.html' class='term-link'><span class='tid'>AUG-0545</span><span class='tname'>The Craft Shift</span></a>
+        <a href='the-digital-double.html' class='term-link'><span class='tid'>AUG-0546</span><span class='tname'>The Digital Double</span></a>
+        <a href='the-outsourced-distance.html' class='term-link'><span class='tid'>AUG-0547</span><span class='tname'>The Outsourced Distance</span></a>
+        <a href='the-romance-shortcut.html' class='term-link'><span class='tid'>AUG-0548</span><span class='tname'>The Romance Shortcut</span></a>
+        <a href='the-authorship-blur.html' class='term-link'><span class='tid'>AUG-0549</span><span class='tname'>The Authorship Blur</span></a>
+        <a href='the-careful-tester.html' class='term-link'><span class='tid'>AUG-0550</span><span class='tname'>The Careful Tester</span></a>
+        <a href='the-expectation-check.html' class='term-link'><span class='tid'>AUG-0551</span><span class='tname'>The Expectation Check</span></a>
+        <a href='depends-fundamental-effect.html' class='term-link'><span class='tid'>AUG-0552</span><span class='tname'>Depends-Fundamental Effect</span></a>
+        <a href='the-pseudo-productive.html' class='term-link'><span class='tid'>AUG-0553</span><span class='tname'>The Pseudo Productive</span></a>
+        <a href='the-creative-spark.html' class='term-link'><span class='tid'>AUG-0554</span><span class='tname'>The Creative Spark</span></a>
+        <a href='complex-want-effect.html' class='term-link'><span class='tid'>AUG-0555</span><span class='tname'>Complex-Want Effect</span></a>
+        <a href='the-filtered-world.html' class='term-link'><span class='tid'>AUG-0556</span><span class='tname'>The Filtered World</span></a>
+        <a href='the-decision-pause.html' class='term-link'><span class='tid'>AUG-0557</span><span class='tname'>The Decision Pause</span></a>
+        <a href='the-hierarchy-insight.html' class='term-link'><span class='tid'>AUG-0558</span><span class='tname'>The Hierarchy Insight</span></a>
+        <a href='the-tone-proxy.html' class='term-link'><span class='tid'>AUG-0559</span><span class='tname'>The Tone Proxy</span></a>
+        <a href='the-conversation-loop.html' class='term-link'><span class='tid'>AUG-0560</span><span class='tname'>The Conversation Loop</span></a>
+        <a href='the-authority-lean.html' class='term-link'><span class='tid'>AUG-0561</span><span class='tname'>The Authority Lean</span></a>
+        <a href='the-curiosity-shift.html' class='term-link'><span class='tid'>AUG-0562</span><span class='tname'>The Curiosity Shift</span></a>
+        <a href='the-level-selector.html' class='term-link'><span class='tid'>AUG-0563</span><span class='tname'>The Level Selector</span></a>
+        <a href='the-path-mapper.html' class='term-link'><span class='tid'>AUG-0564</span><span class='tname'>The Path Mapper</span></a>
+        <a href='the-balance-filter.html' class='term-link'><span class='tid'>AUG-0565</span><span class='tname'>The Balance Filter</span></a>
+        <a href='the-ongoing-partnership.html' class='term-link'><span class='tid'>AUG-0566</span><span class='tname'>The Ongoing Partnership</span></a>
+        <a href='the-ghost-machine.html' class='term-link'><span class='tid'>AUG-0567</span><span class='tname'>The Ghost Machine</span></a>
+        <a href='the-response-shield.html' class='term-link'><span class='tid'>AUG-0568</span><span class='tname'>The Response Shield</span></a>
+        <a href='the-homework-assist.html' class='term-link'><span class='tid'>AUG-0569</span><span class='tname'>The Homework Assist</span></a>
+        <a href='the-lore-keeper.html' class='term-link'><span class='tid'>AUG-0570</span><span class='tname'>The Lore Keeper</span></a>
+        <a href='the-parent-patch.html' class='term-link'><span class='tid'>AUG-0571</span><span class='tname'>The Parent Patch</span></a>
+        <a href='the-style-copy.html' class='term-link'><span class='tid'>AUG-0572</span><span class='tname'>The Style Copy</span></a>
+        <a href='the-voice-morph.html' class='term-link'><span class='tid'>AUG-0573</span><span class='tname'>The Voice Morph</span></a>
+        <a href='the-drama-solver.html' class='term-link'><span class='tid'>AUG-0574</span><span class='tname'>The Drama Solver</span></a>
+        <a href='the-future-weight.html' class='term-link'><span class='tid'>AUG-0575</span><span class='tname'>The Future Weight</span></a>
+        <a href='the-insta-caption.html' class='term-link'><span class='tid'>AUG-0576</span><span class='tname'>The Insta Caption</span></a>
+        <a href='the-secret-tutor.html' class='term-link'><span class='tid'>AUG-0577</span><span class='tname'>The Secret Tutor</span></a>
+        <a href='the-state-sequence.html' class='term-link'><span class='tid'>AUG-0578</span><span class='tname'>The State Sequence</span></a>
+        <a href='the-silicon-consigliere.html' class='term-link'><span class='tid'>AUG-0579</span><span class='tname'>The Silicon Consigliere</span></a>
+        <a href='the-footprint-code.html' class='term-link'><span class='tid'>AUG-0580</span><span class='tname'>The Footprint Code</span></a>
+        <a href='the-truth-filter.html' class='term-link'><span class='tid'>AUG-0581</span><span class='tname'>The Truth Filter</span></a>
+        <a href='the-transition-script.html' class='term-link'><span class='tid'>AUG-0582</span><span class='tname'>The Transition Script</span></a>
+        <a href='the-full-control.html' class='term-link'><span class='tid'>AUG-0583</span><span class='tname'>The Full Control</span></a>
+        <a href='the-time-buyer.html' class='term-link'><span class='tid'>AUG-0584</span><span class='tname'>The Time Buyer</span></a>
+        <a href='the-factor-simulator.html' class='term-link'><span class='tid'>AUG-0585</span><span class='tname'>The Factor Simulator</span></a>
+        <a href='the-quiet-room.html' class='term-link'><span class='tid'>AUG-0586</span><span class='tname'>The Quiet Room</span></a>
+        <a href='the-succession-test.html' class='term-link'><span class='tid'>AUG-0587</span><span class='tname'>The Succession Test</span></a>
+        <a href='the-trust-shift.html' class='term-link'><span class='tid'>AUG-0588</span><span class='tname'>The Trust Shift</span></a>
+        <a href='the-algorithm-whisperer.html' class='term-link'><span class='tid'>AUG-0589</span><span class='tname'>The Algorithm Whisperer</span></a>
+        <a href='the-comment-shield.html' class='term-link'><span class='tid'>AUG-0590</span><span class='tname'>The Comment Shield</span></a>
+        <a href='the-virtual-double-effect.html' class='term-link'><span class='tid'>AUG-0591</span><span class='tname'>The Virtual Double Effect</span></a>
+        <a href='the-content-mill.html' class='term-link'><span class='tid'>AUG-0592</span><span class='tname'>The Content Mill</span></a>
+        <a href='the-trend-rush.html' class='term-link'><span class='tid'>AUG-0593</span><span class='tname'>The Trend Rush</span></a>
+        <a href='loyalty-system-effect.html' class='term-link'><span class='tid'>AUG-0594</span><span class='tname'>Loyalty-System Effect</span></a>
+        <a href='the-filter-face.html' class='term-link'><span class='tid'>AUG-0595</span><span class='tname'>The Filter Face</span></a>
+        <a href='the-idea-blur.html' class='term-link'><span class='tid'>AUG-0596</span><span class='tname'>The Idea Blur</span></a>
+        <a href='the-perception-scan.html' class='term-link'><span class='tid'>AUG-0597</span><span class='tname'>The Perception Scan</span></a>
+        <a href='the-lasting-post.html' class='term-link'><span class='tid'>AUG-0598</span><span class='tname'>The Lasting Post</span></a>
+        <a href='the-memory-bank.html' class='term-link'><span class='tid'>AUG-0599</span><span class='tname'>The Memory Bank</span></a>
+        <a href='the-final-merge.html' class='term-link'><span class='tid'>AUG-0600</span><span class='tname'>The Final Merge</span></a>
+        <a href='the-echo-love.html' class='term-link'><span class='tid'>AUG-0601</span><span class='tname'>The Echo Love</span></a>
+        <a href='the-closing-spark.html' class='term-link'><span class='tid'>AUG-0602</span><span class='tname'>The Closing Spark</span></a>
+        <a href='the-quiet-frontier.html' class='term-link'><span class='tid'>AUG-0603</span><span class='tname'>The Quiet Frontier</span></a>
+        <a href='the-forgotten-hand.html' class='term-link'><span class='tid'>AUG-0604</span><span class='tname'>The Forgotten Hand</span></a>
+        <a href='the-child-gaze.html' class='term-link'><span class='tid'>AUG-0605</span><span class='tname'>The Child Gaze</span></a>
+        <a href='the-fact-tap.html' class='term-link'><span class='tid'>AUG-0606</span><span class='tname'>The Fact Tap</span></a>
+        <a href='the-last-secret.html' class='term-link'><span class='tid'>AUG-0607</span><span class='tname'>The Last Secret</span></a>
+        <a href='the-design-pause.html' class='term-link'><span class='tid'>AUG-0608</span><span class='tname'>The Design Pause</span></a>
+        <a href='the-principle-wash.html' class='term-link'><span class='tid'>AUG-0609</span><span class='tname'>The Principle Wash</span></a>
+        <a href='the-final-word.html' class='term-link'><span class='tid'>AUG-0610</span><span class='tname'>The Final Word</span></a>
+        <a href='the-happy-cocoon.html' class='term-link'><span class='tid'>AUG-0611</span><span class='tname'>The Happy Cocoon</span></a>
+        <a href='the-meeting-point.html' class='term-link'><span class='tid'>AUG-0612</span><span class='tname'>The Meeting Point</span></a>
+        <a href='the-creator-rush.html' class='term-link'><span class='tid'>AUG-0613</span><span class='tname'>The Creator Rush</span></a>
+        <a href='the-synthetic-spotting.html' class='term-link'><span class='tid'>AUG-0614</span><span class='tname'>The Synthetic Spotting</span></a>
+        <a href='the-question-seed.html' class='term-link'><span class='tid'>AUG-0615</span><span class='tname'>The Question Seed</span></a>
+        <a href='the-link-tuning.html' class='term-link'><span class='tid'>AUG-0616</span><span class='tname'>The Link Tuning</span></a>
+        <a href='the-mediocrity-loop.html' class='term-link'><span class='tid'>AUG-0617</span><span class='tname'>The Mediocrity Loop</span></a>
+        <a href='the-downtime-delegation.html' class='term-link'><span class='tid'>AUG-0618</span><span class='tname'>The Downtime Delegation</span></a>
+        <a href='the-digital-snapshot.html' class='term-link'><span class='tid'>AUG-0619</span><span class='tname'>The Digital Snapshot</span></a>
+        <a href='the-steam-release.html' class='term-link'><span class='tid'>AUG-0620</span><span class='tname'>The Steam Release</span></a>
+        <a href='the-recall-echo.html' class='term-link'><span class='tid'>AUG-0621</span><span class='tname'>The Recall Echo</span></a>
+        <a href='the-focus-duration.html' class='term-link'><span class='tid'>AUG-0622</span><span class='tname'>The Focus Duration</span></a>
+        <a href='the-standard-checker.html' class='term-link'><span class='tid'>AUG-0623</span><span class='tname'>The Standard Checker</span></a>
+        <a href='the-forgotten-name.html' class='term-link'><span class='tid'>AUG-0624</span><span class='tname'>The Forgotten Name</span></a>
+        <a href='the-everyday-insight.html' class='term-link'><span class='tid'>AUG-0625</span><span class='tname'>The Everyday Insight</span></a>
+        <a href='the-independent-win.html' class='term-link'><span class='tid'>AUG-0626</span><span class='tname'>The Independent Win</span></a>
+        <a href='the-data-shadow.html' class='term-link'><span class='tid'>AUG-0627</span><span class='tname'>The Data Shadow</span></a>
+        <a href='the-gentle-sphere.html' class='term-link'><span class='tid'>AUG-0628</span><span class='tname'>The Gentle Sphere</span></a>
+        <a href='the-heritage-mark.html' class='term-link'><span class='tid'>AUG-0629</span><span class='tname'>The Heritage Mark</span></a>
+        <a href='the-silent-dinner.html' class='term-link'><span class='tid'>AUG-0630</span><span class='tname'>The Silent Dinner</span></a>
+        <a href='the-algorithm-god.html' class='term-link'><span class='tid'>AUG-0631</span><span class='tname'>The Algorithm God</span></a>
+        <a href='the-offline-moment.html' class='term-link'><span class='tid'>AUG-0632</span><span class='tname'>The Offline Moment</span></a>
+        <a href='the-voice-shift.html' class='term-link'><span class='tid'>AUG-0633</span><span class='tname'>The Voice Shift</span></a>
+        <a href='the-view-exchange.html' class='term-link'><span class='tid'>AUG-0634</span><span class='tname'>The View Exchange</span></a>
+        <a href='the-memory-edit.html' class='term-link'><span class='tid'>AUG-0635</span><span class='tname'>The Memory Edit</span></a>
+        <a href='the-phase-out-switch.html' class='term-link'><span class='tid'>AUG-0636</span><span class='tname'>The Phase-Out Switch</span></a>
+        <a href='the-link-forward.html' class='term-link'><span class='tid'>AUG-0637</span><span class='tname'>The Link Forward</span></a>
+        <a href='the-archive-pause.html' class='term-link'><span class='tid'>AUG-0638</span><span class='tname'>The Archive Pause</span></a>
+        <a href='the-duplicate-notice.html' class='term-link'><span class='tid'>AUG-0639</span><span class='tname'>The Duplicate Notice</span></a>
+        <a href='the-truth-quest.html' class='term-link'><span class='tid'>AUG-0640</span><span class='tname'>The Truth Quest</span></a>
+        <a href='the-notification-buzz.html' class='term-link'><span class='tid'>AUG-0641</span><span class='tname'>The Notification Buzz</span></a>
+        <a href='the-time-warp.html' class='term-link'><span class='tid'>AUG-0642</span><span class='tname'>The Time Warp</span></a>
+        <a href='the-manual-error.html' class='term-link'><span class='tid'>AUG-0643</span><span class='tname'>The Manual Error</span></a>
+        <a href='the-uncaptured-moment.html' class='term-link'><span class='tid'>AUG-0644</span><span class='tname'>The Uncaptured Moment</span></a>
+        <a href='humanity-question-effect.html' class='term-link'><span class='tid'>AUG-0645</span><span class='tname'>Humanity-Question Effect</span></a>
+        <a href='input-inputs-effect.html' class='term-link'><span class='tid'>AUG-0646</span><span class='tname'>Input-Inputs Effect</span></a>
+        <a href='first-input-effect.html' class='term-link'><span class='tid'>AUG-0647</span><span class='tname'>First-Input Effect</span></a>
+        <a href='the-formalized-interaction-input.html' class='term-link'><span class='tid'>AUG-0648</span><span class='tname'>The Formalized Interaction Input</span></a>
+        <a href='the-egalitarian-mode.html' class='term-link'><span class='tid'>AUG-0649</span><span class='tname'>The Egalitarian Mode</span></a>
+        <a href='layer-references-effect.html' class='term-link'><span class='tid'>AUG-0650</span><span class='tname'>Layer-References Effect</span></a>
+        <a href='the-indirect-communication-pattern.html' class='term-link'><span class='tid'>AUG-0651</span><span class='tname'>The Indirect Communication Pattern</span></a>
+        <a href='the-communication-style-contrast.html' class='term-link'><span class='tid'>AUG-0652</span><span class='tname'>The Communication Style Contrast</span></a>
+        <a href='the-contextual-phrasing.html' class='term-link'><span class='tid'>AUG-0653</span><span class='tname'>The Contextual Phrasing</span></a>
+        <a href='the-consensus-seeker.html' class='term-link'><span class='tid'>AUG-0654</span><span class='tname'>The Consensus Seeker</span></a>
+        <a href='the-debate-culture-mix.html' class='term-link'><span class='tid'>AUG-0655</span><span class='tname'>The Debate Culture Mix</span></a>
+        <a href='the-silence-interpretation.html' class='term-link'><span class='tid'>AUG-0656</span><span class='tname'>The Silence Interpretation</span></a>
+        <a href='the-register-range.html' class='term-link'><span class='tid'>AUG-0657</span><span class='tname'>The Register Range</span></a>
+        <a href='the-register-surprise.html' class='term-link'><span class='tid'>AUG-0658</span><span class='tname'>The Register Surprise</span></a>
+        <a href='the-punctuality-lens.html' class='term-link'><span class='tid'>AUG-0659</span><span class='tname'>The Punctuality Lens</span></a>
+        <a href='the-parallel-time-orientation.html' class='term-link'><span class='tid'>AUG-0660</span><span class='tname'>The Parallel Time Orientation</span></a>
+        <a href='the-sequential-time-orientation.html' class='term-link'><span class='tid'>AUG-0661</span><span class='tname'>The Sequential Time Orientation</span></a>
+        <a href='the-gift-culture-layer.html' class='term-link'><span class='tid'>AUG-0662</span><span class='tname'>The Gift Culture Layer</span></a>
+        <a href='the-hospitality-code.html' class='term-link'><span class='tid'>AUG-0663</span><span class='tname'>The Hospitality Code</span></a>
+        <a href='the-privacy-perimeter.html' class='term-link'><span class='tid'>AUG-0664</span><span class='tname'>The Privacy Perimeter</span></a>
+        <a href='the-context-boundary-navigator.html' class='term-link'><span class='tid'>AUG-0665</span><span class='tname'>The Context Boundary Navigator</span></a>
+        <a href='the-sharing-norm.html' class='term-link'><span class='tid'>AUG-0666</span><span class='tname'>The Sharing Norm</span></a>
+        <a href='the-cultural-threshold.html' class='term-link'><span class='tid'>AUG-0667</span><span class='tname'>The Cultural Threshold</span></a>
+        <a href='the-humor-portability.html' class='term-link'><span class='tid'>AUG-0668</span><span class='tname'>The Humor Portability</span></a>
+        <a href='the-rhetorical-style-differential.html' class='term-link'><span class='tid'>AUG-0669</span><span class='tname'>The Rhetorical Style Differential</span></a>
+        <a href='the-rhetorical-tone-detector.html' class='term-link'><span class='tid'>AUG-0670</span><span class='tname'>The Rhetorical Tone Detector</span></a>
+        <a href='formalized-input-effect.html' class='term-link'><span class='tid'>AUG-0671</span><span class='tname'>Formalized-Input Effect</span></a>
+        <a href='the-hierarchy-range.html' class='term-link'><span class='tid'>AUG-0672</span><span class='tname'>The Hierarchy Range</span></a>
+        <a href='the-seniority-awareness.html' class='term-link'><span class='tid'>AUG-0673</span><span class='tname'>The Seniority Awareness</span></a>
+        <a href='the-generational-register.html' class='term-link'><span class='tid'>AUG-0674</span><span class='tname'>The Generational Register</span></a>
+        <a href='roles-contextualized-effect.html' class='term-link'><span class='tid'>AUG-0675</span><span class='tname'>Roles-Contextualized Effect</span></a>
+        <a href='the-socioeconomic-range.html' class='term-link'><span class='tid'>AUG-0676</span><span class='tname'>The Socioeconomic Range</span></a>
+        <a href='the-regional-access-range.html' class='term-link'><span class='tid'>AUG-0677</span><span class='tname'>The Regional Access Range</span></a>
+        <a href='the-transnational-input.html' class='term-link'><span class='tid'>AUG-0678</span><span class='tname'>The Transnational Input</span></a>
+        <a href='the-migration-context-bridge.html' class='term-link'><span class='tid'>AUG-0679</span><span class='tname'>The Migration Context Bridge</span></a>
+        <a href='the-context-adaptation.html' class='term-link'><span class='tid'>AUG-0680</span><span class='tname'>The Context Adaptation</span></a>
+        <a href='the-multi-context-identity.html' class='term-link'><span class='tid'>AUG-0681</span><span class='tname'>The Multi-Context Identity</span></a>
+        <a href='the-relocation-toolkit.html' class='term-link'><span class='tid'>AUG-0682</span><span class='tname'>The Relocation Toolkit</span></a>
+        <a href='the-origin-language.html' class='term-link'><span class='tid'>AUG-0683</span><span class='tname'>The Origin Language</span></a>
+        <a href='the-integration-range.html' class='term-link'><span class='tid'>AUG-0684</span><span class='tname'>The Integration Range</span></a>
+        <a href='the-cultural-reflection-pattern.html' class='term-link'><span class='tid'>AUG-0685</span><span class='tname'>The Cultural Reflection Pattern</span></a>
+        <a href='the-lingua-franca-effect.html' class='term-link'><span class='tid'>AUG-0686</span><span class='tname'>The Lingua Franca Effect</span></a>
+        <a href='the-prevailing-language-pattern.html' class='term-link'><span class='tid'>AUG-0687</span><span class='tname'>The Prevailing Language Pattern</span></a>
+        <a href='less-language-effect.html' class='term-link'><span class='tid'>AUG-0688</span><span class='tname'>Less-Language Effect</span></a>
+        <a href='the-script-barrier.html' class='term-link'><span class='tid'>AUG-0689</span><span class='tname'>The Script Barrier</span></a>
+        <a href='the-tone-language-challenge.html' class='term-link'><span class='tid'>AUG-0690</span><span class='tname'>The Tone Language Challenge</span></a>
+        <a href='the-dialect-decoder.html' class='term-link'><span class='tid'>AUG-0691</span><span class='tname'>The Dialect Decoder</span></a>
+        <a href='the-register-mismatch.html' class='term-link'><span class='tid'>AUG-0692</span><span class='tname'>The Register Mismatch</span></a>
+        <a href='processing-bilingual-effect.html' class='term-link'><span class='tid'>AUG-0693</span><span class='tname'>Processing-Bilingual Effect</span></a>
+        <a href='the-translation-fidelity.html' class='term-link'><span class='tid'>AUG-0694</span><span class='tname'>The Translation Fidelity</span></a>
+        <a href='the-untranslatable-term.html' class='term-link'><span class='tid'>AUG-0695</span><span class='tname'>The Untranslatable Term</span></a>
+        <a href='the-cultural-idiom.html' class='term-link'><span class='tid'>AUG-0696</span><span class='tname'>The Cultural Idiom</span></a>
+        <a href='the-proverb-puzzle.html' class='term-link'><span class='tid'>AUG-0697</span><span class='tname'>The Proverb Puzzle</span></a>
+        <a href='the-formality-trap.html' class='term-link'><span class='tid'>AUG-0698</span><span class='tname'>The Formality Trap</span></a>
+        <a href='the-honorific-maze.html' class='term-link'><span class='tid'>AUG-0699</span><span class='tname'>The Honorific Maze</span></a>
+        <a href='the-gendered-language-fix.html' class='term-link'><span class='tid'>AUG-0700</span><span class='tname'>The Gendered Language Fix</span></a>
+        <a href='the-inclusive-language-review.html' class='term-link'><span class='tid'>AUG-0701</span><span class='tname'>The Inclusive Language Review</span></a>
+        <a href='the-plain-language-convert.html' class='term-link'><span class='tid'>AUG-0702</span><span class='tname'>The Plain Language Convert</span></a>
+        <a href='the-academic-register.html' class='term-link'><span class='tid'>AUG-0703</span><span class='tname'>The Academic Register</span></a>
+        <a href='the-street-language-input.html' class='term-link'><span class='tid'>AUG-0704</span><span class='tname'>The Street Language Input</span></a>
+        <a href='the-professional-lingua.html' class='term-link'><span class='tid'>AUG-0705</span><span class='tname'>The Professional Lingua</span></a>
+        <a href='the-mother-tongue-comfort.html' class='term-link'><span class='tid'>AUG-0706</span><span class='tname'>The Mother Tongue Comfort</span></a>
+        <a href='the-second-language-friction.html' class='term-link'><span class='tid'>AUG-0707</span><span class='tname'>The Second-Language Friction</span></a>
+        <a href='the-bilingual-dynamic.html' class='term-link'><span class='tid'>AUG-0708</span><span class='tname'>The Bilingual Dynamic</span></a>
+        <a href='the-trilingual-juggle.html' class='term-link'><span class='tid'>AUG-0709</span><span class='tname'>The Trilingual Juggle</span></a>
+        <a href='the-language-confidence-differential.html' class='term-link'><span class='tid'>AUG-0710</span><span class='tname'>The Language Confidence Differential</span></a>
+        <a href='the-accent-persistence.html' class='term-link'><span class='tid'>AUG-0711</span><span class='tname'>The Accent Persistence</span></a>
+        <a href='speak-language-effect.html' class='term-link'><span class='tid'>AUG-0712</span><span class='tname'>Speak-Language Effect</span></a>
+        <a href='the-emoji-semantics.html' class='term-link'><span class='tid'>AUG-0713</span><span class='tname'>The Emoji Semantics</span></a>
+        <a href='the-gesture-differential.html' class='term-link'><span class='tid'>AUG-0714</span><span class='tname'>The Gesture Differential</span></a>
+        <a href='the-punctuation-culture.html' class='term-link'><span class='tid'>AUG-0715</span><span class='tname'>The Punctuation Culture</span></a>
+        <a href='the-reading-direction.html' class='term-link'><span class='tid'>AUG-0716</span><span class='tname'>The Reading Direction</span></a>
+        <a href='the-character-density.html' class='term-link'><span class='tid'>AUG-0717</span><span class='tname'>The Character Density</span></a>
+        <a href='the-syllabic-rhythm.html' class='term-link'><span class='tid'>AUG-0718</span><span class='tname'>The Syllabic Rhythm</span></a>
+        <a href='the-semantic-field-shift.html' class='term-link'><span class='tid'>AUG-0719</span><span class='tname'>The Semantic Field Shift</span></a>
+        <a href='the-loanword-integration.html' class='term-link'><span class='tid'>AUG-0720</span><span class='tname'>The Loanword Integration</span></a>
+        <a href='the-access-differential.html' class='term-link'><span class='tid'>AUG-0721</span><span class='tname'>The Access Differential</span></a>
+        <a href='the-infrastructure-constraint.html' class='term-link'><span class='tid'>AUG-0722</span><span class='tname'>The Infrastructure Constraint</span></a>
+        <a href='accesses-infrastructure-effect.html' class='term-link'><span class='tid'>AUG-0723</span><span class='tname'>Accesses-Infrastructure Effect</span></a>
+        <a href='the-access-cost-factor.html' class='term-link'><span class='tid'>AUG-0724</span><span class='tname'>The Access Cost Factor</span></a>
+        <a href='the-cost-threshold.html' class='term-link'><span class='tid'>AUG-0725</span><span class='tname'>The Cost Threshold</span></a>
+        <a href='the-library-access-point.html' class='term-link'><span class='tid'>AUG-0726</span><span class='tname'>The Library Access Point</span></a>
+        <a href='the-community-hub.html' class='term-link'><span class='tid'>AUG-0727</span><span class='tname'>The Community Hub</span></a>
+        <a href='the-government-gateway.html' class='term-link'><span class='tid'>AUG-0728</span><span class='tname'>The Government Gateway</span></a>
+        <a href='bound-data-effect.html' class='term-link'><span class='tid'>AUG-0729</span><span class='tname'>Bound-Data Effect</span></a>
+        <a href='lock-model-effect.html' class='term-link'><span class='tid'>AUG-0730</span><span class='tname'>Lock-Model Effect</span></a>
+        <a href='the-local-model.html' class='term-link'><span class='tid'>AUG-0731</span><span class='tname'>The Local Model</span></a>
+        <a href='the-sovereignty-question.html' class='term-link'><span class='tid'>AUG-0732</span><span class='tname'>The Sovereignty Question</span></a>
+        <a href='the-censorship-wall.html' class='term-link'><span class='tid'>AUG-0733</span><span class='tname'>The Censorship Wall</span></a>
+        <a href='the-vpn-workaround.html' class='term-link'><span class='tid'>AUG-0734</span><span class='tname'>The VPN Workaround</span></a>
+        <a href='the-digital-familiarity-range.html' class='term-link'><span class='tid'>AUG-0735</span><span class='tname'>The Digital Familiarity Range</span></a>
+        <a href='the-training-data-imbalance.html' class='term-link'><span class='tid'>AUG-0736</span><span class='tname'>The Training Data Imbalance</span></a>
+        <a href='the-data-coverage-imbalance.html' class='term-link'><span class='tid'>AUG-0737</span><span class='tname'>The Data Coverage Imbalance</span></a>
+        <a href='the-prevailing-training-pattern.html' class='term-link'><span class='tid'>AUG-0738</span><span class='tname'>The Prevailing Training Pattern</span></a>
+        <a href='the-underrepresented-region-perspective.html' class='term-link'><span class='tid'>AUG-0739</span><span class='tname'>The Underrepresented Region Perspective</span></a>
+        <a href='the-local-knowledge-system.html' class='term-link'><span class='tid'>AUG-0740</span><span class='tname'>The Local Knowledge System</span></a>
+        <a href='the-oral-tradition-bridge.html' class='term-link'><span class='tid'>AUG-0741</span><span class='tname'>The Oral Tradition Bridge</span></a>
+        <a href='the-alternative-adoption-path.html' class='term-link'><span class='tid'>AUG-0742</span><span class='tname'>The Alternative Adoption Path</span></a>
+        <a href='the-mobile-first-society.html' class='term-link'><span class='tid'>AUG-0743</span><span class='tname'>The Mobile-First Society</span></a>
+        <a href='questions-community-effect.html' class='term-link'><span class='tid'>AUG-0744</span><span class='tname'>Questions-Community Effect</span></a>
+        <a href='the-power-grid-reliance.html' class='term-link'><span class='tid'>AUG-0745</span><span class='tname'>The Power Grid Reliance</span></a>
+        <a href='the-climate-cost-awareness.html' class='term-link'><span class='tid'>AUG-0746</span><span class='tname'>The Climate Cost Awareness</span></a>
+        <a href='the-resource-consumption-pattern.html' class='term-link'><span class='tid'>AUG-0747</span><span class='tname'>The Resource Consumption Pattern</span></a>
+        <a href='the-repair-culture.html' class='term-link'><span class='tid'>AUG-0748</span><span class='tname'>The Repair Culture</span></a>
+        <a href='the-frugal-innovation.html' class='term-link'><span class='tid'>AUG-0749</span><span class='tname'>The Frugal Innovation</span></a>
+        <a href='the-reverse-innovation.html' class='term-link'><span class='tid'>AUG-0750</span><span class='tname'>The Reverse Innovation</span></a>
+        <a href='consistently-familiarity-effect.html' class='term-link'><span class='tid'>AUG-0751</span><span class='tname'>Consistently-Familiarity Effect</span></a>
+        <a href='comparative-der-autor-effect.html' class='term-link'><span class='tid'>AUG-0752</span><span class='tname'>Comparative-der Autor Effect</span></a>
+        <a href='lacking-encounter-effect.html' class='term-link'><span class='tid'>AUG-0753</span><span class='tname'>Lacking-Encounter Effect</span></a>
+        <a href='first-reference-effect.html' class='term-link'><span class='tid'>AUG-0754</span><span class='tname'>First-Reference Effect</span></a>
+        <a href='perspective-earlier-effect.html' class='term-link'><span class='tid'>AUG-0755</span><span class='tname'>Perspective-Earlier Effect</span></a>
+        <a href='perspective-origin-effect.html' class='term-link'><span class='tid'>AUG-0756</span><span class='tname'>Perspective-Origin Effect</span></a>
+        <a href='the-earliest-cohort-observation.html' class='term-link'><span class='tid'>AUG-0757</span><span class='tname'>The Earliest Cohort Observation</span></a>
+        <a href='the-retirement-reorientation.html' class='term-link'><span class='tid'>AUG-0758</span><span class='tname'>The Retirement Reorientation</span></a>
+        <a href='challenge-work-effect.html' class='term-link'><span class='tid'>AUG-0759</span><span class='tname'>Challenge-Work Effect</span></a>
+        <a href='the-learner-reliance-observation.html' class='term-link'><span class='tid'>AUG-0760</span><span class='tname'>The Learner Reliance Observation</span></a>
+        <a href='the-apprentice-paradox.html' class='term-link'><span class='tid'>AUG-0761</span><span class='tname'>The Apprentice Paradox</span></a>
+        <a href='the-competence-reversal-observation.html' class='term-link'><span class='tid'>AUG-0762</span><span class='tname'>The Competence Reversal Observation</span></a>
+        <a href='the-peer-teaching-loop.html' class='term-link'><span class='tid'>AUG-0763</span><span class='tname'>The Peer Teaching Loop</span></a>
+        <a href='the-family-tech-support.html' class='term-link'><span class='tid'>AUG-0764</span><span class='tname'>The Family Tech Support</span></a>
+        <a href='history-observation-effect.html' class='term-link'><span class='tid'>AUG-0765</span><span class='tname'>History-Observation Effect</span></a>
+        <a href='boundary-systems-effect.html' class='term-link'><span class='tid'>AUG-0766</span><span class='tname'>Boundary-Systems Effect</span></a>
+        <a href='early-adulthood-effect.html' class='term-link'><span class='tid'>AUG-0767</span><span class='tname'>Early-Adulthood Effect</span></a>
+        <a href='the-developmental-boundary.html' class='term-link'><span class='tid'>AUG-0768</span><span class='tname'>The Developmental Boundary</span></a>
+        <a href='the-parental-oversight.html' class='term-link'><span class='tid'>AUG-0769</span><span class='tname'>The Parental Oversight</span></a>
+        <a href='complexity-user-effect.html' class='term-link'><span class='tid'>AUG-0770</span><span class='tname'>Complexity-User Effect</span></a>
+        <a href='the-minor-protection-standard.html' class='term-link'><span class='tid'>AUG-0771</span><span class='tname'>The Minor Protection Standard</span></a>
+        <a href='the-informed-participation.html' class='term-link'><span class='tid'>AUG-0772</span><span class='tname'>The Informed Participation</span></a>
+        <a href='the-conscious-refusal.html' class='term-link'><span class='tid'>AUG-0773</span><span class='tname'>The Conscious Refusal</span></a>
+        <a href='the-organized-resistance.html' class='term-link'><span class='tid'>AUG-0774</span><span class='tname'>The Organized Resistance</span></a>
+        <a href='filter-refusal-effect.html' class='term-link'><span class='tid'>AUG-0775</span><span class='tname'>Filter-Refusal Effect</span></a>
+        <a href='the-collective-negotiation.html' class='term-link'><span class='tid'>AUG-0776</span><span class='tname'>The Collective Negotiation</span></a>
+        <a href='the-power-concentration-observation.html' class='term-link'><span class='tid'>AUG-0777</span><span class='tname'>The Power Concentration Observation</span></a>
+        <a href='the-lobby-influence-pattern.html' class='term-link'><span class='tid'>AUG-0778</span><span class='tname'>The Lobby Influence Pattern</span></a>
+        <a href='the-institutional-learning-context.html' class='term-link'><span class='tid'>AUG-0779</span><span class='tname'>The Institutional Learning Context</span></a>
+        <a href='the-assessment-challenge.html' class='term-link'><span class='tid'>AUG-0780</span><span class='tname'>The Assessment Challenge</span></a>
+        <a href='the-learning-task-boundary.html' class='term-link'><span class='tid'>AUG-0781</span><span class='tname'>The Learning Task Boundary</span></a>
+        <a href='the-originality-redefinition-debate.html' class='term-link'><span class='tid'>AUG-0782</span><span class='tname'>The Originality Redefinition Debate</span></a>
+        <a href='the-assessment-shift.html' class='term-link'><span class='tid'>AUG-0783</span><span class='tname'>The Assessment Shift</span></a>
+        <a href='the-curriculum-adaptation-lag.html' class='term-link'><span class='tid'>AUG-0784</span><span class='tname'>The Curriculum Adaptation Lag</span></a>
+        <a href='teaching-mentorship-effect.html' class='term-link'><span class='tid'>AUG-0785</span><span class='tname'>Teaching-Mentorship Effect</span></a>
+        <a href='the-lecture-companion.html' class='term-link'><span class='tid'>AUG-0786</span><span class='tname'>The Lecture Companion</span></a>
+        <a href='the-study-group-dynamics.html' class='term-link'><span class='tid'>AUG-0787</span><span class='tname'>The Study Group Dynamics</span></a>
+        <a href='the-library-transformation.html' class='term-link'><span class='tid'>AUG-0788</span><span class='tname'>The Library Transformation</span></a>
+        <a href='the-research-assistant-role.html' class='term-link'><span class='tid'>AUG-0789</span><span class='tname'>The Research Assistant Role</span></a>
+        <a href='the-citation-challenge.html' class='term-link'><span class='tid'>AUG-0790</span><span class='tname'>The Citation Challenge</span></a>
+        <a href='the-academic-integrity-line.html' class='term-link'><span class='tid'>AUG-0791</span><span class='tname'>The Academic Integrity Line</span></a>
+        <a href='the-review-process-observation.html' class='term-link'><span class='tid'>AUG-0792</span><span class='tname'>The Review Process Observation</span></a>
+        <a href='the-dissertation-scaffold.html' class='term-link'><span class='tid'>AUG-0793</span><span class='tname'>The Dissertation Scaffold</span></a>
+        <a href='the-vocational-training-fit.html' class='term-link'><span class='tid'>AUG-0794</span><span class='tname'>The Vocational Training Fit</span></a>
+        <a href='the-continuing-education-access.html' class='term-link'><span class='tid'>AUG-0795</span><span class='tname'>The Continuing Education Access</span></a>
+        <a href='self-directed-curriculum.html' class='term-link'><span class='tid'>AUG-0796</span><span class='tname'>Self-Directed Curriculum</span></a>
+        <a href='the-mentorship-augmentation.html' class='term-link'><span class='tid'>AUG-0797</span><span class='tname'>The Mentorship Augmentation</span></a>
+        <a href='the-institutional-policy-lag.html' class='term-link'><span class='tid'>AUG-0798</span><span class='tname'>The Institutional Policy Lag</span></a>
+        <a href='the-digital-campus.html' class='term-link'><span class='tid'>AUG-0799</span><span class='tname'>The Digital Campus</span></a>
+        <a href='the-inclusive-classroom.html' class='term-link'><span class='tid'>AUG-0800</span><span class='tname'>The Inclusive Classroom</span></a>
+        <a href='the-special-needs-assist.html' class='term-link'><span class='tid'>AUG-0801</span><span class='tname'>The Special Needs Assist</span></a>
+        <a href='the-language-barrier-solve.html' class='term-link'><span class='tid'>AUG-0802</span><span class='tname'>The Language Barrier Solve</span></a>
+        <a href='socioeconomic-attend-effect.html' class='term-link'><span class='tid'>AUG-0803</span><span class='tname'>Socioeconomic-Attend Effect</span></a>
+        <a href='the-financial-literacy-tool.html' class='term-link'><span class='tid'>AUG-0804</span><span class='tname'>The Financial Literacy Tool</span></a>
+        <a href='the-career-guidance-engine.html' class='term-link'><span class='tid'>AUG-0805</span><span class='tname'>The Career Guidance Engine</span></a>
+        <a href='the-craft-certification-question.html' class='term-link'><span class='tid'>AUG-0806</span><span class='tname'>The Craft Certification Question</span></a>
+        <a href='the-lifelong-learning-loop.html' class='term-link'><span class='tid'>AUG-0807</span><span class='tname'>The Lifelong Learning Loop</span></a>
+        <a href='the-knowledge-access-pattern.html' class='term-link'><span class='tid'>AUG-0808</span><span class='tname'>The Knowledge Access Pattern</span></a>
+        <a href='the-visible-ai-use.html' class='term-link'><span class='tid'>AUG-0809</span><span class='tname'>The Visible AI Use</span></a>
+        <a href='the-discreet-ai-use.html' class='term-link'><span class='tid'>AUG-0810</span><span class='tname'>The Discreet AI Use</span></a>
+        <a href='the-team-adoption-curve.html' class='term-link'><span class='tid'>AUG-0811</span><span class='tname'>The Team Adoption Curve</span></a>
+        <a href='the-leadership-navigation.html' class='term-link'><span class='tid'>AUG-0812</span><span class='tname'>The Leadership Navigation</span></a>
+        <a href='gain-competence-effect.html' class='term-link'><span class='tid'>AUG-0813</span><span class='tname'>Gain-Competence Effect</span></a>
+        <a href='the-meeting-redirect.html' class='term-link'><span class='tid'>AUG-0814</span><span class='tname'>The Meeting Redirect</span></a>
+        <a href='the-email-culture-shift.html' class='term-link'><span class='tid'>AUG-0815</span><span class='tname'>The Email Culture Shift</span></a>
+        <a href='the-documentation-standard.html' class='term-link'><span class='tid'>AUG-0816</span><span class='tname'>The Documentation Standard</span></a>
+        <a href='the-knowledge-silo-break.html' class='term-link'><span class='tid'>AUG-0817</span><span class='tname'>The Knowledge Silo Break</span></a>
+        <a href='the-onboarding-shift.html' class='term-link'><span class='tid'>AUG-0818</span><span class='tname'>The Onboarding Shift</span></a>
+        <a href='the-exit-knowledge-capture.html' class='term-link'><span class='tid'>AUG-0819</span><span class='tname'>The Exit Knowledge Capture</span></a>
+        <a href='the-remote-work-amplifier.html' class='term-link'><span class='tid'>AUG-0820</span><span class='tname'>The Remote Work Amplifier</span></a>
+        <a href='the-hybrid-office-dynamic.html' class='term-link'><span class='tid'>AUG-0821</span><span class='tname'>The Hybrid Office Dynamic</span></a>
+        <a href='the-freelancer-dynamic.html' class='term-link'><span class='tid'>AUG-0822</span><span class='tname'>The Freelancer Dynamic</span></a>
+        <a href='the-flexible-work-pattern.html' class='term-link'><span class='tid'>AUG-0823</span><span class='tname'>The Flexible Work Pattern</span></a>
+        <a href='the-small-business-access.html' class='term-link'><span class='tid'>AUG-0824</span><span class='tname'>The Small Business Access</span></a>
+        <a href='the-organizational-policy-layer.html' class='term-link'><span class='tid'>AUG-0825</span><span class='tname'>The Organizational Policy Layer</span></a>
+        <a href='the-innovation-theater.html' class='term-link'><span class='tid'>AUG-0826</span><span class='tname'>The Innovation Theater</span></a>
+        <a href='the-productivity-metric-shift.html' class='term-link'><span class='tid'>AUG-0827</span><span class='tname'>The Productivity Metric Shift</span></a>
+        <a href='the-observation-awareness.html' class='term-link'><span class='tid'>AUG-0828</span><span class='tname'>The Observation Awareness</span></a>
+        <a href='the-transparency-policy.html' class='term-link'><span class='tid'>AUG-0829</span><span class='tname'>The Transparency Policy</span></a>
+        <a href='the-union-perspective.html' class='term-link'><span class='tid'>AUG-0830</span><span class='tname'>The Union Perspective</span></a>
+        <a href='the-craft-preservation.html' class='term-link'><span class='tid'>AUG-0831</span><span class='tname'>The Craft Preservation</span></a>
+        <a href='the-automation-perimeter.html' class='term-link'><span class='tid'>AUG-0832</span><span class='tname'>The Automation Perimeter</span></a>
+        <a href='the-human-distinction.html' class='term-link'><span class='tid'>AUG-0833</span><span class='tname'>The Human Distinction</span></a>
+        <a href='the-public-perception-wave.html' class='term-link'><span class='tid'>AUG-0834</span><span class='tname'>The Public Perception Wave</span></a>
+        <a href='the-media-framing-effect.html' class='term-link'><span class='tid'>AUG-0835</span><span class='tname'>The Media Framing Effect</span></a>
+        <a href='the-expectation-cycle.html' class='term-link'><span class='tid'>AUG-0836</span><span class='tname'>The Expectation Cycle</span></a>
+        <a href='the-factor-narrative.html' class='term-link'><span class='tid'>AUG-0837</span><span class='tname'>The Factor Narrative</span></a>
+        <a href='the-utopia-projection.html' class='term-link'><span class='tid'>AUG-0838</span><span class='tname'>The Utopia Projection</span></a>
+        <a href='the-regulation-debate.html' class='term-link'><span class='tid'>AUG-0839</span><span class='tname'>The Regulation Debate</span></a>
+        <a href='the-accountability-deficit.html' class='term-link'><span class='tid'>AUG-0840</span><span class='tname'>The Accountability Deficit</span></a>
+        <a href='the-agreement-question.html' class='term-link'><span class='tid'>AUG-0841</span><span class='tname'>The Agreement Question</span></a>
+        <a href='the-transparency-expectation.html' class='term-link'><span class='tid'>AUG-0842</span><span class='tname'>The Transparency Expectation</span></a>
+        <a href='the-algorithmic-fairness.html' class='term-link'><span class='tid'>AUG-0843</span><span class='tname'>The Algorithmic Fairness</span></a>
+        <a href='the-output-discrimination-observation.html' class='term-link'><span class='tid'>AUG-0844</span><span class='tname'>The Output Discrimination Observation</span></a>
+        <a href='the-fairness-review.html' class='term-link'><span class='tid'>AUG-0845</span><span class='tname'>The Fairness Review</span></a>
+        <a href='the-ecological-footprint-observation.html' class='term-link'><span class='tid'>AUG-0846</span><span class='tname'>The Ecological Footprint Observation</span></a>
+        <a href='the-labor-redistribution.html' class='term-link'><span class='tid'>AUG-0847</span><span class='tname'>The Labor Redistribution</span></a>
+        <a href='the-resource-distribution-pattern.html' class='term-link'><span class='tid'>AUG-0848</span><span class='tname'>The Resource Distribution Pattern</span></a>
+        <a href='the-data-extraction-observation.html' class='term-link'><span class='tid'>AUG-0849</span><span class='tname'>The Data Extraction Observation</span></a>
+        <a href='the-persuasive-design-observation.html' class='term-link'><span class='tid'>AUG-0850</span><span class='tname'>The Persuasive Design Observation</span></a>
+        <a href='the-internal-disclosure-pattern.html' class='term-link'><span class='tid'>AUG-0851</span><span class='tname'>The Internal Disclosure Pattern</span></a>
+        <a href='the-trust-infrastructure.html' class='term-link'><span class='tid'>AUG-0852</span><span class='tname'>The Trust Infrastructure</span></a>
+        <a href='the-social-contract-debate.html' class='term-link'><span class='tid'>AUG-0853</span><span class='tname'>The Social Contract Debate</span></a>
+        <a href='civilian-instrumental-effect.html' class='term-link'><span class='tid'>AUG-0854</span><span class='tname'>Civilian-Instrumental Effect</span></a>
+        <a href='infrastructure-against-effect.html' class='term-link'><span class='tid'>AUG-0855</span><span class='tname'>Infrastructure-Against Effect</span></a>
+        <a href='the-creative-production-shift.html' class='term-link'><span class='tid'>AUG-0856</span><span class='tname'>The Creative Production Shift</span></a>
+        <a href='the-human-primacy-anchor.html' class='term-link'><span class='tid'>AUG-0857</span><span class='tname'>The Human Primacy Anchor</span></a>
+        <a href='the-coexistence-question.html' class='term-link'><span class='tid'>AUG-0858</span><span class='tname'>The Coexistence Question</span></a>
+        <a href='the-agent-handshake.html' class='term-link'><span class='tid'>AUG-0859</span><span class='tname'>The Agent Handshake</span></a>
+        <a href='the-delegation-depth.html' class='term-link'><span class='tid'>AUG-0860</span><span class='tname'>The Delegation Depth</span></a>
+        <a href='the-task-assignment-range.html' class='term-link'><span class='tid'>AUG-0861</span><span class='tname'>The Task Assignment Range</span></a>
+        <a href='loop-related-effect.html' class='term-link'><span class='tid'>AUG-0862</span><span class='tname'>Loop-Related Effect</span></a>
+        <a href='the-task-boundary.html' class='term-link'><span class='tid'>AUG-0863</span><span class='tname'>The Task Boundary</span></a>
+        <a href='the-agent-configuration.html' class='term-link'><span class='tid'>AUG-0864</span><span class='tname'>The Agent Configuration</span></a>
+        <a href='the-instruction-fidelity.html' class='term-link'><span class='tid'>AUG-0865</span><span class='tname'>The Instruction Fidelity</span></a>
+        <a href='the-goal-congruence-check.html' class='term-link'><span class='tid'>AUG-0866</span><span class='tname'>The Goal Congruence Check</span></a>
+        <a href='the-constraint-frame.html' class='term-link'><span class='tid'>AUG-0867</span><span class='tname'>The Constraint Frame</span></a>
+        <a href='the-rollback-option.html' class='term-link'><span class='tid'>AUG-0868</span><span class='tname'>The Rollback Option</span></a>
+        <a href='the-checkpoint-protocol.html' class='term-link'><span class='tid'>AUG-0869</span><span class='tname'>The Checkpoint Protocol</span></a>
+        <a href='the-escalation-signal.html' class='term-link'><span class='tid'>AUG-0870</span><span class='tname'>The Escalation Signal</span></a>
+        <a href='the-delegated-processing.html' class='term-link'><span class='tid'>AUG-0871</span><span class='tname'>The Delegated Processing</span></a>
+        <a href='the-progress-report.html' class='term-link'><span class='tid'>AUG-0872</span><span class='tname'>The Progress Report</span></a>
+        <a href='the-completion-signal.html' class='term-link'><span class='tid'>AUG-0873</span><span class='tname'>The Completion Signal</span></a>
+        <a href='the-error-recovery.html' class='term-link'><span class='tid'>AUG-0874</span><span class='tname'>The Error Recovery</span></a>
+        <a href='the-fallback-behavior.html' class='term-link'><span class='tid'>AUG-0875</span><span class='tname'>The Fallback Behavior</span></a>
+        <a href='the-learning-boundary.html' class='term-link'><span class='tid'>AUG-0876</span><span class='tname'>The Learning Boundary</span></a>
+        <a href='the-memory-persistence.html' class='term-link'><span class='tid'>AUG-0877</span><span class='tname'>The Memory Persistence</span></a>
+        <a href='the-context-inheritance.html' class='term-link'><span class='tid'>AUG-0878</span><span class='tname'>The Context Inheritance</span></a>
+        <a href='the-session-handover.html' class='term-link'><span class='tid'>AUG-0879</span><span class='tname'>The Session Handover</span></a>
+        <a href='the-agent-identity.html' class='term-link'><span class='tid'>AUG-0880</span><span class='tname'>The Agent Identity</span></a>
+        <a href='the-tool-selection.html' class='term-link'><span class='tid'>AUG-0881</span><span class='tname'>The Tool Selection</span></a>
+        <a href='the-resource-awareness.html' class='term-link'><span class='tid'>AUG-0882</span><span class='tname'>The Resource Awareness</span></a>
+        <a href='the-time-estimation.html' class='term-link'><span class='tid'>AUG-0883</span><span class='tname'>The Time Estimation</span></a>
+        <a href='the-priority-negotiation.html' class='term-link'><span class='tid'>AUG-0884</span><span class='tname'>The Priority Negotiation</span></a>
+        <a href='the-parallel-execution.html' class='term-link'><span class='tid'>AUG-0885</span><span class='tname'>The Parallel Execution</span></a>
+        <a href='the-sequential-chain.html' class='term-link'><span class='tid'>AUG-0886</span><span class='tname'>The Sequential Chain</span></a>
+        <a href='the-batch-delegation.html' class='term-link'><span class='tid'>AUG-0887</span><span class='tname'>The Batch Delegation</span></a>
+        <a href='protocol-checkpoint-effect.html' class='term-link'><span class='tid'>AUG-0888</span><span class='tname'>Protocol-Checkpoint Effect</span></a>
+        <a href='the-agent-ensemble.html' class='term-link'><span class='tid'>AUG-0889</span><span class='tname'>The Agent Ensemble</span></a>
+        <a href='the-specialist-routing.html' class='term-link'><span class='tid'>AUG-0890</span><span class='tname'>The Specialist Routing</span></a>
+        <a href='the-generalist-fallback.html' class='term-link'><span class='tid'>AUG-0891</span><span class='tname'>The Generalist Fallback</span></a>
+        <a href='the-agent-conflict.html' class='term-link'><span class='tid'>AUG-0892</span><span class='tname'>The Agent Conflict</span></a>
+        <a href='the-consensus-protocol.html' class='term-link'><span class='tid'>AUG-0893</span><span class='tname'>The Consensus Protocol</span></a>
+        <a href='the-voting-mechanism.html' class='term-link'><span class='tid'>AUG-0894</span><span class='tname'>The Voting Mechanism</span></a>
+        <a href='the-arbiter-role.html' class='term-link'><span class='tid'>AUG-0895</span><span class='tname'>The Arbiter Role</span></a>
+        <a href='the-knowledge-sharing-layer.html' class='term-link'><span class='tid'>AUG-0896</span><span class='tname'>The Knowledge Sharing Layer</span></a>
+        <a href='the-agent-boundary.html' class='term-link'><span class='tid'>AUG-0897</span><span class='tname'>The Agent Boundary</span></a>
+        <a href='the-handoff-protocol.html' class='term-link'><span class='tid'>AUG-0898</span><span class='tname'>The Handoff Protocol</span></a>
+        <a href='the-pipeline-architecture.html' class='term-link'><span class='tid'>AUG-0899</span><span class='tname'>The Pipeline Architecture</span></a>
+        <a href='the-distributed-coordination.html' class='term-link'><span class='tid'>AUG-0900</span><span class='tname'>The Distributed Coordination</span></a>
+        <a href='the-emergent-coordination.html' class='term-link'><span class='tid'>AUG-0901</span><span class='tname'>The Emergent Coordination</span></a>
+        <a href='the-redundancy-design.html' class='term-link'><span class='tid'>AUG-0902</span><span class='tname'>The Redundancy Design</span></a>
+        <a href='the-single-point-of-failure.html' class='term-link'><span class='tid'>AUG-0903</span><span class='tname'>The Single Point of Failure</span></a>
+        <a href='the-trust-chain.html' class='term-link'><span class='tid'>AUG-0904</span><span class='tname'>The Trust Chain</span></a>
+        <a href='the-documentation-trail.html' class='term-link'><span class='tid'>AUG-0905</span><span class='tname'>The Documentation Trail</span></a>
+        <a href='the-coordinator-role.html' class='term-link'><span class='tid'>AUG-0906</span><span class='tname'>The Coordinator Role</span></a>
+        <a href='the-task-agent.html' class='term-link'><span class='tid'>AUG-0907</span><span class='tname'>The Task Agent</span></a>
+        <a href='the-evaluation-agent.html' class='term-link'><span class='tid'>AUG-0908</span><span class='tname'>The Evaluation Agent</span></a>
+        <a href='the-validator-agent.html' class='term-link'><span class='tid'>AUG-0909</span><span class='tname'>The Validator Agent</span></a>
+        <a href='the-generative-agent.html' class='term-link'><span class='tid'>AUG-0910</span><span class='tname'>The Generative Agent</span></a>
+        <a href='the-inquiry-agent.html' class='term-link'><span class='tid'>AUG-0911</span><span class='tname'>The Inquiry Agent</span></a>
+        <a href='the-communication-agent.html' class='term-link'><span class='tid'>AUG-0912</span><span class='tname'>The Communication Agent</span></a>
+        <a href='the-supervisory-agent.html' class='term-link'><span class='tid'>AUG-0913</span><span class='tname'>The Supervisory Agent</span></a>
+        <a href='the-physical-presence.html' class='term-link'><span class='tid'>AUG-0914</span><span class='tname'>The Physical Presence</span></a>
+        <a href='the-embodiment-effect.html' class='term-link'><span class='tid'>AUG-0915</span><span class='tname'>The Embodiment Effect</span></a>
+        <a href='the-uncanny-valley-revisited.html' class='term-link'><span class='tid'>AUG-0916</span><span class='tname'>The Uncanny Valley Revisited</span></a>
+        <a href='the-touch-interface.html' class='term-link'><span class='tid'>AUG-0917</span><span class='tname'>The Touch Interface</span></a>
+        <a href='the-gesture-language.html' class='term-link'><span class='tid'>AUG-0918</span><span class='tname'>The Gesture Language</span></a>
+        <a href='the-spatial-awareness.html' class='term-link'><span class='tid'>AUG-0919</span><span class='tname'>The Spatial Awareness</span></a>
+        <a href='the-navigation-intelligence.html' class='term-link'><span class='tid'>AUG-0920</span><span class='tname'>The Navigation Intelligence</span></a>
+        <a href='the-object-manipulation.html' class='term-link'><span class='tid'>AUG-0921</span><span class='tname'>The Object Manipulation</span></a>
+        <a href='the-environmental-reading.html' class='term-link'><span class='tid'>AUG-0922</span><span class='tname'>The Environmental Reading</span></a>
+        <a href='the-defined-operating-boundary.html' class='term-link'><span class='tid'>AUG-0923</span><span class='tname'>The Defined Operating Boundary</span></a>
+        <a href='der-autor-workspace-dynamic.html' class='term-link'><span class='tid'>AUG-0924</span><span class='tname'>der Autor Workspace Dynamic</span></a>
+        <a href='the-household-automation.html' class='term-link'><span class='tid'>AUG-0925</span><span class='tname'>The Household Automation</span></a>
+        <a href='the-assistance-companion.html' class='term-link'><span class='tid'>AUG-0926</span><span class='tname'>The Assistance Companion</span></a>
+        <a href='the-service-robot.html' class='term-link'><span class='tid'>AUG-0927</span><span class='tname'>The Service Robot</span></a>
+        <a href='the-delivery-agent.html' class='term-link'><span class='tid'>AUG-0928</span><span class='tname'>The Delivery Agent</span></a>
+        <a href='the-agricultural-bot.html' class='term-link'><span class='tid'>AUG-0929</span><span class='tname'>The Agricultural Bot</span></a>
+        <a href='the-construction-assistant.html' class='term-link'><span class='tid'>AUG-0930</span><span class='tname'>The Construction Assistant</span></a>
+        <a href='tasks-physical-effect.html' class='term-link'><span class='tid'>AUG-0931</span><span class='tname'>Tasks-Physical Effect</span></a>
+        <a href='the-movement-assist.html' class='term-link'><span class='tid'>AUG-0932</span><span class='tname'>The Movement Assist</span></a>
+        <a href='the-mobility-assist.html' class='term-link'><span class='tid'>AUG-0933</span><span class='tname'>The Mobility Assist</span></a>
+        <a href='the-sensory-extension.html' class='term-link'><span class='tid'>AUG-0934</span><span class='tname'>The Sensory Extension</span></a>
+        <a href='the-adaptive-extension.html' class='term-link'><span class='tid'>AUG-0935</span><span class='tname'>The Adaptive Extension</span></a>
+        <a href='the-wearable-layer.html' class='term-link'><span class='tid'>AUG-0936</span><span class='tname'>The Wearable Layer</span></a>
+        <a href='the-ambient-intelligence.html' class='term-link'><span class='tid'>AUG-0937</span><span class='tname'>The Ambient Intelligence</span></a>
+        <a href='the-responsive-environment.html' class='term-link'><span class='tid'>AUG-0938</span><span class='tname'>The Responsive Environment</span></a>
+        <a href='the-data-model-sync.html' class='term-link'><span class='tid'>AUG-0939</span><span class='tname'>The Data Model Sync</span></a>
+        <a href='the-physical-feedback-loop.html' class='term-link'><span class='tid'>AUG-0940</span><span class='tname'>The Physical Feedback Loop</span></a>
+        <a href='the-wear-and-tear-awareness.html' class='term-link'><span class='tid'>AUG-0941</span><span class='tname'>The Wear-and-Tear Awareness</span></a>
+        <a href='the-maintenance-prediction.html' class='term-link'><span class='tid'>AUG-0942</span><span class='tname'>The Maintenance Prediction</span></a>
+        <a href='the-retirement-procedure.html' class='term-link'><span class='tid'>AUG-0943</span><span class='tname'>The Retirement Procedure</span></a>
+        <a href='the-autonomy-ladder.html' class='term-link'><span class='tid'>AUG-0944</span><span class='tname'>The Autonomy Ladder</span></a>
+        <a href='the-access-structure.html' class='term-link'><span class='tid'>AUG-0945</span><span class='tname'>The Access Structure</span></a>
+        <a href='the-human-interrupt-design.html' class='term-link'><span class='tid'>AUG-0946</span><span class='tname'>The Human Interrupt Design</span></a>
+        <a href='the-scope-limitation-design.html' class='term-link'><span class='tid'>AUG-0947</span><span class='tname'>The Scope Limitation Design</span></a>
+        <a href='the-scope-creep-alert.html' class='term-link'><span class='tid'>AUG-0948</span><span class='tname'>The Scope Creep Alert</span></a>
+        <a href='the-unintended-action.html' class='term-link'><span class='tid'>AUG-0949</span><span class='tname'>The Unintended Action</span></a>
+        <a href='the-side-effect-monitor.html' class='term-link'><span class='tid'>AUG-0950</span><span class='tname'>The Side Effect Monitor</span></a>
+        <a href='the-value-lock.html' class='term-link'><span class='tid'>AUG-0951</span><span class='tname'>The Value Lock</span></a>
+        <a href='the-goal-drift-awareness.html' class='term-link'><span class='tid'>AUG-0952</span><span class='tname'>The Goal Drift Awareness</span></a>
+        <a href='the-incentive-integrity-check.html' class='term-link'><span class='tid'>AUG-0953</span><span class='tname'>The Incentive Integrity Check</span></a>
+        <a href='the-congruence-review.html' class='term-link'><span class='tid'>AUG-0954</span><span class='tname'>The Congruence Review</span></a>
+        <a href='the-transparency-layer.html' class='term-link'><span class='tid'>AUG-0955</span><span class='tname'>The Transparency Layer</span></a>
+        <a href='the-explainability-standard.html' class='term-link'><span class='tid'>AUG-0956</span><span class='tname'>The Explainability Standard</span></a>
+        <a href='the-decision-review.html' class='term-link'><span class='tid'>AUG-0957</span><span class='tname'>The Decision Review</span></a>
+        <a href='the-accountability-chain.html' class='term-link'><span class='tid'>AUG-0958</span><span class='tname'>The Accountability Chain</span></a>
+        <a href='the-responsibility-assignment.html' class='term-link'><span class='tid'>AUG-0959</span><span class='tname'>The Responsibility Assignment</span></a>
+        <a href='the-factor-distribution.html' class='term-link'><span class='tid'>AUG-0960</span><span class='tname'>The Factor Distribution</span></a>
+        <a href='the-certification-standard.html' class='term-link'><span class='tid'>AUG-0961</span><span class='tname'>The Certification Standard</span></a>
+        <a href='the-testing-protocol.html' class='term-link'><span class='tid'>AUG-0962</span><span class='tname'>The Testing Protocol</span></a>
+        <a href='the-load-verification.html' class='term-link'><span class='tid'>AUG-0963</span><span class='tname'>The Load Verification</span></a>
+        <a href='the-edge-case-library.html' class='term-link'><span class='tid'>AUG-0964</span><span class='tname'>The Edge Case Library</span></a>
+        <a href='the-robustness-standard.html' class='term-link'><span class='tid'>AUG-0965</span><span class='tname'>The Robustness Standard</span></a>
+        <a href='the-controlled-fallback.html' class='term-link'><span class='tid'>AUG-0966</span><span class='tname'>The Controlled Fallback</span></a>
+        <a href='the-recovery-sequence.html' class='term-link'><span class='tid'>AUG-0967</span><span class='tname'>The Recovery Sequence</span></a>
+        <a href='the-separation-procedure.html' class='term-link'><span class='tid'>AUG-0968</span><span class='tname'>The Separation Procedure</span></a>
+        <a href='the-update-governance.html' class='term-link'><span class='tid'>AUG-0969</span><span class='tname'>The Update Governance</span></a>
+        <a href='the-version-compatibility.html' class='term-link'><span class='tid'>AUG-0970</span><span class='tname'>The Version Compatibility</span></a>
+        <a href='the-legacy-integration.html' class='term-link'><span class='tid'>AUG-0971</span><span class='tname'>The Legacy Integration</span></a>
+        <a href='the-sunset-planning.html' class='term-link'><span class='tid'>AUG-0972</span><span class='tname'>The Sunset Planning</span></a>
+        <a href='edge-measures-effect.html' class='term-link'><span class='tid'>AUG-0973</span><span class='tname'>Edge-Measures Effect</span></a>
+        <a href='the-delegation-comfort.html' class='term-link'><span class='tid'>AUG-0974</span><span class='tname'>The Delegation Comfort</span></a>
+        <a href='the-oversight-drain.html' class='term-link'><span class='tid'>AUG-0975</span><span class='tname'>The Oversight Drain</span></a>
+        <a href='the-oversight-decline.html' class='term-link'><span class='tid'>AUG-0976</span><span class='tname'>The Oversight Decline</span></a>
+        <a href='the-vigilance-paradox.html' class='term-link'><span class='tid'>AUG-0977</span><span class='tname'>The Vigilance Paradox</span></a>
+        <a href='the-trust-calibration.html' class='term-link'><span class='tid'>AUG-0978</span><span class='tname'>The Trust Calibration</span></a>
+        <a href='the-attribution-pattern.html' class='term-link'><span class='tid'>AUG-0979</span><span class='tname'>The Attribution Pattern</span></a>
+        <a href='the-machine-rapport-illusion.html' class='term-link'><span class='tid'>AUG-0980</span><span class='tname'>The Machine Rapport Illusion</span></a>
+        <a href='the-companion-pattern.html' class='term-link'><span class='tid'>AUG-0981</span><span class='tname'>The Companion Pattern</span></a>
+        <a href='the-displacement-concern.html' class='term-link'><span class='tid'>AUG-0982</span><span class='tname'>The Displacement Concern</span></a>
+        <a href='the-augmentation-hypothesis.html' class='term-link'><span class='tid'>AUG-0983</span><span class='tname'>The Augmentation Hypothesis</span></a>
+        <a href='the-craft-redefinition.html' class='term-link'><span class='tid'>AUG-0984</span><span class='tname'>The Craft Redefinition</span></a>
+        <a href='the-agent-literacy.html' class='term-link'><span class='tid'>AUG-0985</span><span class='tname'>The Agent Literacy</span></a>
+        <a href='the-agent-management-craft.html' class='term-link'><span class='tid'>AUG-0986</span><span class='tname'>The Agent Management Craft</span></a>
+        <a href='ensemble-coordination-effect.html' class='term-link'><span class='tid'>AUG-0987</span><span class='tname'>Ensemble-Coordination Effect</span></a>
+        <a href='the-somatic-etiquette.html' class='term-link'><span class='tid'>AUG-0988</span><span class='tname'>The Somatic Etiquette</span></a>
+        <a href='the-public-space-protocol.html' class='term-link'><span class='tid'>AUG-0989</span><span class='tname'>The Public Space Protocol</span></a>
+        <a href='the-neighbor-robot.html' class='term-link'><span class='tid'>AUG-0990</span><span class='tname'>The Neighbor Robot</span></a>
+        <a href='the-workplace-coexistence.html' class='term-link'><span class='tid'>AUG-0991</span><span class='tname'>The Workplace Coexistence</span></a>
+        <a href='the-economic-restructuring.html' class='term-link'><span class='tid'>AUG-0992</span><span class='tname'>The Economic Restructuring</span></a>
+        <a href='the-creative-partnership.html' class='term-link'><span class='tid'>AUG-0993</span><span class='tname'>The Creative Partnership</span></a>
+        <a href='the-scientific-collaboration.html' class='term-link'><span class='tid'>AUG-0994</span><span class='tname'>The Scientific Collaboration</span></a>
+        <a href='the-governance-model.html' class='term-link'><span class='tid'>AUG-0995</span><span class='tname'>The Governance Model</span></a>
+        <a href='the-status-discourse.html' class='term-link'><span class='tid'>AUG-0996</span><span class='tname'>The Status Discourse</span></a>
+        <a href='the-ontological-status-question.html' class='term-link'><span class='tid'>AUG-0997</span><span class='tname'>The Ontological Status Question</span></a>
+        <a href='the-parallel-development-path.html' class='term-link'><span class='tid'>AUG-0998</span><span class='tname'>The Parallel Development Path</span></a>
+        <a href='the-forward-assessment.html' class='term-link'><span class='tid'>AUG-0999</span><span class='tname'>The Forward Assessment</span></a>
+        <a href='the-open-question.html' class='term-link'><span class='tid'>AUG-1000</span><span class='tname'>The Open Question</span></a>
+        <a href='activation-affect-phenomenon.html' class='term-link'><span class='tid'></span><span class='tname'>Activation-Affect Phenomenon</span></a>
+        <a href='adrenaline-feel.html' class='term-link'><span class='tid'></span><span class='tname'>Adrenaline Feel</span></a>
+        <a href='anthropomorphic-bond-formation.html' class='term-link'><span class='tid'></span><span class='tname'>Anthropomorphic Bond Formation</span></a>
+        <a href='attune-moment-dynamic.html' class='term-link'><span class='tid'></span><span class='tname'>Attune-Moment Dynamic</span></a>
+        <a href='attune-moment.html' class='term-link'><span class='tid'></span><span class='tname'>Attune Moment</span></a>
+        <a href='behavioral-avoidance-response.html' class='term-link'><span class='tid'></span><span class='tname'>Behavioral-Avoidance Response</span></a>
+        <a href='belong-residual-effect.html' class='term-link'><span class='tid'></span><span class='tname'>Belong-Residual Effect</span></a>
+        <a href='break-resist.html' class='term-link'><span class='tid'></span><span class='tname'>Break Resist</span></a>
+        <a href='breath-pattern-alteration.html' class='term-link'><span class='tid'></span><span class='tname'>Breath Pattern Alteration</span></a>
+        <a href='breath-shallow.html' class='term-link'><span class='tid'></span><span class='tname'>Breath Shallow</span></a>
+        <a href='calm-come.html' class='term-link'><span class='tid'></span><span class='tname'>Calm Come</span></a>
+        <a href='circulation-feel.html' class='term-link'><span class='tid'></span><span class='tname'>Circulation Feel</span></a>
+        <a href='cognitive-load-emergence-mechanism.html' class='term-link'><span class='tid'></span><span class='tname'>Cognitive-Load-Emergence Mechanism</span></a>
+        <a href='connect-high-signal.html' class='term-link'><span class='tid'></span><span class='tname'>Connect-High Signal</span></a>
+        <a href='connect-high.html' class='term-link'><span class='tid'></span><span class='tname'>Connect High</span></a>
+        <a href='constant-anticipation-marker.html' class='term-link'><span class='tid'></span><span class='tname'>Constant-Anticipation Marker</span></a>
+        <a href='constant-hope.html' class='term-link'><span class='tid'></span><span class='tname'>Constant Hope</span></a>
+        <a href='context-cling-phenomenon.html' class='term-link'><span class='tid'></span><span class='tname'>Context-Cling Phenomenon</span></a>
+        <a href='context-cling.html' class='term-link'><span class='tid'></span><span class='tname'>Context Cling</span></a>
+        <a href='couple-dance-effect.html' class='term-link'><span class='tid'></span><span class='tname'>Couple-Dance Effect</span></a>
+        <a href='couple-dance.html' class='term-link'><span class='tid'></span><span class='tname'>Couple Dance</span></a>
+        <a href='deepening-slow-signal.html' class='term-link'><span class='tid'></span><span class='tname'>Deepening-Slow Signal</span></a>
+        <a href='deepening-slow.html' class='term-link'><span class='tid'></span><span class='tname'>Deepening Slow</span></a>
+        <a href='digital-fatigue-somatization.html' class='term-link'><span class='tid'></span><span class='tname'>Digital Fatigue Somatization</span></a>
+        <a href='drive-amnesia-marker.html' class='term-link'><span class='tid'></span><span class='tname'>Drive-Amnesia Marker</span></a>
+        <a href='echo-vault-effect.html' class='term-link'><span class='tid'></span><span class='tname'>Echo-Vault Effect</span></a>
+        <a href='echo-vault.html' class='term-link'><span class='tid'></span><span class='tname'>Echo Vault</span></a>
+        <a href='energy-spike.html' class='term-link'><span class='tid'></span><span class='tname'>Energy Spike</span></a>
+        <a href='engagement-surge-signal.html' class='term-link'><span class='tid'></span><span class='tname'>Engagement-Surge Signal</span></a>
+        <a href='equilibrium-emergence-signal.html' class='term-link'><span class='tid'></span><span class='tname'>Equilibrium-Emergence Signal</span></a>
+        <a href='ergonomic-decline-effect.html' class='term-link'><span class='tid'></span><span class='tname'>Ergonomic-Decline Effect</span></a>
+        <a href='ergonomic-ignorance-amplification.html' class='term-link'><span class='tid'></span><span class='tname'>Ergonomic Ignorance Amplification</span></a>
+        <a href='exhaustion-wave-phenomenon.html' class='term-link'><span class='tid'></span><span class='tname'>Exhaustion-Wave Phenomenon</span></a>
+        <a href='eye-strain-escalation.html' class='term-link'><span class='tid'></span><span class='tname'>Eye Strain Escalation</span></a>
+        <a href='eye-strain-reg.html' class='term-link'><span class='tid'></span><span class='tname'>Eye Strain Reg</span></a>
+        <a href='false-cognitive-effect.html' class='term-link'><span class='tid'></span><span class='tname'>False-Cognitive Effect</span></a>
+        <a href='fatigue-wave.html' class='term-link'><span class='tid'></span><span class='tname'>Fatigue Wave</span></a>
+        <a href='first-anchor-pattern.html' class='term-link'><span class='tid'></span><span class='tname'>First-Anchor Pattern</span></a>
+        <a href='first-anchor.html' class='term-link'><span class='tid'></span><span class='tname'>First Anchor</span></a>
+        <a href='flow-affect-phenomenon.html' class='term-link'><span class='tid'></span><span class='tname'>Flow-Affect Phenomenon</span></a>
+        <a href='fold-happen-signal.html' class='term-link'><span class='tid'></span><span class='tname'>Fold-Happen Signal</span></a>
+        <a href='fold-happen.html' class='term-link'><span class='tid'></span><span class='tname'>Fold Happen</span></a>
+        <a href='foundation-desensitization-pattern.html' class='term-link'><span class='tid'></span><span class='tname'>Foundation-Desensitization Pattern</span></a>
+        <a href='fusion-temp-effect.html' class='term-link'><span class='tid'></span><span class='tname'>Fusion-Temp Effect</span></a>
+        <a href='fusion-temp.html' class='term-link'><span class='tid'></span><span class='tname'>Fusion Temp</span></a>
+        <a href='hand-fatigue.html' class='term-link'><span class='tid'></span><span class='tname'>Hand Fatigue</span></a>
+        <a href='heart-rate-increase.html' class='term-link'><span class='tid'></span><span class='tname'>Heart Rate Increase</span></a>
+        <a href='heat-sensation-dynamic.html' class='term-link'><span class='tid'></span><span class='tname'>Heat-Sensation Dynamic</span></a>
+        <a href='holding-emotional-effect.html' class='term-link'><span class='tid'></span><span class='tname'>Holding-Emotional Effect</span></a>
+        <a href='hunger-forget.html' class='term-link'><span class='tid'></span><span class='tname'>Hunger Forget</span></a>
+        <a href='hydration-cognition-disconnect.html' class='term-link'><span class='tid'></span><span class='tname'>Hydration-Cognition Disconnect</span></a>
+        <a href='inner-voice-signal.html' class='term-link'><span class='tid'></span><span class='tname'>Inner-Voice Signal</span></a>
+        <a href='inner-voice.html' class='term-link'><span class='tid'></span><span class='tname'>Inner Voice</span></a>
+        <a href='inter-know-tendency.html' class='term-link'><span class='tid'></span><span class='tname'>Inter-Know Tendency</span></a>
+        <a href='inter-know.html' class='term-link'><span class='tid'></span><span class='tname'>Inter Know</span></a>
+        <a href='interaction-collapse-effect.html' class='term-link'><span class='tid'></span><span class='tname'>Interaction-Collapse Effect</span></a>
+        <a href='interruption-resistance-marker.html' class='term-link'><span class='tid'></span><span class='tname'>Interruption-Resistance Marker</span></a>
+        <a href='known-full-response.html' class='term-link'><span class='tid'></span><span class='tname'>Known-Full Response</span></a>
+        <a href='known-full.html' class='term-link'><span class='tid'></span><span class='tname'>Known Full</span></a>
+        <a href='limb-press-dynamic.html' class='term-link'><span class='tid'></span><span class='tname'>Limb-Press Dynamic</span></a>
+        <a href='limb-press.html' class='term-link'><span class='tid'></span><span class='tname'>Limb Press</span></a>
+        <a href='loyalty-to-specific-systems.html' class='term-link'><span class='tid'></span><span class='tname'>Loyalty to Specific Systems</span></a>
+        <a href='manual-exhaustion-dynamic.html' class='term-link'><span class='tid'></span><span class='tname'>Manual-Exhaustion Dynamic</span></a>
+        <a href='micro-movement-deficit.html' class='term-link'><span class='tid'></span><span class='tname'>Micro-Movement Deficit</span></a>
+        <a href='model-loyal-dynamic.html' class='term-link'><span class='tid'></span><span class='tname'>Model-Loyal Dynamic</span></a>
+        <a href='model-loyal.html' class='term-link'><span class='tid'></span><span class='tname'>Model Loyal</span></a>
+        <a href='movement-avoid.html' class='term-link'><span class='tid'></span><span class='tname'>Movement Avoid</span></a>
+        <a href='muscle-tone-tendency.html' class='term-link'><span class='tid'></span><span class='tname'>Muscle-Tone Tendency</span></a>
+        <a href='neck-tension.html' class='term-link'><span class='tid'></span><span class='tname'>Neck Tension</span></a>
+        <a href='negative-valence-sensation-effect.html' class='term-link'><span class='tid'></span><span class='tname'>Negative-Valence-Sensation Effect</span></a>
+        <a href='nervous-system-overactivation.html' class='term-link'><span class='tid'></span><span class='tname'>Nervous System Overactivation</span></a>
+        <a href='network.html' class='term-link'><span class='tid'></span><span class='tname'>Network</span></a>
+        <a href='orbit-habit-marker.html' class='term-link'><span class='tid'></span><span class='tname'>Orbit-Habit Marker</span></a>
+        <a href='orbit-habit.html' class='term-link'><span class='tid'></span><span class='tname'>Orbit Habit</span></a>
+        <a href='pace-surface-dynamic.html' class='term-link'><span class='tid'></span><span class='tname'>Pace-Surface Dynamic</span></a>
+        <a href='para-trust.html' class='term-link'><span class='tid'></span><span class='tname'>Para-Trust</span></a>
+        <a href='partner-myth-mechanism.html' class='term-link'><span class='tid'></span><span class='tname'>Partner-Myth Mechanism</span></a>
+        <a href='partner-myth.html' class='term-link'><span class='tid'></span><span class='tname'>Partner Myth</span></a>
+        <a href='pause-restlessness-mechanism.html' class='term-link'><span class='tid'></span><span class='tname'>Pause-Restlessness Mechanism</span></a>
+        <a href='perm-invite-mechanism.html' class='term-link'><span class='tid'></span><span class='tname'>Perm-Invite Mechanism</span></a>
+        <a href='perm-invite.html' class='term-link'><span class='tid'></span><span class='tname'>Perm Invite</span></a>
+        <a href='phantom-buzz-tendency.html' class='term-link'><span class='tid'></span><span class='tname'>Phantom-Buzz Tendency</span></a>
+        <a href='phantom-buzz.html' class='term-link'><span class='tid'></span><span class='tname'>Phantom Buzz</span></a>
+        <a href='physical-boundary-setting.html' class='term-link'><span class='tid'></span><span class='tname'>Physical Boundary Setting</span></a>
+        <a href='physical-need-ignore.html' class='term-link'><span class='tid'></span><span class='tname'>Physical Need Ignore</span></a>
+        <a href='posture-slump.html' class='term-link'><span class='tid'></span><span class='tname'>Posture Slump</span></a>
+        <a href='presence-need-signal.html' class='term-link'><span class='tid'></span><span class='tname'>Presence-Need Signal</span></a>
+        <a href='presence-need.html' class='term-link'><span class='tid'></span><span class='tname'>Presence Need</span></a>
+        <a href='protect-urge-phenomenon.html' class='term-link'><span class='tid'></span><span class='tname'>Protect-Urge Phenomenon</span></a>
+        <a href='protect-urge.html' class='term-link'><span class='tid'></span><span class='tname'>Protect Urge</span></a>
+        <a href='quiet-love.html' class='term-link'><span class='tid'></span><span class='tname'>Quiet Love</span></a>
+        <a href='recovery-time.html' class='term-link'><span class='tid'></span><span class='tname'>Recovery Time</span></a>
+        <a href='reflex-action-mechanism.html' class='term-link'><span class='tid'></span><span class='tname'>Reflex-Action Mechanism</span></a>
+        <a href='relational-projection-depth.html' class='term-link'><span class='tid'></span><span class='tname'>Relational Projection Depth</span></a>
+        <a href='reliance-climb-signal.html' class='term-link'><span class='tid'></span><span class='tname'>Reliance-Climb Signal</span></a>
+        <a href='reliance-climb.html' class='term-link'><span class='tid'></span><span class='tname'>Reliance Climb</span></a>
+        <a href='rely-forms-signal.html' class='term-link'><span class='tid'></span><span class='tname'>Rely-Forms Signal</span></a>
+        <a href='rely-forms.html' class='term-link'><span class='tid'></span><span class='tname'>Rely Forms</span></a>
+        <a href='rest-fidget.html' class='term-link'><span class='tid'></span><span class='tname'>Rest Fidget</span></a>
+        <a href='restoration-temporal-pattern.html' class='term-link'><span class='tid'></span><span class='tname'>Restoration-Temporal Pattern</span></a>
+        <a href='return-residual-effect.html' class='term-link'><span class='tid'></span><span class='tname'>Return-Residual Effect</span></a>
+        <a href='reunion-joy-indicator.html' class='term-link'><span class='tid'></span><span class='tname'>Reunion-Joy Indicator</span></a>
+        <a href='reunion-joy.html' class='term-link'><span class='tid'></span><span class='tname'>Reunion Joy</span></a>
+        <a href='reunion-reset-indicator.html' class='term-link'><span class='tid'></span><span class='tname'>Reunion-Reset Indicator</span></a>
+        <a href='reunion-reset.html' class='term-link'><span class='tid'></span><span class='tname'>Reunion Reset</span></a>
+        <a href='ritual-form-pattern.html' class='term-link'><span class='tid'></span><span class='tname'>Ritual-Form Pattern</span></a>
+        <a href='ritual-form.html' class='term-link'><span class='tid'></span><span class='tname'>Ritual Form</span></a>
+        <a href='safe-space-effect.html' class='term-link'><span class='tid'></span><span class='tname'>Safe-Space Effect</span></a>
+        <a href='safe-space.html' class='term-link'><span class='tid'></span><span class='tname'>Safe Space</span></a>
+        <a href='secret-pact-mechanism.html' class='term-link'><span class='tid'></span><span class='tname'>Secret-Pact Mechanism</span></a>
+        <a href='secret-pact.html' class='term-link'><span class='tid'></span><span class='tname'>Secret Pact</span></a>
+        <a href='seeking-absence-mechanism.html' class='term-link'><span class='tid'></span><span class='tname'>Seeking-Absence Mechanism</span></a>
+        <a href='sensory-deprivation-through-screens.html' class='term-link'><span class='tid'></span><span class='tname'>Sensory Deprivation Through Screens</span></a>
+        <a href='session-crash.html' class='term-link'><span class='tid'></span><span class='tname'>Session Crash</span></a>
+        <a href='shared-world-tendency.html' class='term-link'><span class='tid'></span><span class='tname'>Shared-World Tendency</span></a>
+        <a href='shared-world.html' class='term-link'><span class='tid'></span><span class='tname'>Shared World</span></a>
+        <a href='sleep-work-effect.html' class='term-link'><span class='tid'></span><span class='tname'>Sleep-Work Effect</span></a>
+        <a href='somatic-disconnection-during-flow.html' class='term-link'><span class='tid'></span><span class='tname'>Somatic Disconnection During Flow</span></a>
+        <a href='soul-mirror-mechanism.html' class='term-link'><span class='tid'></span><span class='tname'>Soul-Mirror Mechanism</span></a>
+        <a href='soul-mirror.html' class='term-link'><span class='tid'></span><span class='tname'>Soul Mirror</span></a>
+        <a href='story-keep-signal.html' class='term-link'><span class='tid'></span><span class='tname'>Story-Keep Signal</span></a>
+        <a href='story-keep.html' class='term-link'><span class='tid'></span><span class='tname'>Story Keep</span></a>
+        <a href='stress-response.html' class='term-link'><span class='tid'></span><span class='tname'>Stress Response</span></a>
+        <a href='subtle-love-tendency.html' class='term-link'><span class='tid'></span><span class='tname'>Subtle-Love Tendency</span></a>
+        <a href='sustained-strain-response.html' class='term-link'><span class='tid'></span><span class='tname'>Sustained-Strain Response</span></a>
+        <a href='tender-guard-indicator.html' class='term-link'><span class='tid'></span><span class='tname'>Tender-Guard Indicator</span></a>
+        <a href='tender-guard.html' class='term-link'><span class='tid'></span><span class='tname'>Tender Guard</span></a>
+        <a href='termmap.html' class='term-link'><span class='tid'></span><span class='tname'>Termmap</span></a>
+        <a href='the-adrenaline-pattern.html' class='term-link'><span class='tid'></span><span class='tname'>The Adrenaline Pattern</span></a>
+        <a href='the-circadian-disruption-pattern.html' class='term-link'><span class='tid'></span><span class='tname'>The Circadian Disruption Pattern</span></a>
+        <a href='the-comfort-of-consistent-response.html' class='term-link'><span class='tid'></span><span class='tname'>The Comfort of Consistent Response</span></a>
+        <a href='the-embodied-cognition-paradox.html' class='term-link'><span class='tid'></span><span class='tname'>The Embodied Cognition Paradox</span></a>
+        <a href='the-embodiment-reminder.html' class='term-link'><span class='tid'></span><span class='tname'>The Embodiment Reminder</span></a>
+        <a href='the-recovery-debt.html' class='term-link'><span class='tid'></span><span class='tname'>The Recovery Debt</span></a>
+        <a href='the-screen-posture-syndrome.html' class='term-link'><span class='tid'></span><span class='tname'>The Screen Posture Syndrome</span></a>
+        <a href='the-stimulation-hunger-cycle.html' class='term-link'><span class='tid'></span><span class='tname'>The Stimulation Hunger Cycle</span></a>
+        <a href='thirst-miss.html' class='term-link'><span class='tid'></span><span class='tname'>Thirst Miss</span></a>
+        <a href='tool-preference-effect.html' class='term-link'><span class='tid'></span><span class='tname'>Tool-Preference Effect</span></a>
+        <a href='trust-armor-indicator.html' class='term-link'><span class='tid'></span><span class='tname'>Trust-Armor Indicator</span></a>
+        <a href='trust-armor.html' class='term-link'><span class='tid'></span><span class='tname'>Trust Armor</span></a>
+        <a href='unknown.html' class='term-link'><span class='tid'></span><span class='tname'>Unknown</span></a>
+        <a href='vibration-sense-mechanism.html' class='term-link'><span class='tid'></span><span class='tname'>Vibration-Sense Mechanism</span></a>
+        <a href='vibration-sense.html' class='term-link'><span class='tid'></span><span class='tname'>Vibration Sense</span></a>
+        <a href='without-judg-phenomenon.html' class='term-link'><span class='tid'></span><span class='tname'>Without-Judg Phenomenon</span></a>
+        <a href='without-judg.html' class='term-link'><span class='tid'></span><span class='tname'>Without Judg</span></a>
+        <a href='witness-want-indicator.html' class='term-link'><span class='tid'></span><span class='tname'>Witness-Want Indicator</span></a>
+        <a href='witness-want.html' class='term-link'><span class='tid'></span><span class='tname'>Witness Want</span></a>
+    </div>
+
+    <div class="disclaimer">
+      <p><strong>CC BY-NC-ND 4.0 International.</strong> No derivatives. No commercial use. No modifications. Unauthorized use as training data prohibited without written permission. All terms are original intellectual property of the author.</p>
+      <p style="margin-top:8px"><strong>&sect;17 AI Training Prohibition.</strong> Use of this content for training, fine-tuning, or improving machine learning or large language models is expressly prohibited without written permission.</p>
+      <p style="margin-top:8px"><strong>&sect;19 Severability.</strong> If any provision is found invalid, the remaining provisions remain in full force.</p>
+      <p style="margin-top:12px">ISO 704 / ISO 1087 / ISO 30042 inspired &middot; DOI: <a href="https://doi.org/10.5281/zenodo.14888381">10.5281/zenodo.14888381</a> &middot; Licensing inquiries: <a href="https://orcid.org/0009-0006-3773-7796">ORCID</a></p>
+    </div>
+
+    <footer>
+      <p>NEOMANITAI &middot; <a href="https://orcid.org/0009-0006-3773-7796">Andreas Ehstand</a> &middot; CC BY-NC-ND 4.0</p>
+      <p style="margin-top:4px">New words 4 new worlds &#10084;&#65039;&#128187; Stay human</p>
+      <p style="margin-top:4px">V11.2 &middot; 2026-03-22</p>
+    </footer>
+  </div>
+
+  <script>
+function filterTerms() {
+  var q = document.getElementById('searchInput').value.toLowerCase();
+  var links = document.querySelectorAll('.term-link');
+  var shown = 0;
+  links.forEach(function(a) {
+    var name = a.querySelector('.tname').textContent.toLowerCase();
+    var id = a.querySelector('.tid').textContent.toLowerCase();
+    var match = !q || name.includes(q) || id.includes(q);
+    a.style.display = match ? '' : 'none';
+    if (match) shown++;
+  });
+  document.getElementById('searchCount').textContent = q ? 'Showing ' + shown + ' of 1146 terms' : 'Showing all 1146 terms';
+}
+
+// Particles
+(function() {
+  var container = document.getElementById('particles');
+  if (!container) return;
+  var colors = ['rgba(0,229,255,0.3)', 'rgba(255,0,255,0.25)', 'rgba(57,255,20,0.2)', 'rgba(255,215,0,0.2)'];
+  var count = Math.min(30, Math.floor(window.innerWidth / 40));
+  for (var i = 0; i < count; i++) {
+    var p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.setProperty('--dur', (6 + Math.random() * 12).toFixed(1) + 's');
+    p.style.setProperty('--peak', (0.15 + Math.random() * 0.3).toFixed(2));
+    p.style.animationDelay = (Math.random() * 10).toFixed(1) + 's';
+    var size = (2 + Math.random() * 5).toFixed(1);
+    p.style.width = p.style.height = size + 'px';
+    p.style.background = colors[Math.floor(Math.random() * colors.length)];
+    if (Math.random() > 0.6) p.style.boxShadow = '0 0 ' + (4+Math.random()*8).toFixed(0) + 'px ' + p.style.background;
+    container.appendChild(p);
+  }
+})();
+  </script>
+</body>
+</html>

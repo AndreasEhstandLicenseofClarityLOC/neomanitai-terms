@@ -4,7 +4,7 @@
 
 **Creator:** [Andreas Ehstand](https://orcid.org/0009-0006-3773-7796)
 **Framework:** NEOMANITAI
-**License:** CC BY-ND 4.0
+**License:** CC BY-NC-ND 4.0
 **Generated:** 2026-03-16
 **Total Terms:** 1100
 

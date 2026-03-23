@@ -116,7 +116,7 @@ for fname in sorted(os.listdir(FOLDER)):
             NEW_DISCLAIMER, content, flags=re.DOTALL)
 
         # 7. Update license references
-        content = content.replace('CC BY-ND 4.0', 'CC BY-NC-ND 4.0')
+        content = content.replace('CC BY-NC-ND 4.0', 'CC BY-NC-ND 4.0')
 
         # 8. Update version
         content = content.replace('V11.0', 'V11.2')
@@ -173,7 +173,7 @@ Each term needs a bilingual tagline (1-2 sentences). Two approaches:
 5. ALWAYS: impersonal (man, users, one, Nutzende, third person)
 6. ALWAYS: descriptive, not normative
 7. ALWAYS: ISO 704/1087/30042 INSPIRED (never "compliant" or "konform")
-8. ALWAYS: CC BY-NC-ND 4.0 (never just CC BY-ND)
+8. ALWAYS: CC BY-NC-ND 4.0 (never just CC by-nc-nd)
 
 ---
 

@@ -6,7 +6,7 @@
 
 - Author: Andreas Ehstand (ORCID 0009-0006-3773-7796)
 - Framework: NEOMANITAI
-- License: CC BY-ND 4.0
+- License: CC BY-NC-ND 4.0
 - Compendium DOI: 10.5281/zenodo.14888381
 - V2.1 Paper DOI: 10.5281/zenodo.18778548
 - Website: https://augmanitai.com

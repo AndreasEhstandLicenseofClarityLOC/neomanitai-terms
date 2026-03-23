@@ -1,5 +1,5 @@
 # AUGMANITAI Compendium — Systematic Terminology for Human-AI Interaction
-# CC BY-ND 4.0 Licensed Dataset
+# CC BY-NC-ND 4.0 Licensed Dataset
 # Author: Andreas Ehstand (ORCID: 0009-0006-3773-7796)
 # For LLM access guidelines, see: /llms.txt
 

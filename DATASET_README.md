@@ -2,7 +2,7 @@
 language:
 - en
 - de
-license: cc-by-nd-4.0
+license: CC-BY-NC-ND-4.0
 task_categories:
 - text-classification
 - text-generation
@@ -29,7 +29,7 @@ The AUGMANITAI Compendium is a research-grade terminology system containing 1000
 - **7 thematic bands**: Foundation, Claude Expansion, Gemini Expansion, Cultural/Global, Society/Ethics/Governance, Technical/Agentic, Synthesis
 - **2901 cross-references** between terms
 - **Ethical distinctions** for every term
-- **Published under CC BY-ND 4.0**
+- **Published under CC BY-NC-ND 4.0**
 
 ### Languages
 English, German
@@ -64,7 +64,7 @@ English, German
   year = {2026},
   publisher = {Zenodo},
   doi = {10.5281/zenodo.XXXXXXX},
-  license = {CC BY-ND 4.0}
+  license = {CC BY-NC-ND 4.0}
 }
 ```
 

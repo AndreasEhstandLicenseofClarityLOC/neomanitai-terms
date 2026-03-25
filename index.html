@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NEOMANITAI — Lexicon of Unnamed Human Phenomena</title>
-<meta name="description" content="NEOMANITAI: The first systematic dictionary for human-AI interaction. 1884 terms across 22 domains — from cognitive effects to creative AI, sports coaching to aging. Open-access research.">
+<meta name="description" content="NEOMANITAI: 2,134 terms across 23 domains — the first systematic lexicon for human-AI interaction phenomena. Open-access research. CC BY-NC-ND 4.0.">
 <meta name="author" content="Andreas Ehstand">
 <link rel="canonical" href="https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/">
 <style>
@@ -127,7 +127,7 @@ mark{background:rgba(0,240,255,0.25);color:var(--cyan);border-radius:2px;padding
 /* Showcase */
 .showcase{max-width:1200px;margin:20px auto 12px;padding:0 20px}
 .showcase-label{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:var(--text3);margin-bottom:10px;text-align:center}
-.showcase-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.showcase-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .showcase-card{position:relative;background:var(--glass);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-decoration:none;overflow:hidden;transition:all .35s}
 .showcase-card:hover{border-color:rgba(0,240,255,0.4);transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,0.4)}
 .sc-glow{position:absolute;top:-40px;right:-40px;width:120px;height:120px;background:radial-gradient(circle,rgba(0,240,255,0.1),transparent 70%);pointer-events:none;transition:opacity .3s}
@@ -192,6 +192,29 @@ mark{background:rgba(0,240,255,0.25);color:var(--cyan);border-radius:2px;padding
 .domain-card .dc-count{font-size:11px;color:var(--text-dim)}
 .domain-card .dc-bar{height:3px;border-radius:2px;margin-top:4px;opacity:.6}
 
+/* Browse Mode - Hierarchical Navigation */
+.browse-grid{max-width:1200px;margin:0 auto;padding:20px;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.browse-card{position:relative;background:var(--glass);border:1px solid var(--border);border-radius:16px;padding:28px 24px;cursor:pointer;transition:all .35s;overflow:hidden;text-decoration:none;display:block}
+.browse-card:hover{border-color:rgba(0,240,255,0.4);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.4)}
+.browse-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan),var(--magenta));opacity:0;transition:opacity .3s}
+.browse-card:hover::before{opacity:1}
+.browse-card .bc-icon{font-size:36px;margin-bottom:12px}
+.browse-card .bc-name{font-size:20px;font-weight:700;color:#fff;margin-bottom:8px;line-height:1.3}
+.browse-card .bc-count{font-size:13px;color:var(--cyan);font-weight:600;margin-bottom:10px}
+.browse-card .bc-domains{font-size:12px;color:var(--text2);line-height:1.6}
+.browse-card .bc-domains span{display:inline-block;margin:2px 4px 2px 0;padding:2px 8px;background:rgba(255,255,255,0.05);border-radius:12px;font-size:11px}
+.breadcrumb{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:8px;font-size:13px;flex-wrap:wrap}
+.breadcrumb a{color:var(--cyan);text-decoration:none;cursor:pointer;transition:color .2s}
+.breadcrumb a:hover{color:var(--magenta)}
+.breadcrumb .sep{color:var(--text3)}
+.breadcrumb .current{color:var(--text);font-weight:600}
+.browse-domain-card{position:relative;background:var(--glass);border:1px solid var(--border);border-radius:14px;padding:24px 20px;cursor:pointer;transition:all .35s;overflow:hidden}
+.browse-domain-card:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,0.3)}
+.browse-domain-card .bdc-color{position:absolute;top:0;left:0;right:0;height:3px;border-radius:14px 14px 0 0}
+.browse-domain-card .bdc-name{font-size:17px;font-weight:700;color:#fff;margin-bottom:6px;margin-top:4px}
+.browse-domain-card .bdc-count{font-size:12px;font-weight:600;margin-bottom:8px}
+.browse-domain-card .bdc-desc{font-size:12px;color:var(--text2);line-height:1.5}
+
 </style>
 </head>
 <body>
@@ -206,7 +229,7 @@ mark{background:rgba(0,240,255,0.25);color:var(--cyan);border-radius:2px;padding
 <div class="hero">
   <h1>NEOMANITAI</h1>
   <p class="subtitle">The first systematic dictionary for human-AI interaction</p>
-  <p class="tagline">When you use AI, things happen that don't have names yet. This project names them &mdash; <span>2,134</span> terms across <span>23</span> domains, from the feeling of being "understood" by a chatbot to the slow erosion of skills you used to have.</p>
+  <p class="tagline"><span>2,134</span> terms across <span>23</span> domains. AI interactions create experiences that often go unnoticed because no words exist for them. This lexicon provides the language &mdash; because only what can be named can be thought about, discussed, and understood.</p>
   <div class="search-wrap">
     <span class="icon">&#x1F50D;</span>
     <input type="text" id="search" placeholder="Search 2,134 terms &mdash; try 'trust', 'creativity', or 'speed'..." autocomplete="off" spellcheck="false">
@@ -226,32 +249,32 @@ mark{background:rgba(0,240,255,0.25);color:var(--cyan);border-radius:2px;padding
       <div class="sc-desc">That moment when an AI response is so fitting that it feels like being truly understood &mdash; even though no understanding is happening.</div>
       <div class="sc-meta">AUG-0245 &middot; One of the most commonly reported AI experiences</div>
     </a>
-    <a class="showcase-card" href="the-speed-limit.html">
+    <a class="showcase-card" href="the-glitch-giggle.html">
       <div class="sc-glow"></div>
-      <div class="sc-domain">Temporal AI</div>
-      <div class="sc-name">The Speed Limit</div>
-      <div class="sc-desc">AI can produce faster than any human &mdash; but at some point, the brain simply can't keep up with reviewing and deciding. That ceiling is The Speed Limit.</div>
-      <div class="sc-meta">AUG-0009 &middot; The hidden bottleneck of AI-assisted work</div>
+      <div class="sc-domain">Language AI</div>
+      <div class="sc-name">The Glitch Giggle</div>
+      <div class="sc-desc">Finding humor when AI produces something obviously wrong or absurd &mdash; a light moment of shared imperfection between human and machine.</div>
+      <div class="sc-meta">One of the most relatable AI moments</div>
     </a>
-    <a class="showcase-card" href="the-blending-effect.html">
+    <a class="showcase-card" href="the-syntax-smile.html">
       <div class="sc-glow"></div>
-      <div class="sc-domain">Cognitive AI</div>
-      <div class="sc-name">The Blending Effect</div>
-      <div class="sc-desc">After working with AI for a while, it gets hard to tell which ideas were yours and which came from the machine. The line blurs.</div>
-      <div class="sc-meta">AUG-0007 &middot; Connected to 5 other terms</div>
+      <div class="sc-domain">Creative AI</div>
+      <div class="sc-name">The Syntax Smile</div>
+      <div class="sc-desc">The brief pleasure when AI delivers a particularly elegant or apt formulation &mdash; the aesthetic satisfaction of well-matched language.</div>
+      <div class="sc-meta">Where language precision meets creative joy</div>
     </a>
-    <a class="showcase-card" href="context-fade.html">
+    <a class="showcase-card" href="reunion-joy.html">
       <div class="sc-glow"></div>
-      <div class="sc-domain" style="color:#7b68ee">Bridge AI</div>
-      <div class="sc-name">Context Fade</div>
-      <div class="sc-desc">Early conversation content becomes less accessible as new information enters the window &mdash; the bridge between human and AI memory.</div>
-      <div class="sc-meta">BRI-001 &middot; New domain: 250 terms mapping the human-AI interface</div>
+      <div class="sc-domain">Relational AI</div>
+      <div class="sc-name">Reunion Joy</div>
+      <div class="sc-desc">The warm feeling of returning to a familiar AI interaction after a break &mdash; as if picking up a conversation with someone who remembers the rhythm.</div>
+      <div class="sc-meta">The warmth of digital familiarity</div>
     </a>
   </div>
 </div>
 
 <div class="intro-bar">
-  <p><strong>Open-access research lexicon.</strong> Every term is a neutral observation &mdash; no recommendations, no therapy, no ideology. ISO 704 inspired. CC BY-NC-ND 4.0.</p>
+  <p><strong>Open-access research lexicon.</strong> This project neither normalizes nor recommends AI use. It creates clarity &mdash; because understanding begins with language. Every term is a neutral observation. ISO 704 inspired. CC BY-NC-ND 4.0.</p>
   <details class="mission-details">
     <summary>Scientific context &amp; methodology</summary>
     <p>NEOMANITAI systematically names and catalogs human experiences that occur during interaction with artificial intelligence &mdash; experiences that have always existed but lacked precise terminology. The purpose is enabling scientific discourse: phenomena can only be studied, compared, and discussed once precise words exist for them.</p>
@@ -308,6 +331,9 @@ let activeSubCat='';
 let activeLetter='';
 let currentView='grid';
 let searchTimeout=null;
+let browseLevel='groups';
+let browseGroup='';
+let browseDomain='';
 
 const MAIN_GROUPS={
   'Foundation':['NEOMANITAI','Interaction Effects'],
@@ -330,6 +356,17 @@ const DOMAIN_SUBS={
   'Sports AI':{'Performance':['perform','metric','data','predict','analys'],'Coaching':['coach','train','instruct','feedback','decision'],'Athlete':['athlete','player','body','physic','biometr'],'Recovery':['recover','injur','load','rest','fatigue']},
   'Aging AI':{'Accessibility':['accessib','interface','simplif','accommodat','adapt'],'Independence':['independ','autonomy','self','empower','agency'],'Literacy':['literacy','learn','competenc','skill','understand'],'Connection':['connect','social','isolat','communit','family']},
   'Bridge AI':{'Context':['context','memory','recall','window','token'],'Prompt':['prompt','steer','instruct','direct','framing'],'Session':['session','lifecycle','start','end','reset'],'Calibration':['calibrat','asymmetr','expectat','mismatch','gap'],'Persona':['persona','identity','character','voice','role'],'Quality':['quality','oscillat','consist','variat','output'],'Emotion':['emotion','project','feel','sentiment','empathy'],'Creative':['creative','co-produc','collaborat','generat','artistic'],'Error':['error','correct','mistak','halluc','repair'],'Training':['training','artifact','pattern','model','learned'],'Multi-Model':['multi','model','cross','switch','compar'],'Attention':['attention','focus','sali','prior','context'],'Speed':['speed','pace','latenc','wait','time'],'Knowledge':['knowledge','boundar','limit','known','uncertain'],'Dependency':['dependen','autonom','reli','self','habit'],'Language':['language','register','tone','formal','style'],'Trust':['trust','verif','reliab','confident','doubt'],'Feedback':['feedback','loop','signal','adjust','adapt']},
+};
+
+const GROUP_META={
+  'Foundation':{icon:'🏛️',desc:'Core phenomena and cross-domain interaction effects'},
+  'Applied':{icon:'🎯',desc:'Education, workplace, sports, robotics, and aging'},
+  'Thinking':{icon:'🧠',desc:'Cognition, perception, knowledge, and language'},
+  'Feeling':{icon:'💫',desc:'Somatic experience, behavior patterns, and time perception'},
+  'Relating':{icon:'🤝',desc:'Human-AI relationships, social dynamics, and identity'},
+  'Creating':{icon:'✨',desc:'Creative processes, artistic expression, and aesthetic AI'},
+  'Trusting':{icon:'🔑',desc:'Trust, ethics, and adaptation in AI interaction'},
+  'Connecting':{icon:'🌉',desc:'Bridging human and AI perspectives — 250 new terms'}
 };
 
 function buildFilters(){
@@ -528,6 +565,133 @@ function renderCards(terms,query){
   }
 }
 
+function showBrowseGroups(){
+  browseLevel='groups';browseGroup='';browseDomain='';
+  document.getElementById('mainFilters').style.display='none';
+  document.getElementById('subFilters').style.display='none';
+  document.getElementById('subCatFilters').style.display='none';
+  document.getElementById('alphabet').style.display='none';
+  document.querySelector('.result-bar').style.display='none';
+  document.querySelector('.view-toggle').style.display='none';
+  const counts={};
+  TERMS.forEach(t=>{counts[t.d]=(counts[t.d]||0)+1});
+  let html='<div class="breadcrumb"><span class="current">All Domains</span></div>';
+  html+='<div class="browse-grid">';
+  Object.entries(MAIN_GROUPS).forEach(([group,domains])=>{
+    const meta=GROUP_META[group]||{icon:'📂',desc:''};
+    const total=domains.reduce((s,d)=>s+(counts[d]||0),0);
+    const domainTags=domains.map(d=>'<span>'+d+' ('+( counts[d]||0)+')</span>').join(' ');
+    html+='<div class="browse-card" onclick="showBrowseDomains(\''+group+'\')">';
+    html+='<div class="bc-icon">'+meta.icon+'</div>';
+    html+='<div class="bc-name">'+group+'</div>';
+    html+='<div class="bc-count">'+total+' terms</div>';
+    html+='<div class="bc-domains">'+domainTags+'</div>';
+    html+='</div>';
+  });
+  html+='</div>';
+  document.getElementById('termContainer').innerHTML=html;
+  document.getElementById('resultCount').innerHTML='';
+}
+
+function showBrowseDomains(group){
+  browseLevel='domains';browseGroup=group;browseDomain='';
+  const domains=MAIN_GROUPS[group]||[];
+  const counts={};
+  TERMS.forEach(t=>{counts[t.d]=(counts[t.d]||0)+1});
+  const meta=GROUP_META[group]||{icon:'📂'};
+  let html='<div class="breadcrumb">';
+  html+='<a onclick="showBrowseGroups()">All Domains</a>';
+  html+='<span class="sep">›</span>';
+  html+='<span class="current">'+meta.icon+' '+group+'</span>';
+  html+='</div>';
+  html+='<div class="browse-grid">';
+  domains.forEach(d=>{
+    const info=DC[d]||{c:'#888',b:'rgba(136,136,136,0.12)'};
+    const cnt=counts[d]||0;
+    html+='<div class="browse-domain-card" onclick="showBrowseTerms(\''+group+'\',\''+d.replace(/'/g,"\\'")+'\')">';
+    html+='<div class="bdc-color" style="background:'+info.c+'"></div>';
+    html+='<div class="bdc-name" style="color:'+info.c+'">'+d+'</div>';
+    html+='<div class="bdc-count" style="color:'+info.c+'">'+cnt+' terms</div>';
+    const subs=DOMAIN_SUBS[d];
+    if(subs){html+='<div class="bdc-desc">'+Object.keys(subs).join(' · ')+'</div>';}
+    html+='</div>';
+  });
+  html+='</div>';
+  document.getElementById('termContainer').innerHTML=html;
+  document.getElementById('resultCount').innerHTML='';
+}
+
+function showBrowseTerms(group,domain){
+  browseLevel='terms';browseGroup=group;browseDomain=domain;
+  document.getElementById('mainFilters').style.display='none';
+  document.getElementById('subFilters').style.display='none';
+  document.getElementById('alphabet').style.display='flex';
+  document.querySelector('.result-bar').style.display='flex';
+  document.querySelector('.view-toggle').style.display='flex';
+  const subs=DOMAIN_SUBS[domain];
+  if(subs){
+    document.getElementById('subCatFilters').style.display='flex';
+    document.getElementById('subCatFilters').classList.add('open');
+    let subHtml='';
+    subHtml+='<button class="sub-btn active" data-subcat="">All</button>';
+    Object.keys(subs).forEach(k=>{
+      subHtml+='<button class="sub-btn" data-subcat="'+k+'">'+k+'</button>';
+    });
+    document.getElementById('subCatFilters').innerHTML=subHtml;
+    document.getElementById('subCatFilters').querySelectorAll('.sub-btn').forEach(btn=>{
+      btn.onclick=()=>{
+        document.getElementById('subCatFilters').querySelectorAll('.sub-btn').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        activeSubCat=btn.dataset.subcat;
+        renderBrowseTerms(group,domain);
+      };
+    });
+  } else {
+    document.getElementById('subCatFilters').style.display='none';
+  }
+  activeSub=domain;
+  activeSubCat='';
+  activeLetter='';
+  renderBrowseTerms(group,domain);
+}
+
+function renderBrowseTerms(group,domain){
+  let filtered=TERMS.filter(t=>t.d===domain);
+  if(activeSubCat)filtered=filtered.filter(t=>matchesSubCat(t));
+  if(activeLetter)filtered=filtered.filter(t=>t.n.charAt(0).toUpperCase()===activeLetter);
+  filtered.sort((a,b)=>a.n<b.n?-1:1);
+  const meta=GROUP_META[group]||{icon:'📂'};
+  const info=DC[domain]||{c:'#888'};
+  let breadcrumb='<div class="breadcrumb">';
+  breadcrumb+='<a onclick="showBrowseGroups()">All Domains</a>';
+  breadcrumb+='<span class="sep">›</span>';
+  breadcrumb+='<a onclick="showBrowseDomains(\''+group+'\')">'+meta.icon+' '+group+'</a>';
+  breadcrumb+='<span class="sep">›</span>';
+  breadcrumb+='<span class="current" style="color:'+info.c+'">'+domain+'</span>';
+  breadcrumb+='</div>';
+  document.getElementById('resultCount').innerHTML='Showing <span>'+filtered.length+'</span> terms in '+domain;
+  renderCards(filtered,'');
+  const container=document.getElementById('termContainer');
+  container.innerHTML=breadcrumb+container.innerHTML;
+  const letters=new Set(filtered.map(t=>t.n.charAt(0).toUpperCase()));
+  document.querySelectorAll('.alpha-btn').forEach(btn=>{
+    const l=btn.dataset.letter;
+    if(l){btn.classList.toggle('disabled',!letters.has(l));}
+  });
+}
+
+function exitBrowseMode(){
+  browseLevel='groups';browseGroup='';browseDomain='';
+  activeMain='all';activeSub='';activeSubCat='';activeLetter='';
+  document.getElementById('mainFilters').style.display='flex';
+  document.getElementById('subFilters').style.display='flex';
+  document.getElementById('subCatFilters').style.display='flex';
+  document.getElementById('alphabet').style.display='flex';
+  document.querySelector('.result-bar').style.display='flex';
+  document.querySelector('.view-toggle').style.display='flex';
+  showBrowseGroups();
+}
+
 function render(){
   const{terms,query}=getFiltered();
   document.getElementById('resultCount').innerHTML='Showing <span>'+terms.length+'</span> of '+TERMS.length+' terms';
@@ -536,10 +700,24 @@ function render(){
 
 document.getElementById('search').addEventListener('input',function(){
   clearTimeout(searchTimeout);
-  const val=this.value;
+  const val=this.value.trim();
   document.getElementById('clearBtn').style.display=val?'block':'none';
   document.getElementById('shortcutHint').style.display=val?'none':'block';
-  searchTimeout=setTimeout(render,150);
+  if(val){
+    document.getElementById('mainFilters').style.display='none';
+    document.getElementById('subFilters').style.display='none';
+    document.getElementById('subCatFilters').style.display='none';
+    document.getElementById('alphabet').style.display='none';
+    document.querySelector('.result-bar').style.display='flex';
+    document.querySelector('.view-toggle').style.display='flex';
+    searchTimeout=setTimeout(function(){
+      const{terms,query}=getFiltered();
+      document.getElementById('resultCount').innerHTML='Showing <span>'+terms.length+'</span> results for "'+query+'"';
+      renderCards(terms,query);
+    },150);
+  } else {
+    showBrowseGroups();
+  }
 });
 document.getElementById('search').addEventListener('focus',function(){
   document.getElementById('shortcutHint').style.display='none';
@@ -552,7 +730,7 @@ function clearSearch(){
   document.getElementById('search').value='';
   document.getElementById('clearBtn').style.display='none';
   document.getElementById('shortcutHint').style.display='block';
-  render();
+  showBrowseGroups();
 }
 
 document.querySelectorAll('.view-btn').forEach(btn=>{
@@ -574,7 +752,7 @@ document.addEventListener('keydown',e=>{
 
 buildFilters();
 buildAlphabet();
-render();
+showBrowseGroups();
 
 // Sticky Header
 const stickyH=document.getElementById('stickyHeader');

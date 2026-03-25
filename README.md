@@ -2,7 +2,7 @@
 
 **New words 4 new worlds — Stay human**
 
-The largest known systematic, multilingual, ISO-oriented, multi-LLM-validated lexicon of unnamed human phenomena. Over 1,000 terms for experiences that have always existed but never had a word.
+The largest known systematic, multilingual, ISO-oriented, multi-LLM-validated lexicon of unnamed human phenomena. 2,134 terms across 23 domains for experiences that have always existed but never had a word.
 
 ---
 
@@ -37,12 +37,13 @@ Each term page includes:
 
 | Metric | Value |
 |--------|-------|
-| Terms | 1,146+ |
-| Domains | 10 |
+| Terms | 2,134 |
+| Domains | 23 |
 | Languages | English, German |
 | Definition structure | ISO 704/1087/30042 inspired |
 | Validation | Multi-LLM (architecturally independent) |
 | Format | Standalone HTML, one file per term |
+| DOIs | 10.5281/zenodo.14888381 (Compendium), 10.5281/zenodo.19227772 (Bridge AI), 10.5281/zenodo.19227776 (Full Index) |
 
 ## License
 
@@ -56,6 +57,10 @@ This means:
 
 Licensing inquiries: [ORCID 0009-0006-3773-7796](https://orcid.org/0009-0006-3773-7796)
 
+## Domains
+
+NEOMANITAI, Education, Robotics, Workplace, Aging AI, Sports AI, Cognitive AI, Perception AI, Knowledge AI, Language AI, Somatic AI, Behavioral AI, Temporal AI, Relational AI, Social AI, Identity AI, Creative AI, AI Art, Ethics AI, Trust AI, Adaptation AI, Interaction Effects, Bridge AI.
+
 ## Author
 
 **Andreas Ehstand**
@@ -66,7 +71,7 @@ Licensing inquiries: [ORCID 0009-0006-3773-7796](https://orcid.org/0009-0006-377
 ## Citation
 
 ### APA 7
-Ehstand, A. (2026). *NEOMANITAI: Compendium of named phenomena for unnamed human experiences* (V11.2). Zenodo. https://doi.org/10.5281/zenodo.14888381
+Ehstand, A. (2026). *NEOMANITAI: Compendium of named phenomena for unnamed human experiences* (V12.0). Zenodo. https://doi.org/10.5281/zenodo.14888381
 
 ### BibTeX
 ```bibtex
@@ -77,7 +82,7 @@ Ehstand, A. (2026). *NEOMANITAI: Compendium of named phenomena for unnamed human
   publisher = {Zenodo},
   doi = {10.5281/zenodo.14888381},
   url = {https://doi.org/10.5281/zenodo.14888381},
-  note = {V11.2. CC BY-NC-ND 4.0}
+  note = {V12.0. CC BY-NC-ND 4.0}
 }
 ```
 
@@ -87,4 +92,4 @@ These terms are high-density semantic tokens with real referents. Each one fills
 
 ---
 
-V11.2 · 2026-03-22 · CC BY-NC-ND 4.0 International
+V12.0 · 2026-03-26 · 2,134 terms · 23 domains · CC BY-NC-ND 4.0 International

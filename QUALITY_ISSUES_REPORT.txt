@@ -1,0 +1,264 @@
+================================================================================
+QUALITY ISSUES SCAN - FINAL REPORT
+AI Art and Aging AI Domain Definitions
+================================================================================
+
+SCAN COMPLETED: All HTML files checked
+Total Files Scanned:
+  - AI Art: 100 files
+  - Aging AI: 100 files
+
+ISSUES IDENTIFIED: 52 TOTAL
+  - AI Art: 32 files with issues
+  - Aging AI: 20 files with issues
+
+================================================================================
+ISSUE BREAKDOWN
+================================================================================
+
+MOST COMMON ISSUES:
+
+1. Forbidden opening pattern (This is when/phenomenon related to):
+   - AI Art: 25 files
+   - Aging AI: 13 files
+   - TOTAL: 38 occurrences
+   
+   These definitions start with "When..." which violates the quality standards
+   for clarity and definitional structure.
+
+2. Prescriptive language (you/your):
+   - AI Art: 17 files
+   - Aging AI: 14 files
+   - TOTAL: 31 occurrences
+   
+   Definitions use second-person language addressing the reader, making them
+   less objective and more casual than required.
+
+3. Generic boilerplate:
+   - AI Art: 5 files
+   - Aging AI: 2 files
+   - TOTAL: 7 occurrences
+   
+   Definitions use generic opening like "The process..." that could apply
+   to almost any term.
+
+4. German language content: 0 files
+   No German definitions found in English definition sections.
+
+5. Forbidden words (anxiety, barrier, conflict, depression, harm, failure,
+   collapse, deficit, breakdown): 0 files
+   No forbidden words detected.
+
+6. Too academic/jargon-heavy: 0 files
+   No overly academic content detected.
+
+================================================================================
+FILES WITH MULTIPLE ISSUES
+================================================================================
+
+MOST PROBLEMATIC (2 issues):
+- aesthetic-algorithm-imbalance-display.html
+- ai-artist-attribution-framework.html
+- ai-artistic-output-reproducibility.html
+- generated-image-quality-variance.html
+- aging-fine-motor-control-accommodation.html
+- elder-user-error-recovery-difficulty.html
+- generational-tech-adoption-timeline.html
+- interface-stability-psychological-safety.html
+
+All others have single issues.
+
+================================================================================
+DETAILED ISSUE LIST
+================================================================================
+
+AI ART DOMAIN (32 issues):
+1. aesthetic-algorithm-imbalance-display.html
+   - Forbidden opening pattern, Prescriptive language
+   
+2. aesthetic-consensus-in-ai-generated-art.html
+   - Forbidden opening pattern
+   
+3. aesthetic-preference-algorithm-optimization.html
+   - Forbidden opening pattern
+   
+4. aesthetic-training-data-contamination.html
+   - Forbidden opening pattern
+   
+5. ai-art-community-identity-formation.html
+   - Forbidden opening pattern
+   
+6. ai-art-community-legitimacy-building.html
+   - Generic boilerplate
+   
+7. ai-art-copyright-enforcement-challenge.html
+   - Forbidden opening pattern
+   
+8. ai-art-market-speculation-effect.html
+   - Forbidden opening pattern
+   
+9. ai-art-ownership-legal-ambiguity.html
+   - Forbidden opening pattern
+   
+10. ai-art-style-clustering-effect.html
+    - Prescriptive language
+    
+11. ai-artist-attribution-framework.html
+    - Forbidden opening pattern, Prescriptive language
+    
+12. ai-artistic-output-reproducibility.html
+    - Forbidden opening pattern, Prescriptive language
+    
+13. ai-artistic-style-transfer-effect.html
+    - Prescriptive language
+    
+14. ai-artistic-training-data-opacity.html
+    - Prescriptive language
+    
+15. ai-artwork-attribution-challenge.html
+    - Forbidden opening pattern
+    
+16. ai-artwork-conceptual-originality.html
+    - Prescriptive language
+    
+17. ai-artwork-market-price-discovery.html
+    - Forbidden opening pattern
+    
+18. algorithm-aesthetic-exploration-guidance.html
+    - Forbidden opening pattern
+    
+19. algorithm-aesthetic-fairness-adjustment.html
+    - Forbidden opening pattern
+    
+20. algorithm-aesthetic-preference-concentration.html
+    - Forbidden opening pattern
+    
+21. algorithmic-art-curation-effect.html
+    - Forbidden opening pattern
+    
+22. algorithmic-curation-aesthetic-homogenization.html
+    - Forbidden opening pattern
+    
+23. art-style-homogenization-through-ai.html
+    - Forbidden opening pattern
+    
+24. artistic-attribution-system-design.html
+    - Generic boilerplate
+    
+25. artistic-community-ai-acceptance.html
+    - Generic boilerplate
+    
+26. artistic-community-ai-integration-mismatch.html
+    - Forbidden opening pattern
+    
+27. artistic-copyright-in-ai-generated-works.html
+    - Forbidden opening pattern
+    
+28. artistic-intent-disambiguation-in-ai.html
+    - Forbidden opening pattern
+    
+29. generated-art-market-integration.html
+    - Generic boilerplate, Prescriptive language
+    
+30. generated-artwork-reproducibility-paradox.html
+    - Prescriptive language
+    
+31. generated-image-quality-prediction.html
+    - Prescriptive language
+    
+32. generated-image-quality-variance.html
+    - Forbidden opening pattern, Prescriptive language
+
+AGING AI DOMAIN (20 issues):
+1. accessibility-feature-invisibility.html
+   - Forbidden opening pattern
+   
+2. age-based-algorithm-imbalance-visibility.html
+   - Forbidden opening pattern
+   
+3. age-based-technology-avoidance.html
+   - Forbidden opening pattern
+   
+4. aging-cognitive-load-compensation.html
+   - Forbidden opening pattern
+   
+5. aging-fine-motor-control-accommodation.html
+   - Forbidden opening pattern, Prescriptive language
+   
+6. aging-motor-control-accommodation-pattern.html
+   - Generic boilerplate
+   
+7. ai-response-pace-mismatch.html
+   - Forbidden opening pattern
+   
+8. cognitive-load-amplification-effect.html
+   - Forbidden opening pattern
+   
+9. elder-tech-adoption-resistance-pattern.html
+   - Generic boilerplate
+   
+10. elder-user-error-recovery-difficulty.html
+    - Forbidden opening pattern, Prescriptive language
+    
+11. elder-user-support-dependence.html
+    - Prescriptive language
+    
+12. generational-help-seeking-behavior.html
+    - Forbidden opening pattern
+    
+13. generational-instruction-format-preference.html
+    - Prescriptive language
+    
+14. generational-tech-adoption-timeline.html
+    - Forbidden opening pattern, Prescriptive language
+    
+15. interface-stability-psychological-safety.html
+    - Forbidden opening pattern, Prescriptive language
+    
+16. tech-adoption-timing-effect.html
+    - Forbidden opening pattern
+    
+17. tech-company-age-invisibility.html
+    - Prescriptive language
+    
+18. tech-support-generational-language-gap.html
+    - Prescriptive language
+    
+19. technological-competence-verification-difficulty.html
+    - Prescriptive language
+    
+20. technological-literacy-threshold.html
+    - Prescriptive language
+
+================================================================================
+RECOMMENDATIONS
+================================================================================
+
+IMMEDIATE ACTIONS REQUIRED:
+
+1. FORBIDDEN OPENING PATTERN (38 total):
+   Rewrite all definitions starting with "When..." to use stronger, more
+   direct openings that explain what the term IS, not when it happens.
+   Example rewrites:
+   - OLD: "When an AI tool keeps generating..."
+   - NEW: "The tendency of AI tools to generate similar-looking images..."
+   
+2. PRESCRIPTIVE LANGUAGE (31 total):
+   Remove all instances of "you/your" and replace with neutral, objective
+   language.
+   Example rewrites:
+   - OLD: "...but you can't easily trace where..."
+   - NEW: "...but tracing where... is difficult"
+   
+3. GENERIC BOILERPLATE (7 total):
+   Replace vague openings with specific, term-relevant descriptions.
+   Example rewrites:
+   - OLD: "The process where AI artists work..."
+   - NEW: "The effort AI artists undertake to establish credibility..."
+
+NO ISSUES FOUND WITH:
+- German language contamination (0 files)
+- Forbidden words (0 files)
+- Over-academic content (0 files)
+
+================================================================================

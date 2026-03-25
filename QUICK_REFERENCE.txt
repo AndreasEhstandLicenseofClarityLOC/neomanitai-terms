@@ -1,0 +1,123 @@
+================================================================================
+QUALITY SCAN - QUICK REFERENCE GUIDE
+================================================================================
+
+SCAN COMPLETED: 200 files (100 AI Art + 100 Aging AI)
+ISSUES FOUND: 52 total (32 AI Art, 20 Aging AI)
+FILES WITH ISSUES: 52 files (68% of files are clean)
+
+================================================================================
+THE 3 MAIN ISSUES
+================================================================================
+
+ISSUE #1: "WHEN..." OPENING PATTERN (38 files)
+---------------------------------------------------
+Files that explain WHEN something happens instead of WHAT it is.
+
+Example:
+  WRONG: "When an AI tool keeps generating the same types of images..."
+  RIGHT: "AI tools tend to generate images that look similar to each other."
+
+AI Art files: 25
+Aging AI files: 13
+
+QUICK FIX: Rewrite first sentence to define the term, not describe when it happens
+
+
+ISSUE #2: PRESCRIPTIVE LANGUAGE - YOU/YOUR (31 files)
+------------------------------------------------------
+Definitions address the reader directly ("you/your") instead of being objective.
+
+Example:
+  WRONG: "...so you can't easily trace where the model learned its style"
+  RIGHT: "...making it difficult to trace where the model learned its style"
+
+AI Art files: 17
+Aging AI files: 14
+
+QUICK FIX: Replace all "you/your" with objective descriptions
+
+
+ISSUE #3: GENERIC BOILERPLATE (7 files)
+----------------------------------------
+Definitions use vague generic openings that could apply to any term.
+
+Example:
+  WRONG: "The process where AI artists work to get their work taken seriously"
+  RIGHT: "The effort AI artists undertake to establish credibility with galleries"
+
+AI Art files: 5
+Aging AI files: 2
+
+QUICK FIX: Add specific context that makes this term unique
+
+================================================================================
+FILES NEEDING MOST ATTENTION (2+ issues each)
+================================================================================
+
+AI Art Domain:
+  1. aesthetic-algorithm-imbalance-display.html
+  2. ai-artist-attribution-framework.html
+  3. ai-artistic-output-reproducibility.html
+  4. generated-image-quality-variance.html
+  5. generated-art-market-integration.html
+
+Aging AI Domain:
+  1. aging-fine-motor-control-accommodation.html
+  2. elder-user-error-recovery-difficulty.html
+  3. generational-tech-adoption-timeline.html
+  4. interface-stability-psychological-safety.html
+
+================================================================================
+WHAT'S GOOD (ZERO ISSUES FOUND)
+================================================================================
+
+✓ German language contamination: 0 files
+✓ Forbidden words (anxiety, barrier, conflict, depression, harm, failure, 
+  collapse, deficit, breakdown): 0 files
+✓ Over-academic/jargon-heavy content: 0 files
+
+This means:
+- All definitions are in English
+- Tone is accessible to 18-year-olds
+- No negative framing or harmful language
+
+================================================================================
+DETAILED REPORTS AVAILABLE
+================================================================================
+
+For detailed issue lists with full definitions, see:
+
+1. QUALITY_ISSUES_REPORT.txt
+   - Full definitions for every problematic file
+   - Complete issue descriptions
+   - Best for reading and understanding context
+
+2. QUALITY_ISSUES_DETAILED.csv
+   - Machine-readable format
+   - Easy to filter and sort
+   - Best for spreadsheet analysis
+
+3. SCAN_RESULTS.md
+   - This summary with examples
+   - Remediation priorities
+   - Best for getting oriented
+
+================================================================================
+REMEDIATION STRATEGY
+================================================================================
+
+PHASE 1 - THE "WHEN..." FIX (Priority 1 - 38 files)
+Focus on files that define terms by describing when they happen instead of 
+what they are. This is the most fundamental issue.
+
+PHASE 2 - REMOVE YOU/YOUR (Priority 2 - 31 files)  
+Replace prescriptive language with objective descriptions. Many of these can
+be batch-processed.
+
+PHASE 3 - FIX BOILERPLATE (Priority 3 - 7 files)
+Rewrite generic opening phrases to be specific to each term.
+
+Note: Some files appear in multiple phases (have multiple issues).
+
+================================================================================

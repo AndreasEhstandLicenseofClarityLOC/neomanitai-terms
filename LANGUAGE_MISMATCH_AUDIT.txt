@@ -1,0 +1,327 @@
+================================================================================
+SPORTS AI TERM FILES - LANGUAGE MISMATCH AUDIT REPORT
+================================================================================
+
+SUMMARY OF FINDINGS:
+====================
+
+Total Sports AI files scanned: 101
+Files with German text in English Definition section: 87
+Files with correct English definitions: 13
+Files with English text in German Definition section: 0
+
+CRITICAL ISSUE IDENTIFIED:
+==========================
+
+86% of Sports AI term files (87 out of 101) have their English definitions 
+written in German, not English. The German definition sections contain the 
+same German text (duplicated).
+
+Example of the problem:
+- File: athletic-performance-prediction-error.html
+- English Definition section shows: "Wenn die Vorhersage der KI über die..."
+- German Definition section shows: "Wenn die Vorhersage der KI über die..." (identical)
+- No reverse issue found (no German sections with English text)
+
+================================================================================
+COMPLETE LIST OF 87 PROBLEMATIC FILES (with definitions)
+================================================================================
+
+1. athlete-agency-in-data-driven-coaching.html
+   "Wenn ein Athlet selbst entscheiden kann, wie sein Trainer KI-Daten über ihn nutzt..."
+
+2. athlete-autonomy-in-data-rich-environment.html
+   "Die Freiheit eines Athleten, eigene Entscheidungen zu treffen, wenn KI-Systeme ständig..."
+
+3. athlete-behavioral-response-tracking.html
+   "Wenn KI bemerkt, wie ein Athlet auf Dinge reagiert — ob er dem Trainer folgt..."
+
+4. athlete-data-awareness-shift.html
+   "Wenn ein Athlet anfängt, anders über sich selbst nachzudenken, weil er sieht..."
+
+5. athlete-data-literacy-gap.html
+   "Wenn ein Athlet viele Daten von der KI bekommt, aber nicht wirklich versteht..."
+
+6. athlete-data-transparency-expectation.html
+   "Wenn ein Athlet erwartet, genau zu sehen und zu verstehen, welche Daten die KI..."
+
+7. athlete-motivation-data-correlation.html
+   "Wenn die KI zeigt, dass ein Athlet an Tagen mit mehr Motivation besser abschneidet..."
+
+8. athlete-psychological-load-from-metrics.html
+   "Wenn sich ein Athlet erschöpft oder überfordert fühlt, weil er ständig Zahlen..."
+
+9. athlete-recovery-prediction-accuracy.html
+   "Wenn die KI vorhersagt, dass ein Athlet nach einer Erholung wieder hart trainieren kann..."
+
+10. athlete-self-awareness-vs-data.html
+    "Der Moment, wenn ein Athlet merkt, dass die KI-Daten über ihn etwas anderes sagen..."
+
+11. athlete-trust-in-coach-vs-algorithm.html
+    "Der unangenehme Moment, wenn der Trainer eine Sache sagt, die KI etwas anderes sagt..."
+
+12. athletic-autonomy-vs-data-load.html
+    "Wenn das Sammeln von immer mehr Daten über sportliche Leistung anfängt..."
+
+13. athletic-performance-metric-proliferation.html
+    "Wenn Trainer und KI-Systeme so viele verschiedene Messungen verfolgen..."
+
+14. athletic-performance-optimization-paradox.html
+    "Wenn der Versuch, alles durch Daten perfekt zu machen, dazu führt..."
+
+15. biometric-awareness-shift.html
+    "Wenn Athleten ihre eigenen Körper auf eine neue Weise wahrnehmen..."
+
+16. biometric-baseline-establishment.html
+    "Wenn die KI einen normalen Referenzpunkt für die Körpermessungen eines Athleten..."
+
+17. biometric-concern-manifestation-effect.html
+    "Diese Sache, wo das Sehen einer schlechten Zahl auf deinem tragbaren Gerät..."
+
+18. biometric-concern-manifestation.html
+    "Wenn ein Athlet seine biometrischen Daten sieht und anfängt, sich Sorgen zu machen..."
+
+19. biometric-device-interoperability-challenge.html
+    "Wenn ein Athlet mehrere tragbare Geräte und Apps hat, die ihn verfolgen..."
+
+20. biometric-equipment-reliance.html
+    "Wenn ein Athlet abhängig von seinem Tracking-Gerät wird und seinem eigenen Körper..."
+
+21. biometric-feedback-lag-effect.html
+    "Wenn ein Athlet zu spät Rückmeldung über seine Biometrik erhält..."
+
+22. biometric-measurement-accuracy-doubt.html
+    "Wenn ein Athlet den Messungen seines tragbaren Geräts nicht traut..."
+
+23. biometric-measurement-validity-question.html
+    "Wenn sich ein Athlet fragt, ob das, was der biometrische Sensor misst..."
+
+24. biometric-privacy-vs-performance-optimization.html
+    "Diese Abwägung, bei der Athleten wählen müssen, ob sie ihre Körperdaten..."
+
+25. biometric-variance-interpretation.html
+    "Wenn sich die Messungen eines Athleten von Tag zu Tag ändern..."
+
+26. biometric-variance-normal-range.html
+    "Wenn die KI herausfindet, was als normale Variation für einen Athletenkörper..."
+
+27. coach-algorithm-authority-split.html
+    "Die verworrene Situation, in der weder der Trainer noch der KI-Algorithmus..."
+
+28. coach-algorithm-collaboration-pattern.html
+    "Wenn ein Trainer und KI-System eine funktionierende Beziehung entwickeln..."
+
+29. coach-athlete-communication-mediation.html
+    "Wenn das KI-System zum Vermittler in der Trainer-Athlet-Kommunikation wird..."
+
+30. coach-athlete-data-literacy-alignment.html
+    "Wenn ein Trainer die Daten versteht, aber der Athlet nicht..."
+
+31. coach-authority-over-data-interpretation.html
+    "Der Machtkampf um die Frage, wer die Daten interpretieren darf..."
+
+32. coach-authority-recalibration.html
+    "Wenn Trainer ihre Autorität und ihren Status überdenken müssen..."
+
+33. coach-data-integration-workflow-optimization.html
+    "Wenn ein Trainerstab herausfindet, wie man KI-Daten am besten..."
+
+34. coach-decision-authority-shift.html
+    "Wenn die Entscheidungsgewalt allmählich von Trainern zum KI-System verlagert wird..."
+
+35. coach-decision-making-transparency.html
+    "Wenn alle datengestützten Entscheidungen Athleten gegenüber offengelegt werden..."
+
+36. coach-decision-transparency-requirement.html
+    "Wenn Athleten erwarten, dass Trainer erklären, warum sie eine Entscheidung..."
+
+37. coach-expertise-democratization-through-data.html
+    "Wenn KI Coaching-Wissen für alle zugänglich macht..."
+
+38. coach-expertise-validation.html
+    "Wenn Trainer ihre Bauchgefühle und Entscheidungen durch Daten validiert..."
+
+39. coach-expertise-vs-algorithm-value.html
+    "Die zugrunde liegende Frage: Ist die jahrelange Erfahrung eines Trainers wertvoller..."
+
+40. coach-intuition-validation-need.html
+    "Wenn Trainer einen Beweis brauchen, dass ihre Bauchinstinkte korrekt sind..."
+
+41. coach-intuition-vs-data-divergence.html
+    "Wenn das Bauchgefühl eines Trainers in eine Richtung zeigt und die Daten..."
+
+42. competition-performance-data-mismatch.html
+    "Wenn die Daten eines Athleten im Training perfekt aussehen, aber er..."
+
+43. competition-simulation-data-gap.html
+    "Die Lücke zwischen dem, was in Trainings-Simulationen passiert..."
+
+44. data-driven-individual-difference-identification.html
+    "Wenn KI bemerkt, dass Athlet A völlig unterschiedlich auf Trainingsreize..."
+
+45. data-driven-overtraining-pattern.html
+    "Wenn KI die Warnsignale von Übertraining erkennen kann..."
+
+46. data-driven-team-dynamics-shift.html
+    "Wenn sich die Zusammenarbeitsweise eines Teams ändert, weil jetzt..."
+
+47. data-driven-training-adaptation-effectiveness.html
+    "Die Frage: Führt die ständige Anpassung des Trainings basierend auf..."
+
+48. data-driven-training-adaptation.html
+    "Wenn Trainer das Training spontan basierend auf Echtzeit-Daten-Feedback..."
+
+49. data-interpretation-expertise-gap.html
+    "Wenn eine Organisation alle Daten hat, aber Menschen mangeln..."
+
+50. data-saturation-decision-making-impact.html
+    "Wenn es so viele Daten gibt, dass die Entscheidungsfindung tatsächlich..."
+
+51. injury-likelihood-algorithmic-assessment.html
+    "Wenn ein KI-System eine prozentuale Wahrscheinlichkeit zuweist..."
+
+52. injury-likelihood-assessment-divergence.html
+    "Wenn die KI sagt, dass das Verletzungsrisiko niedrig ist, aber der Trainer..."
+
+53. injury-prediction-algorithm-reliance.html
+    "Wenn Trainer und Athleten so sehr auf die KI für Verletzungswarnungen..."
+
+54. injury-prevention-data-confidence.html
+    "Wenn sich ein Athlet oder Trainer nicht sicher ist, ob die Empfehlungen..."
+
+55. injury-recovery-optimization-prediction.html
+    "Wenn KI vorhersagt, wie schnell ein verletzter Athlet zum Spielen..."
+
+56. performance-ceiling-identification.html
+    "Wenn KI erkennt, dass ein Athlet sein maximales Potenzial bei aktuellem..."
+
+57. performance-comparison-psychological-effect.html
+    "Wenn ein Athlet sieht, wie seine Leistungsdaten mit Teamkollegen..."
+
+58. performance-data-communication-gap.html
+    "Wenn die Daten existieren, aber niemand den Athleten wirksam erklärt..."
+
+59. performance-data-comparison-skew.html
+    "Wenn Leistungsdaten von verschiedenen Athleten verglichen werden, aber..."
+
+60. performance-data-interpretation-skill-gap.html
+    "Wenn Athleten Zugang zu ihren Leistungsdaten haben, aber nicht..."
+
+61. performance-data-overread.html
+    "Wenn Trainer oder Athleten viel zu viel in kleine Schwankungen..."
+
+62. performance-interpretation-asymmetry.html
+    "Wenn gute Leistungszahlen gefeiert werden, aber schlechte Zahlen..."
+
+63. performance-metric-overreliance.html
+    "Wenn Trainer Entscheidungen nur basierend auf Metriken treffen..."
+
+64. performance-metric-selection-skew.html
+    "Wenn die Wahl, welche Metriken zu verfolgen sind, die Interpretation verzerrt..."
+
+65. performance-metric-standardization-across-teams.html
+    "Wenn verschiedene Sportorganisationen unterschiedliche Metriken..."
+
+66. performance-plateau-detection-lag.html
+    "Wenn die KI Wochen braucht, um zu bemerken, dass die Leistung..."
+
+67. real-time-biometric-feedback-loop.html
+    "Wenn ein Athlet sieht, wie sich seine Herzfrequenz oder Leistungsabgabe..."
+
+68. real-time-decision-making-load.html
+    "Wenn Trainer während eines Spiels oder Trainings Echtzeit-Daten erhalten..."
+
+69. real-time-feedback-reliance.html
+    "Wenn Athleten abhängig von ständigem Feedback werden und nicht..."
+
+70. real-time-feedback-sensitivity.html
+    "Wenn die Leistung eines Athleten zu empfindlich für Echtzeit-Daten-Feedback..."
+
+71. real-time-performance-feedback-reliance.html
+    "Wenn Echtzeit-Leistungsdaten so zentral werden, wie ein Athlet trainiert..."
+
+72. recovery-metric-integration-difficulty.html
+    "Wenn Trainer mehrere Erholungsmessungen haben..."
+
+73. recovery-metric-interpretation.html
+    "Wenn ein 'Erholungspunktestand' zurückkommt, aber es ist unklar..."
+
+74. recovery-monitoring-accuracy-improvement.html
+    "Wenn KI besser wird, den Erholungsstatus eines Athleten vorherzusagen..."
+
+75. recovery-optimization-instinct.html
+    "Wenn ein Athlet intuitiv weiß, was er zur Erholung braucht..."
+
+76. training-customization-effectiveness.html
+    "Wenn KI personalisierte Trainingspläne erstellt, aber ist die Anpassung..."
+
+77. training-deviation-from-algorithm.html
+    "Wenn ein Trainer oder Athlet bewusst die Trainingsempfehlung der KI..."
+
+78. training-individualization-paradox.html
+    "Wenn der Versuch, das perfekte individualisierte Training zu schaffen..."
+
+79. training-intensity-calibration-gap.html
+    "Wenn die KI eine Trainingsintensität verschreibt, aber der Athlet..."
+
+80. training-intensity-precision-increase.html
+    "Wenn KI Trainern hilft, genaue Trainingsintensitäten mit Watt..."
+
+81. training-load-distribution-algorithm.html
+    "Wenn KI herausfindet, wie Trainingsbelastung über Tage und Wochen..."
+
+82. training-load-optimization-paradox.html
+    "Wenn die Optimierung der Trainingsbelastung durch Daten dazu führt..."
+
+83. training-load-prescription-standardization.html
+    "Wenn Sportorganisationen versuchen, zu standardisieren, wie sie..."
+
+84. training-load-quantification-paradox.html
+    "Wenn eine Zahl auf die Trainingsbelastung gelegt wird, wirkt sie..."
+
+85. training-load-recovery-balance.html
+    "Das ewige KI-Ziel: Finde den genauen Punkt, an dem das Training..."
+
+86. training-periodization-algorithm-integration.html
+    "Wenn Trainer traditionelle Periodisierung (geplante Trainingszyclen)..."
+
+87. training-progression-algorithm-trust.html
+    "Wenn ein Athlet einem KI-Plan für eine allmähliche Progression..."
+
+================================================================================
+CORRECT FILES (13 files with proper English definitions)
+================================================================================
+
+1. athlete-confidence-in-data.html
+2. athlete-psychological-adaptation-to-tracking.html
+3. athlete-psychological-response-to-metrics.html
+4. athlete-trust-in-algorithm.html
+5. athletic-performance-datafication.html
+6. athletic-performance-predictability-increase.html
+7. athletic-performance-prediction-error.html
+8. biometric-feedback-sensitivity-individual-variance.html
+9. biometric-physiological-response-pattern.html
+10. injury-prevention-prediction-confidence.html
+11. performance-ceiling-prediction-accuracy.html
+12. real-time-feedback-adaptation-speed.html
+13. training-customization-effectiveness-variance.html
+
+================================================================================
+NOTES
+================================================================================
+
+- All 87 problematic files have German text starting with German markers:
+  "Wenn", "Die", "Der", "Das", "Ein", "Eine", etc.
+  
+- The German definition sections are duplicates (same text in both sections)
+  
+- No reverse problem found: No German definition sections contain English text
+  
+- The issue is systematic across almost the entire Sports AI domain
+  (87 out of 101 files = 86% affected)
+
+- The 13 correct files remain unchanged and properly have English definitions
+
+================================================================================
+END OF REPORT
+================================================================================

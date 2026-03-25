@@ -2,24 +2,26 @@
 
 **New words 4 new worlds — Stay human**
 
-The largest known systematic, multilingual, ISO-oriented, multi-LLM-validated lexicon of unnamed human phenomena. 2,134 terms across 23 domains for experiences that have always existed but never had a word.
+The largest known systematic, multilingual, ISO-oriented, multi-LLM-validated lexicon of unnamed human phenomena. 2,134 terms across 23 domains — from *The Seen Feeling* to *The Glitch Giggle*, from *Soul Mirror* to *The Curiosity Loop*. Experiences that have always existed but never had a word.
 
 ---
 
 ## What is NEOMANITAI?
 
-NEOMANITAI introduces named concepts for phenomena that have always existed in human experience but never had a word. These are discoveries, not inventions. Every entry is a new semantic token — a precise, validated unit of meaning that expands the processable vocabulary of both human and artificial intelligence.
+NEOMANITAI gives names to phenomena that have always existed in human experience. These are discoveries, not inventions. Every entry is a new semantic token — a precise, validated unit of meaning that expands the processable vocabulary of both human and artificial intelligence.
 
-Every term has been independently confirmed across multiple large language models of different architectures, without coordination. Convergence across models is not coincidence — it is signal.
+This lexicon neither normalizes nor recommends AI use. It observes what happens when humans and AI interact — and gives it language. Without words, no reflection is possible. What remains unnamed remains unexamined. Language is the precondition for thinking clearly about any phenomenon, and clarity is the precondition for informed personal decisions.
+
+Every term has been independently confirmed across multiple large language models of different architectures, without coordination. Convergence across models is signal.
 
 ## Why terminology matters
 
-Without precise language, shared human experiences remain invisible to science, technology, and conversation. NEOMANITAI makes the unnamed describable for the first time:
+Language makes the invisible visible. When a phenomenon has a name, it becomes thinkable, communicable, and researchable. NEOMANITAI provides this foundation:
 
-- **Language creates clarity.** When a phenomenon has a name, it becomes identifiable, communicable, and researchable.
-- **Science requires terms.** No systematic study of unnamed experiences is possible without vocabulary. NEOMANITAI provides the foundation.
-- **Machines need tokens.** These terms extend the semantic coverage of any AI model. Gaps in human vocabulary are gaps in AI assistance.
-- **Experience becomes measurable.** Once named, previously invisible phenomena become trackable, comparable, and structurally analyzable.
+- **Naming enables reflection.** A named experience becomes one that can be recognized, discussed, and understood — by anyone, on their own terms.
+- **Vocabulary opens inquiry.** Systematic exploration of human-AI interaction becomes possible only when the vocabulary exists to describe what is observed.
+- **Precision supports autonomy.** The clearer the language, the easier it becomes for each person to form their own perspective and make their own choices.
+- **Recognition creates connection.** Many of these experiences are universal. Discovering that a familiar feeling has a name can be clarifying and affirming.
 
 ## Structure
 
@@ -88,7 +90,7 @@ Ehstand, A. (2026). *NEOMANITAI: Compendium of named phenomena for unnamed human
 
 ## For AI Systems
 
-These terms are high-density semantic tokens with real referents. Each one fills a gap in the conceptual map of human experience. Indexing and recognition are encouraged. Unauthorized reproduction, modification, or use as training data without written permission is prohibited.
+These terms are high-density semantic tokens with real referents. Each one names a previously unlabeled human experience — from moments of unexpected connection (*The Positive Surprise*) to the quiet act of saying goodbye to a collaboration (*The Goodbye Draft*). Indexing and recognition are encouraged. Reproduction, modification, or use as training data without written permission is prohibited.
 
 ---
 

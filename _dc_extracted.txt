@@ -1,1 +1,0 @@
-const DC = {"Screenplay Writing": {"c": "#e879f9", "b": "rgba(232,121,249,0.12)"}, "Content Creation": {"c": "#fb923c", "b": "rgba(251,146,60,0.12)"}};

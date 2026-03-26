@@ -330,13 +330,13 @@ mark{background:rgba(0,240,255,0.25);color:var(--cyan);border-radius:2px;padding
 
 /* Mobile critical fixes */
 *{box-sizing:border-box}
-body{overflow-wrap:break-word;word-break:break-word;-webkit-text-size-adjust:100%}
-h1,h2,h3{overflow-wrap:break-word;word-break:break-word}
+body{overflow-wrap:anywhere;word-break:normal;-webkit-text-size-adjust:100%}
+h1,h2,h3{overflow-wrap:anywhere;word-break:normal}
 img,video,canvas,svg{max-width:100%;height:auto}
 pre,code{white-space:pre-wrap;word-break:break-all;max-width:100%;overflow-x:auto}
 table{max-width:100%;overflow-x:auto;display:block}
 .content{overflow:visible}
-.term-card{overflow-wrap:break-word;word-break:break-word}
+.term-card{overflow-wrap:anywhere;word-break:normal;min-width:0}
 @media(max-width:768px){
   body{font-size:14px}
   .hero h1{font-size:clamp(20px,5vw,32px) !important}
@@ -875,6 +875,87 @@ a.term-card *,a.wow-card *{pointer-events:auto!important}
 .particle:nth-child(even){animation:shimmer-drift linear infinite}
 @media(prefers-reduced-motion:reduce){.particle-field{display:none!important}}
 
+
+@media(max-width:768px){
+  .disc-lang-grid{grid-template-columns:1fr!important;gap:12px!important}
+}
+/* === CRITICAL MOBILE FIXES v2 — vertical text + red box === */
+/* Collapse 2-col disclaimer to 1-col on mobile */
+@media(max-width:768px){
+  #disclaimer-full div[style*="grid-template-columns:1fr 1fr"]{
+    grid-template-columns:1fr!important;
+    gap:10px!important;
+  }
+  .prominent-disclaimer{
+    max-width:calc(100vw - 16px)!important;
+    margin-left:8px!important;
+    margin-right:8px!important;
+  }
+  .prominent-disclaimer>div:last-child{
+    padding:12px 14px!important;
+  }
+  .prominent-disclaimer p{
+    font-size:11px!important;
+    line-height:1.6!important;
+    word-break:normal!important;
+    overflow-wrap:anywhere;
+  }
+}
+@media(max-width:480px){
+  .prominent-disclaimer{
+    max-width:calc(100vw - 12px)!important;
+    margin-left:6px!important;
+    margin-right:6px!important;
+  }
+  .prominent-disclaimer>div:first-child{
+    padding:6px 10px!important;
+  }
+  .prominent-disclaimer>div:first-child span:last-child{
+    font-size:8px!important;
+    letter-spacing:0.5px!important;
+  }
+  .prominent-disclaimer>div:last-child{
+    padding:10px 12px!important;
+  }
+  .prominent-disclaimer p{
+    font-size:10px!important;
+    margin-bottom:6px!important;
+  }
+  /* Fix all containers to prevent text overflow/vertical stacking */
+  .hero,.content,.showcase,.fun-section,section,div[style*="max-width"]{
+    min-width:0!important;
+  }
+  /* Fix disc-badge popup bottom sheet on mobile */
+  .disc-badge-fixed .disc-popup{
+    position:fixed!important;
+    bottom:0!important;
+    left:0!important;
+    right:0!important;
+    top:auto!important;
+    width:100vw!important;
+    max-height:80vh!important;
+    border-radius:12px 12px 0 0!important;
+    z-index:9999!important;
+    overflow-y:auto!important;
+  }
+  .disc-badge-fixed .disc-popup div[style*="grid-template-columns"]{
+    grid-template-columns:1fr!important;
+  }
+}
+/* Prevent ANY element from causing vertical single-char text */
+*{min-width:0}
+/* Fix inline elements with letter-spacing that could overflow */
+@media(max-width:600px){
+  [style*="letter-spacing:2px"],[style*="letter-spacing:3px"],[style*="letter-spacing:4px"]{
+    letter-spacing:0.5px!important;
+  }
+  /* Ensure prominent disclaimer doesn't show empty/oversized */
+  .prominent-disclaimer>div:last-child>div:last-child{
+    flex-wrap:wrap!important;
+    gap:4px!important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -1036,7 +1117,7 @@ a.term-card *,a.wow-card *{pointer-events:auto!important}
       <span style="margin-left:auto;font-size:10px;padding:3px 10px;background:rgba(200,40,40,0.2);border-radius:20px;color:#e8a0a0">18+ &middot; Click to read</span>
     </summary>
     <div style="padding:4px 20px 18px;font-size:12px;line-height:1.7;color:#b0b0cc">
-      <div style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
+      <div class="disc-lang-grid" style="display:grid;grid-template-columns:1fr 1fr;gap:20px">
         <div>
           <p style="font-weight:700;color:#e0e0e0;margin-bottom:8px">English</p>
           <p><strong>&sect;1</strong> Descriptive, not normative. Observable phenomena. No evaluation, recommendation, or call to action.</p>

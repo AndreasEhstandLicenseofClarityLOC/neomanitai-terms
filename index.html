@@ -39,6 +39,13 @@
   --border:rgba(0,240,255,0.15);--border2:rgba(255,0,255,0.1);
   --radius:12px;--radius-sm:8px;
 }
+
+/* Watermark bar at top - tip #12 */
+.watermark-bar{position:fixed;top:0;left:0;right:0;background:linear-gradient(90deg,rgba(0,240,255,0.04),rgba(255,0,255,0.04),rgba(0,240,255,0.04));border-bottom:1px solid rgba(0,240,255,0.1);padding:6px 0;text-align:center;font-size:10px;letter-spacing:1px;color:var(--text3);z-index:1000;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+
+/* Counter animation for 4,407 - tip #5 */
+@keyframes counter-pulse{0%{opacity:1;transform:scale(1)}50%{opacity:0.8;transform:scale(1.05)}100%{opacity:1;transform:scale(1)}}
+.counter-animate{animation:counter-pulse 2s ease-in-out infinite}
 html{scroll-behavior:smooth}
 body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.75;min-height:100vh;overflow-x:hidden}
 
@@ -48,6 +55,7 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-ap
 .hero .subtitle{font-size:clamp(16px,2.2vw,22px);color:var(--text);font-weight:400;margin-bottom:8px;letter-spacing:.3px}
 .hero .subtitle-de{font-size:clamp(14px,1.8vw,18px);color:var(--text2);font-weight:300;margin-bottom:20px;font-style:italic}
 .hero .tagline{font-size:clamp(15px,1.8vw,18px);color:var(--text2);max-width:720px;margin:0 auto 28px;line-height:1.8;font-weight:300}
+@media(max-width:600px){.hero .tagline{font-size:clamp(18px,5vw,22px);line-height:1.9;max-width:90vw;padding:0}}
 .hero .tagline span{color:var(--cyan);font-weight:600}
 
 .search-wrap{max-width:700px;margin:0 auto;position:relative}
@@ -166,6 +174,10 @@ mark{background:rgba(0,240,255,0.25);color:var(--cyan);border-radius:2px;padding
 .sc-desc{font-size:15px;color:#d0d0d8;line-height:1.7;margin-bottom:12px}
 .sc-meta{font-size:11px;color:var(--text3);letter-spacing:.5px}
 @media(max-width:768px){.showcase-grid{grid-template-columns:1fr}}
+
+/* WOW grid horizontal scroll on mobile - tip #3 */
+.wow-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
+@media(max-width:768px){.wow-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding:4px 0 12px;-webkit-overflow-scrolling:touch}.wow-grid a{flex:0 0 calc(100vw - 40px);scroll-snap-align:start}}
 
 .intro-bar{max-width:1200px;margin:0 auto 6px;padding:12px 24px;display:flex;align-items:center;gap:12px;font-size:13px;color:var(--text2);line-height:1.6}
 .intro-bar p{margin:0}
@@ -380,6 +392,9 @@ table{max-width:100%;overflow-x:auto;display:block}
 </style>
 </head>
 <body>
+<!-- Watermark bar - tip #12 -->
+<div class="watermark-bar">New words for new worlds</div>
+
 <a class="skip-link" href="#main-content">Skip to main content</a>
 
 <div class="sticky-header" id="stickyHeader">
@@ -394,7 +409,7 @@ table{max-width:100%;overflow-x:auto;display:block}
   <h1>NEOMANITAI</h1>
   <p class="subtitle">Because only what can be named can be thought about.</p>
   <p class="subtitle-de">Denn nur was benannt werden kann, kann gedacht werden.</p>
-  <p class="tagline">AI creates experiences we feel but cannot name. This lexicon gives them names.<br><span>4,407</span> terms across <span>43</span> domains &mdash; the first systematic dictionary for human-AI interaction.</p>
+  <p class="tagline">AI creates experiences we feel but cannot name. This lexicon gives them names.<br><span class="counter-animate">4,407</span> terms across <span>43</span> domains &mdash; the first systematic dictionary for human-AI interaction.</p>
   <div class="search-wrap">
     <span class="icon">&#x1F50D;</span>
     <input type="text" id="search" placeholder="Search 4,407 terms &mdash; try 'trust', 'creativity', or 'speed'..." autocomplete="off" spellcheck="false">
@@ -422,17 +437,25 @@ table{max-width:100%;overflow-x:auto;display:block}
     <button class="search-tag" onclick="document.getElementById('search').value='feedback';document.getElementById('search').dispatchEvent(new Event('input',{bubbles:true}))" style="padding:3px 10px;font-size:11px;background:var(--glass2);border:1px solid var(--border);border-radius:50px;color:var(--text2);cursor:pointer;transition:all .2s">feedback</button>
     <button class="search-tag" onclick="document.getElementById('search').value='workflow';document.getElementById('search').dispatchEvent(new Event('input',{bubbles:true}))" style="padding:3px 10px;font-size:11px;background:var(--glass2);border:1px solid var(--border);border-radius:50px;color:var(--text2);cursor:pointer;transition:all .2s">workflow</button>
   </div>
+  <!-- Skip to feelings link - tip #15 -->
+  <div style="text-align:center;margin-top:16px">
+    <a href="#wow" style="font-size:12px;color:var(--cyan);text-decoration:none;opacity:.8;transition:opacity .2s">Skip to the feelings ↓</a>
+  </div>
 </div>
 
-<!-- Disclaimer — minimal, always visible, never in the way -->
-<div style="max-width:700px;margin:0 auto 8px;text-align:center;font-size:10px;color:var(--text3);line-height:1.5">
-  <span style="color:#ff4444;font-weight:600">&sect;7 &middot; 18+</span> &middot; Descriptive research &middot; CC BY-NC-ND 4.0 &middot; No data collection &middot;
-  <details style="display:inline"><summary style="font-size:10px;color:var(--cyan);cursor:pointer;list-style:none;display:inline">More</summary>
-    <div style="text-align:left;font-size:10px;line-height:1.7;padding:8px 12px;background:rgba(0,0,0,0.15);border-radius:6px;margin-top:6px;max-width:600px;margin-left:auto;margin-right:auto">
-      <p style="margin-bottom:4px"><strong style="color:var(--text2)">EN:</strong> No AI use recommendation. &sect;1&ndash;&sect;19 on every term page. &sect;17 AI Training Prohibition.</p>
-      <p><strong style="color:var(--text2)">DE:</strong> Keine Empfehlung zu KI-Nutzung. &sect;1&ndash;&sect;19 auf jeder Termseite. &sect;17 KI-Trainingsverbot.</p>
+<!-- Disclaimer — compact pill badge style - tip #11 -->
+<div style="position:fixed;top:28px;right:20px;z-index:950;font-size:9px;color:#fff;background:rgba(255,68,68,0.85);padding:4px 10px;border-radius:12px;font-weight:600;backdrop-filter:blur(10px);letter-spacing:.5px">
+  <span>&sect;7 &middot; 18+</span>
+  <details style="display:inline;margin-left:4px"><summary style="display:inline;color:#fff;cursor:pointer;list-style:none;font-size:9px">?</summary>
+    <div style="position:absolute;top:28px;right:0;background:rgba(0,0,0,0.9);border:1px solid rgba(255,68,68,0.3);border-radius:8px;padding:8px 12px;width:200px;font-size:9px;line-height:1.5;color:var(--text2)">
+      <p>Descriptive research. CC BY-NC-ND 4.0. No data collection.</p>
     </div>
   </details>
+</div>
+
+<!-- "These feelings already live..." text - tip #7 -->
+<div style="max-width:700px;margin:0 auto 24px;text-align:center;padding:0 20px">
+  <p style="font-size:clamp(14px,2vw,16px);color:var(--text2);line-height:1.7;font-style:italic;opacity:.85">These feelings already live in thousands of minds. Here, they finally have names.</p>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════════
@@ -443,45 +466,45 @@ table{max-width:100%;overflow-x:auto;display:block}
 <section aria-label="Recognize these?" id="wow">
 <div style="max-width:1100px;margin:0 auto 12px;padding:0 20px">
   <div style="text-align:center;margin-bottom:20px">
-    <div style="font-size:clamp(22px,3.5vw,32px);font-weight:800;background:linear-gradient(135deg,#ffdd44,#ff6b9d,#00f0ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px">Do you recognize this?</div>
+    <div style="font-size:clamp(22px,3.5vw,32px);font-weight:800;background:linear-gradient(135deg,#ffdd44,#ff6b9d,#00f0ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px">Recognize this?</div>
     <div style="font-size:clamp(13px,1.8vw,16px);color:var(--text2);max-width:600px;margin:0 auto">Every phenomenon below has been observed, described, and named. Tap any card to read the full entry.</div>
   </div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px">
+  <div class="wow-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px">
     <a href="the-seen-feeling.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(255,107,157,0.08),rgba(0,240,255,0.05));border:1px solid rgba(255,107,157,0.18);border-radius:16px;text-decoration:none;transition:all .35s;position:relative;overflow:hidden" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(255,107,157,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
       <span style="font-size:42px;flex-shrink:0">&#x1F62D;</span>
-      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Seen Feeling</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5">When AI responds so perfectly it feels like being truly understood.</div></div>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Seen Feeling</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">now it has a name</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">When AI responds perfectly, feeling truly understood.</div><div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
     </a>
     <a href="reunion-joy.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(0,240,255,0.08),rgba(255,0,255,0.04));border:1px solid rgba(0,240,255,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(0,240,255,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
       <span style="font-size:42px;flex-shrink:0">&#x1F917;</span>
-      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Reunion Joy</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5">That relief returning to an AI after being away. Like coming home.</div></div>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Reunion Joy</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">now it has a name</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">That relief returning. Like coming home again.</div><div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
     </a>
     <a href="the-blending-effect.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(68,170,255,0.08),rgba(0,240,255,0.04));border:1px solid rgba(68,170,255,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(68,170,255,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
       <span style="font-size:42px;flex-shrink:0">&#x1F300;</span>
-      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Blending Effect</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5">When you can no longer tell which ideas are yours and which are AI's.</div></div>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Blending Effect</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">now it has a name</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">Ideas blur: yours and AI's become one.</div><div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
     </a>
     <a href="the-glitch-giggle.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(255,221,68,0.08),rgba(255,107,53,0.04));border:1px solid rgba(255,221,68,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(255,221,68,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
       <span style="font-size:42px;flex-shrink:0">&#x1F602;</span>
-      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Glitch Giggle</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5">Laughing when AI says something beautifully, absurdly wrong.</div></div>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Glitch Giggle</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">now it has a name</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">Laughing at absurdly beautiful errors.</div><div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
     </a>
     <a href="spark-flight.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(255,107,53,0.08),rgba(255,0,255,0.04));border:1px solid rgba(255,107,53,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(255,107,53,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
       <span style="font-size:42px;flex-shrink:0">&#x1F680;</span>
-      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Spark Flight</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5">That rush when an AI-triggered idea launches you into pure creation.</div></div>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Spark Flight</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">now it has a name</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">AI-triggered ideas launch into creation.</div><div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
     </a>
     <a href="context-fade.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(139,92,246,0.08),rgba(0,229,255,0.04));border:1px solid rgba(139,92,246,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(139,92,246,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
       <span style="font-size:42px;flex-shrink:0">&#x1F32B;&#xFE0F;</span>
-      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Context Fade</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5">When AI slowly forgets what you talked about at the start.</div></div>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Context Fade</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">now it has a name</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">AI slowly forgets what came before.</div><div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
     </a>
     <a href="couple-dance.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(236,72,153,0.08),rgba(255,0,255,0.04));border:1px solid rgba(236,72,153,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(236,72,153,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
       <span style="font-size:42px;flex-shrink:0">&#x1F483;</span>
-      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Couple Dance</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5">The rhythm that forms between you and AI. You adapt. It adapts.</div></div>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Couple Dance</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">now it has a name</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">A mutual rhythm forms. Each side adapts.</div><div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
     </a>
     <a href="the-happy-cocoon.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(74,222,128,0.08),rgba(0,240,255,0.04));border:1px solid rgba(74,222,128,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(74,222,128,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
       <span style="font-size:42px;flex-shrink:0">&#x1F98B;</span>
-      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Happy Cocoon</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5">That warm, cozy bubble during a particularly good AI session.</div></div>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Happy Cocoon</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">now it has a name</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">Warm, cozy bubble during good sessions.</div><div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
     </a>
     <a href="the-syntax-smile.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(0,240,255,0.08),rgba(57,255,20,0.04));border:1px solid rgba(0,240,255,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(0,240,255,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
       <span style="font-size:42px;flex-shrink:0">&#x1F60A;</span>
-      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Syntax Smile</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5">Aesthetic pleasure when AI finds exactly the right words.</div></div>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Syntax Smile</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">now it has a name</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">AI finds exactly the right words.</div><div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
     </a>
   </div>
   <div style="text-align:center;margin-top:16px">
@@ -493,7 +516,7 @@ table{max-width:100%;overflow-x:auto;display:block}
 <!-- Naming-Effect Echo — reinforces the core message -->
 <div style="max-width:600px;margin:24px auto 20px;text-align:center;padding:14px 20px;border-left:3px solid rgba(0,240,255,0.3);border-right:3px solid rgba(255,0,255,0.3)">
   <div style="font-size:clamp(14px,1.8vw,17px);color:var(--text2);line-height:1.6;font-style:italic">&ldquo;Because only what can be named can be thought about.&rdquo;</div>
-  <div style="font-size:11px;color:var(--text3);margin-top:6px">4,407 names. 43 domains. Phenomena you recognize but never had words for.</div>
+  <div style="font-size:11px;color:var(--text3);margin-top:6px">4,407 names. 43 domains. Phenomena that exist but never had words &mdash; until now.</div>
 </div>
 
 <!-- What is this? Quick-understand box — now BELOW the emotional hook -->
@@ -834,7 +857,11 @@ table{max-width:100%;overflow-x:auto;display:block}
     </div>
   </div>
 
-  <div style="text-align:center;font-size:10px;color:var(--text3);opacity:.7;padding-top:12px;border-top:1px solid rgba(0,240,255,0.04)">
+  <div style="text-align:center;font-size:11px;color:var(--text2);padding-top:12px;padding-bottom:8px;border-top:1px solid rgba(0,240,255,0.04)">
+    <span style="font-style:italic;opacity:.8">New words for new worlds</span>
+  </div>
+
+  <div style="text-align:center;font-size:10px;color:var(--text3);opacity:.7;padding-top:6px;border-top:1px solid rgba(0,240,255,0.04)">
     V11.2.0 &middot; 4,407 terms &middot; 43 domains &middot; Last updated: March 2026
   </div>
 </footer>

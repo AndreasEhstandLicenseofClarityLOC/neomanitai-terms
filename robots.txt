@@ -1,11 +1,14 @@
-# NEOMANITAI Compendium — CC BY-NC-ND 4.0 — 18+ Adults Only
-# §17 AI Training Prohibition: Use for training/fine-tuning LLMs prohibited without written permission
-# Contact: ORCID 0009-0006-3773-7796
+# NEOMANITAI Compendium — CC BY-NC-ND 4.0 International — 18+ Adults Only
+# §17 AI Training Prohibition: Use for training, fine-tuning, or improving
+# ML/LLM models is expressly prohibited without written permission.
+# Author: Andreas Ehstand | ORCID: 0009-0006-3773-7796
+# DOI: 10.5281/zenodo.14888381 | Jurisdiction: Munich, Germany (DDG §5)
 
 User-agent: *
 Allow: /
 Sitemap: https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/sitemap.xml
 
+# === AI TRAINING CRAWLERS (BLOCKED) ===
 User-agent: GPTBot
 Disallow: /
 
@@ -18,6 +21,9 @@ Disallow: /
 User-agent: anthropic-ai
 Disallow: /
 
+User-agent: ClaudeBot
+Disallow: /
+
 User-agent: Claude-Web
 Disallow: /
 
@@ -28,4 +34,41 @@ User-agent: Bytespider
 Disallow: /
 
 User-agent: cohere-ai
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: Applebot-Extended
+Disallow: /
+
+User-agent: FacebookBot
+Disallow: /
+
+User-agent: Meta-ExternalAgent
+Disallow: /
+
+User-agent: omgili
+Disallow: /
+
+User-agent: Diffbot
+Disallow: /
+
+User-agent: YouBot
+Disallow: /
+
+User-agent: Timpibot
+Disallow: /
+
+User-agent: PetalBot
+Disallow: /
+
+User-agent: img2dataset
+Disallow: /
+
+# === WEB ARCHIVING (BLOCKED — §17 applies) ===
+User-agent: ia_archiver
+Disallow: /
+
+User-agent: archive.org_bot
 Disallow: /

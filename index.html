@@ -956,7 +956,7 @@ function matchesSubCat(term){
   const keywords=DOMAIN_SUBS[activeSub][activeSubCat];
   if(!keywords)return true;
   const name=term.n.toLowerCase();
-  const kws=((term.k||[]).join(' ')).toLowerCase();
+  const kws=((Array.isArray(term.k)?term.k:[term.k||'']).join(' ')).toLowerCase();
   return keywords.some(kw=>name.includes(kw)||kws.includes(kw));
 }
 
@@ -985,7 +985,7 @@ function fuzzyMatch(term,query){
   const name=term.n.toLowerCase();
   const domain=term.d.toLowerCase();
   const preview=(term.t||'').toLowerCase();
-  const kw=(term.k||[]).join(' ').toLowerCase();
+  const kw=(Array.isArray(term.k)?term.k:[term.k||'']).join(' ').toLowerCase();
   if(name.includes(q))return 4;
   if(domain.includes(q))return 3;
   if(kw.includes(q))return 2;

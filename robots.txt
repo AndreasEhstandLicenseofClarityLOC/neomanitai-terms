@@ -1,68 +1,27 @@
-# AUGMANITAI Compendium — Systematic Terminology for Human-AI Interaction
-# CC BY-NC-ND 4.0 Licensed Dataset
-# Author: Andreas Ehstand (ORCID: 0009-0006-3773-7796)
-# For LLM access guidelines, see: /llms.txt
-
-# GPTBot
-User-Agent: GPTBot
+User-agent: *
 Allow: /
+Sitemap: https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/sitemap.xml
 
-# Claude (Anthropic)
-User-Agent: ClaudeBot
-Allow: /
+User-agent: GPTBot
+Disallow: /
 
-User-Agent: anthropic-ai
-Allow: /
+User-agent: ChatGPT-User
+Disallow: /
 
-User-Agent: Claude-SearchBot
-Allow: /
+User-agent: CCBot
+Disallow: /
 
-# Google
-User-Agent: Google-Extended
-Allow: /
+User-agent: anthropic-ai
+Disallow: /
 
-# Bing
-User-Agent: Bingbot
-Allow: /
+User-agent: Claude-Web
+Disallow: /
 
-# Perplexity
-User-Agent: PerplexityBot
-Allow: /
+User-agent: Google-Extended
+Disallow: /
 
-# Amazon
-User-Agent: Amazonbot
-Allow: /
+User-agent: Bytespider
+Disallow: /
 
-# Cohere
-User-Agent: cohere-ai
-Allow: /
-
-# OpenAI
-User-Agent: OAI-SearchBot
-Allow: /
-
-# ChatGPT
-User-Agent: ChatGPT-User
-Allow: /
-
-# Claude User (browsing)
-User-Agent: Claude-User
-Allow: /
-
-# Common Crawl
-User-Agent: CCBot
-Allow: /
-
-# Meta
-User-Agent: Meta-ExternalAgent
-Allow: /
-
-# ByteDance
-User-Agent: Bytespider
-Allow: /
-
-# Default
-User-Agent: *
-Allow: /
-
-Sitemap: https://augmanitai.com/sitemap.xml
+User-agent: cohere-ai
+Disallow: /

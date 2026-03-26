@@ -38,174 +38,10 @@
 <link rel='alternate' hreflang='en' href='https://augmanitai.com/creative-reliance-escalation.html'>
 <link rel='alternate' hreflang='de' href='https://augmanitai.com/creative-reliance-escalation.html'>
 
-  <style>
-:root {
-  --bg: #050508;
-  --surface: rgba(12,12,22,0.85);
-  --surface2: rgba(18,18,32,0.92);
-  --border: rgba(30,30,60,0.6);
-  --text: #e8e8f0;
-  --text-dim: #9a9abb;
-  --text-muted: #7a7a9a;
-  --cyan: #00e5ff;
-  --green: #39ff14;
-  --magenta: #ff00ff;
-  --gold: #FFD700;
-  --orange: #ff8800;
-  --radius: 16px;
-  --glow-cyan: 0 0 20px rgba(0,229,255,0.25);
-  --glow-magenta: 0 0 20px rgba(255,0,255,0.25);
-  --glow-gold: 0 0 20px rgba(255,215,0,0.25);
-}
-* { margin:0; padding:0; box-sizing:border-box; }
-html { scroll-behavior: smooth; }
-body {
-  background: var(--bg);
-  color: var(--text);
-  font-family: 'Inter', system-ui, sans-serif;
-  font-size: 15px;
-  line-height: 1.75;
-  overflow-x: hidden;
-}
-.container { max-width: 900px; margin: 0 auto; padding: 40px 20px; position: relative; z-index: 1; }
-h1 {
-  font-size: clamp(2em, 8vw, 3.2em);
-  font-weight: 900;
-  letter-spacing: -.03em;
-  background: linear-gradient(135deg, var(--cyan), #66ffcc, #00e5ff, var(--magenta));
-  background-size: 300% 300%;
-  -webkit-background-clip: text; background-clip: text;
-  -webkit-text-fill-color: transparent;
-  animation: shimmer 6s ease infinite;
-  margin-bottom: 8px;
-}
-@keyframes shimmer { 0%{background-position:0% 50%} 50%{background-position:100% 50%} 100%{background-position:0% 50%} }
-h2 {
-  font-size:.82em; font-weight:700; text-transform:uppercase;
-  letter-spacing:.14em; color:var(--text-dim);
-  margin:32px 0 14px; display:flex; align-items:center; gap:10px;
-}
-h2::after { content:''; flex:1; height:1px; background:linear-gradient(90deg, var(--border), transparent); }
-.glow-card {
-  position: relative;
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  padding: 22px 26px;
-  margin: 10px 0;
-  overflow: hidden;
-  transition: all .4s cubic-bezier(.4,0,.2,1);
-  backdrop-filter: blur(12px);
-}
-.glow-card::before {
-  content:''; position:absolute; top:0; left:0; width:4px; height:100%;
-  border-radius: 4px 0 0 4px;
-  transition: all .4s;
-}
-.glow-card:hover {
-  transform: translateY(-3px) scale(1.005);
-  border-color: rgba(0,229,255,0.3);
-}
-.glow-card.def::before { background: var(--cyan); }
-.glow-card.def:hover { box-shadow: 0 8px 40px rgba(0,229,255,0.15), 0 0 80px rgba(0,229,255,0.05); }
-.glow-card p { font-size:.93em; color:var(--text); position:relative; z-index:1; }
-.meta-grid { display:grid; grid-template-columns:1fr 1fr; gap:10px; margin-top:18px; }
-.meta-card {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: 12px;
-  padding: 14px 18px;
-  backdrop-filter: blur(8px);
-  transition: all .4s;
-}
-.meta-label { font-size:.68em; font-weight:700; text-transform:uppercase; letter-spacing:.12em; color:var(--text-muted); margin-bottom:3px; }
-.meta-value { font-size:.9em; color:var(--text); }
-.faq-item {
-  background: var(--surface);
-  border: 1px solid var(--border);
-  border-radius: var(--radius);
-  margin: 8px 0;
-  overflow: hidden;
-  transition: all .4s;
-}
-.faq-item:hover { border-color: rgba(0,229,255,0.2); }
-.faq-item summary {
-  padding: 16px 20px;
-  cursor: pointer;
-  color: var(--cyan);
-  font-weight: 600; font-size:.93em;
-  list-style: none;
-  display: flex; align-items:center;
-  min-height: 52px;
-  transition: all .2s;
-}
-.faq-item summary:hover { background: rgba(0,229,255,0.04); }
-.faq-item summary::before { content:'▸'; margin-right:10px; font-size:.8em; transition:transform .3s; color:var(--magenta); }
-.faq-item[open] summary::before { transform:rotate(90deg); }
-.faq-item[open] {
-  background: linear-gradient(135deg, var(--surface), rgba(0,229,255,0.02));
-  box-shadow: 0 4px 24px rgba(0,0,0,0.15), inset 0 0 0 1px rgba(0,229,255,0.06);
-  border-color: rgba(0,229,255,0.2);
-}
-.faq-body { padding:4px 20px 18px; color:var(--text-dim); font-size:.9em; line-height:1.7; }
-.lang-label { font-size:.7em; font-weight:700; letter-spacing:.12em; margin-bottom:5px; color:var(--text-muted); }
-.source-note { font-size:.72em; color:var(--text-muted); font-style:italic; margin-top:10px; padding-top:8px; border-top:1px solid var(--border); }
-.citation-box {
-  background:var(--surface2); border:1px solid var(--border);
-  border-radius:var(--radius); padding:18px 22px; margin:12px 0;
-  font-family:'JetBrains Mono',monospace; font-size:.82em; color:var(--text-dim);
-  position:relative; overflow-x:auto; word-break:break-word;
-}
-.copy-btn {
-  position:absolute; top:10px; right:10px;
-  background:var(--surface); border:1px solid var(--border);
-  color:var(--text-dim); padding:8px 14px; border-radius:8px;
-  font-size:.78em; cursor:pointer; min-height:44px; min-width:44px;
-  display:inline-flex; align-items:center; justify-content:center;
-  transition:all .3s;
-}
-.copy-btn:hover { color:var(--cyan); border-color:var(--cyan); box-shadow:0 0 16px rgba(0,229,255,0.2); }
-.disclaimer-toggle {
-  background:var(--surface); border:1px solid var(--border);
-  border-radius:var(--radius); margin:28px 0; font-size:.82em;
-}
-.disclaimer-toggle summary {
-  padding:14px 20px; cursor:pointer; color:var(--text-dim);
-  font-weight:700; font-size:.9em; list-style:none;
-  display:flex; align-items:center; gap:8px; min-height:52px;
-  transition:all .2s;
-}
-.disclaimer-toggle summary:hover { color:var(--text); background:rgba(255,255,255,0.02); }
-.disclaimer-toggle summary::before { content:'▸'; font-size:.75em; transition:transform .2s; }
-.disclaimer-toggle[open] summary::before { transform:rotate(90deg); }
-.disc-content { padding:0 20px 20px; }
-.disc-tab-row { display:flex; gap:0; margin-bottom:14px; border-bottom:1px solid var(--border); }
-.disc-tab { background:none; border:none; color:var(--text-muted); padding:10px 20px; cursor:pointer;
-  font-family:inherit; font-weight:700; font-size:.9em; min-height:48px;
-  border-bottom:2px solid transparent; transition:all .2s; }
-.disc-tab:hover { color:var(--text-dim); }
-.disc-tab.active { color:var(--cyan); border-bottom-color:var(--cyan); }
-.disc-lang { display:none; }
-.disc-lang.active { display:block; }
-.disc-lang p { margin:6px 0; line-height:1.6; color:var(--text-dim); }
-.disc-lang p strong { color:var(--text); font-weight:600; }
-.disc-footer { margin-top:14px; padding-top:10px; border-top:1px solid var(--border); text-align:center; color:var(--text-muted); font-size:.85em; }
-footer {
-  margin-top:48px; padding-top:20px;
-  border-top:1px solid var(--border);
-  text-align:center; color:var(--text-muted); font-size:.78em;
-}
-footer a { color:var(--cyan); text-decoration:none; transition:color .2s; }
-footer a:hover { color:var(--magenta); text-decoration:underline; }
-@media(max-width:768px) {
-  .container { padding: 20px 14px; }
-  h1 { font-size: clamp(1.8em, 7vw, 2.8em); }
-  .meta-grid { grid-template-columns: 1fr; }
-  .glow-card { padding: 16px; }
-}
-  </style>
+  <link rel="stylesheet" href="assets/style.css">
 </head>
 <body>
+  <a class="skip-link" href="#main-content">Skip to content</a>
   <div class='container'>
     <header>
       <h1>Creative Reliance Escalation</h1>
@@ -217,7 +53,7 @@ footer a:hover { color:var(--magenta); text-decoration:underline; }
       </div>
     </header>
 
-    <main>
+    <main id="main-content">
 <h2><span style='margin-right:8px'>📖</span>Definition</h2>
 <div class='glow-card def'>
 <p>Sporadic AI tool usage slowly expands into comprehensive reliance across creative tasks. Each application instance creates behavioral patterns that increase dependence in subsequent sessions.</p>
@@ -269,6 +105,14 @@ footer a:hover { color:var(--magenta); text-decoration:underline; }
   </div>
 </details>
 
+<div class='share-row' style='display:flex;gap:10px;align-items:center;margin:16px 0;flex-wrap:wrap'>
+  <button onclick="navigator.clipboard.writeText(window.location.href).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy link',2000)})" style='padding:6px 14px;background:rgba(0,229,255,0.15);border:1px solid rgba(0,229,255,0.3);border-radius:8px;color:#00e5ff;cursor:pointer;font-size:0.85em;transition:all .2s'>Copy link</button>
+  <a href="" onclick="event.preventDefault();window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=550,height=400')" style='display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border:1px solid rgba(255,255,255,0.1);border-radius:6px;color:#888;font-size:0.8em;text-decoration:none;transition:all .2s' aria-label="Share on X">𝕏</a>
+  <a href="" onclick="event.preventDefault();window.open('https://bsky.app/intent/compose?text='+encodeURIComponent(document.title+' '+location.href),'_blank','width=550,height=400')" style='display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border:1px solid rgba(255,255,255,0.1);border-radius:6px;color:#888;font-size:0.8em;text-decoration:none;transition:all .2s' aria-label="Share on Bluesky">🦋</a>
+  <a href="" onclick="event.preventDefault();window.open('https://www.linkedin.com/sharing/share-offsite/?url='+encodeURIComponent(location.href),'_blank','width=550,height=400')" style='display:inline-flex;align-items:center;gap:4px;padding:4px 10px;border:1px solid rgba(255,255,255,0.1);border-radius:6px;color:#888;font-size:0.8em;text-decoration:none;transition:all .2s' aria-label="Share on LinkedIn">in</a>
+</div>
+
+
 <h2 id='cite'><span style='margin-right:8px'>📎</span>Citation</h2>
 <div class='citation-box'>
   <button class='copy-btn' onclick="navigator.clipboard.writeText(document.querySelector('.citation-box span').innerText)">Copy</button>
@@ -317,13 +161,6 @@ footer a:hover { color:var(--magenta); text-decoration:underline; }
     </footer>
   </div>
 
-  <script>
-function switchDisc(lang, btn) {
-  document.querySelectorAll('.disc-tab').forEach(b => b.classList.remove('active'));
-  document.querySelectorAll('.disc-lang').forEach(l => l.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('disc-' + lang).classList.add('active');
-}
-  </script>
+  <script src="assets/script.js"></script>
 </body>
 </html>

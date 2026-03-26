@@ -1,0 +1,48 @@
+function switchDisc(lang, btn) {
+  const c = btn.closest('.disc-content');
+  c.querySelectorAll('.disc-lang').forEach(e => e.classList.remove('active'));
+  c.querySelectorAll('.disc-tab').forEach(e => e.classList.remove('active'));
+  btn.classList.add('active');
+  c.querySelector('#disc-' + lang).classList.add('active');
+}
+function switchCite(fmt, btn) {
+  const p = btn.closest('.container') || document;
+  p.querySelectorAll('.citation-box').forEach(e => e.style.display = 'none');
+  p.querySelectorAll('.cite-tab').forEach(e => e.classList.remove('active'));
+  btn.classList.add('active');
+  const el = p.querySelector('#cite-' + fmt);
+  if (el) el.style.display = 'block';
+}
+function copyCite(btn) {
+  const text = btn.parentElement.querySelector('.cite-text').innerText;
+  navigator.clipboard.writeText(text);
+  btn.textContent = 'Copied!';
+  setTimeout(() => btn.textContent = 'Copy', 1500);
+}
+window.addEventListener('scroll', () => {
+  const h = document.documentElement;
+  const pct = (h.scrollTop / (h.scrollHeight - h.clientHeight)) * 100;
+  const bar = document.querySelector('.scroll-progress');
+  if (bar) bar.style.width = pct + '%';
+});
+
+// Floating particles
+(function() {
+  var container = document.getElementById('particles');
+  if (!container) return;
+  var colors = ['rgba(0,229,255,0.3)', 'rgba(255,0,255,0.25)', 'rgba(57,255,20,0.2)', 'rgba(255,215,0,0.2)'];
+  var count = Math.min(30, Math.floor(window.innerWidth / 40));
+  for (var i = 0; i < count; i++) {
+    var p = document.createElement('div');
+    p.className = 'particle';
+    p.style.left = Math.random() * 100 + '%';
+    p.style.setProperty('--dur', (6 + Math.random() * 12).toFixed(1) + 's');
+    p.style.setProperty('--peak', (0.15 + Math.random() * 0.3).toFixed(2));
+    p.style.animationDelay = (Math.random() * 10).toFixed(1) + 's';
+    var size = (2 + Math.random() * 5).toFixed(1);
+    p.style.width = p.style.height = size + 'px';
+    p.style.background = colors[Math.floor(Math.random() * colors.length)];
+    if (Math.random() > 0.6) p.style.boxShadow = '0 0 ' + (4+Math.random()*8).toFixed(0) + 'px ' + p.style.background;
+    container.appendChild(p);
+  }
+})();

@@ -11,6 +11,12 @@
 <meta name="rating" content="adult">
 <meta name="audience" content="adults">
 <link rel="canonical" href="https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"WebSite","name":"NEOMANITAI","url":"https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/","description":"Systematic Lexicon of Unnamed Human-AI Interaction Phenomena. 4,407 terms across 43 domains.","author":{"@type":"Person","name":"Andreas Ehstand","url":"https://orcid.org/0009-0006-3773-7796"},"license":"https://creativecommons.org/licenses/by-nc-nd/4.0/","inLanguage":["en","de"]}
+</script>
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"Dataset","name":"NEOMANITAI Compendium","description":"4,407 systematically named human-AI interaction phenomena across 43 domains. ISO 704 inspired terminology. Bilingual EN+DE.","url":"https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/","identifier":"10.5281/zenodo.14888381","license":"https://creativecommons.org/licenses/by-nc-nd/4.0/","creator":{"@type":"Person","name":"Andreas Ehstand","identifier":"https://orcid.org/0009-0006-3773-7796"},"version":"11.2.0","dateModified":"2026-03","keywords":["human-AI interaction","neologism","terminology","lexicon","AI phenomena"],"distribution":{"@type":"DataDownload","encodingFormat":"text/html","contentUrl":"https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/"}}
+</script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
 :root{
@@ -291,6 +297,8 @@ table{max-width:100%;overflow-x:auto;display:block}
   .stat-grid{grid-template-columns:1fr !important}
 }
 .search-tag:hover{border-color:var(--cyan)!important;color:var(--cyan)!important}
+#toc a:hover{border-color:var(--cyan);color:var(--cyan)}
+#cite div[style*="monospace"]{user-select:all;cursor:text}
 </style>
 </head>
 
@@ -340,8 +348,28 @@ table{max-width:100%;overflow-x:auto;display:block}
   <span style="color:#ff4444;">Nur f&uuml;r Erwachsene</span> &middot; Rein deskriptive Forschung &middot; Keine Empfehlung zu KI-Nutzung &middot; &sect;1&ndash;&sect;19 auf jeder Seite &middot; &sect;17 KI-Trainingsverbot
 </div>
 
+<!-- What is this? Quick-understand box -->
+<div id="what" style="max-width:800px;margin:0 auto 20px;padding:18px 24px;background:linear-gradient(135deg,rgba(0,240,255,0.04),rgba(255,0,255,0.03));border:1px solid var(--border);border-radius:14px">
+  <div style="font-size:15px;font-weight:700;color:var(--cyan);margin-bottom:10px;letter-spacing:.5px">What is NEOMANITAI?</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;font-size:13px;color:var(--text);line-height:1.6">
+    <div style="display:flex;gap:8px;align-items:flex-start"><span style="font-size:18px;flex-shrink:0" aria-hidden="true">&#x1F4D6;</span><span>A research lexicon naming <strong>4,407 human experiences</strong> that occur during AI interaction &mdash; experiences that exist but lack words.</span></div>
+    <div style="display:flex;gap:8px;align-items:flex-start"><span style="font-size:18px;flex-shrink:0" aria-hidden="true">&#x1F50D;</span><span><strong>Purely descriptive.</strong> No recommendations. No value judgments. Both positive experiences and concerning patterns are made equally describable.</span></div>
+    <div style="display:flex;gap:8px;align-items:flex-start"><span style="font-size:18px;flex-shrink:0" aria-hidden="true">&#x1F310;</span><span><strong>Open access.</strong> ISO 704 inspired. DOI-registered on Zenodo. CC BY-NC-ND 4.0. Bilingual (EN+DE). No data collection.</span></div>
+  </div>
+</div>
+
+<!-- Quick Navigation TOC -->
+<nav id="toc" style="max-width:800px;margin:0 auto 20px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:0 20px" aria-label="Page navigation">
+  <a href="#showcase" style="padding:6px 14px;font-size:12px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">Featured Terms</a>
+  <a href="#stats" style="padding:6px 14px;font-size:12px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">Statistics</a>
+  <a href="#browse" style="padding:6px 14px;font-size:12px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">Browse Domains</a>
+  <a href="#entry-points" style="padding:6px 14px;font-size:12px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">Entry Points</a>
+  <a href="#how-to" style="padding:6px 14px;font-size:12px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">How to Use</a>
+  <a href="#cite" style="padding:6px 14px;font-size:12px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">Cite</a>
+</nav>
+
 <!-- Showcase: Example Terms -->
-<div class="showcase">
+<div class="showcase" id="showcase">
   <div class="showcase-label">Example phenomena from the compendium</div>
   <div class="showcase-grid">
     <a class="showcase-card" href="the-seen-feeling.html">
@@ -385,14 +413,25 @@ table{max-width:100%;overflow-x:auto;display:block}
   </details>
 </div>
 
+<!-- How to Use This Lexicon -->
+<div id="how-to" style="max-width:800px;margin:0 auto 24px;padding:18px 24px;background:var(--glass);border:1px solid var(--border);border-radius:14px">
+  <div style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:12px">How to use this lexicon</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;font-size:13px;color:var(--text2);line-height:1.6">
+    <div><span style="color:var(--cyan);font-weight:700;font-size:18px">1</span><span style="margin-left:8px"><strong style="color:var(--text)">Search or browse.</strong> Use the search bar above, click a domain group below, or start with an entry point.</span></div>
+    <div><span style="color:var(--cyan);font-weight:700;font-size:18px">2</span><span style="margin-left:8px"><strong style="color:var(--text)">Read the definition.</strong> Each term page contains a bilingual definition (EN+DE), distinction, and citation.</span></div>
+    <div><span style="color:var(--cyan);font-weight:700;font-size:18px">3</span><span style="margin-left:8px"><strong style="color:var(--text)">Explore related terms.</strong> Follow links between terms to discover clusters and cross-domain connections.</span></div>
+  </div>
+</div>
+
 <!-- Stats Banner -->
-<div class="stats-banner">
+<div class="stats-banner" id="stats">
   <div class="stat-item"><div class="stat-number">4,407</div><div class="stat-label">Terms</div></div>
   <div class="stat-item"><div class="stat-number">43</div><div class="stat-label">Domains</div></div>
   <div class="stat-item"><div class="stat-number">8</div><div class="stat-label">Groups</div></div>
   <div class="stat-item"><div class="stat-number">250</div><div class="stat-label">Bridge AI</div></div>
 </div>
 
+<div id="browse"></div>
 <div class="filter-row" id="mainFilters"></div>
 <div class="sub-row" id="subFilters"></div>
 <div class="sub-row" id="subCatFilters"></div>
@@ -415,7 +454,7 @@ table{max-width:100%;overflow-x:auto;display:block}
 
 
 <!-- Fun & Playful Terms Discovery -->
-<div class="fun-section">
+<div class="fun-section" id="entry-points">
   <div class="fun-header">
     <h2>Accessible Entry Points</h2>
     <p>Some phenomena are immediately recognizable from everyday AI use. These terms offer an accessible starting point for exploring the compendium.</p>
@@ -526,6 +565,34 @@ table{max-width:100%;overflow-x:auto;display:block}
   </div>
 </div>
 
+
+<!-- Cite This Project -->
+<div id="cite" style="max-width:800px;margin:24px auto;padding:20px 24px;background:var(--glass);border:1px solid var(--border);border-radius:14px">
+  <div style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:12px">Cite this project</div>
+  <div style="display:grid;gap:10px">
+    <div style="position:relative">
+      <div style="font-size:11px;font-weight:600;color:var(--cyan);letter-spacing:.5px;margin-bottom:4px">APA</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text2);background:rgba(0,0,0,0.3);padding:10px 14px;border-radius:8px;line-height:1.6">Ehstand, A. (2026). NEOMANITAI: Systematic Lexicon of Unnamed Human-AI Interaction Phenomena. <em>AUGMANITAI Compendium V11.2.0.</em> DOI: 10.5281/zenodo.14888381</div>
+    </div>
+    <div>
+      <div style="font-size:11px;font-weight:600;color:var(--magenta);letter-spacing:.5px;margin-bottom:4px">BibTeX</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2);background:rgba(0,0,0,0.3);padding:10px 14px;border-radius:8px;line-height:1.5;white-space:pre-wrap">@misc{ehstand2026neomanitai,
+  title={NEOMANITAI: Systematic Lexicon of Unnamed Human-AI Interaction Phenomena},
+  author={Ehstand, Andreas},
+  year={2026},
+  doi={10.5281/zenodo.14888381},
+  note={V11.2.0, 4407 terms, 43 domains}
+}</div>
+    </div>
+  </div>
+</div>
+
+<!-- Suggest a Term -->
+<div style="max-width:800px;margin:0 auto 20px;text-align:center;padding:0 20px">
+  <a href="https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/issues/new?title=Term+Suggestion:+[Your+Term+Name]&body=Describe+the+phenomenon+you+want+to+name.+Include+domain,+definition,+and+any+related+terms." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:linear-gradient(135deg,rgba(0,240,255,0.08),rgba(255,0,255,0.06));border:1px solid var(--border);border-radius:10px;color:var(--text2);font-size:13px;text-decoration:none;transition:all .3s">
+    <span aria-hidden="true">&#x1F4A1;</span> Suggest a new term via GitHub Issues
+  </a>
+</div>
 
 <!-- Social Share Links -->
 <div style="max-width:700px;margin:20px auto;text-align:center;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:0 20px">

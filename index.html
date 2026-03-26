@@ -996,6 +996,15 @@ document.addEventListener('keydown',e=>{
   if(e.key==='Escape'){clearSearch();document.getElementById('search').blur();}
 });
 
+
+    // Expose functions to global scope for onclick handlers
+    window.showBrowseGroups = showBrowseGroups;
+    window.showBrowseDomains = showBrowseDomains;
+    window.showBrowseTerms = showBrowseTerms;
+    window.render = render;
+    window.randomTerm = randomTerm;
+    window.clearSearch = clearSearch;
+
 buildFilters();
 buildAlphabet();
 showBrowseGroups();

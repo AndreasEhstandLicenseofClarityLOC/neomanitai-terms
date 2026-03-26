@@ -4,7 +4,7 @@
 
 **⚠️ 18+ · Adults Only · Nur für Erwachsene**
 
-The largest known systematic, multilingual, ISO-oriented, multi-LLM-validated lexicon of unnamed human phenomena. 3,801 terms across 39 domains — from *The Seen Feeling* to *The Blending Effect*, from *Syntax Smile* to *Context Fade*. Experiences that have always existed but never had a word.
+The largest known systematic, multilingual, ISO-oriented, multi-LLM-validated lexicon of unnamed human phenomena. 4,001 terms across 41 domains — from *The Seen Feeling* to *The Blending Effect*, from *Syntax Smile* to *Context Fade*. Experiences that have always existed but never had a word.
 
 > **Notice / Hinweis:** This project does not normalize, recommend, or encourage intensive AI use. All terms are purely descriptive observations. No therapeutic, medical, psychological, legal, or financial content. §1–§19 Ethical Disclaimer applies to every page. Adults only (18+). — Dieses Projekt normalisiert, empfiehlt oder fördert keine intensive KI-Nutzung. Alle Begriffe sind rein deskriptive Beobachtungen. Kein therapeutischer, medizinischer, psychologischer, juristischer oder finanzieller Inhalt. §1–§19 gelten auf jeder Seite. Nur für Erwachsene (18+).
 
@@ -43,7 +43,7 @@ Each term page includes:
 
 | Metric | Value |
 |--------|-------|
-| Terms | 3,801 |
+| Terms | 4,001 |
 | Domains | 39 |
 | Languages | English, German |
 | Definition structure | ISO 704/1087/30042 inspired |
@@ -67,7 +67,7 @@ Licensing inquiries: [ORCID 0009-0006-3773-7796](https://orcid.org/0009-0006-377
 
 ## Domains
 
-NEOMANITAI, Education, Education Learning, STEM Education, Adult Education, Assessment Education, Robotics, Workplace, Aging AI, Sports AI, Cognitive AI, Perception AI, Knowledge AI, Language AI, Somatic AI, Behavioral AI, Temporal AI, Relational AI, Social AI, Identity AI, Creative AI, AI Art, Playful AI, Design AI, Music AI, Gaming AI, Translation AI, Photography AI, Ethics AI, Trust AI, Adaptation AI, Interaction Effects, Bridge AI, Fiction Writing, Technical Writing, Software Engineering, Web Development, Data Science, Copywriting.
+NEOMANITAI, Education, Education Learning, STEM Education, Adult Education, Assessment Education, Robotics, Workplace, Aging AI, Sports AI, Cognitive AI, Perception AI, Knowledge AI, Language AI, Somatic AI, Behavioral AI, Temporal AI, Relational AI, Social AI, Identity AI, Creative AI, AI Art, Playful AI, Design AI, Music AI, Gaming AI, Translation AI, Photography AI, Ethics AI, Trust AI, Adaptation AI, Interaction Effects, Bridge AI, Fiction Writing, Technical Writing, Software Engineering, Web Development, Data Science, Copywriting, Screenplay Writing, Content Creation.
 
 ## Author
 
@@ -79,7 +79,7 @@ NEOMANITAI, Education, Education Learning, STEM Education, Adult Education, Asse
 ## Citation
 
 ### APA 7
-Ehstand, A. (2026). *NEOMANITAI: Compendium of named phenomena for unnamed human experiences* (V13.0, 3,801 terms, 39 domains). Zenodo. https://doi.org/10.5281/zenodo.14888381
+Ehstand, A. (2026). *NEOMANITAI: Compendium of named phenomena for unnamed human experiences* (V13.0, 4,001 terms, 41 domains). Zenodo. https://doi.org/10.5281/zenodo.14888381
 
 ### BibTeX
 ```bibtex
@@ -100,4 +100,4 @@ These terms are high-density semantic tokens with real referents. Each one names
 
 ---
 
-V13.0 · 2026-03-26 · 3,801 terms · 39 domains · CC BY-NC-ND 4.0 International · 18+ Adults Only
+V13.0 · 2026-03-26 · 4,001 terms · 41 domains · CC BY-NC-ND 4.0 International · 18+ Adults Only

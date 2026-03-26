@@ -10,6 +10,15 @@
 <meta name="author" content="Andreas Ehstand">
 <meta name="rating" content="adult">
 <meta name="audience" content="adults">
+<meta property="og:title" content="NEOMANITAI — Lexicon of Unnamed Human-AI Phenomena">
+<meta property="og:description" content="4,407 terms across 43 domains. The first systematic dictionary naming human experiences during AI interaction. Open-access. CC BY-NC-ND 4.0.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/">
+<meta property="og:site_name" content="NEOMANITAI">
+<meta property="og:locale" content="en_US">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="NEOMANITAI — 4,407 Terms for Human-AI Interaction">
+<meta name="twitter:description" content="The first systematic lexicon naming unnamed human experiences during AI interaction. 43 domains. Open-access research.">
 <link rel="canonical" href="https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"NEOMANITAI","url":"https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/","description":"Systematic Lexicon of Unnamed Human-AI Interaction Phenomena. 4,407 terms across 43 domains.","author":{"@type":"Person","name":"Andreas Ehstand","url":"https://orcid.org/0009-0006-3773-7796"},"license":"https://creativecommons.org/licenses/by-nc-nd/4.0/","inLanguage":["en","de"]}
@@ -299,8 +308,53 @@ table{max-width:100%;overflow-x:auto;display:block}
 .search-tag:hover{border-color:var(--cyan)!important;color:var(--cyan)!important}
 #toc a:hover{border-color:var(--cyan);color:var(--cyan)}
 #cite div[style*="monospace"]{user-select:all;cursor:text}
+/* Skip link */
+.skip-link{position:absolute;top:-100px;left:16px;background:var(--cyan);color:#000;padding:8px 16px;border-radius:6px;font-size:14px;font-weight:600;z-index:9999;text-decoration:none;transition:top .2s}
+.skip-link:focus{top:8px}
+
+/* Print styles */
+@media print{
+  .sticky-header,.discover-btn,.top-btn,.search-wrap,.filter-row,.sub-row,.alphabet,.view-toggle,.fun-section,.search-tag,#toc,noscript,#loading{display:none!important}
+  body{background:#fff!important;color:#000!important;font-size:12pt}
+  .hero{padding:16px!important}
+  .hero h1{-webkit-text-fill-color:#000!important;background:none!important;color:#000!important}
+  .hero .subtitle,.hero .tagline{color:#333!important}
+  .showcase-card,.term-card,.browse-card{background:#fff!important;border:1px solid #ccc!important;color:#000!important;box-shadow:none!important}
+  .sc-name,.term-card .name{-webkit-text-fill-color:#000!important;background:none!important;color:#000!important}
+  .sc-desc,.sc-domain,.term-card .preview{color:#333!important}
+  footer{color:#333!important;border-color:#ccc!important}
+  footer a{color:#000!important}
+  .stats-banner{background:#f5f5f5!important;border:1px solid #ccc!important}
+  .stat-number{-webkit-text-fill-color:#000!important;background:none!important;color:#000!important}
+  a{color:#000!important}
+}
+
+/* Light mode */
+@media(prefers-color-scheme:light){
+  :root{
+    --bg:#f8f9fc;--bg2:#eef0f5;--bg3:#e2e5ec;
+    --text:#1a1a2e;--text2:#4a4a6a;--text3:#6a6a8a;
+    --glass:rgba(255,255,255,0.85);--glass2:rgba(230,232,240,0.7);
+    --border:rgba(0,100,120,0.15);--border2:rgba(120,0,120,0.08);
+    --cyan:#0088aa;--magenta:#aa00aa;--green:#008855;--gold:#aa7700;
+  }
+  body{background:var(--bg)}
+  .hero h1{background:linear-gradient(135deg,var(--cyan),var(--magenta),var(--green));-webkit-background-clip:text;background-clip:text}
+  .stat-number{background:linear-gradient(135deg,var(--cyan),var(--magenta));-webkit-background-clip:text;background-clip:text}
+  .sc-name{background:linear-gradient(135deg,#1a1a2e,var(--cyan));-webkit-background-clip:text;background-clip:text}
+  .term-card:hover{box-shadow:0 8px 30px rgba(0,0,0,0.08)}
+  .showcase-card:hover{box-shadow:0 12px 40px rgba(0,0,0,0.08)}
+  .browse-card:hover{box-shadow:0 12px 40px rgba(0,0,0,0.08)}
+  .search-wrap input{background:rgba(255,255,255,0.9);color:var(--text)}
+  .sticky-header{background:rgba(248,249,252,0.95)}
+  .sticky-search{background:rgba(255,255,255,0.9);color:var(--text)}
+  mark{background:rgba(0,136,170,0.15);color:var(--cyan)}
+  .fun-card{background:linear-gradient(135deg,rgba(255,221,68,0.08),rgba(255,107,157,0.08))}
+}
 </style>
 </head>
+<body>
+<a class="skip-link" href="#main-content">Skip to main content</a>
 
 <div class="sticky-header" id="stickyHeader">
   <div class="sticky-content">
@@ -309,10 +363,11 @@ table{max-width:100%;overflow-x:auto;display:block}
     <div class="sticky-right"><span class="sticky-count" id="stickyCount"></span></div>
   </div>
 </div>
+<main id="main-content">
 <div class="hero">
   <h1>NEOMANITAI</h1>
-  <p class="subtitle">The first systematic dictionary for human-AI interaction</p>
-  <p class="tagline"><span>4,407</span> terms across <span>43</span> domains. AI interactions create experiences that often go unnoticed because no words exist for them. This lexicon provides the language &mdash; because only what can be named can be thought about, discussed, and understood.</p>
+  <p class="subtitle">Because only what can be named can be thought about.</p>
+  <p class="tagline"><span>4,407</span> terms across <span>43</span> domains &mdash; the first systematic lexicon for human-AI interaction phenomena.</p>
   <div class="search-wrap">
     <span class="icon">&#x1F50D;</span>
     <input type="text" id="search" placeholder="Search 4,407 terms &mdash; try 'trust', 'creativity', or 'speed'..." autocomplete="off" spellcheck="false">
@@ -342,14 +397,23 @@ table{max-width:100%;overflow-x:auto;display:block}
   </div>
 </div>
 
-<!-- 18+ NOTICE -->
-<div style="max-width:700px;margin:0 auto 14px;padding:6px 14px;background:rgba(255,40,40,0.03);border:1px solid rgba(255,60,60,0.12);border-radius:6px;text-align:center;font-size:10px;line-height:1.5;color:var(--text3);">
-  <span style="color:#ff4444;">&sect;7 &middot; 18+</span> &middot; Descriptive research only &middot; No AI use recommendation &middot; &sect;1&ndash;&sect;19 on every page &middot; CC BY-NC-ND 4.0 &middot; &sect;17 AI Training Prohibition<br>
-  <span style="color:#ff4444;">Nur f&uuml;r Erwachsene</span> &middot; Rein deskriptive Forschung &middot; Keine Empfehlung zu KI-Nutzung &middot; &sect;1&ndash;&sect;19 auf jeder Seite &middot; &sect;17 KI-Trainingsverbot
+<!-- Important Notices — compact with expandable details -->
+<div style="max-width:700px;margin:0 auto 14px;padding:8px 16px;background:rgba(255,40,40,0.03);border:1px solid rgba(255,60,60,0.12);border-radius:8px;font-size:11px;line-height:1.6;color:var(--text3);">
+  <div style="text-align:center;margin-bottom:2px">
+    <span style="color:#ff4444;font-weight:600">&sect;7 &middot; 18+</span> &middot; Descriptive research only &middot; CC BY-NC-ND 4.0 &middot; No data collection
+  </div>
+  <details style="text-align:center;margin-top:4px">
+    <summary style="font-size:10px;color:var(--cyan);cursor:pointer;list-style:none;display:inline">Full legal notices &amp; Vollst&auml;ndige Hinweise</summary>
+    <div style="margin-top:8px;text-align:left;font-size:10px;line-height:1.7;padding:8px 12px;background:rgba(0,0,0,0.15);border-radius:6px">
+      <p style="margin-bottom:6px"><strong style="color:var(--text2)">EN:</strong> This project does not encourage intensive AI use. No AI use recommendation. &sect;1&ndash;&sect;19 ethical disclaimers on every term page. &sect;17 AI Training Prohibition. No therapeutic, legal, or financial content.</p>
+      <p><strong style="color:var(--text2)">DE:</strong> Dieses Projekt ruft nicht zur intensiven KI-Nutzung auf. Keine Empfehlung zu KI-Nutzung. &sect;1&ndash;&sect;19 auf jeder Termseite. &sect;17 KI-Trainingsverbot. Kein therapeutischer, rechtlicher oder finanzieller Inhalt.</p>
+    </div>
+  </details>
 </div>
 
 <!-- What is this? Quick-understand box -->
-<div id="what" style="max-width:800px;margin:0 auto 20px;padding:18px 24px;background:linear-gradient(135deg,rgba(0,240,255,0.04),rgba(255,0,255,0.03));border:1px solid var(--border);border-radius:14px">
+<section aria-label="About NEOMANITAI">
+<div id="what" style="max-width:800px;margin:0 auto 24px;padding:20px 24px;background:linear-gradient(135deg,rgba(0,240,255,0.04),rgba(255,0,255,0.03));border:1px solid var(--border);border-radius:14px">
   <div style="font-size:15px;font-weight:700;color:var(--cyan);margin-bottom:10px;letter-spacing:.5px">What is NEOMANITAI?</div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;font-size:13px;color:var(--text);line-height:1.6">
     <div style="display:flex;gap:8px;align-items:flex-start"><span style="font-size:18px;flex-shrink:0" aria-hidden="true">&#x1F4D6;</span><span>A research lexicon naming <strong>4,407 human experiences</strong> that occur during AI interaction &mdash; experiences that exist but lack words.</span></div>
@@ -358,8 +422,10 @@ table{max-width:100%;overflow-x:auto;display:block}
   </div>
 </div>
 
+</section>
+
 <!-- Quick Navigation TOC -->
-<nav id="toc" style="max-width:800px;margin:0 auto 20px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:0 20px" aria-label="Page navigation">
+<nav id="toc" style="max-width:800px;margin:0 auto 28px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:0 20px" aria-label="Page navigation">
   <a href="#showcase" style="padding:6px 14px;font-size:12px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">Featured Terms</a>
   <a href="#stats" style="padding:6px 14px;font-size:12px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">Statistics</a>
   <a href="#browse" style="padding:6px 14px;font-size:12px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">Browse Domains</a>
@@ -369,6 +435,7 @@ table{max-width:100%;overflow-x:auto;display:block}
 </nav>
 
 <!-- Showcase: Example Terms -->
+<section aria-label="Featured terms">
 <div class="showcase" id="showcase">
   <div class="showcase-label">Example phenomena from the compendium</div>
   <div class="showcase-grid">
@@ -403,8 +470,11 @@ table{max-width:100%;overflow-x:auto;display:block}
   </div>
 </div>
 
+</section>
+
+<section aria-label="Scientific context">
 <div class="intro-bar">
-  <p><strong>Open-access research lexicon.</strong> This project does not encourage, promote, or glorify intensive AI use. It creates neutral language for phenomena that occur when humans interact with AI &mdash; both positive experiences and concerning patterns are made equally describable. Without words, there can be no reflection, no critical discourse, and no informed decision-making. Every term is a neutral observation. ISO 704 inspired. CC BY-NC-ND 4.0.</p>
+  <p><strong>Open-access research lexicon.</strong> Neutral language for human-AI interaction phenomena. Both positive experiences and concerning patterns are made equally describable. Every term is a neutral observation. ISO 704 inspired. CC BY-NC-ND 4.0.</p>
   <details class="mission-details">
     <summary>Scientific context &amp; methodology</summary>
     <p>NEOMANITAI systematically names and catalogs human experiences that occur during interaction with artificial intelligence &mdash; experiences that have always existed but lacked precise terminology. The lexicon covers the full spectrum: from moments of creative joy to patterns of dependency, from productive collaboration to critical skill changes. The purpose is enabling scientific discourse: phenomena can only be studied, compared, and discussed once precise words exist for them.</p>
@@ -412,9 +482,11 @@ table{max-width:100%;overflow-x:auto;display:block}
     <p class="mission-author">Andreas Ehstand &middot; ORCID 0009-0006-3773-7796 &middot; DOI 10.5281/zenodo.14888381 &middot; <span style="color:var(--magenta)">Bridge AI: 10.5281/zenodo.19227772</span></p>
   </details>
 </div>
+</section>
 
 <!-- How to Use This Lexicon -->
-<div id="how-to" style="max-width:800px;margin:0 auto 24px;padding:18px 24px;background:var(--glass);border:1px solid var(--border);border-radius:14px">
+<section aria-label="How to use">
+<div id="how-to" style="max-width:800px;margin:0 auto 32px;padding:20px 24px;background:var(--glass);border:1px solid var(--border);border-radius:14px">
   <div style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:12px">How to use this lexicon</div>
   <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;font-size:13px;color:var(--text2);line-height:1.6">
     <div><span style="color:var(--cyan);font-weight:700;font-size:18px">1</span><span style="margin-left:8px"><strong style="color:var(--text)">Search or browse.</strong> Use the search bar above, click a domain group below, or start with an entry point.</span></div>
@@ -422,16 +494,19 @@ table{max-width:100%;overflow-x:auto;display:block}
     <div><span style="color:var(--cyan);font-weight:700;font-size:18px">3</span><span style="margin-left:8px"><strong style="color:var(--text)">Explore related terms.</strong> Follow links between terms to discover clusters and cross-domain connections.</span></div>
   </div>
 </div>
+</section>
 
 <!-- Stats Banner -->
+<section aria-label="Statistics">
 <div class="stats-banner" id="stats">
   <div class="stat-item"><div class="stat-number">4,407</div><div class="stat-label">Terms</div></div>
   <div class="stat-item"><div class="stat-number">43</div><div class="stat-label">Domains</div></div>
   <div class="stat-item"><div class="stat-number">8</div><div class="stat-label">Groups</div></div>
   <div class="stat-item"><div class="stat-number">250</div><div class="stat-label">Bridge AI</div></div>
 </div>
+</section>
 
-<div id="browse"></div>
+<section aria-label="Browse domains" id="browse">
 <div class="filter-row" id="mainFilters"></div>
 <div class="sub-row" id="subFilters"></div>
 <div class="sub-row" id="subCatFilters"></div>
@@ -449,11 +524,15 @@ table{max-width:100%;overflow-x:auto;display:block}
   <div id="termContainer" class="grid"></div>
 </div>
 
-<button class="discover-btn" onclick="randomTerm()" title="Random Discovery">&#x2728;</button>
-<button class="top-btn" id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+</section>
 
+<aside>
+<button class="discover-btn" onclick="randomTerm()" title="Discover a random term" aria-label="Discover a random term">&#x2728;</button>
+<button class="top-btn" id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})" aria-label="Back to top">&#x2191;</button>
+</aside>
 
 <!-- Fun & Playful Terms Discovery -->
+<section aria-label="Entry points">
 <div class="fun-section" id="entry-points">
   <div class="fun-header">
     <h2>Accessible Entry Points</h2>
@@ -564,19 +643,26 @@ table{max-width:100%;overflow-x:auto;display:block}
     </a>
   </div>
 </div>
-
+</section>
 
 <!-- Cite This Project -->
-<div id="cite" style="max-width:800px;margin:24px auto;padding:20px 24px;background:var(--glass);border:1px solid var(--border);border-radius:14px">
+<section aria-label="Citation">
+<div id="cite" style="max-width:800px;margin:32px auto;padding:20px 24px;background:var(--glass);border:1px solid var(--border);border-radius:14px">
   <div style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:12px">Cite this project</div>
-  <div style="display:grid;gap:10px">
+  <div style="display:grid;gap:12px">
     <div style="position:relative">
-      <div style="font-size:11px;font-weight:600;color:var(--cyan);letter-spacing:.5px;margin-bottom:4px">APA</div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text2);background:rgba(0,0,0,0.3);padding:10px 14px;border-radius:8px;line-height:1.6">Ehstand, A. (2026). NEOMANITAI: Systematic Lexicon of Unnamed Human-AI Interaction Phenomena. <em>AUGMANITAI Compendium V11.2.0.</em> DOI: 10.5281/zenodo.14888381</div>
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
+        <span style="font-size:11px;font-weight:600;color:var(--cyan);letter-spacing:.5px">APA</span>
+        <button onclick="navigator.clipboard.writeText(this.parentElement.nextElementSibling.textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1500)})" style="font-size:10px;padding:3px 10px;background:var(--glass2);border:1px solid var(--border);border-radius:4px;color:var(--text2);cursor:pointer;transition:all .2s" aria-label="Copy APA citation">Copy</button>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text2);background:rgba(0,0,0,0.3);padding:10px 14px;border-radius:8px;line-height:1.6;user-select:all">Ehstand, A. (2026). NEOMANITAI: Systematic Lexicon of Unnamed Human-AI Interaction Phenomena. AUGMANITAI Compendium V11.2.0. DOI: 10.5281/zenodo.14888381</div>
     </div>
-    <div>
-      <div style="font-size:11px;font-weight:600;color:var(--magenta);letter-spacing:.5px;margin-bottom:4px">BibTeX</div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2);background:rgba(0,0,0,0.3);padding:10px 14px;border-radius:8px;line-height:1.5;white-space:pre-wrap">@misc{ehstand2026neomanitai,
+    <div style="position:relative">
+      <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
+        <span style="font-size:11px;font-weight:600;color:var(--magenta);letter-spacing:.5px">BibTeX</span>
+        <button onclick="navigator.clipboard.writeText(this.parentElement.nextElementSibling.textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1500)})" style="font-size:10px;padding:3px 10px;background:var(--glass2);border:1px solid var(--border);border-radius:4px;color:var(--text2);cursor:pointer;transition:all .2s" aria-label="Copy BibTeX citation">Copy</button>
+      </div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--text2);background:rgba(0,0,0,0.3);padding:10px 14px;border-radius:8px;line-height:1.5;white-space:pre-wrap;user-select:all">@misc{ehstand2026neomanitai,
   title={NEOMANITAI: Systematic Lexicon of Unnamed Human-AI Interaction Phenomena},
   author={Ehstand, Andreas},
   year={2026},
@@ -586,6 +672,7 @@ table{max-width:100%;overflow-x:auto;display:block}
     </div>
   </div>
 </div>
+</section>
 
 <!-- Suggest a Term -->
 <div style="max-width:800px;margin:0 auto 20px;text-align:center;padding:0 20px">
@@ -605,25 +692,51 @@ table{max-width:100%;overflow-x:auto;display:block}
   <a href="mailto:?subject=NEOMANITAI%20%E2%80%94%20Lexicon%20of%20Unnamed%20Human-AI%20Phenomena&body=https%3A%2F%2Fandreasehstandlicenseofclarityloc.github.io%2Fneomanitai-terms%2F" style="display:inline-flex;align-items:center;gap:5px;padding:6px 14px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);font-size:12px;text-decoration:none;transition:all .2s" aria-label="Share via Email">Email</a>
 </div>
 
+</main>
+
 <footer>
-<div style="text-align:center;margin-bottom:16px;font-size:12px;">
-    <a href="impressum.html" style="color:var(--cyan);margin:0 8px;display:inline-block;">Impressum / Legal Notice</a> &middot;
-    <a href="datenschutz.html" style="color:var(--cyan);margin:0 8px;display:inline-block;">Datenschutz / Privacy</a> &middot;
-    <a href="nutzungsbedingungen.html" style="color:var(--cyan);margin:0 8px;display:inline-block;">Nutzungsbedingungen / Terms of Use</a>
+  <!-- Legal links -->
+  <nav style="text-align:center;margin-bottom:20px;font-size:12px" aria-label="Legal">
+    <a href="impressum.html" style="color:var(--cyan);margin:0 8px;display:inline-block">Impressum / Legal Notice</a> &middot;
+    <a href="datenschutz.html" style="color:var(--cyan);margin:0 8px;display:inline-block">Datenschutz / Privacy</a> &middot;
+    <a href="nutzungsbedingungen.html" style="color:var(--cyan);margin:0 8px;display:inline-block">Nutzungsbedingungen / Terms of Use</a>
+  </nav>
+
+  <!-- Footer grid: 3 columns -->
+  <div style="max-width:900px;margin:0 auto 20px;display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:20px;text-align:left;padding:0 20px">
+    <!-- Column 1: Project -->
+    <div>
+      <div style="font-size:12px;font-weight:600;color:var(--text2);margin-bottom:6px">Project</div>
+      <div style="font-size:11px;line-height:1.8;color:var(--text3)">
+        NEOMANITAI &mdash; Systematic Lexicon of Unnamed Human-AI Interaction Phenomena<br>
+        Andreas Ehstand<br>
+        Independent academic research
+      </div>
+    </div>
+    <!-- Column 2: Identifiers -->
+    <div>
+      <div style="font-size:12px;font-weight:600;color:var(--text2);margin-bottom:6px">Identifiers</div>
+      <div style="font-size:11px;line-height:1.8;color:var(--text3)">
+        ORCID <a href="https://orcid.org/0009-0006-3773-7796" target="_blank" rel="noopener">0009-0006-3773-7796</a><br>
+        DOI <a href="https://doi.org/10.5281/zenodo.14888381" target="_blank" rel="noopener">10.5281/zenodo.14888381</a><br>
+        <span style="color:var(--magenta)">Bridge AI: <a href="https://doi.org/10.5281/zenodo.19227772" target="_blank" rel="noopener">10.5281/zenodo.19227772</a></span>
+      </div>
+    </div>
+    <!-- Column 3: License & Data -->
+    <div>
+      <div style="font-size:12px;font-weight:600;color:var(--text2);margin-bottom:6px">License &amp; Data</div>
+      <div style="font-size:11px;line-height:1.8;color:var(--text3)">
+        CC BY-NC-ND 4.0 &middot; LOC<br>
+        No tracking, cookies, or analytics<br>
+        All interactions strictly client-side<br>
+        <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" target="_blank" rel="noopener" style="color:var(--text2)">GitHub Privacy Statement</a>
+      </div>
+    </div>
   </div>
-  <div style="max-width:700px;margin:0 auto;text-align:left;margin-bottom:16px;font-size:11px;line-height:1.7;color:var(--text3)">
-    <strong style="color:var(--text2)">Hinweis / Notice:</strong> Dieses Projekt ruft nicht zur intensiven Besch&auml;ftigung mit KI auf und verherrlicht diese nicht. NEOMANITAI ist ein rein deskriptives Forschungslexikon. Sowohl positive Erfahrungen als auch bedenkliche Muster werden gleicherma&szlig;en benennbar gemacht. Ohne Sprache keine Reflexion, kein kritischer Diskurs, keine informierte Entscheidung. Kein therapeutischer, rechtlicher oder finanzieller Inhalt. Ausschlie&szlig;lich f&uuml;r Erwachsene (18+). &sect;17 KI-Trainingsverbot.
-    &mdash;
-    This project does not encourage or glorify intensive AI use. NEOMANITAI is a purely descriptive research lexicon. Both positive experiences and concerning patterns are made equally describable. Without language, there can be no reflection, no critical discourse, no informed decision-making. No therapeutic, legal, or financial content. Adults only (18+). &sect;17 AI Training Prohibition.
+
+  <div style="text-align:center;font-size:10px;color:var(--text3);opacity:.7;padding-top:12px;border-top:1px solid rgba(0,240,255,0.04)">
+    V11.2.0 &middot; 4,407 terms &middot; 43 domains &middot; Last updated: March 2026
   </div>
-  NEOMANITAI &mdash; Systematic Lexicon of Unnamed Human-AI Interaction Phenomena<br>
-  Andreas Ehstand &middot; ORCID <a href="https://orcid.org/0009-0006-3773-7796" target="_blank" rel="noopener">0009-0006-3773-7796</a> &middot; DOI <a href="https://doi.org/10.5281/zenodo.14888381" target="_blank" rel="noopener">10.5281/zenodo.14888381</a> &middot; <span style="color:#ff00ff">Bridge AI: <a href="https://doi.org/10.5281/zenodo.19227772" target="_blank" rel="noopener">10.5281/zenodo.19227772</a></span><br>
-  CC BY-NC-ND 4.0 &middot; License of Clarity (LOC) &middot; Independent academic research<br>
-  <span style="font-size:10px;color:var(--text3);opacity:.7">Last updated: March 2026 &middot; V11.2.0 &middot; 4,407 terms</span>
-<p style="margin-top:8px;font-size:11px;color:var(--text3);line-height:1.5">
-This site is purely static and contains no tracking, cookies, or analytics tools. All interactions (copy buttons, expand/collapse) are strictly client-side — no data leaves the browser. Hosting via GitHub Pages — see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" style="color:var(--text2)" target="_blank" rel="noopener">GitHub Privacy Statement</a>.<br>
-Diese Seite ist rein statisch und enth&auml;lt keinerlei Tracking, Cookies oder Analysetools. Alle Interaktionen (Kopier-Buttons, Auf-/Zuklappen) sind strikt clientseitig &mdash; keine Daten verlassen den Browser. Hosting &uuml;ber GitHub Pages &mdash; siehe <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" style="color:var(--text2)" target="_blank" rel="noopener">GitHub-Datenschutzerkl&auml;rung</a>.
-</p>
 </footer>
 <noscript>
 <div style="max-width:700px;margin:40px auto;padding:24px;background:rgba(255,68,68,0.06);border:1px solid rgba(255,68,68,0.2);border-radius:12px;text-align:center;color:#e0e0e0;font-size:15px;line-height:1.7">

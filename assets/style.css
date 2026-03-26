@@ -586,11 +586,33 @@ div[lang="de"] h2::after{content:'DE';position:absolute;right:0;top:50%;transfor
 
 /* Improved body font for term pages */
 body{font-size:17px}
-*:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
+*:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
 
 /* Mini-TOC navigation */
 .mini-toc a:hover{background:rgba(0,229,255,0.12);border-color:rgba(0,229,255,0.3);color:var(--cyan)}
 .mini-toc a:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+
+/* Prev/Next navigation */
+.prev-next-nav a:hover{border-color:rgba(0,229,255,0.3)!important;color:var(--cyan)!important}
+
+/* Reading time badge */
+.reading-time{opacity:.7;transition:opacity .2s}
+.reading-time:hover{opacity:1}
+
+/* Breadcrumb */
+.term-breadcrumb a:hover{color:var(--magenta)!important;text-decoration:underline}
+
+/* Keyboard hints footer */
+.keyboard-hints kbd{font-size:10px;vertical-align:middle}
+
+/* Scroll-to-top button */
+#scrollTopBtn:hover{background:rgba(0,229,255,0.2)!important;border-color:rgba(0,229,255,0.4)!important;transform:translateY(-2px)}
+
+/* Reduced motion preference */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important}
+  .particles,.scroll-progress,.mesh-bg{display:none!important}
+}
 
 /* Light mode for term pages */
 @media(prefers-color-scheme:light){

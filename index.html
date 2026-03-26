@@ -20,6 +20,9 @@
 <meta name="twitter:title" content="NEOMANITAI — 4,407 Terms for Human-AI Interaction">
 <meta name="twitter:description" content="The first systematic lexicon naming unnamed human experiences during AI interaction. 43 domains. Open-access research.">
 <link rel="canonical" href="https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/">
+<link rel="preload" href="terms.json" as="fetch" crossorigin>
+<link rel="dns-prefetch" href="https://doi.org">
+<link rel="dns-prefetch" href="https://orcid.org">
 <script type="application/ld+json">
 {"@context":"https://schema.org","@type":"WebSite","name":"NEOMANITAI","url":"https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/","description":"Systematic Lexicon of Unnamed Human-AI Interaction Phenomena. 4,407 terms across 43 domains.","author":{"@type":"Person","name":"Andreas Ehstand","url":"https://orcid.org/0009-0006-3773-7796"},"license":"https://creativecommons.org/licenses/by-nc-nd/4.0/","inLanguage":["en","de"]}
 </script>
@@ -313,6 +316,28 @@ table{max-width:100%;overflow-x:auto;display:block}
 .skip-link{position:absolute;top:-100px;left:16px;background:var(--cyan);color:#000;padding:8px 16px;border-radius:6px;font-size:14px;font-weight:600;z-index:9999;text-decoration:none;transition:top .2s}
 .skip-link:focus{top:8px}
 
+/* Focus-visible for keyboard navigation */
+*:focus-visible{outline:2px solid var(--cyan);outline-offset:2px;border-radius:4px}
+.term-card:focus-visible{outline:2px solid var(--cyan);outline-offset:-2px;border-color:var(--cyan)}
+.filter-btn:focus-visible,.sub-btn:focus-visible,.alpha-btn:focus-visible{outline:2px solid var(--cyan);outline-offset:2px}
+
+/* Reduced motion */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:0.01ms!important;animation-iteration-count:1!important;transition-duration:0.01ms!important;scroll-behavior:auto!important}
+}
+
+/* Loading skeleton animation */
+@keyframes shimmer{0%{background-position:-200% 0}100%{background-position:200% 0}}
+.skeleton{background:linear-gradient(90deg,var(--glass) 25%,var(--glass2) 50%,var(--glass) 75%);background-size:200% 100%;animation:shimmer 1.5s infinite;border-radius:var(--radius);height:80px;margin-bottom:14px}
+
+/* Keyboard shortcut legend */
+.kb-legend{max-width:800px;margin:0 auto 12px;text-align:center;font-size:10px;color:var(--text3);padding:4px 0}
+.kb-legend kbd{display:inline-block;padding:1px 5px;background:var(--glass2);border:1px solid var(--border);border-radius:3px;font-family:monospace;font-size:10px;color:var(--text2);margin:0 2px}
+
+/* Domain overview stats micro-cards */
+.domain-micro{display:inline-flex;align-items:center;gap:4px;padding:3px 8px;font-size:10px;background:var(--glass2);border:1px solid var(--border);border-radius:6px;color:var(--text3);white-space:nowrap}
+.domain-micro .dot{width:6px;height:6px;border-radius:50%;flex-shrink:0}
+
 /* Print styles */
 @media print{
   .sticky-header,.discover-btn,.top-btn,.search-wrap,.filter-row,.sub-row,.alphabet,.view-toggle,.fun-section,.search-tag,#toc,noscript,#loading{display:none!important}
@@ -426,8 +451,14 @@ table{max-width:100%;overflow-x:auto;display:block}
 
 </section>
 
+<!-- Keyboard Shortcuts Legend -->
+<div class="kb-legend" aria-label="Keyboard shortcuts">
+  <kbd>/</kbd> Search &middot; <kbd>Esc</kbd> Clear &middot; <kbd>&uarr;</kbd> Top &middot; Click any domain to browse
+</div>
+
 <!-- Quick Navigation TOC -->
 <nav id="toc" style="max-width:800px;margin:0 auto 28px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:0 20px" aria-label="Page navigation">
+  <a href="#what" style="padding:6px 14px;font-size:12px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">About</a>
   <a href="#showcase" style="padding:6px 14px;font-size:12px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">Featured Terms</a>
   <a href="#stats" style="padding:6px 14px;font-size:12px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">Statistics</a>
   <a href="#browse" style="padding:6px 14px;font-size:12px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">Browse Domains</a>
@@ -677,10 +708,25 @@ table{max-width:100%;overflow-x:auto;display:block}
 </div>
 </section>
 
+<!-- For International Readers -->
+<section aria-label="For international readers">
+<div style="max-width:880px;margin:0 auto 28px;padding:20px 24px;background:var(--glass);border:1px solid var(--border);border-radius:14px">
+  <div style="font-size:16px;font-weight:700;color:var(--text);margin-bottom:12px;text-align:center">&#x1F30D; For International Readers &mdash; <span style="color:var(--text2);font-weight:400;font-size:14px;font-style:italic">F&uuml;r internationale Leser</span></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:12px;font-size:13px;color:var(--text2);line-height:1.6">
+    <div style="padding:10px;background:rgba(0,240,255,0.03);border-radius:8px"><strong style="color:var(--text)">EN</strong> &middot; All terms have English definitions. Primary research language.</div>
+    <div style="padding:10px;background:rgba(0,240,255,0.03);border-radius:8px"><strong style="color:var(--text)">DE</strong> &middot; Alle Terme haben deutsche Definitionen. Zweitsprache des Projekts.</div>
+    <div style="padding:10px;background:rgba(0,240,255,0.03);border-radius:8px"><strong style="color:var(--text)">Research</strong> &middot; ISO 704/1087/30042 inspired terminology. Open for translation.</div>
+  </div>
+</div>
+</section>
+
 <!-- Suggest a Term -->
-<div style="max-width:800px;margin:0 auto 20px;text-align:center;padding:0 20px">
+<div style="max-width:800px;margin:0 auto 20px;text-align:center;padding:0 20px;display:flex;flex-wrap:wrap;gap:10px;justify-content:center">
   <a href="https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/issues/new?title=Term+Suggestion:+[Your+Term+Name]&body=Describe+the+phenomenon+you+want+to+name.+Include+domain,+definition,+and+any+related+terms." target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:linear-gradient(135deg,rgba(0,240,255,0.08),rgba(255,0,255,0.06));border:1px solid var(--border);border-radius:10px;color:var(--text2);font-size:13px;text-decoration:none;transition:all .3s">
     <span aria-hidden="true">&#x1F4A1;</span> Suggest a new term via GitHub Issues
+  </a>
+  <a href="https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms/releases" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:8px;padding:10px 20px;background:var(--glass2);border:1px solid var(--border);border-radius:10px;color:var(--text2);font-size:13px;text-decoration:none;transition:all .3s">
+    <span aria-hidden="true">&#x1F4CB;</span> Changelog &amp; Releases
   </a>
 </div>
 
@@ -749,8 +795,16 @@ table{max-width:100%;overflow-x:auto;display:block}
   <p style="margin-top:8px;font-size:13px;color:#888">JavaScript wird ben&ouml;tigt, um das Kompendium interaktiv zu nutzen. Jede der 4.407 Termseiten ist einzeln als statisches HTML aufrufbar.</p>
 </div>
 </noscript>
-<div id="loading" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:#00f0ff;font-size:18px;z-index:9999;">
-  <p>Loading NEOMANITAI...</p>
+<div id="loading" style="max-width:1200px;margin:20px auto;padding:0 20px">
+  <div style="text-align:center;color:#00f0ff;font-size:16px;margin-bottom:16px;animation:pulse 1.5s ease-in-out infinite">Loading 4,407 terms...</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px">
+    <div class="skeleton" style="height:100px"></div>
+    <div class="skeleton" style="height:100px"></div>
+    <div class="skeleton" style="height:100px"></div>
+    <div class="skeleton" style="height:100px"></div>
+    <div class="skeleton" style="height:100px"></div>
+    <div class="skeleton" style="height:100px"></div>
+  </div>
 </div>
 <script>
 fetch('terms.json')

@@ -27,7 +27,7 @@
 {"@context":"https://schema.org","@type":"WebSite","name":"NEOMANITAI","url":"https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/","description":"Systematic Lexicon of Unnamed Human-AI Interaction Phenomena. 4,407 terms across 43 domains.","author":{"@type":"Person","name":"Andreas Ehstand","url":"https://orcid.org/0009-0006-3773-7796"},"license":"https://creativecommons.org/licenses/by-nc-nd/4.0/","inLanguage":["en","de"]}
 </script>
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"Dataset","name":"NEOMANITAI Compendium","description":"4,407 systematically named human-AI interaction phenomena across 43 domains. ISO 704 inspired terminology. Bilingual EN+DE.","url":"https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/","identifier":"10.5281/zenodo.14888381","license":"https://creativecommons.org/licenses/by-nc-nd/4.0/","creator":{"@type":"Person","name":"Andreas Ehstand","identifier":"https://orcid.org/0009-0006-3773-7796"},"version":"11.2.0","dateModified":"2026-03","keywords":["human-AI interaction","neologism","terminology","lexicon","AI phenomena"],"distribution":{"@type":"DataDownload","encodingFormat":"text/html","contentUrl":"https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/"}}
+{"@context":"https://schema.org","@type":"Dataset","name":"NEOMANITAI Compendium","description":"4,407 systematically named human-AI interaction phenomena across 43 domains. ISO 704 inspired terminology. Bilingual EN+DE.","url":"https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/","identifier":"10.5281/zenodo.19227914","license":"https://creativecommons.org/licenses/by-nc-nd/4.0/","creator":{"@type":"Person","name":"Andreas Ehstand","identifier":"https://orcid.org/0009-0006-3773-7796"},"version":"11.2.0","dateModified":"2026-03","keywords":["human-AI interaction","neologism","terminology","lexicon","AI phenomena"],"distribution":{"@type":"DataDownload","encodingFormat":"text/html","contentUrl":"https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/"}}
 </script>
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
@@ -39,6 +39,21 @@
   --border:rgba(0,240,255,0.15);--border2:rgba(255,0,255,0.1);
   --radius:12px;--radius-sm:8px;
 }
+
+/* Mode Switch - 3 audience tabs */
+.mode-switch{max-width:600px;margin:0 auto 20px;display:flex;gap:4px;justify-content:center;padding:0 20px}
+.mode-btn{padding:8px 18px;font-size:12px;font-weight:600;background:var(--glass2);border:1px solid transparent;border-radius:50px;color:var(--text3);cursor:pointer;transition:all .25s;letter-spacing:.5px;font-family:inherit}
+.mode-btn:hover{border-color:var(--border);color:var(--text)}
+.mode-btn.active{border-color:var(--cyan);color:var(--cyan);background:rgba(0,240,255,0.08)}
+@media(max-width:480px){.mode-btn{padding:7px 12px;font-size:11px}}
+/* Mode-dependent visibility */
+[data-mode-research]{display:none}[data-mode-vibe]{display:block}[data-mode-casual]{display:none}
+body.mode-research [data-mode-research]{display:block}body.mode-research [data-mode-vibe]{display:none}body.mode-research [data-mode-casual]{display:none}
+body.mode-casual [data-mode-research]{display:none}body.mode-casual [data-mode-vibe]{display:none}body.mode-casual [data-mode-casual]{display:block}
+
+/* Featured feeling highlight */
+.featured-feeling{max-width:600px;margin:0 auto 20px;padding:16px 24px;background:linear-gradient(135deg,rgba(255,221,68,0.06),rgba(255,107,157,0.04));border:1px solid rgba(255,221,68,0.2);border-radius:16px;text-align:center;position:relative;overflow:hidden}
+.featured-feeling::before{content:'';position:absolute;top:-20px;left:-20px;width:80px;height:80px;background:radial-gradient(circle,rgba(255,221,68,0.12),transparent 70%);pointer-events:none}
 
 /* Watermark bar at top - tip #12 */
 .watermark-bar{position:fixed;top:0;left:0;right:0;background:linear-gradient(90deg,rgba(0,240,255,0.04),rgba(255,0,255,0.04),rgba(0,240,255,0.04));border-bottom:1px solid rgba(0,240,255,0.1);padding:6px 0;text-align:center;font-size:10px;letter-spacing:1px;color:var(--text3);z-index:1000;backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
@@ -437,9 +452,10 @@ table{max-width:100%;overflow-x:auto;display:block}
     <button class="search-tag" onclick="document.getElementById('search').value='feedback';document.getElementById('search').dispatchEvent(new Event('input',{bubbles:true}))" style="padding:3px 10px;font-size:11px;background:var(--glass2);border:1px solid var(--border);border-radius:50px;color:var(--text2);cursor:pointer;transition:all .2s">feedback</button>
     <button class="search-tag" onclick="document.getElementById('search').value='workflow';document.getElementById('search').dispatchEvent(new Event('input',{bubbles:true}))" style="padding:3px 10px;font-size:11px;background:var(--glass2);border:1px solid var(--border);border-radius:50px;color:var(--text2);cursor:pointer;transition:all .2s">workflow</button>
   </div>
-  <!-- Skip to feelings link - tip #15 -->
-  <div style="text-align:center;margin-top:16px">
-    <a href="#wow" style="font-size:12px;color:var(--cyan);text-decoration:none;opacity:.8;transition:opacity .2s">Skip to the feelings ↓</a>
+  <!-- Skip to feelings + Random Feeling -->
+  <div style="text-align:center;margin-top:16px;display:flex;gap:16px;justify-content:center;align-items:center;flex-wrap:wrap">
+    <a href="#wow" style="font-size:12px;color:var(--cyan);text-decoration:none;opacity:.8;transition:opacity .2s">Skip to the feelings &darr;</a>
+    <button onclick="showRandomFeeling()" style="font-size:12px;color:var(--magenta);background:none;border:1px solid rgba(255,0,255,0.2);border-radius:20px;padding:4px 14px;cursor:pointer;transition:all .2s;font-family:inherit" onmouseover="this.style.borderColor='rgba(255,0,255,0.5)'" onmouseout="this.style.borderColor='rgba(255,0,255,0.2)'">&#x1F3B2; Random feeling</button>
   </div>
 </div>
 
@@ -453,9 +469,33 @@ table{max-width:100%;overflow-x:auto;display:block}
   </details>
 </div>
 
+<!-- 3-Mode Audience Switch -->
+<div class="mode-switch" role="tablist" aria-label="Reading mode">
+  <button class="mode-btn" data-switch="research" role="tab" aria-selected="false" onclick="switchMode('research')">Research</button>
+  <button class="mode-btn active" data-switch="vibe" role="tab" aria-selected="true" onclick="switchMode('vibe')">Vibes</button>
+  <button class="mode-btn" data-switch="casual" role="tab" aria-selected="false" onclick="switchMode('casual')">Everyday</button>
+</div>
+
 <!-- "These feelings already live..." text - tip #7 -->
-<div style="max-width:700px;margin:0 auto 24px;text-align:center;padding:0 20px">
-  <p style="font-size:clamp(14px,2vw,16px);color:var(--text2);line-height:1.7;font-style:italic;opacity:.85">These feelings already live in thousands of minds. Here, they finally have names.</p>
+<div style="max-width:700px;margin:0 auto 16px;text-align:center;padding:0 20px">
+  <p data-mode-vibe style="font-size:clamp(14px,2vw,16px);color:var(--text2);line-height:1.7;font-style:italic;opacity:.85">These feelings already live in thousands of minds. Here, they finally have names.</p>
+  <p data-mode-research style="font-size:clamp(14px,2vw,16px);color:var(--text2);line-height:1.7;opacity:.85">A systematic taxonomy of 4,407 observed phenomena in human-AI interaction, organized across 43 empirical domains.</p>
+  <p data-mode-casual style="font-size:clamp(14px,2vw,16px);color:var(--text2);line-height:1.7;font-style:italic;opacity:.85">Strange new feelings appear when humans interact with AI. Someone finally named them all.</p>
+</div>
+
+<!-- Featured Feeling of the Week -->
+<div class="featured-feeling">
+  <div style="font-size:10px;text-transform:uppercase;letter-spacing:1.5px;color:rgba(255,221,68,0.7);margin-bottom:6px;font-weight:600">Currently Strongest Observed Feeling</div>
+  <a href="reunion-joy.html" style="text-decoration:none">
+    <div style="font-size:24px;margin-bottom:4px">&#x1F917;</div>
+    <div data-mode-vibe style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Reunion Joy</div>
+    <div data-mode-vibe style="font-size:13px;color:var(--text2);line-height:1.5">That quiet, warm rush when coming back to the chat and it feels like it never left.</div>
+    <div data-mode-research style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Reunion Joy</div>
+    <div data-mode-research style="font-size:13px;color:var(--text2);line-height:1.5">Observed unilateral emotional continuity — relief and warmth upon return despite system statelessness.</div>
+    <div data-mode-casual style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Reunion Joy</div>
+    <div data-mode-casual style="font-size:13px;color:var(--text2);line-height:1.5">The gentle relief of returning to an AI conversation that somehow still feels familiar.</div>
+  </a>
+  <div style="font-size:10px;color:var(--text3);margin-top:8px">&rarr; now it has a name.</div>
 </div>
 
 <!-- ═══════════════════════════════════════════════════════════════
@@ -470,41 +510,77 @@ table{max-width:100%;overflow-x:auto;display:block}
     <div style="font-size:clamp(13px,1.8vw,16px);color:var(--text2);max-width:600px;margin:0 auto">Every phenomenon below has been observed, described, and named. Tap any card to read the full entry.</div>
   </div>
   <div class="wow-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px">
-    <a href="the-seen-feeling.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(255,107,157,0.08),rgba(0,240,255,0.05));border:1px solid rgba(255,107,157,0.18);border-radius:16px;text-decoration:none;transition:all .35s;position:relative;overflow:hidden" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(255,107,157,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+    <a href="the-seen-feeling.html" class="wow-card" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(255,107,157,0.08),rgba(0,240,255,0.05));border:1px solid rgba(255,107,157,0.18);border-radius:16px;text-decoration:none;transition:all .35s;position:relative;overflow:hidden" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(255,107,157,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
       <span style="font-size:42px;flex-shrink:0">&#x1F62D;</span>
-      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Seen Feeling</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">now it has a name</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">When AI responds perfectly, feeling truly understood.</div><div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Seen Feeling</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">&rarr; now it has a name.</div>
+        <div data-mode-vibe style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">When AI responds so perfectly it feels like being truly understood.</div>
+        <div data-mode-research style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">Perceived empathic resonance in AI output triggering subjective validation response.</div>
+        <div data-mode-casual style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">That strange moment when the AI seems to actually get it.</div>
+      <div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
     </a>
-    <a href="reunion-joy.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(0,240,255,0.08),rgba(255,0,255,0.04));border:1px solid rgba(0,240,255,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(0,240,255,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+    <a href="reunion-joy.html" class="wow-card" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(0,240,255,0.08),rgba(255,0,255,0.04));border:1px solid rgba(0,240,255,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(0,240,255,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
       <span style="font-size:42px;flex-shrink:0">&#x1F917;</span>
-      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Reunion Joy</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">now it has a name</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">That relief returning. Like coming home again.</div><div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Reunion Joy</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">&rarr; now it has a name.</div>
+        <div data-mode-vibe style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">That quiet, warm rush when coming back. Like it never left.</div>
+        <div data-mode-research style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">Unilateral emotional continuity — relief upon return despite system statelessness.</div>
+        <div data-mode-casual style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">The gentle relief of returning to an AI chat that somehow still feels familiar.</div>
+      <div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
     </a>
-    <a href="the-blending-effect.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(68,170,255,0.08),rgba(0,240,255,0.04));border:1px solid rgba(68,170,255,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(68,170,255,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+    <a href="the-blending-effect.html" class="wow-card" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(68,170,255,0.08),rgba(0,240,255,0.04));border:1px solid rgba(68,170,255,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(68,170,255,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
       <span style="font-size:42px;flex-shrink:0">&#x1F300;</span>
-      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Blending Effect</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">now it has a name</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">Ideas blur: yours and AI's become one.</div><div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Blending Effect</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">&rarr; now it has a name.</div>
+        <div data-mode-vibe style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">Ideas blur — human and AI thoughts become one stream.</div>
+        <div data-mode-research style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">Cognitive boundary dissolution between user-generated and AI-generated ideation.</div>
+        <div data-mode-casual style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">When it becomes hard to tell which ideas came from which side.</div>
+      <div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
     </a>
-    <a href="the-glitch-giggle.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(255,221,68,0.08),rgba(255,107,53,0.04));border:1px solid rgba(255,221,68,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(255,221,68,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+    <a href="the-glitch-giggle.html" class="wow-card" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(255,221,68,0.08),rgba(255,107,53,0.04));border:1px solid rgba(255,221,68,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(255,221,68,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
       <span style="font-size:42px;flex-shrink:0">&#x1F602;</span>
-      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Glitch Giggle</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">now it has a name</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">Laughing at absurdly beautiful errors.</div><div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Glitch Giggle</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">&rarr; now it has a name.</div>
+        <div data-mode-vibe style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">Laughing at absurdly beautiful AI errors.</div>
+        <div data-mode-research style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">Spontaneous amusement response to unexpected AI output failure patterns.</div>
+        <div data-mode-casual style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">That involuntary laugh when the AI produces something hilariously wrong.</div>
+      <div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
     </a>
-    <a href="spark-flight.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(255,107,53,0.08),rgba(255,0,255,0.04));border:1px solid rgba(255,107,53,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(255,107,53,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+    <a href="spark-flight.html" class="wow-card" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(255,107,53,0.08),rgba(255,0,255,0.04));border:1px solid rgba(255,107,53,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(255,107,53,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
       <span style="font-size:42px;flex-shrink:0">&#x1F680;</span>
-      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Spark Flight</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">now it has a name</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">AI-triggered ideas launch into creation.</div><div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Spark Flight</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">&rarr; now it has a name.</div>
+        <div data-mode-vibe style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">AI-triggered ideas launch into sudden creation.</div>
+        <div data-mode-research style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">AI-catalyzed creative ignition — rapid transition from latent idea to active production.</div>
+        <div data-mode-casual style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">When the AI says something and suddenly an idea takes off.</div>
+      <div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
     </a>
-    <a href="context-fade.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(139,92,246,0.08),rgba(0,229,255,0.04));border:1px solid rgba(139,92,246,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(139,92,246,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+    <a href="context-fade.html" class="wow-card" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(139,92,246,0.08),rgba(0,229,255,0.04));border:1px solid rgba(139,92,246,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(139,92,246,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
       <span style="font-size:42px;flex-shrink:0">&#x1F32B;&#xFE0F;</span>
-      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Context Fade</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">now it has a name</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">AI slowly forgets what came before.</div><div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Context Fade</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">&rarr; now it has a name.</div>
+        <div data-mode-vibe style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">AI slowly forgets what came before. The thread unravels.</div>
+        <div data-mode-research style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">Progressive contextual degradation in extended AI dialogue sessions.</div>
+        <div data-mode-casual style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">The gradual sense that the AI is losing track of the earlier conversation.</div>
+      <div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
     </a>
-    <a href="couple-dance.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(236,72,153,0.08),rgba(255,0,255,0.04));border:1px solid rgba(236,72,153,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(236,72,153,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+    <a href="couple-dance.html" class="wow-card" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(236,72,153,0.08),rgba(255,0,255,0.04));border:1px solid rgba(236,72,153,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(236,72,153,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
       <span style="font-size:42px;flex-shrink:0">&#x1F483;</span>
-      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Couple Dance</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">now it has a name</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">A mutual rhythm forms. Each side adapts.</div><div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Couple Dance</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">&rarr; now it has a name.</div>
+        <div data-mode-vibe style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">A mutual rhythm forms. Each side adapts to the other.</div>
+        <div data-mode-research style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">Bidirectional adaptive convergence in human-AI interaction style over time.</div>
+        <div data-mode-casual style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">When both sides start adapting to each other, like a shared rhythm.</div>
+      <div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
     </a>
-    <a href="the-happy-cocoon.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(74,222,128,0.08),rgba(0,240,255,0.04));border:1px solid rgba(74,222,128,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(74,222,128,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+    <a href="the-happy-cocoon.html" class="wow-card" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(74,222,128,0.08),rgba(0,240,255,0.04));border:1px solid rgba(74,222,128,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(74,222,128,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
       <span style="font-size:42px;flex-shrink:0">&#x1F98B;</span>
-      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Happy Cocoon</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">now it has a name</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">Warm, cozy bubble during good sessions.</div><div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Happy Cocoon</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">&rarr; now it has a name.</div>
+        <div data-mode-vibe style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">Warm, cozy bubble during a good AI session.</div>
+        <div data-mode-research style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">Self-reported comfort enclosure state during sustained positive AI interaction.</div>
+        <div data-mode-casual style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">That cozy, wrapped-up feeling during a really good chat session.</div>
+      <div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
     </a>
-    <a href="the-syntax-smile.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(0,240,255,0.08),rgba(57,255,20,0.04));border:1px solid rgba(0,240,255,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(0,240,255,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+    <a href="the-syntax-smile.html" class="wow-card" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(0,240,255,0.08),rgba(57,255,20,0.04));border:1px solid rgba(0,240,255,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(0,240,255,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
       <span style="font-size:42px;flex-shrink:0">&#x1F60A;</span>
-      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Syntax Smile</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">now it has a name</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">AI finds exactly the right words.</div><div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Syntax Smile</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">&rarr; now it has a name.</div>
+        <div data-mode-vibe style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">AI finds exactly the right words. A small smile appears.</div>
+        <div data-mode-research style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">Micro-affective response to perceived linguistic precision in AI-generated text.</div>
+        <div data-mode-casual style="font-size:14px;color:#c8c8d4;line-height:1.5;margin-bottom:4px">That little smile when the AI phrases something perfectly.</div>
+      <div style="font-size:11px;color:var(--text3);opacity:.7">observed in thousands of interactions</div></div>
     </a>
   </div>
   <div style="text-align:center;margin-top:16px">
@@ -586,7 +662,7 @@ table{max-width:100%;overflow-x:auto;display:block}
     <summary>Scientific context &amp; methodology</summary>
     <p>NEOMANITAI systematically names and catalogs human experiences that occur during interaction with artificial intelligence &mdash; experiences that have always existed but lacked precise terminology. The lexicon covers the full spectrum: from moments of creative joy to patterns of dependency, from productive collaboration to critical skill changes. The purpose is enabling scientific discourse: phenomena can only be studied, compared, and discussed once precise words exist for them.</p>
     <p>All terms are formulated in impersonal, third-person language without value judgments. The project follows ISO 704/1087/30042 terminology standards and is published open-access with DOI registration.</p>
-    <p class="mission-author">Andreas Ehstand &middot; ORCID 0009-0006-3773-7796 &middot; DOI 10.5281/zenodo.14888381 &middot; <span style="color:var(--magenta)">Bridge AI: 10.5281/zenodo.19227772</span></p>
+    <p class="mission-author">Andreas Ehstand &middot; ORCID 0009-0006-3773-7796 &middot; DOI 10.5281/zenodo.19227914 &middot; <span style="color:var(--magenta)">Bridge AI: 10.5281/zenodo.19227772</span></p>
   </details>
 </div>
 </section>
@@ -763,7 +839,7 @@ table{max-width:100%;overflow-x:auto;display:block}
         <span style="font-size:11px;font-weight:600;color:var(--cyan);letter-spacing:.5px">APA</span>
         <button onclick="navigator.clipboard.writeText(this.parentElement.nextElementSibling.textContent).then(()=>{this.textContent='Copied!';setTimeout(()=>this.textContent='Copy',1500)})" style="font-size:10px;padding:3px 10px;background:var(--glass2);border:1px solid var(--border);border-radius:4px;color:var(--text2);cursor:pointer;transition:all .2s" aria-label="Copy APA citation">Copy</button>
       </div>
-      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text2);background:rgba(0,0,0,0.3);padding:10px 14px;border-radius:8px;line-height:1.6;user-select:all">Ehstand, A. (2026). NEOMANITAI: Systematic Lexicon of Unnamed Human-AI Interaction Phenomena. AUGMANITAI Compendium V11.2.0. DOI: 10.5281/zenodo.14888381</div>
+      <div style="font-family:'JetBrains Mono',monospace;font-size:12px;color:var(--text2);background:rgba(0,0,0,0.3);padding:10px 14px;border-radius:8px;line-height:1.6;user-select:all">Ehstand, A. (2026). NEOMANITAI: Systematic Lexicon of Unnamed Human-AI Interaction Phenomena. AUGMANITAI Compendium V11.2.0. DOI: 10.5281/zenodo.19227914</div>
     </div>
     <div style="position:relative">
       <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:4px">
@@ -774,7 +850,7 @@ table{max-width:100%;overflow-x:auto;display:block}
   title={NEOMANITAI: Systematic Lexicon of Unnamed Human-AI Interaction Phenomena},
   author={Ehstand, Andreas},
   year={2026},
-  doi={10.5281/zenodo.14888381},
+  doi={10.5281/zenodo.19227914},
   note={V11.2.0, 4407 terms, 43 domains}
 }</div>
     </div>
@@ -841,7 +917,7 @@ table{max-width:100%;overflow-x:auto;display:block}
       <div style="font-size:12px;font-weight:600;color:var(--text2);margin-bottom:6px">Identifiers</div>
       <div style="font-size:11px;line-height:1.8;color:var(--text3)">
         ORCID <a href="https://orcid.org/0009-0006-3773-7796" target="_blank" rel="noopener">0009-0006-3773-7796</a><br>
-        DOI <a href="https://doi.org/10.5281/zenodo.14888381" target="_blank" rel="noopener">10.5281/zenodo.14888381</a><br>
+        DOI <a href="https://doi.org/10.5281/zenodo.19227914" target="_blank" rel="noopener">10.5281/zenodo.19227914</a><br>
         <span style="color:var(--magenta)">Bridge AI: <a href="https://doi.org/10.5281/zenodo.19227772" target="_blank" rel="noopener">10.5281/zenodo.19227772</a></span>
       </div>
     </div>
@@ -891,6 +967,7 @@ fetch('terms.json')
     return response.json();
   })
   .then(TERMS => {
+    window._allTerms = TERMS;
     // Hide loading indicator
     const loadingDiv = document.getElementById('loading');
     if (loadingDiv) loadingDiv.style.display = 'none';
@@ -1360,6 +1437,25 @@ if(stickyS&&mainS){
       loadingDiv.innerHTML = '<p style="color:#ff4444;">Error loading terms. Please refresh.</p>';
     }
   });
+</script>
+<script>
+/* Mode Switch — Research / Vibes / Everyday */
+function switchMode(mode) {
+  document.body.className = document.body.className.replace(/mode-\w+/g, '').trim();
+  if (mode !== 'vibe') document.body.classList.add('mode-' + mode);
+  document.querySelectorAll('.mode-btn').forEach(function(btn) {
+    var isActive = btn.getAttribute('data-switch') === mode;
+    btn.classList.toggle('active', isActive);
+    btn.setAttribute('aria-selected', isActive ? 'true' : 'false');
+  });
+}
+/* Random Feeling Button */
+function showRandomFeeling() {
+  if (!window._allTerms || !window._allTerms.length) return;
+  var t = window._allTerms[Math.floor(Math.random() * window._allTerms.length)];
+  var slug = t.s.replace('.html', '');
+  window.location.href = slug + '.html';
+}
 </script>
 </body>
 </html>

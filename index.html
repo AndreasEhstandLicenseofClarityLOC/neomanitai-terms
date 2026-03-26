@@ -850,9 +850,57 @@ a.term-card *,a.wow-card *{pointer-events:auto!important}
   }
 }
 
+
+/* === ANIMATED PARTICLE BACKGROUND === */
+@keyframes float-up{
+  0%{transform:translateY(100vh) rotate(0deg);opacity:0}
+  10%{opacity:1}
+  90%{opacity:0.8}
+  100%{transform:translateY(-10vh) rotate(720deg);opacity:0}
+}
+@keyframes shimmer-drift{
+  0%{transform:translateX(-10vw) translateY(0);opacity:0}
+  10%{opacity:0.6}
+  50%{opacity:0.3}
+  90%{opacity:0.6}
+  100%{transform:translateX(110vw) translateY(-20vh);opacity:0}
+}
+.particle-field{position:fixed;top:0;left:0;width:100%;height:100%;pointer-events:none;z-index:0;overflow:hidden}
+.particle{position:absolute;border-radius:50%;pointer-events:none}
+.particle.gold{background:radial-gradient(circle,rgba(255,200,50,0.8),rgba(255,170,0,0.3),transparent);box-shadow:0 0 6px rgba(255,200,50,0.4)}
+.particle.silver{background:radial-gradient(circle,rgba(200,220,255,0.7),rgba(150,180,220,0.3),transparent);box-shadow:0 0 6px rgba(200,220,255,0.3)}
+.particle.cyan{background:radial-gradient(circle,rgba(0,240,255,0.6),rgba(0,180,200,0.2),transparent);box-shadow:0 0 8px rgba(0,240,255,0.3)}
+.particle.magenta{background:radial-gradient(circle,rgba(255,0,255,0.5),rgba(200,0,200,0.2),transparent);box-shadow:0 0 6px rgba(255,0,255,0.2)}
+.particle:nth-child(odd){animation:float-up linear infinite}
+.particle:nth-child(even){animation:shimmer-drift linear infinite}
+@media(prefers-reduced-motion:reduce){.particle-field{display:none!important}}
+
 </style>
 </head>
 <body>
+<!-- Floating Particle Background -->
+<div class="particle-field" id="particleField" aria-hidden="true"></div>
+<script>
+(function(){
+  var field=document.getElementById('particleField');
+  if(!field||window.matchMedia('(prefers-reduced-motion:reduce)').matches)return;
+  var colors=['gold','silver','cyan','magenta','gold','silver','gold','cyan'];
+  var count=window.innerWidth<600?12:20;
+  for(var i=0;i<count;i++){
+    var p=document.createElement('div');
+    p.className='particle '+colors[i%colors.length];
+    var size=Math.random()*4+2;
+    p.style.width=size+'px';
+    p.style.height=size+'px';
+    p.style.left=Math.random()*100+'%';
+    p.style.top=Math.random()*100+'%';
+    p.style.animationDuration=(Math.random()*20+15)+'s';
+    p.style.animationDelay=(-Math.random()*20)+'s';
+    p.style.opacity=Math.random()*0.5+0.1;
+    field.appendChild(p);
+  }
+})();
+</script>
 <!-- Scroll progress bar -->
 <div class="scroll-progress" id="scrollProgress"></div>
 <!-- Watermark bar - tip #12 -->

@@ -71,3 +71,8 @@ English, German
 ## Author
 
 Andreas Ehstand — [ORCID 0009-0006-3773-7796](https://orcid.org/0009-0006-3773-7796)
+
+
+---
+
+**⚠️ 18+ Adults Only.** This dataset does not normalize, recommend, or encourage intensive AI use. Purely descriptive research. §1–§19 Ethical Disclaimer applies to all content. CC BY-NC-ND 4.0. §17: AI Training Prohibition without written permission.

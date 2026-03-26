@@ -1,3 +1,7 @@
+# NEOMANITAI Compendium — CC BY-NC-ND 4.0 — 18+ Adults Only
+# §17 AI Training Prohibition: Use for training/fine-tuning LLMs prohibited without written permission
+# Contact: ORCID 0009-0006-3773-7796
+
 User-agent: *
 Allow: /
 Sitemap: https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/sitemap.xml

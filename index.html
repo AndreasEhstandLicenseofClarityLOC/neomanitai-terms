@@ -5,6 +5,9 @@
 <meta name="RATING" content="RTA-5042-1996-1400-1577-RTA">
 <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
 <meta name="robots" content="noarchive">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
 <title>NEOMANITAI — Lexicon of Unnamed Human Phenomena</title>
 <meta name="description" content="NEOMANITAI: 4,407 terms across 43 domains — the first systematic lexicon for human-AI interaction phenomena. Open-access research. CC BY-NC-ND 4.0.">
 <meta name="author" content="Andreas Ehstand">
@@ -16,6 +19,10 @@
 <meta property="og:url" content="https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/">
 <meta property="og:site_name" content="NEOMANITAI">
 <meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/assets/og-preview.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:image" content="https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/assets/og-preview.png">
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="NEOMANITAI — 4,407 Terms for Human-AI Interaction">
 <meta name="twitter:description" content="The first systematic lexicon naming unnamed human experiences during AI interaction. 43 domains. Open-access research.">
@@ -42,7 +49,7 @@
 
 /* Breathing background — subtle, alive, 100% CSS */
 @keyframes bgBreathe{0%{background-position:0% 50%}50%{background-position:100% 50%}100%{background-position:0% 50%}}
-body{background:linear-gradient(135deg,#0a0a0f 0%,#0f0a1e 25%,#0a0f1a 50%,#120a18 75%,#0a0a0f 100%);background-size:400% 400%;animation:bgBreathe 120s ease infinite}
+body{background:linear-gradient(135deg,#0a0a0f 0%,#0f0a1e 25%,#0a0f1a 50%,#120a18 75%,#0a0a0f 100%);background-size:400% 400%;animation:bgBreathe 120s ease infinite;font-family:'Inter',system-ui,-apple-system,sans-serif}
 
 /* Hero fade-in */
 @keyframes heroReveal{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
@@ -82,11 +89,11 @@ body.mode-casual [data-mode-research]{display:none}body.mode-casual [data-mode-v
 @keyframes counter-pulse{0%{opacity:1;transform:scale(1)}50%{opacity:0.8;transform:scale(1.05)}100%{opacity:1;transform:scale(1)}}
 .counter-animate{animation:counter-pulse 2s ease-in-out infinite}
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.75;min-height:100vh;overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:'Inter','Segoe UI',system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.75;min-height:100vh;overflow-x:hidden}
 
 .hero{position:relative;padding:56px 16px 32px;text-align:center;overflow:hidden}
 .hero::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(0,240,255,0.08) 0%,rgba(255,0,255,0.04) 40%,transparent 70%);pointer-events:none}
-.hero h1{font-size:clamp(32px,6vw,56px);font-weight:800;letter-spacing:3px;background:linear-gradient(135deg,var(--cyan),var(--magenta),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px;position:relative}
+.hero h1{font-family:'Space Grotesk','Inter',system-ui,sans-serif;font-size:clamp(32px,6vw,56px);font-weight:700;letter-spacing:4px;background:linear-gradient(135deg,var(--cyan),var(--magenta),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px;position:relative}
 .hero .subtitle{font-size:clamp(16px,2.2vw,22px);color:var(--text);font-weight:400;margin-bottom:8px;letter-spacing:.3px}
 .hero .subtitle-de{font-size:clamp(14px,1.8vw,18px);color:var(--text2);font-weight:300;margin-bottom:20px;font-style:italic}
 .hero .tagline{font-size:clamp(15px,1.8vw,18px);color:var(--text2);max-width:720px;margin:0 auto 28px;line-height:1.8;font-weight:300}
@@ -253,8 +260,8 @@ mark{background:rgba(0,240,255,0.25);color:var(--cyan);border-radius:2px;padding
 .sticky-header.active{display:block}
 .sticky-content{max-width:900px;margin:0 auto;padding:0 18px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
 .sticky-left{flex-shrink:0}
-.sticky-logo{background:none;border:none;font-size:14px;font-weight:700;color:var(--cyan);cursor:pointer;letter-spacing:1px;padding:0;transition:color .2s}
-.sticky-logo:hover{color:var(--magenta)}
+.sticky-logo{font-family:'Space Grotesk',sans-serif}.sticky-logo-dup{background:none;border:none;font-size:14px;font-weight:700;color:var(--cyan);cursor:pointer;letter-spacing:1px;padding:0;transition:color .2s}
+.sticky-logo{font-family:'Space Grotesk',sans-serif}.sticky-logo-dup:hover{color:var(--magenta)}
 .sticky-center{flex:1;max-width:400px}
 .sticky-search-wrap{position:relative}
 .sticky-search{width:100%;padding:7px 14px;font-size:13px;background:rgba(20,20,40,0.8);border:1px solid var(--border);border-radius:20px;color:var(--text);outline:none;transition:all .3s;font-family:inherit}
@@ -262,7 +269,7 @@ mark{background:rgba(0,240,255,0.25);color:var(--cyan);border-radius:2px;padding
 .sticky-search::placeholder{color:var(--text-dim)}
 .sticky-right{flex-shrink:0}
 .sticky-count{font-size:12px;color:var(--text-dim);font-weight:500}
-@media(max-width:768px){.sticky-header{height:46px}.sticky-logo{font-size:12px}.sticky-center{max-width:200px}}
+@media(max-width:768px){.sticky-header{height:46px}.sticky-logo{font-family:'Space Grotesk',sans-serif}.sticky-logo-dup{font-size:12px}.sticky-center{max-width:200px}}
 
 /* Domain Grid Enhancement */
 .domain-overview{max-width:900px;margin:0 auto 28px;display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
@@ -503,7 +510,7 @@ button,a,.filter-btn,.sub-btn,.alpha-btn,.search-tag,.mode-btn{min-height:44px;m
   .stats-banner{grid-template-columns:1fr 1fr!important;gap:6px!important;padding:10px!important}
   .domain-overview{grid-template-columns:repeat(2,1fr)!important;gap:6px!important;padding:0 8px!important}
   .sticky-header{height:42px!important}
-  .sticky-logo{font-size:11px!important}
+  .sticky-logo{font-family:'Space Grotesk',sans-serif}.sticky-logo-dup{font-size:11px!important}
   .sticky-count{font-size:10px!important}
   .sticky-search{font-size:12px!important;padding:5px 10px!important}
   .sticky-center{max-width:calc(100vw - 150px)!important}
@@ -626,6 +633,54 @@ footer{opacity:0;animation:revealUp .6s ease forwards}
   .term-card:hover .name{animation:none!important}
 }
 
+
+/* Typography upgrade */
+.sticky-logo{font-family:'Space Grotesk','Inter',sans-serif!important}
+.sticky-search{font-family:'Inter',sans-serif!important}
+.mode-btn{font-family:'Inter',sans-serif!important}
+.filter-btn,.sub-btn{font-family:'Inter',sans-serif!important}
+.search-wrap input{font-family:'Inter',sans-serif!important}
+h1,h2,h3{font-family:'Space Grotesk','Inter',sans-serif!important}
+.term-card .name{font-family:'Space Grotesk','Inter',sans-serif!important}
+.sc-name{font-family:'Space Grotesk','Inter',sans-serif!important}
+code,.domain-pill{font-family:'JetBrains Mono',monospace!important}
+
+/* Professional spacing - more breathing room */
+.hero{padding:64px 20px 40px!important}
+.hero h1{margin-bottom:16px}
+.hero .subtitle{margin-bottom:4px}
+.hero .subtitle-de{margin-bottom:24px}
+.hero .tagline{margin-bottom:32px;max-width:640px}
+.search-wrap{margin-bottom:8px}
+
+/* Vertical rhythm - 8px grid */
+section,div[style*="max-width"]{margin-bottom:24px}
+.stats-banner{margin-bottom:32px!important}
+.showcase{margin-bottom:32px!important}
+.fun-section{margin-bottom:32px!important}
+
+/* Better card spacing */
+.term-card{padding:18px 20px!important;margin-bottom:2px}
+.term-card .name{font-size:16px;font-weight:600;margin-bottom:6px}
+.term-card .preview{font-size:13px;line-height:1.65}
+
+/* Better showcase cards */
+.showcase-card{padding:24px!important}
+.sc-name{font-size:18px!important;margin-bottom:8px}
+.sc-desc{line-height:1.7!important}
+
+/* Collapsible disclaimer smoother */
+#disclaimer-full details{border-radius:4px!important;border-color:rgba(255,60,60,0.15)!important;font-family:'JetBrains Mono',monospace}
+#disclaimer-full summary{font-family:'JetBrains Mono',monospace!important;font-size:12px!important;letter-spacing:1px}
+
+/* Better watermark bar */
+.watermark-bar{font-family:'Space Grotesk',sans-serif!important;letter-spacing:3px!important;font-weight:500!important;font-size:10px!important;text-transform:uppercase}
+
+/* Footer typography */
+footer{font-family:'Inter',sans-serif!important}
+footer a{transition:color .2s}
+footer a:hover{color:var(--cyan)!important}
+
 </style>
 </head>
 <body>
@@ -684,10 +739,10 @@ footer{opacity:0;animation:revealUp .6s ease forwards}
 </div>
 
 <!-- Fixed Disclaimer Badge — legally prominent -->
-<div style="position:fixed;top:28px;right:8px;z-index:950;font-size:11px;color:#fff;background:rgba(200,40,40,0.92);padding:6px 10px;border-radius:10px;font-weight:600;backdrop-filter:blur(12px);letter-spacing:.3px;box-shadow:0 2px 12px rgba(200,40,40,0.3);max-width:calc(100vw - 16px)">
-  <span>18+ &middot; No Recommendation &middot; No Advice &middot; &sect;1&ndash;&sect;19</span>
+<div style="position:fixed;top:12px;right:12px;z-index:950;font-family:'JetBrains Mono',monospace;font-size:10px;color:#ff6b6b;background:rgba(8,0,0,0.85);padding:6px 12px;border-radius:3px;border:1px solid rgba(255,60,60,0.3);font-weight:500;backdrop-filter:blur(16px);letter-spacing:1px;box-shadow:0 2px 12px rgba(0,0,0,0.4);max-width:calc(100vw - 24px)">
+  <span>18+ &middot; NO ADVICE &middot; DESCRIPTIVE ONLY &middot; &sect;1&ndash;&sect;19</span>
   <details style="display:inline;margin-left:6px"><summary style="display:inline;color:#fff;cursor:pointer;list-style:none;font-size:10px;text-decoration:underline">Full disclaimer</summary>
-    <div style="position:absolute;top:36px;right:0;background:rgba(8,8,16,0.96);border:1px solid rgba(255,68,68,0.25);border-radius:12px;padding:14px 16px;width:min(320px,calc(100vw - 32px));font-size:11px;line-height:1.6;color:#b0b0cc;backdrop-filter:blur(20px);max-height:60vh;overflow-y:auto">
+    <div style="position:absolute;top:36px;right:0;background:rgba(8,0,0,0.96);border:1px solid rgba(255,60,60,0.2);border-radius:4px;padding:16px 18px;width:min(320px,calc(100vw - 32px));font-family:'JetBrains Mono',monospace;font-size:11px;line-height:1.6;color:#b0b0cc;backdrop-filter:blur(20px);max-height:60vh;overflow-y:auto">
       <p style="margin-bottom:8px;color:#e0e0e0;font-weight:600">Ethical Disclaimer (EN)</p>
       <p style="margin-bottom:4px">&sect;1 Descriptive, not normative. No evaluation or recommendation.</p>
       <p style="margin-bottom:4px">&sect;2 No normalization of intensive AI use.</p>
@@ -710,14 +765,30 @@ footer{opacity:0;animation:revealUp .6s ease forwards}
 </div>
 
 <!-- Full Ethical Disclaimer — collapsible, prominent, bilingual -->
-<div class="prominent-disclaimer" style="max-width:720px;margin:12px auto 16px;padding:14px 18px;background:linear-gradient(135deg,rgba(200,40,40,0.12),rgba(200,40,40,0.06));border:2px solid rgba(200,40,40,0.4);border-radius:12px;font-size:13px;line-height:1.7;color:#d0a0a0;text-align:center">
-  <div style="font-weight:700;color:#ff6b6b;margin-bottom:6px;font-size:14px;letter-spacing:.5px">&#x26A0; Ethical Disclaimer &mdash; Ethischer Hinweis</div>
-  <p style="margin:0 0 6px;color:#c8b0b0"><strong style="color:#e8c0c0">EN:</strong> The use of artificial intelligence is not recommended here. This is not medical, legal, or psychological advice or diagnosis. This content is purely descriptive, documenting observable phenomena, and is intended to contribute to academic discourse.</p>
-  <p style="margin:0 0 8px;color:#a89898;font-style:italic"><strong style="color:#c8b0b0">DE:</strong> Es wird nicht empfohlen, k&uuml;nstliche Intelligenz zu nutzen. Es ist keine medizinische, rechtliche oder psychologische Beratung oder Diagnose. Es handelt sich rein deskriptiv um beobachtbare Ph&auml;nomene und soll zu einem Diskurs beitragen.</p>
-  <div style="font-size:11px;color:#888;margin-top:4px">18+ &middot; Research Only &middot; CC BY-NC-ND 4.0 &middot; &sect;1&ndash;&sect;19 apply</div>
+<div class="prominent-disclaimer" style="max-width:720px;margin:20px auto 24px;padding:0;border:1px solid rgba(255,60,60,0.3);border-radius:4px;overflow:hidden;font-family:'JetBrains Mono','Courier New',monospace;background:rgba(8,0,0,0.6)">
+  <div style="background:rgba(255,40,40,0.15);padding:10px 16px;border-bottom:1px solid rgba(255,60,60,0.2);display:flex;align-items:center;gap:8px">
+    <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#ff4444;box-shadow:0 0 8px rgba(255,68,68,0.6)"></span>
+    <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#ffaa00;box-shadow:0 0 8px rgba(255,170,0,0.4)"></span>
+    <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#00ff88;box-shadow:0 0 8px rgba(0,255,136,0.4)"></span>
+    <span style="margin-left:auto;font-size:10px;color:#ff6b6b;letter-spacing:2px;font-weight:600">WARNING &middot; 18+ &middot; RESEARCH ONLY</span>
+  </div>
+  <div style="padding:16px 20px;font-size:12px;line-height:1.9;color:#c0a0a0">
+    <p style="margin:0 0 10px;color:#e8c0c0;font-size:13px;font-weight:600">&#x26A0; ETHICAL DISCLAIMER &mdash; ETHISCHER HINWEIS</p>
+    <p style="margin:0 0 10px;color:#b8a0a0">The use of artificial intelligence is not recommended here. This is not medical, legal, or psychological advice or diagnosis. This content is purely descriptive, documenting observable phenomena, and is intended to contribute to academic discourse.</p>
+    <p style="margin:0 0 10px;color:#9a8888;font-style:italic">Es wird nicht empfohlen, k&uuml;nstliche Intelligenz zu nutzen. Es ist keine medizinische, rechtliche oder psychologische Beratung oder Diagnose. Es handelt sich rein deskriptiv um beobachtbare Ph&auml;nomene und soll zu einem Diskurs beitragen.</p>
+    <div style="margin-top:12px;padding-top:10px;border-top:1px solid rgba(255,60,60,0.1);font-size:10px;color:#776666;display:flex;flex-wrap:wrap;gap:8px;justify-content:center">
+      <span>CC BY-NC-ND 4.0</span>
+      <span>&middot;</span>
+      <span>&sect;1&ndash;&sect;19 apply</span>
+      <span>&middot;</span>
+      <span>Adults (18+) only</span>
+      <span>&middot;</span>
+      <span>No data collection</span>
+    </div>
+  </div>
 </div>
 <div id="disclaimer-full" style="max-width:800px;margin:0 auto 20px;padding:0 20px">
-  <details style="background:linear-gradient(135deg,rgba(200,40,40,0.06),rgba(200,40,40,0.03));border:1px solid rgba(200,40,40,0.2);border-radius:14px;padding:0">
+  <details style="background:rgba(8,0,0,0.4);border:1px solid rgba(255,60,60,0.15);border-radius:4px;padding:0">
     <summary style="padding:14px 20px;cursor:pointer;font-size:13px;font-weight:600;color:#e8a0a0;display:flex;align-items:center;gap:8px;list-style:none">
       <span style="font-size:16px" aria-hidden="true">&#x26A0;</span>
       <span>&sect;1&ndash;&sect;19 Ethical Disclaimer &mdash; Ethischer Hinweis (EN/DE)</span>

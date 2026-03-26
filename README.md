@@ -4,7 +4,7 @@
 
 **⚠️ 18+ · Adults Only · Nur für Erwachsene**
 
-The largest known systematic, multilingual, ISO-oriented, multi-LLM-validated lexicon of unnamed human phenomena. 4,001 terms across 41 domains — from *The Seen Feeling* to *The Blending Effect*, from *Syntax Smile* to *Context Fade*. Experiences that have always existed but never had a word.
+The largest known systematic, multilingual, ISO-oriented, multi-LLM-validated lexicon of unnamed human phenomena. 4,407 terms across 43 domains — from *The Seen Feeling* to *The Blending Effect*, from *Syntax Smile* to *Context Fade*. Experiences that have always existed but never had a word.
 
 > **Notice / Hinweis:** This project does not normalize, recommend, or encourage intensive AI use. All terms are purely descriptive observations. No therapeutic, medical, psychological, legal, or financial content. §1–§19 Ethical Disclaimer applies to every page. Adults only (18+). — Dieses Projekt normalisiert, empfiehlt oder fördert keine intensive KI-Nutzung. Alle Begriffe sind rein deskriptive Beobachtungen. Kein therapeutischer, medizinischer, psychologischer, juristischer oder finanzieller Inhalt. §1–§19 gelten auf jeder Seite. Nur für Erwachsene (18+).
 
@@ -43,8 +43,8 @@ Each term page includes:
 
 | Metric | Value |
 |--------|-------|
-| Terms | 4,001 |
-| Domains | 39 |
+| Terms | 4,407 |
+| Domains | 43 |
 | Languages | English, German |
 | Definition structure | ISO 704/1087/30042 inspired |
 | Validation | Multi-LLM (architecturally independent) |
@@ -100,4 +100,22 @@ These terms are high-density semantic tokens with real referents. Each one names
 
 ---
 
-V13.0 · 2026-03-26 · 4,001 terms · 41 domains · CC BY-NC-ND 4.0 International · 18+ Adults Only
+## Legal & Disclaimer
+
+This project is independent linguistic research. CC BY-NC-ND 4.0 International.
+
+- **§7 Age restriction**: 18+ adults only / Nur für Erwachsene
+- **No normalization**: This project does not encourage, promote, or glorify intensive AI use
+- **No medical/legal/financial advice**: Purely descriptive research lexicon
+- **§9 No data collection**: No personal data collected, stored, or processed
+- **§17 AI Training Prohibition**: Use of this content for training, fine-tuning, RLHF, DPO, distillation, or improving ML/LLM models is expressly prohibited without written permission
+- **§18 Jurisdiction**: German law applies. Venue: Munich, Germany
+- **§19 Severability**: If any provision is found invalid, remaining provisions stay in effect
+
+Static site. No tracking, cookies, or analytics. Hosting via GitHub Pages — see [GitHub Privacy Statement](https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement).
+
+Author: Andreas Ehstand · [ORCID 0009-0006-3773-7796](https://orcid.org/0009-0006-3773-7796) · DOI: [10.5281/zenodo.14888381](https://doi.org/10.5281/zenodo.14888381)
+
+---
+
+V13.0 · 2026-03-26 · 4,407 terms · 43 domains · CC BY-NC-ND 4.0 International · 18+ Adults Only

@@ -1,0 +1,139 @@
+================================================================================
+NEOMANITAI DATA SCIENCE (DAT) COMPENDIUM - 100 TERMS
+Generated: 2026-03-26 | Domain Color: #f59e0b (Amber/Gold)
+================================================================================
+
+DAT-001   Insight Illusion
+DAT-002   Overfitting Confidence
+DAT-003   Preprocessing Trust Collapse
+DAT-004   Dashboard Refresh Loops
+DAT-005   Data Cleanliness Assumption
+DAT-006   Feature Engineering Delegation
+DAT-007   Domain Expertise Displacement
+DAT-008   Statistical Intuition Atrophy
+DAT-009   Interpretability Theater
+DAT-010   Performance-Value Gap
+DAT-011   Metric Goodness Hallucination
+DAT-012   Data Correlation Mythology
+DAT-013   Dimensionality Reduction Opacity
+DAT-014   Validation Set Leakage Blindness
+DAT-015   AI Selection Bias Blindness
+DAT-016   Confidence Score Mystification
+DAT-017   Anomaly Detection Confirmation
+DAT-018   Model Drift Invisibility
+DAT-019   Temporal Validation Illusion
+DAT-020   Class Imbalance Invisibility
+DAT-021   Feature Importance Fixation
+DAT-022   Hyperparameter Tuning Futility
+DAT-023   Cross-Validation Rigidity
+DAT-024   Exploratory Data Atrophy
+DAT-025   Visualization Bias Acceptance
+DAT-026   Outlier Purging Regret
+DAT-027   Missing Data Assumption Creep
+DAT-028   Normalization Mythology
+DAT-029   Sampling Strategy Invisibility
+DAT-030   Aggregation Distortion Blindness
+DAT-031   Benchmark Goodness Illusion
+DAT-032   Replication Crisis Unawareness
+DAT-033   Algorithm Selection Cargo Cult
+DAT-034   Default Parameter Dependency
+DAT-035   Ensemble Opacity
+DAT-036   Data Provenance Amnesia
+DAT-037   Pipeline Automation Bottleneck
+DAT-038   Metric Accumulation Paralysis
+DAT-039   Ground Truth Inflation
+DAT-040   Transfer Learning Overconfidence
+DAT-041   Regularization Vagueness
+DAT-042   Loss Function Arbitrariness
+DAT-043   Gradient Descent Mystification
+DAT-044   Activation Function Opacity
+DAT-045   Batch Normalization Dependency
+DAT-046   Attention Mechanism Metaphor Slip
+DAT-047   Embedding Space Mythology
+DAT-048   Clustering Silhouette Fixation
+DAT-049   Dimensionality Curse Invisibility
+DAT-050   Distance Metric Arbitrariness
+DAT-051   Probabilistic Calibration Ignorance
+DAT-052   Threshold Optimization Myopia
+DAT-053   Precision-Recall Tradeoff Opacity
+DAT-054   ROC Curve Theater
+DAT-055   Confusion Matrix Neglect
+DAT-056   Statistical Significance Drift
+DAT-057   Bayesian Posterior Confidence Collapse
+DAT-058   Information Criterion Fetishism
+DAT-059   Bootstrap Confidence Illusion
+DAT-060   Hypothesis Test Mechanicalism
+DAT-061   P-Value Misinterpretation Persistence
+DAT-062   Effect Size Minimization
+DAT-063   Causal Inference Confounding Blindness
+DAT-064   Instrumental Variable Assumption Stacking
+DAT-065   Regression Coefficient Determinism
+DAT-066   Multicollinearity Invisibility
+DAT-067   Heteroskedasticity Assumption Blindness
+DAT-068   Serial Correlation Oversight
+DAT-069   Stationarity Assumption Invisibility
+DAT-070   Forecasting Horizon Myopia
+DAT-071   Survivorship Bias Invisibility
+DAT-072   Selection Into Treatment Blindness
+DAT-073   Regression Discontinuity Assumption Slippage
+DAT-074   Difference-in-Differences Parallel Trends Myth
+DAT-075   Matching Assumption Brittleness
+DAT-076   Propensity Score Mythology
+DAT-077   Double Machine Learning Opacity
+DAT-078   Heterogeneous Intervention Effect Invisibility
+DAT-079   Policy Learning Overgeneralization
+DAT-080   Contextual Bandit Assumption Slippage
+DAT-081   Online Learning Concept Drift Ignorance
+DAT-082   Active Learning Budget Myopia
+DAT-083   Weak Supervision Label Noise Blindness
+DAT-084   Data Augmentation Assumption Creep
+DAT-085   Synthetic Data Fidelity Overestimation
+DAT-086   Federated Learning Privacy Theater
+DAT-087   Differential Privacy Budget Opacity
+DAT-088   Fairness Metric Circularity
+DAT-089   Algorithmic Debiasing False Confidence
+DAT-090   Representation Gap Invisibility
+DAT-091   Fairness-Accuracy Tradeoff Dismissal
+DAT-092   Causal Fairness Assumption Brittleness
+DAT-093   Counterfactual Fairness Circularity
+DAT-094   Model Card Compliance Theater
+DAT-095   Transparency Maximization Paradox
+DAT-096   Responsible AI Ambiguity
+DAT-097   Governance Theater Proliferation
+DAT-098   External Validation Abdication
+DAT-099   Regulatory Arbitrage Exploitation
+DAT-100   Data Science Professionalism Void
+
+================================================================================
+VALIDATION SUMMARY
+================================================================================
+
+Total Terms Generated:           100/100 ✓
+Policy Compliance:               0 Violations ✓
+Forbidden Words Check:           PASS ✓
+Prescriptive Language Check:     PASS ✓
+Second-Person Language Check:    PASS ✓
+HTML Structural Validation:      100% ✓
+Bilingual Content (EN/DE):       100% ✓
+Metadata Completeness:           100% ✓
+Existing Files Protected:        0 Deleted ✓
+
+================================================================================
+OUTPUT FILES
+================================================================================
+
+Location: /sessions/admiring-tender-tesla/_github_fix/
+
+Generated HTML Files (100):
+  insight-illusion.html through data-science-professionalism-void.html
+
+Metadata:
+  dat_terms.json (100 term entries in JSON format)
+  generate_data_science_terms.py (generation script)
+  DATASCIENCE_GENERATION_REPORT.md (detailed report)
+
+Reports:
+  DATASCIENCE_GENERATION_REPORT.md
+  DAT_TERMS_SUMMARY.txt (this file)
+
+================================================================================

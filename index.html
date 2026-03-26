@@ -16,19 +16,19 @@
 :root{
   --bg:#0a0a0f;--bg2:#111118;--bg3:#1a1a25;
   --cyan:#00f0ff;--magenta:#ff00ff;--green:#00ff88;--gold:#ffaa00;
-  --text:#e0e0e0;--text2:#888;--text3:#555;
+  --text:#e0e0e0;--text2:#999;--text3:#777;
   --glass:rgba(20,20,35,0.7);--glass2:rgba(30,30,50,0.5);
   --border:rgba(0,240,255,0.15);--border2:rgba(255,0,255,0.1);
   --radius:12px;--radius-sm:8px;
 }
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;font-size:15px;min-height:100vh;overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.6;min-height:100vh;overflow-x:hidden}
 
 .hero{position:relative;padding:48px 16px 24px;text-align:center;overflow:hidden}
 .hero::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(0,240,255,0.08) 0%,rgba(255,0,255,0.04) 40%,transparent 70%);pointer-events:none}
 .hero h1{font-size:clamp(28px,5vw,48px);font-weight:800;letter-spacing:2px;background:linear-gradient(135deg,var(--cyan),var(--magenta),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px;position:relative}
 .hero .subtitle{font-size:clamp(13px,2vw,17px);color:var(--text2);font-weight:300;margin-bottom:10px}
-.hero .tagline{font-size:clamp(13px,1.6vw,15px);color:var(--text2);max-width:680px;margin:0 auto 24px;line-height:1.7;font-weight:300}
+.hero .tagline{font-size:clamp(14px,1.6vw,16px);color:var(--text2);max-width:680px;margin:0 auto 24px;line-height:1.7;font-weight:300}
 .hero .tagline span{color:var(--cyan);font-weight:600}
 
 .search-wrap{max-width:700px;margin:0 auto;position:relative}
@@ -61,7 +61,7 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-ap
 .alpha-btn.active{background:rgba(0,240,255,0.15);border-color:var(--cyan);color:var(--cyan)}
 .alpha-btn.disabled{opacity:.2;pointer-events:none}
 
-.content{max-width:1200px;margin:20px auto 0;padding:0 20px}
+.content{max-width:1200px;margin:24px auto 0;padding:0 20px}
 .result-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
 .result-count{font-size:13px;color:var(--text2)}
 .result-count span{color:var(--cyan);font-weight:600}
@@ -69,14 +69,14 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-ap
 .view-btn{background:var(--glass2);border:1px solid transparent;border-radius:6px;color:var(--text3);padding:5px 9px;cursor:pointer;font-size:13px;transition:all .2s}
 .view-btn.active{border-color:var(--cyan);color:var(--cyan)}
 
-.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}
-.term-card{background:var(--glass);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;cursor:pointer;transition:all .25s;text-decoration:none;display:block;position:relative;overflow:hidden}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:14px}
+.term-card{background:var(--glass);border:1px solid var(--border);border-radius:var(--radius);padding:16px 18px;cursor:pointer;transition:all .25s;text-decoration:none;display:block;position:relative;overflow:hidden}
 .term-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--magenta));opacity:0;transition:opacity .3s}
 .term-card:hover{border-color:rgba(0,240,255,0.35);transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,0.3)}
 .term-card:hover::before{opacity:1}
-.term-card .name{font-size:15px;font-weight:600;color:#fff;margin-bottom:4px;line-height:1.3}
+.term-card .name{font-size:16px;font-weight:600;color:#fff;margin-bottom:6px;line-height:1.35}
 .term-card .domain-tag{display:inline-block;font-size:10px;padding:2px 7px;border-radius:50px;margin-bottom:6px;font-weight:500;letter-spacing:.3px}
-.term-card .preview{font-size:12px;color:var(--text2);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+.term-card .preview{font-size:13px;color:#c0c0c8;line-height:1.55;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
 
 .tag-neomanitai{background:rgba(0,240,255,0.12);color:#00f0ff}
 .tag-education{background:rgba(0,255,136,0.12);color:#00ff88}
@@ -125,7 +125,7 @@ body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-ap
 .top-btn{position:fixed;bottom:24px;left:24px;width:40px;height:40px;border-radius:50%;background:var(--glass);border:1px solid var(--border);color:var(--text3);font-size:16px;cursor:pointer;transition:all .3s;z-index:100;display:none;align-items:center;justify-content:center;backdrop-filter:blur(10px)}
 .top-btn:hover{border-color:var(--cyan);color:var(--cyan)}
 
-footer{max-width:1200px;margin:50px auto 0;padding:24px 20px;border-top:1px solid rgba(0,240,255,0.06);text-align:center;font-size:11px;color:var(--text3);line-height:1.8}
+footer{max-width:1200px;margin:60px auto 0;padding:28px 20px;border-top:1px solid rgba(0,240,255,0.06);text-align:center;font-size:11px;color:var(--text3);line-height:1.8}
 footer a{color:var(--cyan);text-decoration:none}
 footer a:hover{text-decoration:underline}
 
@@ -144,7 +144,7 @@ mark{background:rgba(0,240,255,0.25);color:var(--cyan);border-radius:2px;padding
 .showcase-card:hover .sc-glow{opacity:1.5}
 .sc-domain{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--cyan);margin-bottom:8px;opacity:.7}
 .sc-name{font-size:18px;font-weight:700;color:#fff;margin-bottom:8px;line-height:1.3;background:linear-gradient(135deg,#fff,var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.sc-desc{font-size:13px;color:#c8c8d0;line-height:1.6;margin-bottom:10px}
+.sc-desc{font-size:13px;color:#d0d0d8;line-height:1.65;margin-bottom:10px}
 .sc-meta{font-size:10px;color:var(--text3);letter-spacing:.5px}
 @media(max-width:768px){.showcase-grid{grid-template-columns:1fr}}
 
@@ -164,11 +164,14 @@ mark{background:rgba(0,240,255,0.25);color:var(--cyan);border-radius:2px;padding
   .hero{padding:32px 16px 20px}
   .compact{column-count:2}
   .grid{grid-template-columns:1fr}
-  .alpha-btn{width:26px;height:26px;font-size:10px}
+  .alpha-btn{width:34px;height:34px;font-size:11px}
+  .filter-btn{padding:8px 14px;font-size:13px;min-height:36px}
+  .sub-btn{padding:6px 12px;font-size:12px;min-height:32px}
 }
 @media(max-width:480px){
   .compact{column-count:1}
-  .search-wrap input{padding:12px 14px 12px 40px;font-size:15px}
+  .search-wrap input{padding:12px 14px 12px 40px;font-size:16px}
+  .alpha-btn{width:30px;height:30px}
 }
 
 /* Stats Banner */
@@ -267,12 +270,12 @@ table{max-width:100%;overflow-x:auto;display:block}
   .search-wrap{max-width:100% !important;padding:0 8px}
   .search-wrap input{font-size:16px !important}
   .filter-row{gap:4px !important;padding:0 8px !important}
-  .filter-row button{font-size:11px !important;padding:4px 8px !important}
+  .filter-row button{font-size:12px !important;padding:7px 10px !important;min-height:36px !important}
   .content{padding:0 8px !important}
   .grid{grid-template-columns:1fr !important}
   .term-card{padding:10px 12px !important}
   .alphabet{gap:2px !important;padding:0 4px !important}
-  .alphabet button{min-width:24px !important;padding:2px !important;font-size:11px !important}
+  .alphabet button{min-width:30px !important;min-height:30px !important;padding:4px !important;font-size:11px !important}
   footer{padding:16px 8px !important;font-size:10px !important}
   .showcase-grid{grid-template-columns:1fr !important}
   .browse-grid{grid-template-columns:1fr !important}
@@ -321,6 +324,13 @@ table{max-width:100%;overflow-x:auto;display:block}
     <button class="search-tag" onclick="document.getElementById('search').value='vibe';document.getElementById('search').dispatchEvent(new Event('input',{bubbles:true}))" style="padding:3px 10px;font-size:11px;background:var(--glass2);border:1px solid var(--border);border-radius:50px;color:var(--text2);cursor:pointer;transition:all .2s">vibe</button>
     <button class="search-tag" onclick="document.getElementById('search').value='cognitive';document.getElementById('search').dispatchEvent(new Event('input',{bubbles:true}))" style="padding:3px 10px;font-size:11px;background:var(--glass2);border:1px solid var(--border);border-radius:50px;color:var(--text2);cursor:pointer;transition:all .2s">cognitive</button>
     <button class="search-tag" onclick="document.getElementById('search').value='perception';document.getElementById('search').dispatchEvent(new Event('input',{bubbles:true}))" style="padding:3px 10px;font-size:11px;background:var(--glass2);border:1px solid var(--border);border-radius:50px;color:var(--text2);cursor:pointer;transition:all .2s">perception</button>
+    <button class="search-tag" onclick="document.getElementById('search').value='hallucination';document.getElementById('search').dispatchEvent(new Event('input',{bubbles:true}))" style="padding:3px 10px;font-size:11px;background:var(--glass2);border:1px solid var(--border);border-radius:50px;color:var(--text2);cursor:pointer;transition:all .2s">hallucination</button>
+    <button class="search-tag" onclick="document.getElementById('search').value='dependency';document.getElementById('search').dispatchEvent(new Event('input',{bubbles:true}))" style="padding:3px 10px;font-size:11px;background:var(--glass2);border:1px solid var(--border);border-radius:50px;color:var(--text2);cursor:pointer;transition:all .2s">dependency</button>
+    <button class="search-tag" onclick="document.getElementById('search').value='collaboration';document.getElementById('search').dispatchEvent(new Event('input',{bubbles:true}))" style="padding:3px 10px;font-size:11px;background:var(--glass2);border:1px solid var(--border);border-radius:50px;color:var(--text2);cursor:pointer;transition:all .2s">collaboration</button>
+    <button class="search-tag" onclick="document.getElementById('search').value='learning';document.getElementById('search').dispatchEvent(new Event('input',{bubbles:true}))" style="padding:3px 10px;font-size:11px;background:var(--glass2);border:1px solid var(--border);border-radius:50px;color:var(--text2);cursor:pointer;transition:all .2s">learning</button>
+    <button class="search-tag" onclick="document.getElementById('search').value='bias';document.getElementById('search').dispatchEvent(new Event('input',{bubbles:true}))" style="padding:3px 10px;font-size:11px;background:var(--glass2);border:1px solid var(--border);border-radius:50px;color:var(--text2);cursor:pointer;transition:all .2s">bias</button>
+    <button class="search-tag" onclick="document.getElementById('search').value='feedback';document.getElementById('search').dispatchEvent(new Event('input',{bubbles:true}))" style="padding:3px 10px;font-size:11px;background:var(--glass2);border:1px solid var(--border);border-radius:50px;color:var(--text2);cursor:pointer;transition:all .2s">feedback</button>
+    <button class="search-tag" onclick="document.getElementById('search').value='workflow';document.getElementById('search').dispatchEvent(new Event('input',{bubbles:true}))" style="padding:3px 10px;font-size:11px;background:var(--glass2);border:1px solid var(--border);border-radius:50px;color:var(--text2);cursor:pointer;transition:all .2s">workflow</button>
   </div>
 </div>
 
@@ -541,12 +551,21 @@ table{max-width:100%;overflow-x:auto;display:block}
   </div>
   NEOMANITAI &mdash; Systematic Lexicon of Unnamed Human-AI Interaction Phenomena<br>
   Andreas Ehstand &middot; ORCID <a href="https://orcid.org/0009-0006-3773-7796" target="_blank" rel="noopener">0009-0006-3773-7796</a> &middot; DOI <a href="https://doi.org/10.5281/zenodo.14888381" target="_blank" rel="noopener">10.5281/zenodo.14888381</a> &middot; <span style="color:#ff00ff">Bridge AI: <a href="https://doi.org/10.5281/zenodo.19227772" target="_blank" rel="noopener">10.5281/zenodo.19227772</a></span><br>
-  CC BY-NC-ND 4.0 &middot; License of Clarity (LOC) &middot; Independent academic research
+  CC BY-NC-ND 4.0 &middot; License of Clarity (LOC) &middot; Independent academic research<br>
+  <span style="font-size:10px;color:var(--text3);opacity:.7">Last updated: March 2026 &middot; V11.2.0 &middot; 4,407 terms</span>
 <p style="margin-top:8px;font-size:11px;color:var(--text3);line-height:1.5">
 This site is purely static and contains no tracking, cookies, or analytics tools. All interactions (copy buttons, expand/collapse) are strictly client-side — no data leaves the browser. Hosting via GitHub Pages — see <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" style="color:var(--text2)" target="_blank" rel="noopener">GitHub Privacy Statement</a>.<br>
 Diese Seite ist rein statisch und enth&auml;lt keinerlei Tracking, Cookies oder Analysetools. Alle Interaktionen (Kopier-Buttons, Auf-/Zuklappen) sind strikt clientseitig &mdash; keine Daten verlassen den Browser. Hosting &uuml;ber GitHub Pages &mdash; siehe <a href="https://docs.github.com/en/site-policy/privacy-policies/github-general-privacy-statement" style="color:var(--text2)" target="_blank" rel="noopener">GitHub-Datenschutzerkl&auml;rung</a>.
 </p>
 </footer>
+<noscript>
+<div style="max-width:700px;margin:40px auto;padding:24px;background:rgba(255,68,68,0.06);border:1px solid rgba(255,68,68,0.2);border-radius:12px;text-align:center;color:#e0e0e0;font-size:15px;line-height:1.7">
+  <p style="font-size:18px;font-weight:600;color:#ff6b6b;margin-bottom:12px">JavaScript Required</p>
+  <p>NEOMANITAI uses JavaScript to load and search 4,407 terms interactively. Please enable JavaScript in your browser to use the compendium.</p>
+  <p style="margin-top:12px">Alternatively, each of the 4,407 term pages is a standalone HTML document accessible directly via URL.</p>
+  <p style="margin-top:8px;font-size:13px;color:#888">JavaScript wird ben&ouml;tigt, um das Kompendium interaktiv zu nutzen. Jede der 4.407 Termseiten ist einzeln als statisches HTML aufrufbar.</p>
+</div>
+</noscript>
 <div id="loading" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:#00f0ff;font-size:18px;z-index:9999;">
   <p>Loading NEOMANITAI...</p>
 </div>

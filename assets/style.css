@@ -5,8 +5,8 @@
   --surface2: rgba(18,18,32,0.92);
   --border: rgba(30,30,60,0.6);
   --text: #e8e8f0;
-  --text-dim: #9a9abb;
-  --text-muted: #7a7a9a;
+  --text-dim: #b0b0cc;
+  --text-muted: #8e8eaa;
   --cyan: #00e5ff;
   --green: #39ff14;
   --magenta: #ff00ff;
@@ -577,4 +577,13 @@ footer a:hover { color:var(--magenta); text-decoration:underline; }
 /* WCAG 2.2 AA Accessibility */
 .skip-link{position:absolute;top:-40px;left:0;background:var(--accent);color:#000;padding:8px 16px;z-index:10000;font-weight:700;transition:top .3s}
 .skip-link:focus{top:0}
+
+/* EN/DE Visual Separation */
+div[lang="de"]{margin-top:20px;padding-top:16px;border-top:1px solid rgba(255,215,0,0.15)}
+div[lang="de"] h2{position:relative}
+div[lang="de"] h2::after{content:'DE';position:absolute;right:0;top:50%;transform:translateY(-50%);font-size:10px;font-weight:700;letter-spacing:1px;color:var(--gold);opacity:.5;background:rgba(255,215,0,0.08);padding:2px 6px;border-radius:4px}
+.distinction-block+.distinction-block{margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.04)}
+
+/* Improved body font for term pages */
+body{font-size:16px}
 *:focus-visible{outline:2px solid var(--accent);outline-offset:2px}

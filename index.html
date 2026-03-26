@@ -37,13 +37,14 @@
   --radius:12px;--radius-sm:8px;
 }
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;font-size:16px;line-height:1.6;min-height:100vh;overflow-x:hidden}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;font-size:17px;line-height:1.75;min-height:100vh;overflow-x:hidden}
 
-.hero{position:relative;padding:48px 16px 24px;text-align:center;overflow:hidden}
+.hero{position:relative;padding:56px 16px 32px;text-align:center;overflow:hidden}
 .hero::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(0,240,255,0.08) 0%,rgba(255,0,255,0.04) 40%,transparent 70%);pointer-events:none}
-.hero h1{font-size:clamp(28px,5vw,48px);font-weight:800;letter-spacing:2px;background:linear-gradient(135deg,var(--cyan),var(--magenta),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px;position:relative}
-.hero .subtitle{font-size:clamp(13px,2vw,17px);color:var(--text2);font-weight:300;margin-bottom:10px}
-.hero .tagline{font-size:clamp(14px,1.6vw,16px);color:var(--text2);max-width:680px;margin:0 auto 24px;line-height:1.7;font-weight:300}
+.hero h1{font-size:clamp(32px,6vw,56px);font-weight:800;letter-spacing:3px;background:linear-gradient(135deg,var(--cyan),var(--magenta),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:12px;position:relative}
+.hero .subtitle{font-size:clamp(16px,2.2vw,22px);color:var(--text);font-weight:400;margin-bottom:8px;letter-spacing:.3px}
+.hero .subtitle-de{font-size:clamp(14px,1.8vw,18px);color:var(--text2);font-weight:300;margin-bottom:20px;font-style:italic}
+.hero .tagline{font-size:clamp(15px,1.8vw,18px);color:var(--text2);max-width:720px;margin:0 auto 28px;line-height:1.8;font-weight:300}
 .hero .tagline span{color:var(--cyan);font-weight:600}
 
 .search-wrap{max-width:700px;margin:0 auto;position:relative}
@@ -151,16 +152,16 @@ mark{background:rgba(0,240,255,0.25);color:var(--cyan);border-radius:2px;padding
 
 /* Showcase */
 .showcase{max-width:1200px;margin:20px auto 12px;padding:0 20px}
-.showcase-label{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:var(--text3);margin-bottom:10px;text-align:center}
+.showcase-label{font-size:13px;text-transform:uppercase;letter-spacing:2px;color:var(--text3);margin-bottom:14px;text-align:center}
 .showcase-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
 .showcase-card{position:relative;background:var(--glass);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-decoration:none;overflow:hidden;transition:all .35s}
 .showcase-card:hover{border-color:rgba(0,240,255,0.4);transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,0.4)}
 .sc-glow{position:absolute;top:-40px;right:-40px;width:120px;height:120px;background:radial-gradient(circle,rgba(0,240,255,0.1),transparent 70%);pointer-events:none;transition:opacity .3s}
 .showcase-card:hover .sc-glow{opacity:1.5}
 .sc-domain{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--cyan);margin-bottom:8px;opacity:.7}
-.sc-name{font-size:18px;font-weight:700;color:#fff;margin-bottom:8px;line-height:1.3;background:linear-gradient(135deg,#fff,var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
-.sc-desc{font-size:13px;color:#d0d0d8;line-height:1.65;margin-bottom:10px}
-.sc-meta{font-size:10px;color:var(--text3);letter-spacing:.5px}
+.sc-name{font-size:20px;font-weight:700;color:#fff;margin-bottom:10px;line-height:1.3;background:linear-gradient(135deg,#fff,var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sc-desc{font-size:15px;color:#d0d0d8;line-height:1.7;margin-bottom:12px}
+.sc-meta{font-size:11px;color:var(--text3);letter-spacing:.5px}
 @media(max-width:768px){.showcase-grid{grid-template-columns:1fr}}
 
 .intro-bar{max-width:1200px;margin:0 auto 6px;padding:12px 24px;display:flex;align-items:center;gap:12px;font-size:13px;color:var(--text2);line-height:1.6}
@@ -192,8 +193,8 @@ mark{background:rgba(0,240,255,0.25);color:var(--cyan);border-radius:2px;padding
 /* Stats Banner */
 .stats-banner{max-width:900px;margin:0 auto 28px;padding:20px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;background:linear-gradient(135deg,rgba(0,240,255,0.05),rgba(255,0,255,0.04));border:1px solid var(--border);border-radius:var(--radius);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
 .stat-item{text-align:center;padding:8px}
-.stat-number{font-size:28px;font-weight:800;background:linear-gradient(135deg,var(--cyan),var(--magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:4px}
-.stat-label{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-dim)}
+.stat-number{font-size:36px;font-weight:800;background:linear-gradient(135deg,var(--cyan),var(--magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px}
+.stat-label{font-size:13px;text-transform:uppercase;letter-spacing:1.5px;color:var(--text2)}
 @media(max-width:768px){.stats-banner{grid-template-columns:repeat(2,1fr);gap:10px;padding:14px}.stat-number{font-size:22px}}
 
 /* Sticky Header */
@@ -227,8 +228,8 @@ mark{background:rgba(0,240,255,0.25);color:var(--cyan);border-radius:2px;padding
 .browse-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan),var(--magenta));opacity:0;transition:opacity .3s}
 .browse-card:hover::before{opacity:1}
 .browse-card .bc-icon{font-size:36px;margin-bottom:12px}
-.browse-card .bc-name{font-size:20px;font-weight:700;color:#fff;margin-bottom:8px;line-height:1.3}
-.browse-card .bc-count{font-size:13px;color:var(--cyan);font-weight:600;margin-bottom:10px}
+.browse-card .bc-name{font-size:22px;font-weight:700;color:#fff;margin-bottom:10px;line-height:1.3}
+.browse-card .bc-count{font-size:15px;color:var(--cyan);font-weight:600;margin-bottom:12px}
 .browse-card .bc-domains{font-size:12px;color:#b0b0b8;line-height:1.6}
 .browse-card .bc-domains span{display:inline-block;margin:2px 4px 2px 0;padding:2px 8px;background:rgba(255,255,255,0.05);border-radius:12px;font-size:11px}
 .breadcrumb{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:8px;font-size:13px;flex-wrap:wrap}
@@ -247,18 +248,18 @@ mark{background:rgba(0,240,255,0.25);color:var(--cyan);border-radius:2px;padding
 /* Fun Terms Discovery */
 .fun-section{max-width:1200px;margin:16px auto 8px;padding:0 20px}
 .fun-header{text-align:center;margin-bottom:16px}
-.fun-header h2{font-size:20px;font-weight:700;background:linear-gradient(135deg,#ffdd44,#ff6b9d,#00f0ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px}
-.fun-header p{font-size:13px;color:var(--text2);max-width:600px;margin:0 auto}
+.fun-header h2{font-size:26px;font-weight:700;background:linear-gradient(135deg,#ffdd44,#ff6b9d,#00f0ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:10px}
+.fun-header p{font-size:15px;color:var(--text2);max-width:700px;margin:0 auto;line-height:1.7}
 .fun-scroll{display:flex;gap:12px;overflow-x:auto;padding:4px 0 12px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:rgba(0,240,255,0.2) transparent}
 .fun-scroll::-webkit-scrollbar{height:4px}
 .fun-scroll::-webkit-scrollbar-thumb{background:rgba(0,240,255,0.2);border-radius:2px}
-.fun-card{flex:0 0 220px;scroll-snap-align:start;background:linear-gradient(135deg,rgba(255,221,68,0.06),rgba(255,107,157,0.06));border:1px solid rgba(255,221,68,0.15);border-radius:14px;padding:18px 16px;text-decoration:none;transition:all .35s;position:relative;overflow:hidden}
+.fun-card{flex:0 0 240px;scroll-snap-align:start;background:linear-gradient(135deg,rgba(255,221,68,0.06),rgba(255,107,157,0.06));border:1px solid rgba(255,221,68,0.15);border-radius:14px;padding:20px 18px;text-decoration:none;transition:all .35s;position:relative;overflow:hidden}
 .fun-card:hover{border-color:rgba(255,221,68,0.4);transform:translateY(-3px);box-shadow:0 8px 30px rgba(255,221,68,0.1)}
-.fun-card .fc-emoji{font-size:28px;margin-bottom:8px}
-.fun-card .fc-name{font-size:15px;font-weight:700;color:#fff;margin-bottom:6px;line-height:1.3}
-.fun-card .fc-desc{font-size:12px;color:#b8b8c0;line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.fun-card .fc-domain{font-size:10px;margin-top:8px;opacity:.6}
-@media(max-width:768px){.fun-card{flex:0 0 180px;padding:14px 12px}.fun-card .fc-name{font-size:13px}}
+.fun-card .fc-emoji{font-size:32px;margin-bottom:10px}
+.fun-card .fc-name{font-size:17px;font-weight:700;color:#fff;margin-bottom:8px;line-height:1.3}
+.fun-card .fc-desc{font-size:14px;color:#b8b8c0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.fun-card .fc-domain{font-size:11px;margin-top:10px;opacity:.6}
+@media(max-width:768px){.fun-card{flex:0 0 200px;padding:16px 14px}.fun-card .fc-name{font-size:15px}}
 
 @media(max-width:600px){
   .hero{padding:32px 12px 20px}
@@ -367,7 +368,8 @@ table{max-width:100%;overflow-x:auto;display:block}
 <div class="hero">
   <h1>NEOMANITAI</h1>
   <p class="subtitle">Because only what can be named can be thought about.</p>
-  <p class="tagline"><span>4,407</span> terms across <span>43</span> domains &mdash; the first systematic lexicon for human-AI interaction phenomena.</p>
+  <p class="subtitle-de">Denn nur was benannt werden kann, kann gedacht werden.</p>
+  <p class="tagline">AI creates experiences we feel but cannot name. This lexicon gives them names.<br><span>4,407</span> terms across <span>43</span> domains &mdash; the first systematic dictionary for human-AI interaction.</p>
   <div class="search-wrap">
     <span class="icon">&#x1F50D;</span>
     <input type="text" id="search" placeholder="Search 4,407 terms &mdash; try 'trust', 'creativity', or 'speed'..." autocomplete="off" spellcheck="false">
@@ -413,12 +415,12 @@ table{max-width:100%;overflow-x:auto;display:block}
 
 <!-- What is this? Quick-understand box -->
 <section aria-label="About NEOMANITAI">
-<div id="what" style="max-width:800px;margin:0 auto 24px;padding:20px 24px;background:linear-gradient(135deg,rgba(0,240,255,0.04),rgba(255,0,255,0.03));border:1px solid var(--border);border-radius:14px">
-  <div style="font-size:15px;font-weight:700;color:var(--cyan);margin-bottom:10px;letter-spacing:.5px">What is NEOMANITAI?</div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:12px;font-size:13px;color:var(--text);line-height:1.6">
-    <div style="display:flex;gap:8px;align-items:flex-start"><span style="font-size:18px;flex-shrink:0" aria-hidden="true">&#x1F4D6;</span><span>A research lexicon naming <strong>4,407 human experiences</strong> that occur during AI interaction &mdash; experiences that exist but lack words.</span></div>
-    <div style="display:flex;gap:8px;align-items:flex-start"><span style="font-size:18px;flex-shrink:0" aria-hidden="true">&#x1F50D;</span><span><strong>Purely descriptive.</strong> No recommendations. No value judgments. Both positive experiences and concerning patterns are made equally describable.</span></div>
-    <div style="display:flex;gap:8px;align-items:flex-start"><span style="font-size:18px;flex-shrink:0" aria-hidden="true">&#x1F310;</span><span><strong>Open access.</strong> ISO 704 inspired. DOI-registered on Zenodo. CC BY-NC-ND 4.0. Bilingual (EN+DE). No data collection.</span></div>
+<div id="what" style="max-width:880px;margin:0 auto 32px;padding:28px 28px;background:linear-gradient(135deg,rgba(0,240,255,0.05),rgba(255,0,255,0.04));border:1px solid var(--border);border-radius:16px">
+  <div style="font-size:20px;font-weight:700;color:var(--cyan);margin-bottom:16px;letter-spacing:.5px;text-align:center">What is NEOMANITAI? <span style="font-size:16px;color:var(--text2);font-weight:400;font-style:italic">&mdash; Was ist NEOMANITAI?</span></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;font-size:15px;color:var(--text);line-height:1.7">
+    <div style="display:flex;gap:10px;align-items:flex-start;padding:14px;background:rgba(0,240,255,0.03);border-radius:10px"><span style="font-size:26px;flex-shrink:0" aria-hidden="true">&#x1F4D6;</span><span>A research lexicon naming <strong>4,407 human experiences</strong> that occur during AI interaction &mdash; experiences that exist but lack words.<br><span style="color:var(--text2);font-size:13px;font-style:italic">Ein Forschungslexikon, das 4.407 menschliche Erfahrungen benennt, die bei KI-Interaktion auftreten.</span></span></div>
+    <div style="display:flex;gap:10px;align-items:flex-start;padding:14px;background:rgba(0,240,255,0.03);border-radius:10px"><span style="font-size:26px;flex-shrink:0" aria-hidden="true">&#x1F50D;</span><span><strong>Purely descriptive.</strong> No recommendations. No value judgments. Both positive and concerning patterns equally describable.<br><span style="color:var(--text2);font-size:13px;font-style:italic">Rein deskriptiv. Keine Empfehlungen. Keine Wertungen.</span></span></div>
+    <div style="display:flex;gap:10px;align-items:flex-start;padding:14px;background:rgba(0,240,255,0.03);border-radius:10px"><span style="font-size:26px;flex-shrink:0" aria-hidden="true">&#x1F310;</span><span><strong>Open access.</strong> ISO 704 inspired. DOI on Zenodo. CC BY-NC-ND 4.0. Bilingual EN+DE. No data collection.<br><span style="color:var(--text2);font-size:13px;font-style:italic">Offen zug&auml;nglich. DOI-registriert. Keine Datenerhebung.</span></span></div>
   </div>
 </div>
 
@@ -486,12 +488,13 @@ table{max-width:100%;overflow-x:auto;display:block}
 
 <!-- How to Use This Lexicon -->
 <section aria-label="How to use">
-<div id="how-to" style="max-width:800px;margin:0 auto 32px;padding:20px 24px;background:var(--glass);border:1px solid var(--border);border-radius:14px">
-  <div style="font-size:14px;font-weight:700;color:var(--text);margin-bottom:12px">How to use this lexicon</div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:14px;font-size:13px;color:var(--text2);line-height:1.6">
-    <div><span style="color:var(--cyan);font-weight:700;font-size:18px">1</span><span style="margin-left:8px"><strong style="color:var(--text)">Search or browse.</strong> Use the search bar above, click a domain group below, or start with an entry point.</span></div>
-    <div><span style="color:var(--cyan);font-weight:700;font-size:18px">2</span><span style="margin-left:8px"><strong style="color:var(--text)">Read the definition.</strong> Each term page contains a bilingual definition (EN+DE), distinction, and citation.</span></div>
-    <div><span style="color:var(--cyan);font-weight:700;font-size:18px">3</span><span style="margin-left:8px"><strong style="color:var(--text)">Explore related terms.</strong> Follow links between terms to discover clusters and cross-domain connections.</span></div>
+<div id="how-to" style="max-width:880px;margin:0 auto 36px;padding:24px 28px;background:var(--glass);border:1px solid var(--border);border-radius:16px">
+  <div style="font-size:18px;font-weight:700;color:var(--text);margin-bottom:6px">How to use this lexicon</div>
+  <div style="font-size:14px;color:var(--text2);margin-bottom:16px;font-style:italic">So nutzt du dieses Lexikon</div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px;font-size:15px;color:var(--text2);line-height:1.7">
+    <div style="padding:14px;background:rgba(0,240,255,0.03);border-radius:10px"><span style="color:var(--cyan);font-weight:700;font-size:24px;display:block;margin-bottom:6px">1</span><strong style="color:var(--text);font-size:16px">Search or browse.</strong><br>Use the search bar, click a domain group below, or start with an entry point.</div>
+    <div style="padding:14px;background:rgba(0,240,255,0.03);border-radius:10px"><span style="color:var(--cyan);font-weight:700;font-size:24px;display:block;margin-bottom:6px">2</span><strong style="color:var(--text);font-size:16px">Read the definition.</strong><br>Each term page has a bilingual definition (EN+DE), cluster info, and citation.</div>
+    <div style="padding:14px;background:rgba(0,240,255,0.03);border-radius:10px"><span style="color:var(--cyan);font-weight:700;font-size:24px;display:block;margin-bottom:6px">3</span><strong style="color:var(--text);font-size:16px">Explore related terms.</strong><br>Follow links between terms to discover clusters and cross-domain connections.</div>
   </div>
 </div>
 </section>
@@ -535,8 +538,8 @@ table{max-width:100%;overflow-x:auto;display:block}
 <section aria-label="Entry points">
 <div class="fun-section" id="entry-points">
   <div class="fun-header">
-    <h2>Accessible Entry Points</h2>
-    <p>Some phenomena are immediately recognizable from everyday AI use. These terms offer an accessible starting point for exploring the compendium.</p>
+    <h2>Start Here &mdash; Hier starten</h2>
+    <p style="font-size:16px">These phenomena are immediately recognizable from everyday AI use. Click any card to explore.<br><span style="color:var(--text3);font-style:italic">Diese Ph&auml;nomene sind sofort aus dem Alltag mit KI erkennbar. Klicke auf eine Karte zum Entdecken.</span></p>
   </div>
   <div class="fun-scroll">
     <a class="fun-card" href="the-glitch-giggle.html">

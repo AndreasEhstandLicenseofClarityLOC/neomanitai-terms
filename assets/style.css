@@ -24,8 +24,8 @@ body {
   background: var(--bg);
   color: var(--text);
   font-family: 'Inter', system-ui, sans-serif;
-  font-size: 15px;
-  line-height: 1.75;
+  font-size: 17px;
+  line-height: 1.8;
   overflow-x: hidden;
 }
 
@@ -274,9 +274,9 @@ h1 {
 
 /* === SECTION HEADERS === */
 h2 {
-  font-size:.82em; font-weight:700; text-transform:uppercase;
-  letter-spacing:.14em; color:var(--text-dim);
-  margin:32px 0 14px; display:flex; align-items:center; gap:10px;
+  font-size:1.1em; font-weight:700; text-transform:uppercase;
+  letter-spacing:.1em; color:var(--text-dim);
+  margin:36px 0 16px; display:flex; align-items:center; gap:10px;
 }
 h2::after { content:''; flex:1; height:1px; background:linear-gradient(90deg, var(--border), transparent); }
 
@@ -585,7 +585,7 @@ div[lang="de"] h2::after{content:'DE';position:absolute;right:0;top:50%;transfor
 .distinction-block+.distinction-block{margin-top:10px;padding-top:10px;border-top:1px solid rgba(255,255,255,0.04)}
 
 /* Improved body font for term pages */
-body{font-size:16px}
+body{font-size:17px}
 *:focus-visible{outline:2px solid var(--accent);outline-offset:2px}
 
 /* Mini-TOC navigation */

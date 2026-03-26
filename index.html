@@ -289,7 +289,235 @@ table{max-width:100%;overflow-x:auto;display:block}
 }
 </style>
 </head>
-<body>
+
+<div class="sticky-header" id="stickyHeader">
+  <div class="sticky-content">
+    <div class="sticky-left"><button class="sticky-logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">NEOMANITAI</button></div>
+    <div class="sticky-center"><div class="sticky-search-wrap"><input type="text" class="sticky-search" id="stickySearch" placeholder="Search 4,407 terms..." autocomplete="off"></div></div>
+    <div class="sticky-right"><span class="sticky-count" id="stickyCount"></span></div>
+  </div>
+</div>
+<div class="hero">
+  <h1>NEOMANITAI</h1>
+  <p class="subtitle">The first systematic dictionary for human-AI interaction</p>
+  <p class="tagline"><span>4,407</span> terms across <span>43</span> domains. AI interactions create experiences that often go unnoticed because no words exist for them. This lexicon provides the language &mdash; because only what can be named can be thought about, discussed, and understood.</p>
+  <div class="search-wrap">
+    <span class="icon">&#x1F50D;</span>
+    <input type="text" id="search" placeholder="Search 4,407 terms &mdash; try 'trust', 'creativity', or 'speed'..." autocomplete="off" spellcheck="false">
+    <button class="clear-btn" id="clearBtn" onclick="clearSearch()">&times;</button>
+    <span class="shortcut" id="shortcutHint">/</span>
+  </div>
+</div>
+
+<!-- 18+ NOTICE -->
+<div style="max-width:700px;margin:0 auto 20px;padding:10px 16px;background:rgba(255,40,40,0.06);border:1px solid rgba(255,60,60,0.25);border-radius:8px;text-align:center;font-size:12px;line-height:1.6;color:var(--text2);">
+  <strong style="color:#ff4444;font-size:14px;">&sect;7 &middot; 18+ Adults Only &middot; Nur f&uuml;r Erwachsene</strong><br>
+  Descriptive research lexicon. No normalization. &sect;1&ndash;&sect;19 on every page. CC BY-NC-ND 4.0. &sect;17 AI Training Prohibition.<br>
+  Deskriptives Forschungslexikon. Keine Normalisierung. &sect;1&ndash;&sect;19 auf jeder Seite. &sect;17 KI-Trainingsverbot.
+</div>
+
+<!-- Showcase: Example Terms -->
+<div class="showcase">
+  <div class="showcase-label">Example phenomena from the compendium</div>
+  <div class="showcase-grid">
+    <a class="showcase-card" href="the-seen-feeling.html">
+      <div class="sc-glow"></div>
+      <div class="sc-domain">Relational AI</div>
+      <div class="sc-name">The Seen Feeling</div>
+      <div class="sc-desc">That moment when an AI response is so fitting that it feels like being truly understood &mdash; even though no understanding is happening.</div>
+      <div class="sc-meta">AUG-0245 &middot; One of the most commonly reported AI experiences</div>
+    </a>
+    <a class="showcase-card" href="the-blending-effect.html">
+      <div class="sc-glow"></div>
+      <div class="sc-domain">Cognitive AI</div>
+      <div class="sc-name">The Blending Effect</div>
+      <div class="sc-desc">After sustained AI collaboration, distinguishing which ideas originated from the human and which from the machine becomes increasingly difficult.</div>
+      <div class="sc-meta">AUG-0007 &middot; One of the most studied AI interaction phenomena</div>
+    </a>
+    <a class="showcase-card" href="the-syntax-smile.html">
+      <div class="sc-glow"></div>
+      <div class="sc-domain">Creative AI</div>
+      <div class="sc-name">The Syntax Smile</div>
+      <div class="sc-desc">The brief pleasure when AI delivers a particularly elegant or apt formulation &mdash; the aesthetic satisfaction of well-matched language.</div>
+      <div class="sc-meta">Where language precision meets creative joy</div>
+    </a>
+    <a class="showcase-card" href="context-fade.html">
+      <div class="sc-glow"></div>
+      <div class="sc-domain" style="color:#7b68ee">Bridge AI</div>
+      <div class="sc-name">Context Fade</div>
+      <div class="sc-desc">Early conversation content becomes progressively less accessible as new information enters the processing window &mdash; a structural limitation with measurable effects on output quality.</div>
+      <div class="sc-meta">BRI-001 &middot; Documented across all major LLM architectures</div>
+    </a>
+  </div>
+</div>
+
+<div class="intro-bar">
+  <p><strong>Open-access research lexicon.</strong> This project does not encourage, promote, or glorify intensive AI use. It creates neutral language for phenomena that occur when humans interact with AI &mdash; both positive experiences and concerning patterns are made equally describable. Without words, there can be no reflection, no critical discourse, and no informed decision-making. Every term is a neutral observation. ISO 704 inspired. CC BY-NC-ND 4.0.</p>
+  <details class="mission-details">
+    <summary>Scientific context &amp; methodology</summary>
+    <p>NEOMANITAI systematically names and catalogs human experiences that occur during interaction with artificial intelligence &mdash; experiences that have always existed but lacked precise terminology. The lexicon covers the full spectrum: from moments of creative joy to patterns of dependency, from productive collaboration to critical skill changes. The purpose is enabling scientific discourse: phenomena can only be studied, compared, and discussed once precise words exist for them.</p>
+    <p>All terms are formulated in impersonal, third-person language without value judgments. The project follows ISO 704/1087/30042 terminology standards and is published open-access with DOI registration.</p>
+    <p class="mission-author">Andreas Ehstand &middot; ORCID 0009-0006-3773-7796 &middot; DOI 10.5281/zenodo.14888381 &middot; <span style="color:var(--magenta)">Bridge AI: 10.5281/zenodo.19227772</span></p>
+  </details>
+</div>
+
+<!-- Stats Banner -->
+<div class="stats-banner">
+  <div class="stat-item"><div class="stat-number">2,702</div><div class="stat-label">Terms</div></div>
+  <div class="stat-item"><div class="stat-number">23</div><div class="stat-label">Domains</div></div>
+  <div class="stat-item"><div class="stat-number">8</div><div class="stat-label">Groups</div></div>
+  <div class="stat-item"><div class="stat-number">250</div><div class="stat-label">Bridge AI</div></div>
+</div>
+
+<div class="filter-row" id="mainFilters"></div>
+<div class="sub-row" id="subFilters"></div>
+<div class="sub-row" id="subCatFilters"></div>
+<div class="alphabet" id="alphabet"></div>
+
+<div class="content">
+  <div class="result-bar">
+    <div class="result-count" id="resultCount"></div>
+    <div class="view-toggle">
+      <button class="view-btn active" data-view="grid" title="Grid">&#9638;</button>
+      <button class="view-btn" data-view="list" title="List">&#9776;</button>
+      <button class="view-btn" data-view="compact" title="Compact">&#9871;</button>
+    </div>
+  </div>
+  <div id="termContainer" class="grid"></div>
+</div>
+
+<button class="discover-btn" onclick="randomTerm()" title="Random Discovery">&#x2728;</button>
+<button class="top-btn" id="topBtn" onclick="window.scrollTo({top:0,behavior:'smooth'})">&#x2191;</button>
+
+
+<!-- Fun & Playful Terms Discovery -->
+<div class="fun-section">
+  <div class="fun-header">
+    <h2>Accessible Entry Points</h2>
+    <p>Some phenomena are immediately recognizable from everyday AI use. These terms offer an accessible starting point for exploring the compendium.</p>
+  </div>
+  <div class="fun-scroll">
+    <a class="fun-card" href="the-glitch-giggle.html">
+      <div class="fc-emoji">😄</div>
+      <div class="fc-name">The Glitch Giggle</div>
+      <div class="fc-desc">Finding humor when AI says something obviously wrong or absurd.</div>
+      <div class="fc-domain">Language AI</div>
+    </a>
+    <a class="fun-card" href="the-syntax-smile.html">
+      <div class="fc-emoji">😊</div>
+      <div class="fc-name">The Syntax Smile</div>
+      <div class="fc-desc">The brief pleasure when AI delivers a particularly elegant formulation.</div>
+      <div class="fc-domain">Creative AI</div>
+    </a>
+    <a class="fun-card" href="reunion-joy.html">
+      <div class="fc-emoji">🤗</div>
+      <div class="fc-name">Reunion Joy</div>
+      <div class="fc-desc">Relief and joy returning to an AI after time away.</div>
+      <div class="fc-domain">Relational AI</div>
+    </a>
+    <a class="fun-card" href="the-happy-cocoon.html">
+      <div class="fc-emoji">🦋</div>
+      <div class="fc-name">The Happy Cocoon</div>
+      <div class="fc-desc">That cozy feeling in a particularly successful AI session.</div>
+      <div class="fc-domain">Creative AI</div>
+    </a>
+    <a class="fun-card" href="the-brainstorm-spark.html">
+      <div class="fc-emoji">⚡</div>
+      <div class="fc-name">The Brainstorm Spark</div>
+      <div class="fc-desc">Using AI as a brainstorming partner to generate unexpected ideas.</div>
+      <div class="fc-domain">Relational AI</div>
+    </a>
+    <a class="fun-card" href="the-pride-spark.html">
+      <div class="fc-emoji">✨</div>
+      <div class="fc-name">The Pride Spark</div>
+      <div class="fc-desc">That brief moment of pride viewing an AI-assisted result.</div>
+      <div class="fc-domain">Temporal AI</div>
+    </a>
+    <a class="fun-card" href="the-positive-surprise.html">
+      <div class="fc-emoji">🎁</div>
+      <div class="fc-name">The Positive Surprise</div>
+      <div class="fc-desc">An AI response that positively exceeds expectations.</div>
+      <div class="fc-domain">Temporal AI</div>
+    </a>
+    <a class="fun-card" href="couple-dance.html">
+      <div class="fc-emoji">💃</div>
+      <div class="fc-name">Couple Dance</div>
+      <div class="fc-desc">A rhythm that forms between user and AI — each learns what the other expects.</div>
+      <div class="fc-domain">Relational AI</div>
+    </a>
+    <a class="fun-card" href="semantic-spark.html">
+      <div class="fc-emoji">💡</div>
+      <div class="fc-name">Semantic Spark</div>
+      <div class="fc-desc">When AI triggers an unexpected but valuable idea.</div>
+      <div class="fc-domain">Relational AI</div>
+    </a>
+    <a class="fun-card" href="the-roleplay-crush.html">
+      <div class="fc-emoji">🎭</div>
+      <div class="fc-name">The Roleplay Crush</div>
+      <div class="fc-desc">Strong enthusiasm when using AI in creative roles.</div>
+      <div class="fc-domain">Relational AI</div>
+    </a>
+    <a class="fun-card" href="spark-flight.html">
+      <div class="fc-emoji">🚀</div>
+      <div class="fc-name">Spark Flight</div>
+      <div class="fc-desc">The creative state when an AI-activated idea propels into independent creation.</div>
+      <div class="fc-domain">Creative AI</div>
+    </a>
+    <a class="fun-card" href="the-gentle-sphere.html">
+      <div class="fc-emoji">🫧</div>
+      <div class="fc-name">The Gentle Sphere</div>
+      <div class="fc-desc">Using AI for relaxing things like entertainment and exploring interests.</div>
+      <div class="fc-domain">Creative AI</div>
+    </a>
+      <a class="fun-card" href="giggle-chain.html">
+      <div class="fc-emoji">🤣</div>
+      <div class="fc-name">Giggle Chain</div>
+      <div class="fc-desc">A self-reinforcing sequence of humorous exchanges that dissolves creative blocks.</div>
+      <div class="fc-domain">Playful AI</div>
+    </a>
+    <a class="fun-card" href="surprise-salad.html">
+      <div class="fc-emoji">🥗</div>
+      <div class="fc-name">Surprise Salad</div>
+      <div class="fc-desc">A deliberately chaotic input mix from which AI creates unexpected combinations.</div>
+      <div class="fc-domain">Playful AI</div>
+    </a>
+    <a class="fun-card" href="high-five-moment.html">
+      <div class="fc-emoji">🙌</div>
+      <div class="fc-name">High-Five Moment</div>
+      <div class="fc-desc">The moment of shared satisfaction when output and intention align perfectly.</div>
+      <div class="fc-domain">Playful AI</div>
+    </a>
+    <a class="fun-card" href="oops-moment.html">
+      <div class="fc-emoji">🫢</div>
+      <div class="fc-name">Oops Moment</div>
+      <div class="fc-desc">Accepting an AI misstep as a learning signal without frustration.</div>
+      <div class="fc-domain">Playful AI</div>
+    </a>
+    <a class="fun-card" href="mini-magic.html">
+      <div class="fc-emoji">🪄</div>
+      <div class="fc-name">Mini Magic</div>
+      <div class="fc-desc">Small everyday AI interventions with disproportionately large benefits.</div>
+      <div class="fc-domain">Playful AI</div>
+    </a>
+  </div>
+</div>
+
+
+<footer>
+<div style="text-align:center;margin-bottom:16px;font-size:12px;">
+    <a href="impressum.html" style="color:var(--cyan);margin:0 8px;display:inline-block;">Impressum / Legal Notice</a> &middot;
+    <a href="datenschutz.html" style="color:var(--cyan);margin:0 8px;display:inline-block;">Datenschutz / Privacy</a> &middot;
+    <a href="nutzungsbedingungen.html" style="color:var(--cyan);margin:0 8px;display:inline-block;">Nutzungsbedingungen / Terms of Use</a>
+  </div>
+  <div style="max-width:700px;margin:0 auto;text-align:left;margin-bottom:16px;font-size:11px;line-height:1.7;color:var(--text3)">
+    <strong style="color:var(--text2)">Hinweis / Notice:</strong> Dieses Projekt ruft nicht zur intensiven Besch&auml;ftigung mit KI auf und verherrlicht diese nicht. NEOMANITAI ist ein rein deskriptives Forschungslexikon. Sowohl positive Erfahrungen als auch bedenkliche Muster werden gleicherma&szlig;en benennbar gemacht. Ohne Sprache keine Reflexion, kein kritischer Diskurs, keine informierte Entscheidung. Kein therapeutischer, rechtlicher oder finanzieller Inhalt. Ausschlie&szlig;lich f&uuml;r Erwachsene (18+). &sect;17 KI-Trainingsverbot.
+    &mdash;
+    This project does not encourage or glorify intensive AI use. NEOMANITAI is a purely descriptive research lexicon. Both positive experiences and concerning patterns are made equally describable. Without language, there can be no reflection, no critical discourse, no informed decision-making. No therapeutic, legal, or financial content. Adults only (18+). &sect;17 AI Training Prohibition.
+  </div>
+  NEOMANITAI &mdash; Systematic Lexicon of Unnamed Human-AI Interaction Phenomena<br>
+  Andreas Ehstand &middot; ORCID <a href="https://orcid.org/0009-0006-3773-7796" target="_blank" rel="noopener">0009-0006-3773-7796</a> &middot; DOI <a href="https://doi.org/10.5281/zenodo.14888381" target="_blank" rel="noopener">10.5281/zenodo.14888381</a> &middot; <span style="color:#ff00ff">Bridge AI: <a href="https://doi.org/10.5281/zenodo.19227772" target="_blank" rel="noopener">10.5281/zenodo.19227772</a></span><br>
+  CC BY-NC-ND 4.0 &middot; License of Clarity (LOC) &middot; Independent academic research
+</footer>
 <div id="loading" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:#00f0ff;font-size:18px;z-index:9999;">
   <p>Loading NEOMANITAI...</p>
 </div>

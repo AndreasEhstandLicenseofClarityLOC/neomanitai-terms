@@ -727,6 +727,129 @@ a.term-card *,a.wow-card *{pointer-events:auto!important}
 /* Remove overflow:hidden from parent containers that clip click targets */
 .content,.grid,.wow-grid,.showcase-grid,.browse-grid{overflow:visible!important}
 
+
+/* === MOBILE VISUAL FIX (based on 375px screenshot testing) === */
+
+/* 1. Badge: Hide text, show only icon on small screens */
+@media(max-width:600px){
+  .disc-badge-fixed{
+    position:fixed!important;
+    top:4px!important;
+    right:4px!important;
+    font-size:8px!important;
+    padding:3px 6px!important;
+    max-width:none!important;
+    letter-spacing:0!important;
+    z-index:1002!important;
+  }
+  .disc-badge-fixed>span{display:none!important}
+  .disc-badge-fixed::before{content:'18+ §';font-size:9px;color:#ff6b6b}
+  .disc-badge-fixed details{margin-left:2px!important}
+  .disc-badge-fixed details summary{font-size:8px!important}
+  .disc-popup{
+    position:fixed!important;
+    top:auto!important;
+    bottom:0!important;
+    left:0!important;
+    right:0!important;
+    width:100vw!important;
+    max-height:70vh!important;
+    border-radius:12px 12px 0 0!important;
+    z-index:9999!important;
+  }
+}
+
+/* 2. Wow-cards: FULL WIDTH on mobile */
+@media(max-width:768px){
+  .wow-grid{
+    display:flex!important;
+    flex-direction:column!important;
+    gap:12px!important;
+    padding:0 8px!important;
+  }
+  .wow-grid>a,.wow-grid>.wow-card{
+    width:100%!important;
+    max-width:100%!important;
+    flex:none!important;
+    display:flex!important;
+    flex-direction:column!important;
+    padding:16px!important;
+  }
+  /* Remove inline flex-direction:row on wow-cards */
+  .wow-grid>a[style*="display:flex"]{
+    flex-direction:column!important;
+    align-items:flex-start!important;
+    gap:8px!important;
+  }
+}
+
+/* 3. Fun-cards: full width on mobile */
+@media(max-width:600px){
+  .fun-scroll{
+    display:flex!important;
+    flex-direction:column!important;
+    gap:10px!important;
+    overflow-x:visible!important;
+    padding:0!important;
+  }
+  .fun-card{
+    flex:none!important;
+    width:100%!important;
+    max-width:100%!important;
+  }
+}
+
+/* 4. Collapsible disclaimer - better layout on mobile */
+@media(max-width:600px){
+  #disclaimer-full{padding:0 8px!important}
+  #disclaimer-full details summary{
+    flex-wrap:wrap!important;
+    font-size:10px!important;
+    padding:10px 12px!important;
+    gap:4px!important;
+  }
+}
+
+/* 5. Phenomenon of the Day card - full width */
+@media(max-width:600px){
+  .featured-feeling{
+    max-width:100%!important;
+    margin-left:8px!important;
+    margin-right:8px!important;
+    padding:12px!important;
+  }
+}
+
+/* 6. Search tags - scrollable row, not wrapping */
+@media(max-width:600px){
+  div[style*="flex-wrap:wrap"][style*="justify-content:center"]{
+    flex-wrap:nowrap!important;
+    overflow-x:auto!important;
+    -webkit-overflow-scrolling:touch;
+    scrollbar-width:none;
+    padding:4px 8px!important;
+    justify-content:flex-start!important;
+  }
+  div[style*="flex-wrap:wrap"][style*="justify-content:center"]::-webkit-scrollbar{display:none}
+}
+
+/* 7. Stats banner - 2 col then 1 col */
+@media(max-width:400px){
+  .stats-banner{
+    grid-template-columns:1fr!important;
+    gap:6px!important;
+    padding:8px!important;
+  }
+}
+
+/* 8. Ecosystem nav grid - 1 col on mobile */
+@media(max-width:600px){
+  div[style*="grid-template-columns:repeat(auto-fill,minmax(min(220px"]{
+    grid-template-columns:1fr!important;
+    gap:8px!important;
+  }
+}
+
 </style>
 </head>
 <body>
@@ -749,7 +872,7 @@ a.term-card *,a.wow-card *{pointer-events:auto!important}
   <h1>NEOMANITAI</h1>
   <p class="subtitle">Because only what can be named can be thought about.</p>
   <p class="subtitle-de">Denn nur was benannt werden kann, kann gedacht werden.</p>
-  <p class="tagline">AI creates experiences that have no words yet. This lexicon names them.<br><span class="counter-animate">4,407</span> named experiences across <span>43</span> domains.</p>
+  <p class="tagline">AI creates experiences that have no words yet. A philosophical dictionary for the age of AI.<br><span class="counter-animate">4,407</span> named experiences across <span>43</span> domains.</p>
   <div class="search-wrap">
     <span class="icon">&#x1F50D;</span>
     <input type="text" id="search" placeholder="Search 4,407 terms &mdash; try 'trust', 'creativity', or 'speed'..." autocomplete="off" spellcheck="false">
@@ -817,8 +940,8 @@ a.term-card *,a.wow-card *{pointer-events:auto!important}
 
 <!-- Psychological depth layer: Initiation threshold (Grok tip #1) -->
 <div style="max-width:720px;margin:16px auto 20px;padding:16px 24px;text-align:center;font-size:13px;line-height:1.9;color:var(--text3);font-style:italic;border-left:2px solid rgba(0,240,255,0.1);border-right:2px solid rgba(255,0,255,0.1)">
-  <p style="margin:0 0 6px;color:var(--text2);font-weight:500;font-style:normal;letter-spacing:1px;font-size:11px;text-transform:uppercase;font-family:'JetBrains Mono',monospace">Proceed with awareness</p>
-  <p style="margin:0">Once named, a phenomenon cannot be unrecognized. These words were created because the experiences they describe already exist &mdash; unnamed, shared by millions, waiting to be acknowledged.</p>
+  <p style="margin:0 0 6px;color:var(--text2);font-weight:500;font-style:normal;letter-spacing:1px;font-size:11px;text-transform:uppercase;font-family:'JetBrains Mono',monospace">A new vocabulary emerges</p>
+  <p style="margin:0">Like John Koenig named obscure sorrows, this lexicon names the unnamed experiences of human-AI interaction &mdash; feelings shared by millions, waiting to be acknowledged.</p>
 </div>
 
 <!-- Psychological depth layer: Silent Revolution banner (Grok tip #5) -->

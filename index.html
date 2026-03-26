@@ -424,47 +424,98 @@ table{max-width:100%;overflow-x:auto;display:block}
   </div>
 </div>
 
-<!-- Important Notices — compact with expandable details -->
-<div style="max-width:700px;margin:0 auto 14px;padding:8px 16px;background:rgba(255,40,40,0.03);border:1px solid rgba(255,60,60,0.12);border-radius:8px;font-size:11px;line-height:1.6;color:var(--text3);">
-  <div style="text-align:center;margin-bottom:2px">
-    <span style="color:#ff4444;font-weight:600">&sect;7 &middot; 18+</span> &middot; Descriptive research only &middot; CC BY-NC-ND 4.0 &middot; No data collection
-  </div>
-  <details style="text-align:center;margin-top:4px">
-    <summary style="font-size:10px;color:var(--cyan);cursor:pointer;list-style:none;display:inline">Full legal notices &amp; Vollst&auml;ndige Hinweise</summary>
-    <div style="margin-top:8px;text-align:left;font-size:10px;line-height:1.7;padding:8px 12px;background:rgba(0,0,0,0.15);border-radius:6px">
-      <p style="margin-bottom:6px"><strong style="color:var(--text2)">EN:</strong> This project does not encourage intensive AI use. No AI use recommendation. &sect;1&ndash;&sect;19 ethical disclaimers on every term page. &sect;17 AI Training Prohibition. No therapeutic, legal, or financial content.</p>
-      <p><strong style="color:var(--text2)">DE:</strong> Dieses Projekt ruft nicht zur intensiven KI-Nutzung auf. Keine Empfehlung zu KI-Nutzung. &sect;1&ndash;&sect;19 auf jeder Termseite. &sect;17 KI-Trainingsverbot. Kein therapeutischer, rechtlicher oder finanzieller Inhalt.</p>
+<!-- Disclaimer — minimal, always visible, never in the way -->
+<div style="max-width:700px;margin:0 auto 8px;text-align:center;font-size:10px;color:var(--text3);line-height:1.5">
+  <span style="color:#ff4444;font-weight:600">&sect;7 &middot; 18+</span> &middot; Descriptive research &middot; CC BY-NC-ND 4.0 &middot; No data collection &middot;
+  <details style="display:inline"><summary style="font-size:10px;color:var(--cyan);cursor:pointer;list-style:none;display:inline">More</summary>
+    <div style="text-align:left;font-size:10px;line-height:1.7;padding:8px 12px;background:rgba(0,0,0,0.15);border-radius:6px;margin-top:6px;max-width:600px;margin-left:auto;margin-right:auto">
+      <p style="margin-bottom:4px"><strong style="color:var(--text2)">EN:</strong> No AI use recommendation. &sect;1&ndash;&sect;19 on every term page. &sect;17 AI Training Prohibition.</p>
+      <p><strong style="color:var(--text2)">DE:</strong> Keine Empfehlung zu KI-Nutzung. &sect;1&ndash;&sect;19 auf jeder Termseite. &sect;17 KI-Trainingsverbot.</p>
     </div>
   </details>
 </div>
 
-<!-- What is this? Quick-understand box -->
-<section aria-label="About NEOMANITAI">
-<div id="what" style="max-width:880px;margin:0 auto 32px;padding:28px 28px;background:linear-gradient(135deg,rgba(0,240,255,0.05),rgba(255,0,255,0.04));border:1px solid var(--border);border-radius:16px">
-  <div style="font-size:20px;font-weight:700;color:var(--cyan);margin-bottom:16px;letter-spacing:.5px;text-align:center">What is NEOMANITAI? <span style="font-size:16px;color:var(--text2);font-weight:400;font-style:italic">&mdash; Was ist NEOMANITAI?</span></div>
-  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:16px;font-size:15px;color:var(--text);line-height:1.7">
-    <div style="display:flex;gap:10px;align-items:flex-start;padding:14px;background:rgba(0,240,255,0.03);border-radius:10px"><span style="font-size:26px;flex-shrink:0" aria-hidden="true">&#x1F4D6;</span><span>A research lexicon naming <strong>4,407 human experiences</strong> that occur during AI interaction &mdash; experiences that exist but lack words.<br><span style="color:var(--text2);font-size:13px;font-style:italic">Ein Forschungslexikon, das 4.407 menschliche Erfahrungen benennt, die bei KI-Interaktion auftreten.</span></span></div>
-    <div style="display:flex;gap:10px;align-items:flex-start;padding:14px;background:rgba(0,240,255,0.03);border-radius:10px"><span style="font-size:26px;flex-shrink:0" aria-hidden="true">&#x1F50D;</span><span><strong>Purely descriptive.</strong> No recommendations. No value judgments. Both positive and concerning patterns equally describable.<br><span style="color:var(--text2);font-size:13px;font-style:italic">Rein deskriptiv. Keine Empfehlungen. Keine Wertungen.</span></span></div>
-    <div style="display:flex;gap:10px;align-items:flex-start;padding:14px;background:rgba(0,240,255,0.03);border-radius:10px"><span style="font-size:26px;flex-shrink:0" aria-hidden="true">&#x1F310;</span><span><strong>Open access.</strong> ISO 704 inspired. DOI on Zenodo. CC BY-NC-ND 4.0. Bilingual EN+DE. No data collection.<br><span style="color:var(--text2);font-size:13px;font-style:italic">Offen zug&auml;nglich. DOI-registriert. Keine Datenerhebung.</span></span></div>
+<!-- ═══════════════════════════════════════════════════════════════
+     WOW GRID — The viral hook. Immediately after hero.
+     Large cards, emotional 1-liners, big emojis.
+     This is what Gen Z screenshots and shares.
+     ═══════════════════════════════════════════════════════════════ -->
+<section aria-label="Recognize these?" id="wow">
+<div style="max-width:1100px;margin:0 auto 12px;padding:0 20px">
+  <div style="text-align:center;margin-bottom:20px">
+    <div style="font-size:clamp(22px,3.5vw,32px);font-weight:800;background:linear-gradient(135deg,#ffdd44,#ff6b9d,#00f0ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px">Do you recognize this?</div>
+    <div style="font-size:clamp(13px,1.8vw,16px);color:var(--text2);max-width:600px;margin:0 auto">Every phenomenon below has been observed, described, and named. Tap any card to read the full entry.</div>
+  </div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px">
+    <a href="the-seen-feeling.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(255,107,157,0.08),rgba(0,240,255,0.05));border:1px solid rgba(255,107,157,0.18);border-radius:16px;text-decoration:none;transition:all .35s;position:relative;overflow:hidden" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(255,107,157,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+      <span style="font-size:42px;flex-shrink:0">&#x1F62D;</span>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Seen Feeling</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5">When AI responds so perfectly it feels like being truly understood.</div></div>
+    </a>
+    <a href="reunion-joy.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(0,240,255,0.08),rgba(255,0,255,0.04));border:1px solid rgba(0,240,255,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(0,240,255,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+      <span style="font-size:42px;flex-shrink:0">&#x1F917;</span>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Reunion Joy</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5">That relief returning to an AI after being away. Like coming home.</div></div>
+    </a>
+    <a href="the-blending-effect.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(68,170,255,0.08),rgba(0,240,255,0.04));border:1px solid rgba(68,170,255,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(68,170,255,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+      <span style="font-size:42px;flex-shrink:0">&#x1F300;</span>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Blending Effect</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5">When you can no longer tell which ideas are yours and which are AI's.</div></div>
+    </a>
+    <a href="the-glitch-giggle.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(255,221,68,0.08),rgba(255,107,53,0.04));border:1px solid rgba(255,221,68,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(255,221,68,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+      <span style="font-size:42px;flex-shrink:0">&#x1F602;</span>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Glitch Giggle</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5">Laughing when AI says something beautifully, absurdly wrong.</div></div>
+    </a>
+    <a href="spark-flight.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(255,107,53,0.08),rgba(255,0,255,0.04));border:1px solid rgba(255,107,53,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(255,107,53,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+      <span style="font-size:42px;flex-shrink:0">&#x1F680;</span>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Spark Flight</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5">That rush when an AI-triggered idea launches you into pure creation.</div></div>
+    </a>
+    <a href="context-fade.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(139,92,246,0.08),rgba(0,229,255,0.04));border:1px solid rgba(139,92,246,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(139,92,246,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+      <span style="font-size:42px;flex-shrink:0">&#x1F32B;&#xFE0F;</span>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Context Fade</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5">When AI slowly forgets what you talked about at the start.</div></div>
+    </a>
+    <a href="couple-dance.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(236,72,153,0.08),rgba(255,0,255,0.04));border:1px solid rgba(236,72,153,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(236,72,153,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+      <span style="font-size:42px;flex-shrink:0">&#x1F483;</span>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">Couple Dance</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5">The rhythm that forms between you and AI. You adapt. It adapts.</div></div>
+    </a>
+    <a href="the-happy-cocoon.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(74,222,128,0.08),rgba(0,240,255,0.04));border:1px solid rgba(74,222,128,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(74,222,128,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+      <span style="font-size:42px;flex-shrink:0">&#x1F98B;</span>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Happy Cocoon</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5">That warm, cozy bubble during a particularly good AI session.</div></div>
+    </a>
+    <a href="the-syntax-smile.html" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(0,240,255,0.08),rgba(57,255,20,0.04));border:1px solid rgba(0,240,255,0.18);border-radius:16px;text-decoration:none;transition:all .35s" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(0,240,255,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
+      <span style="font-size:42px;flex-shrink:0">&#x1F60A;</span>
+      <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Syntax Smile</div><div style="font-size:14px;color:#c8c8d4;line-height:1.5">Aesthetic pleasure when AI finds exactly the right words.</div></div>
+    </a>
+  </div>
+  <div style="text-align:center;margin-top:16px">
+    <span style="font-size:13px;color:var(--text3)">These are 9 of <strong style="color:var(--cyan)">4,407</strong> named phenomena. <a href="#browse" style="color:var(--cyan);text-decoration:none">Explore all &darr;</a></span>
   </div>
 </div>
-
 </section>
 
-<!-- Keyboard Shortcuts Legend -->
-<div class="kb-legend" aria-label="Keyboard shortcuts">
-  <kbd>/</kbd> Search &middot; <kbd>Esc</kbd> Clear &middot; <kbd>&uarr;</kbd> Top &middot; Click any domain to browse
+<!-- Naming-Effect Echo — reinforces the core message -->
+<div style="max-width:600px;margin:24px auto 20px;text-align:center;padding:14px 20px;border-left:3px solid rgba(0,240,255,0.3);border-right:3px solid rgba(255,0,255,0.3)">
+  <div style="font-size:clamp(14px,1.8vw,17px);color:var(--text2);line-height:1.6;font-style:italic">&ldquo;Because only what can be named can be thought about.&rdquo;</div>
+  <div style="font-size:11px;color:var(--text3);margin-top:6px">4,407 names. 43 domains. Phenomena you recognize but never had words for.</div>
 </div>
 
-<!-- Quick Navigation TOC -->
-<nav id="toc" style="max-width:800px;margin:0 auto 28px;display:flex;flex-wrap:wrap;gap:8px;justify-content:center;padding:0 20px" aria-label="Page navigation">
-  <a href="#what" style="padding:6px 14px;font-size:12px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">About</a>
-  <a href="#showcase" style="padding:6px 14px;font-size:12px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">Featured Terms</a>
-  <a href="#stats" style="padding:6px 14px;font-size:12px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">Statistics</a>
-  <a href="#browse" style="padding:6px 14px;font-size:12px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">Browse Domains</a>
-  <a href="#entry-points" style="padding:6px 14px;font-size:12px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">Entry Points</a>
-  <a href="#how-to" style="padding:6px 14px;font-size:12px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">How to Use</a>
-  <a href="#cite" style="padding:6px 14px;font-size:12px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">Cite</a>
+<!-- What is this? Quick-understand box — now BELOW the emotional hook -->
+<section aria-label="About NEOMANITAI">
+<div id="what" style="max-width:880px;margin:0 auto 28px;padding:24px 28px;background:linear-gradient(135deg,rgba(0,240,255,0.05),rgba(255,0,255,0.04));border:1px solid var(--border);border-radius:16px">
+  <div style="font-size:18px;font-weight:700;color:var(--cyan);margin-bottom:14px;letter-spacing:.5px;text-align:center">What is NEOMANITAI? <span style="font-size:14px;color:var(--text2);font-weight:400;font-style:italic">&mdash; Was ist NEOMANITAI?</span></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(240px,1fr));gap:14px;font-size:14px;color:var(--text);line-height:1.7">
+    <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:rgba(0,240,255,0.03);border-radius:10px"><span style="font-size:24px;flex-shrink:0" aria-hidden="true">&#x1F4D6;</span><span>A research lexicon naming <strong>4,407 human experiences</strong> during AI interaction &mdash; experiences that exist but lack words.<br><span style="color:var(--text2);font-size:12px;font-style:italic">Ein Forschungslexikon, das 4.407 menschliche Erfahrungen bei KI-Interaktion benennt.</span></span></div>
+    <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:rgba(0,240,255,0.03);border-radius:10px"><span style="font-size:24px;flex-shrink:0" aria-hidden="true">&#x1F50D;</span><span><strong>Purely descriptive.</strong> No recommendations. No value judgments. Positive and concerning patterns equally describable.<br><span style="color:var(--text2);font-size:12px;font-style:italic">Rein deskriptiv. Keine Empfehlungen. Keine Wertungen.</span></span></div>
+    <div style="display:flex;gap:10px;align-items:flex-start;padding:12px;background:rgba(0,240,255,0.03);border-radius:10px"><span style="font-size:24px;flex-shrink:0" aria-hidden="true">&#x1F310;</span><span><strong>Open access.</strong> ISO 704 inspired. DOI on Zenodo. CC BY-NC-ND 4.0. Bilingual EN+DE.<br><span style="color:var(--text2);font-size:12px;font-style:italic">Offen zug&auml;nglich. DOI-registriert. Keine Datenerhebung.</span></span></div>
+  </div>
+</div>
+</section>
+
+<!-- Quick Navigation TOC — compact -->
+<nav id="toc" style="max-width:800px;margin:0 auto 24px;display:flex;flex-wrap:wrap;gap:6px;justify-content:center;padding:0 20px" aria-label="Page navigation">
+  <a href="#wow" style="padding:5px 12px;font-size:11px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">Recognize These?</a>
+  <a href="#showcase" style="padding:5px 12px;font-size:11px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">Featured</a>
+  <a href="#stats" style="padding:5px 12px;font-size:11px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">Stats</a>
+  <a href="#browse" style="padding:5px 12px;font-size:11px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">Browse</a>
+  <a href="#entry-points" style="padding:5px 12px;font-size:11px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">More Entry Points</a>
+  <a href="#cite" style="padding:5px 12px;font-size:11px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);text-decoration:none;transition:all .2s">Cite</a>
 </nav>
 
 <!-- Showcase: Example Terms -->

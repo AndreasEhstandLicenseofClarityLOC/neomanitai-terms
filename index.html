@@ -218,8 +218,8 @@ mark{background:rgba(0,240,255,0.25);color:var(--cyan);border-radius:2px;padding
 @media(max-width:768px){.showcase-grid{grid-template-columns:1fr}}
 
 /* WOW grid horizontal scroll on mobile - tip #3 */
-.wow-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px}
-@media(max-width:768px){.wow-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:12px;padding:4px 0 12px;-webkit-overflow-scrolling:touch}.wow-grid a{flex:0 0 calc(100vw - 40px);scroll-snap-align:start}}
+.wow-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(min(300px,100%),1fr));gap:16px;overflow:visible}
+@media(max-width:768px){.wow-grid{display:grid!important;grid-template-columns:1fr!important;gap:12px;padding:4px 0 12px;overflow-x:visible!important}.wow-grid a{flex:none!important;width:100%!important}}
 
 .intro-bar{max-width:1200px;margin:0 auto 6px;padding:12px 24px;display:flex;align-items:center;gap:12px;font-size:13px;color:var(--text2);line-height:1.6}
 .intro-bar p{margin:0}
@@ -681,6 +681,29 @@ footer{font-family:'Inter',sans-serif!important}
 footer a{transition:color .2s}
 footer a:hover{color:var(--cyan)!important}
 
+
+/* Term card layout fix - name as clear line above description */
+.wow-card,.term-card{display:flex!important;flex-direction:column!important;gap:6px}
+.wow-card .name,.term-card .name{display:block!important;font-size:16px!important;font-weight:600!important;line-height:1.3!important;margin-bottom:4px!important;word-break:normal!important;overflow-wrap:break-word}
+.wow-card .preview,.term-card .preview{display:block!important;font-size:13px!important;line-height:1.6!important;color:#b0b0b8!important}
+
+/* Remove any horizontal scroll on any grid/flex container on mobile */
+@media(max-width:768px){
+  .wow-grid,.grid,.showcase-grid,.browse-grid{overflow-x:visible!important;overflow:visible!important}
+  .wow-grid,.grid{display:grid!important;grid-template-columns:1fr!important}
+  .showcase-grid{grid-template-columns:1fr!important}
+}
+
+/* Fix fun-scroll - also remove horizontal scroll on single items */
+@media(max-width:480px){
+  .fun-scroll{flex-wrap:wrap!important;overflow-x:visible!important}
+  .fun-card{flex:1 1 100%!important;min-width:0!important}
+}
+
+/* Ensure all containers fit viewport */
+*{max-width:100vw}
+section,div,nav,main,footer,header{max-width:100%}
+
 </style>
 </head>
 <body>
@@ -890,7 +913,7 @@ footer a:hover{color:var(--cyan)!important}
     <div style="font-size:clamp(22px,3.5vw,32px);font-weight:800;background:linear-gradient(135deg,#ffdd44,#ff6b9d,#00f0ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px">Recognize this?</div>
     <div style="font-size:clamp(13px,1.8vw,16px);color:var(--text2);max-width:600px;margin:0 auto">Every experience below has been observed, described, and named. Tap any card.</div>
   </div>
-  <div class="wow-grid" style="display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px">
+  <div class="wow-grid">
     <a href="the-seen-feeling.html" class="wow-card" style="display:flex;gap:16px;align-items:center;padding:20px 22px;background:linear-gradient(135deg,rgba(255,107,157,0.08),rgba(0,240,255,0.05));border:1px solid rgba(255,107,157,0.18);border-radius:16px;text-decoration:none;transition:all .35s;position:relative;overflow:hidden" onmouseover="this.style.transform='translateY(-4px)';this.style.boxShadow='0 12px 40px rgba(255,107,157,0.15)'" onmouseout="this.style.transform='none';this.style.boxShadow='none'">
       <span style="font-size:42px;flex-shrink:0">&#x1F62D;</span>
       <div><div style="font-size:18px;font-weight:700;color:#fff;margin-bottom:4px">The Seen Feeling</div><div style="font-size:11px;color:var(--text3);margin-bottom:2px;font-style:italic">&rarr; now it has a name.</div>

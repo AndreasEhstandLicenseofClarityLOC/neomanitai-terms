@@ -1,12 +1,12 @@
 cff-version: 1.2.0
-title: "AUGMANITAI Compendium"
-abstract: "The first systematic framework for identifying and naming previously unnamed phenomena in human-AI interaction."
+title: "NEOMANITAI Compendium"
+abstract: "The largest known systematic lexicon of unnamed human phenomena in human-AI interaction. 2,702 terms across 29 domains."
 authors:
   - family-names: Ehstand
     given-names: Andreas
     orcid: "https://orcid.org/0009-0006-3773-7796"
-version: "10.2.0"
-date-released: 2026-03-16
+version: "13.0.0"
+date-released: 2026-03-26
 identifiers:
   - type: doi
     value: "10.5281/zenodo.14888381"
@@ -16,13 +16,13 @@ keywords:
   - "neologism"
   - "phenomenology"
 license: "CC-BY-NC-ND-4.0"
-repository-code: "https://andreasehstandlicenseofclarityloc.github.io/augmanitai-tools/"
+repository-code: "https://github.com/AndreasEhstandLicenseofClarityLOC/neomanitai-terms"
 url: "https://augmanitai.com"
 preferred-citation:
   type: dataset
   authors:
     - family-names: Ehstand
       given-names: Andreas
-  title: "AUGMANITAI Compendium"
+  title: "NEOMANITAI Compendium"
   doi: "10.5281/zenodo.14888381"
   year: 2026

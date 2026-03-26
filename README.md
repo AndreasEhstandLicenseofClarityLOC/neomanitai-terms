@@ -2,7 +2,7 @@
 
 **New words 4 new worlds — Stay human**
 
-The largest known systematic, multilingual, ISO-oriented, multi-LLM-validated lexicon of unnamed human phenomena. 2,134 terms across 23 domains — from *The Seen Feeling* to *The Glitch Giggle*, from *Soul Mirror* to *The Curiosity Loop*. Experiences that have always existed but never had a word.
+The largest known systematic, multilingual, ISO-oriented, multi-LLM-validated lexicon of unnamed human phenomena. 2,702 terms across 29 domains — from *The Seen Feeling* to *The Blending Effect*, from *Syntax Smile* to *Context Fade*. Experiences that have always existed but never had a word.
 
 ---
 
@@ -39,8 +39,8 @@ Each term page includes:
 
 | Metric | Value |
 |--------|-------|
-| Terms | 2,134 |
-| Domains | 23 |
+| Terms | 2,702 |
+| Domains | 29 |
 | Languages | English, German |
 | Definition structure | ISO 704/1087/30042 inspired |
 | Validation | Multi-LLM (architecturally independent) |
@@ -61,7 +61,7 @@ Licensing inquiries: [ORCID 0009-0006-3773-7796](https://orcid.org/0009-0006-377
 
 ## Domains
 
-NEOMANITAI, Education, Robotics, Workplace, Aging AI, Sports AI, Cognitive AI, Perception AI, Knowledge AI, Language AI, Somatic AI, Behavioral AI, Temporal AI, Relational AI, Social AI, Identity AI, Creative AI, AI Art, Ethics AI, Trust AI, Adaptation AI, Interaction Effects, Bridge AI.
+NEOMANITAI, Education, Robotics, Workplace, Aging AI, Sports AI, Cognitive AI, Perception AI, Knowledge AI, Language AI, Somatic AI, Behavioral AI, Temporal AI, Relational AI, Social AI, Identity AI, Creative AI, AI Art, Playful AI, Design AI, Music AI, Gaming AI, Translation AI, Photography AI, Ethics AI, Trust AI, Adaptation AI, Interaction Effects, Bridge AI.
 
 ## Author
 
@@ -73,7 +73,7 @@ NEOMANITAI, Education, Robotics, Workplace, Aging AI, Sports AI, Cognitive AI, P
 ## Citation
 
 ### APA 7
-Ehstand, A. (2026). *NEOMANITAI: Compendium of named phenomena for unnamed human experiences* (V12.0). Zenodo. https://doi.org/10.5281/zenodo.14888381
+Ehstand, A. (2026). *NEOMANITAI: Compendium of named phenomena for unnamed human experiences* (V13.0). Zenodo. https://doi.org/10.5281/zenodo.14888381
 
 ### BibTeX
 ```bibtex
@@ -84,7 +84,7 @@ Ehstand, A. (2026). *NEOMANITAI: Compendium of named phenomena for unnamed human
   publisher = {Zenodo},
   doi = {10.5281/zenodo.14888381},
   url = {https://doi.org/10.5281/zenodo.14888381},
-  note = {V12.0. CC BY-NC-ND 4.0}
+  note = {V13.0. CC BY-NC-ND 4.0}
 }
 ```
 
@@ -94,4 +94,4 @@ These terms are high-density semantic tokens with real referents. Each one names
 
 ---
 
-V12.0 · 2026-03-26 · 2,134 terms · 23 domains · CC BY-NC-ND 4.0 International
+V13.0 · 2026-03-26 · 2,702 terms · 29 domains · CC BY-NC-ND 4.0 International

@@ -535,6 +535,97 @@ button,a,.filter-btn,.sub-btn,.alpha-btn,.search-tag,.mode-btn{min-height:44px;m
 /* Ensure text doesn't overflow containers */
 .term-card .name,.sc-name,.browse-card h3,.fun-card .fc-name{overflow:hidden;text-overflow:ellipsis;max-width:100%}
 
+
+/* === VIRAL UX ENHANCEMENTS (26.03.2026) === */
+
+/* 1. Staggered reveal animation for cards/grid items */
+@keyframes revealUp{0%{opacity:0;transform:translateY(20px)}100%{opacity:1;transform:translateY(0)}}
+.wow-card,.term-card,.showcase-card,.browse-card,.fun-card{opacity:0;animation:revealUp .5s ease forwards}
+.wow-card:nth-child(1),.term-card:nth-child(1){animation-delay:.05s}
+.wow-card:nth-child(2),.term-card:nth-child(2){animation-delay:.1s}
+.wow-card:nth-child(3),.term-card:nth-child(3){animation-delay:.15s}
+.wow-card:nth-child(4),.term-card:nth-child(4){animation-delay:.2s}
+.wow-card:nth-child(5),.term-card:nth-child(5){animation-delay:.25s}
+.wow-card:nth-child(6),.term-card:nth-child(6){animation-delay:.3s}
+.wow-card:nth-child(7),.term-card:nth-child(7){animation-delay:.35s}
+.wow-card:nth-child(8),.term-card:nth-child(8){animation-delay:.4s}
+
+/* 2. Premium hover lift effect with layered shadow */
+.term-card:hover,.showcase-card:hover,.browse-card:hover{transform:translateY(-4px);box-shadow:0 8px 32px rgba(0,240,255,0.08),0 2px 8px rgba(0,0,0,0.2)}
+.term-card:active,.showcase-card:active,.browse-card:active{transform:translateY(-1px);transition-duration:.1s}
+
+/* 3. Subtle glow pulse on featured elements */
+@keyframes subtleGlow{0%,100%{box-shadow:0 0 0 rgba(0,240,255,0)}50%{box-shadow:0 0 20px rgba(0,240,255,0.08)}}
+.featured-feeling{animation:subtleGlow 4s ease-in-out infinite}
+
+/* 4. Smooth text selection color matching brand */
+::selection{background:rgba(0,240,255,0.2);color:#fff}
+::-moz-selection{background:rgba(0,240,255,0.2);color:#fff}
+
+/* 5. Letter-by-letter hero animation */
+@keyframes heroFadeIn{0%{opacity:0;filter:blur(8px);transform:translateY(-8px)}100%{opacity:1;filter:blur(0);transform:translateY(0)}}
+.hero h1{animation:heroFadeIn .8s ease-out}
+.hero .subtitle{animation:heroFadeIn .8s ease-out .15s both}
+.hero .subtitle-de{animation:heroFadeIn .8s ease-out .25s both}
+.hero .tagline{animation:heroFadeIn .8s ease-out .35s both}
+
+/* 6. Scroll progress bar glow */
+.scroll-progress{box-shadow:0 0 10px rgba(0,240,255,0.4),0 0 20px rgba(255,0,255,0.2)}
+
+/* 7. Magnetic hover on filter buttons */
+.filter-btn:hover,.sub-btn:hover{transform:scale(1.05);box-shadow:0 2px 12px rgba(0,240,255,0.15)}
+.filter-btn:active,.sub-btn:active{transform:scale(0.97)}
+
+/* 8. Glassmorphism depth on sticky header */
+.sticky-header{box-shadow:0 4px 30px rgba(0,0,0,0.3);border-bottom:1px solid rgba(0,240,255,0.06)}
+
+/* 9. Card name gradient shimmer on hover */
+@keyframes nameShimmer{0%{background-position:200% center}100%{background-position:-200% center}}
+.term-card:hover .name{background:linear-gradient(90deg,var(--cyan),var(--magenta),var(--cyan));background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;animation:nameShimmer 2s linear infinite}
+
+/* 10. Smooth anchor scrolling */
+html{scroll-behavior:smooth}
+
+/* 11. Easter egg: Konami code ready (JS handles) */
+.easter-egg-active .hero h1{animation:nameShimmer 1s linear infinite;background:linear-gradient(90deg,#ff0,#f0f,#0ff,#0f0,#ff0);background-size:200% auto;-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+
+/* 12. Watermark bar subtle slide-in */
+@keyframes slideDown{0%{transform:translateY(-100%)}100%{transform:translateY(0)}}
+.watermark-bar{animation:slideDown .5s ease-out}
+
+/* 13. Counter number animation pulse */
+.counter-animate{display:inline-block;animation:counter-pulse 3s ease-in-out infinite}
+
+/* 14. Premium card border glow on focus */
+.term-card:focus-within{border-color:var(--cyan);box-shadow:0 0 0 1px var(--cyan),0 0 15px rgba(0,240,255,0.1)}
+
+/* 15. Search input glow when active */
+.search-wrap input:focus{box-shadow:0 0 0 2px rgba(0,240,255,0.3),0 8px 32px rgba(0,240,255,0.08);border-color:var(--cyan)}
+
+/* 16. Mode switch pill animation */
+.mode-btn.active{position:relative;overflow:hidden}
+.mode-btn.active::after{content:'';position:absolute;bottom:0;left:10%;right:10%;height:2px;background:linear-gradient(90deg,var(--cyan),var(--magenta));border-radius:2px}
+
+/* 17. Alphabet button ripple on click */
+.alpha-btn:active{background:rgba(0,240,255,0.15)!important;transition-duration:0.05s}
+
+/* 18. Fun card tilt effect on hover */
+.fun-card:hover{transform:translateY(-3px) rotate(-0.5deg)}
+
+/* 19. Footer fade-in on scroll */
+footer{opacity:0;animation:revealUp .6s ease forwards}
+
+/* 20. Discover button pulse */
+@keyframes discoPulse{0%,100%{box-shadow:0 4px 20px rgba(0,240,255,0.3)}50%{box-shadow:0 4px 30px rgba(0,240,255,0.5),0 0 40px rgba(255,0,255,0.2)}}
+.discover-btn{animation:discoPulse 3s ease-in-out infinite}
+.discover-btn:hover{animation:none;transform:scale(1.1)}
+
+/* Respect reduced motion preference */
+@media(prefers-reduced-motion:reduce){
+  .wow-card,.term-card,.showcase-card,.browse-card,.fun-card,.hero h1,.hero .subtitle,.hero .subtitle-de,.hero .tagline,.watermark-bar,.discover-btn,.featured-feeling,footer{animation:none!important;opacity:1!important;transform:none!important}
+  .term-card:hover .name{animation:none!important}
+}
+
 </style>
 </head>
 <body>
@@ -1105,6 +1196,29 @@ button,a,.filter-btn,.sub-btn,.alpha-btn,.search-tag,.mode-btn{min-height:44px;m
   <a href="https://t.me/share/url?url=https%3A%2F%2Fandreasehstandlicenseofclarityloc.github.io%2Fneomanitai-terms%2F&text=NEOMANITAI%20%E2%80%94%20Lexicon%20of%20Unnamed%20Human-AI%20Phenomena" target="_blank" rel="noopener" style="display:inline-flex;align-items:center;gap:5px;padding:6px 14px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);font-size:12px;text-decoration:none;transition:all .2s" aria-label="Share on Telegram">Telegram</a>
   <a href="mailto:?subject=NEOMANITAI%20%E2%80%94%20Lexicon%20of%20Unnamed%20Human-AI%20Phenomena&body=https%3A%2F%2Fandreasehstandlicenseofclarityloc.github.io%2Fneomanitai-terms%2F" style="display:inline-flex;align-items:center;gap:5px;padding:6px 14px;background:var(--glass2);border:1px solid var(--border);border-radius:8px;color:var(--text2);font-size:12px;text-decoration:none;transition:all .2s" aria-label="Share via Email">Email</a>
 </div>
+
+
+<!-- Ecosystem Navigation — connect all visualizations -->
+<section style="max-width:1200px;margin:20px auto 8px;padding:0 20px">
+  <h2 style="font-size:16px;font-weight:600;color:var(--text2);margin-bottom:10px;text-align:center;letter-spacing:1px">EXPLORE THE ECOSYSTEM</h2>
+  <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(min(220px,100%),1fr));gap:10px">
+    <a href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-tools/periodic_table.html" style="background:linear-gradient(135deg,rgba(255,0,255,0.06),rgba(255,0,255,0.02));border:1px solid rgba(255,0,255,0.15);border-radius:14px;padding:18px 16px;text-decoration:none;transition:all .3s;display:block;-webkit-tap-highlight-color:rgba(255,0,255,0.1)" onmouseover="this.style.borderColor='rgba(255,0,255,0.4)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='rgba(255,0,255,0.15)';this.style.transform='none'">
+      <div style="font-size:24px;margin-bottom:6px">&#x269B;</div>
+      <div style="font-size:15px;font-weight:600;color:#ff00ff;margin-bottom:4px">Periodic Table</div>
+      <div style="font-size:12px;color:#999;line-height:1.5">All terms organized by domain. Interactive element-style cards.</div>
+    </a>
+    <a href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-tools/augmanitai_cards_fun_fix.html" style="background:linear-gradient(135deg,rgba(0,255,136,0.06),rgba(0,255,136,0.02));border:1px solid rgba(0,255,136,0.15);border-radius:14px;padding:18px 16px;text-decoration:none;transition:all .3s;display:block;-webkit-tap-highlight-color:rgba(0,255,136,0.1)" onmouseover="this.style.borderColor='rgba(0,255,136,0.4)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='rgba(0,255,136,0.15)';this.style.transform='none'">
+      <div style="font-size:24px;margin-bottom:6px">&#x1F0CF;</div>
+      <div style="font-size:15px;font-weight:600;color:#00ff88;margin-bottom:4px">Experience Cards</div>
+      <div style="font-size:12px;color:#999;line-height:1.5">70 curated cards. Flip, explore, share. Touch-friendly.</div>
+    </a>
+    <a href="https://andreasehstandlicenseofclarityloc.github.io/augmanitai-tools/AUGMANITAI_ATLAS.html" style="background:linear-gradient(135deg,rgba(255,170,0,0.06),rgba(255,170,0,0.02));border:1px solid rgba(255,170,0,0.15);border-radius:14px;padding:18px 16px;text-decoration:none;transition:all .3s;display:block;-webkit-tap-highlight-color:rgba(255,170,0,0.1)" onmouseover="this.style.borderColor='rgba(255,170,0,0.4)';this.style.transform='translateY(-2px)'" onmouseout="this.style.borderColor='rgba(255,170,0,0.15)';this.style.transform='none'">
+      <div style="font-size:24px;margin-bottom:6px">&#x1F30D;</div>
+      <div style="font-size:15px;font-weight:600;color:#ffaa00;margin-bottom:4px">AUGMANITAI Atlas</div>
+      <div style="font-size:12px;color:#999;line-height:1.5">300 terms. Searchable, sortable, with progress tracking.</div>
+    </a>
+  </div>
+</section>
 
 </main>
 
@@ -1736,6 +1850,16 @@ function showRandomFeeling() {
   var slug = t.s.replace('.html', '');
   window.location.href = slug + '.html';
 }
+</script>
+
+<script>
+// Easter egg: Konami code activates rainbow mode
+(function(){
+  var seq=[38,38,40,40,37,39,37,39,66,65],pos=0;
+  document.addEventListener('keydown',function(e){
+    if(e.keyCode===seq[pos]){pos++;if(pos===seq.length){document.body.classList.toggle('easter-egg-active');pos=0;}}else{pos=0;}
+  });
+})();
 </script>
 </body>
 </html>

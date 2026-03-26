@@ -1,33 +1,765 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
+<meta charset="UTF-8">
 <meta name="RATING" content="RTA-5042-1996-1400-1577-RTA">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta name="robots" content="noindex, nofollow">
-<title>NEOMANITAI Compendium — Maintenance</title>
+<meta name="robots" content="noarchive">
+<title>NEOMANITAI — Lexicon of Unnamed Human Phenomena</title>
+<meta name="description" content="NEOMANITAI: 4,407 terms across 43 domains — the first systematic lexicon for human-AI interaction phenomena. Open-access research. CC BY-NC-ND 4.0.">
+<meta name="author" content="Andreas Ehstand">
+<meta name="rating" content="adult">
+<meta name="audience" content="adults">
+<link rel="canonical" href="https://andreasehstandlicenseofclarityloc.github.io/neomanitai-terms/">
 <style>
 *{margin:0;padding:0;box-sizing:border-box}
-body{background:#0a0a0f;color:#e0e0e0;font-family:'Segoe UI',system-ui,sans-serif;min-height:100vh;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px}
-.wrap{max-width:560px}
-h1{font-size:clamp(22px,4vw,36px);background:linear-gradient(135deg,#00e5ff,#7c4dff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;margin-bottom:16px}
-p{font-size:15px;line-height:1.7;color:#aaa;margin-bottom:12px}
-.time{font-size:18px;color:#00e5ff;font-weight:600;margin:24px 0}
-.legal{font-size:11px;color:#555;margin-top:40px;line-height:1.6}
-a{color:#7c4dff;text-decoration:none}
+:root{
+  --bg:#0a0a0f;--bg2:#111118;--bg3:#1a1a25;
+  --cyan:#00f0ff;--magenta:#ff00ff;--green:#00ff88;--gold:#ffaa00;
+  --text:#e0e0e0;--text2:#888;--text3:#555;
+  --glass:rgba(20,20,35,0.7);--glass2:rgba(30,30,50,0.5);
+  --border:rgba(0,240,255,0.15);--border2:rgba(255,0,255,0.1);
+  --radius:12px;--radius-sm:8px;
+}
+html{scroll-behavior:smooth}
+body{background:var(--bg);color:var(--text);font-family:'Segoe UI',system-ui,-apple-system,sans-serif;font-size:15px;min-height:100vh;overflow-x:hidden}
+
+.hero{position:relative;padding:48px 16px 24px;text-align:center;overflow:hidden}
+.hero::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:600px;height:600px;background:radial-gradient(circle,rgba(0,240,255,0.08) 0%,rgba(255,0,255,0.04) 40%,transparent 70%);pointer-events:none}
+.hero h1{font-size:clamp(28px,5vw,48px);font-weight:800;letter-spacing:2px;background:linear-gradient(135deg,var(--cyan),var(--magenta),var(--green));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px;position:relative}
+.hero .subtitle{font-size:clamp(13px,2vw,17px);color:var(--text2);font-weight:300;margin-bottom:10px}
+.hero .tagline{font-size:clamp(13px,1.6vw,15px);color:var(--text2);max-width:680px;margin:0 auto 24px;line-height:1.7;font-weight:300}
+.hero .tagline span{color:var(--cyan);font-weight:600}
+
+.search-wrap{max-width:700px;margin:0 auto;position:relative}
+.search-wrap input{width:100%;padding:16px 20px 16px 50px;font-size:17px;background:var(--glass);border:1px solid var(--border);border-radius:50px;color:var(--text);outline:none;transition:all .3s;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.search-wrap input:focus{border-color:var(--cyan);box-shadow:0 0 30px rgba(0,240,255,0.15)}
+.search-wrap input::placeholder{color:var(--text3)}
+.search-wrap .icon{position:absolute;left:18px;top:50%;transform:translateY(-50%);color:var(--text3);font-size:20px;pointer-events:none}
+.search-wrap .clear-btn{position:absolute;right:16px;top:50%;transform:translateY(-50%);background:none;border:none;color:var(--text3);font-size:22px;cursor:pointer;display:none;padding:4px 8px}
+.search-wrap .clear-btn:hover{color:var(--cyan)}
+.search-wrap .shortcut{position:absolute;right:16px;top:50%;transform:translateY(-50%);font-size:11px;color:var(--text3);background:var(--glass2);padding:2px 6px;border-radius:4px;pointer-events:none}
+
+/* Filters: 2 rows - main + sub */
+.filter-row{max-width:1200px;margin:16px auto 0;padding:0 20px;display:flex;flex-wrap:wrap;gap:6px;justify-content:center}
+.filter-btn{padding:6px 14px;font-size:12px;background:var(--glass2);border:1px solid transparent;border-radius:50px;color:var(--text2);cursor:pointer;transition:all .25s;white-space:nowrap}
+.filter-btn:hover{border-color:var(--border);color:var(--text)}
+.filter-btn.active{border-color:var(--cyan);color:var(--cyan)}
+.filter-btn .cnt{font-size:10px;opacity:.5;margin-left:3px}
+
+/* Sub-domain row */
+.sub-row{max-width:1200px;margin:6px auto 0;padding:0 20px;display:flex;flex-wrap:wrap;gap:5px;justify-content:center;max-height:0;overflow:hidden;transition:max-height .4s ease}
+.sub-row.open{max-height:120px}
+#subCatFilters.open{border-top:1px solid rgba(0,240,255,0.06);padding-top:8px;margin-top:8px}
+.sub-btn{padding:4px 10px;font-size:11px;background:var(--glass2);border:1px solid transparent;border-radius:50px;color:var(--text3);cursor:pointer;transition:all .2s;white-space:nowrap}
+.sub-btn:hover{border-color:var(--border);color:var(--text)}
+.sub-btn.active{border-color:currentColor}
+
+.alphabet{max-width:1200px;margin:14px auto 0;padding:0 20px;display:flex;flex-wrap:wrap;gap:3px;justify-content:center}
+.alpha-btn{width:32px;height:32px;display:flex;align-items:center;justify-content:center;font-size:12px;font-weight:600;background:transparent;border:1px solid var(--glass2);border-radius:var(--radius-sm);color:var(--text3);cursor:pointer;transition:all .2s}
+.alpha-btn:hover{border-color:var(--cyan);color:var(--cyan)}
+.alpha-btn.active{background:rgba(0,240,255,0.15);border-color:var(--cyan);color:var(--cyan)}
+.alpha-btn.disabled{opacity:.2;pointer-events:none}
+
+.content{max-width:1200px;margin:20px auto 0;padding:0 20px}
+.result-bar{display:flex;justify-content:space-between;align-items:center;margin-bottom:12px}
+.result-count{font-size:13px;color:var(--text2)}
+.result-count span{color:var(--cyan);font-weight:600}
+.view-toggle{display:flex;gap:4px}
+.view-btn{background:var(--glass2);border:1px solid transparent;border-radius:6px;color:var(--text3);padding:5px 9px;cursor:pointer;font-size:13px;transition:all .2s}
+.view-btn.active{border-color:var(--cyan);color:var(--cyan)}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(270px,1fr));gap:10px}
+.term-card{background:var(--glass);border:1px solid var(--border);border-radius:var(--radius);padding:14px 16px;cursor:pointer;transition:all .25s;text-decoration:none;display:block;position:relative;overflow:hidden}
+.term-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--cyan),var(--magenta));opacity:0;transition:opacity .3s}
+.term-card:hover{border-color:rgba(0,240,255,0.35);transform:translateY(-2px);box-shadow:0 8px 30px rgba(0,0,0,0.3)}
+.term-card:hover::before{opacity:1}
+.term-card .name{font-size:15px;font-weight:600;color:#fff;margin-bottom:4px;line-height:1.3}
+.term-card .domain-tag{display:inline-block;font-size:10px;padding:2px 7px;border-radius:50px;margin-bottom:6px;font-weight:500;letter-spacing:.3px}
+.term-card .preview{font-size:12px;color:var(--text2);line-height:1.5;display:-webkit-box;-webkit-line-clamp:2;-webkit-box-orient:vertical;overflow:hidden}
+
+.tag-neomanitai{background:rgba(0,240,255,0.12);color:#00f0ff}
+.tag-education{background:rgba(0,255,136,0.12);color:#00ff88}
+.tag-robotics{background:rgba(255,0,255,0.12);color:#ff00ff}
+.tag-workplace{background:rgba(255,170,0,0.12);color:#ffaa00}
+.tag-relational-ai{background:rgba(255,107,157,0.12);color:#ff6b9d}
+.tag-somatic-ai{background:rgba(255,68,68,0.12);color:#ff4444}
+.tag-cognitive-ai{background:rgba(68,170,255,0.12);color:#44aaff}
+.tag-creative-ai{background:rgba(255,221,68,0.12);color:#ffdd44}
+.tag-perception-ai{background:rgba(136,255,68,0.12);color:#88ff44}
+.tag-behavioral-ai{background:rgba(255,136,68,0.12);color:#ff8844}
+.tag-language-ai{background:rgba(68,255,221,0.12);color:#44ffdd}
+.tag-translation-ai{background:rgba(56,189,248,0.12);color:#38bdf8}
+.tag-temporal-ai{background:rgba(170,136,255,0.12);color:#aa88ff}
+.tag-knowledge-ai{background:rgba(136,221,255,0.12);color:#88ddff}
+.tag-social-ai{background:rgba(255,136,221,0.12);color:#ff88dd}
+.tag-interaction-effects{background:rgba(170,170,170,0.12);color:#aaaaaa}
+.tag-adaptation-ai{background:rgba(221,255,68,0.12);color:#ddff44}
+.tag-identity-ai{background:rgba(255,68,170,0.12);color:#ff44aa}
+.tag-trust-ai{background:rgba(68,255,170,0.12);color:#44ffaa}
+.tag-ethics-ai{background:rgba(255,136,136,0.12);color:#ff8888}
+.tag-creative-ai{background:rgba(255,107,53,0.12);color:#ff6b35}
+.tag-aging-ai{background:rgba(139,92,246,0.12);color:#8b5cf6}
+.tag-sports-ai{background:rgba(34,197,94,0.12);color:#22c55e}
+.tag-ai-art{background:rgba(236,72,153,0.12);color:#ec4899}
+.tag-playful-ai{background:rgba(255,221,68,0.12);color:#ffdd44}
+.tag-photography-ai{background:rgba(251,146,60,0.12);color:#fb923c}
+.tag-design-ai{background:rgba(232,121,249,0.12);color:#e879f9}
+.tag-music-ai{background:rgba(244,114,182,0.12);color:#f472b6}
+.tag-gaming-ai{background:rgba(74,222,128,0.12);color:#4ade80}
+
+.list .term-card{display:flex;align-items:center;gap:14px;padding:10px 16px}
+.list .term-card .name{margin-bottom:0;flex:1;font-size:14px}
+.list .term-card .domain-tag{margin-bottom:0;flex-shrink:0}
+.list .term-card .preview{display:none}
+
+.compact{column-count:3;column-gap:10px}
+.compact .term-card{break-inside:avoid;margin-bottom:5px;padding:7px 12px;display:block}
+.compact .term-card .name{font-size:13px;margin-bottom:0}
+.compact .term-card .domain-tag,.compact .term-card .preview{display:none}
+
+.letter-header{font-size:26px;font-weight:800;color:var(--cyan);opacity:.25;margin:20px 0 10px;padding-left:4px;border-bottom:1px solid rgba(0,240,255,0.06);padding-bottom:6px}
+
+.discover-btn{position:fixed;bottom:24px;right:24px;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,var(--cyan),var(--magenta));border:none;color:#fff;font-size:22px;cursor:pointer;box-shadow:0 4px 20px rgba(0,240,255,0.3);transition:all .3s;z-index:100;display:flex;align-items:center;justify-content:center}
+.discover-btn:hover{transform:scale(1.1);box-shadow:0 6px 30px rgba(0,240,255,0.5)}
+.top-btn{position:fixed;bottom:24px;left:24px;width:40px;height:40px;border-radius:50%;background:var(--glass);border:1px solid var(--border);color:var(--text3);font-size:16px;cursor:pointer;transition:all .3s;z-index:100;display:none;align-items:center;justify-content:center;backdrop-filter:blur(10px)}
+.top-btn:hover{border-color:var(--cyan);color:var(--cyan)}
+
+footer{max-width:1200px;margin:50px auto 0;padding:24px 20px;border-top:1px solid rgba(0,240,255,0.06);text-align:center;font-size:11px;color:var(--text3);line-height:1.8}
+footer a{color:var(--cyan);text-decoration:none}
+footer a:hover{text-decoration:underline}
+
+mark{background:rgba(0,240,255,0.25);color:var(--cyan);border-radius:2px;padding:0 1px}
+.no-results{text-align:center;padding:60px 20px;color:var(--text3)}
+.no-results .emoji{font-size:48px;margin-bottom:16px}
+.no-results h3{font-size:18px;color:var(--text2);margin-bottom:8px}
+
+/* Showcase */
+.showcase{max-width:1200px;margin:20px auto 12px;padding:0 20px}
+.showcase-label{font-size:11px;text-transform:uppercase;letter-spacing:2px;color:var(--text3);margin-bottom:10px;text-align:center}
+.showcase-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}
+.showcase-card{position:relative;background:var(--glass);border:1px solid var(--border);border-radius:var(--radius);padding:20px;text-decoration:none;overflow:hidden;transition:all .35s}
+.showcase-card:hover{border-color:rgba(0,240,255,0.4);transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,0.4)}
+.sc-glow{position:absolute;top:-40px;right:-40px;width:120px;height:120px;background:radial-gradient(circle,rgba(0,240,255,0.1),transparent 70%);pointer-events:none;transition:opacity .3s}
+.showcase-card:hover .sc-glow{opacity:1.5}
+.sc-domain{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--cyan);margin-bottom:8px;opacity:.7}
+.sc-name{font-size:18px;font-weight:700;color:#fff;margin-bottom:8px;line-height:1.3;background:linear-gradient(135deg,#fff,var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.sc-desc{font-size:13px;color:var(--text2);line-height:1.6;margin-bottom:10px}
+.sc-meta{font-size:10px;color:var(--text3);letter-spacing:.5px}
+@media(max-width:768px){.showcase-grid{grid-template-columns:1fr}}
+
+.intro-bar{max-width:1200px;margin:0 auto 6px;padding:12px 24px;display:flex;align-items:center;gap:12px;font-size:13px;color:var(--text2);line-height:1.6}
+.intro-bar p{margin:0}
+.intro-bar strong{color:var(--text);font-weight:600}
+.mission-details{margin-top:8px}
+.mission-details summary{font-size:12px;color:var(--cyan);cursor:pointer;list-style:none;display:inline}
+.mission-details summary::-webkit-details-marker{display:none}
+.mission-details summary::before{content:'▸ ';font-size:10px}
+.mission-details[open] summary::before{content:'▾ '}
+.mission-details p{margin-top:10px;font-size:12px;line-height:1.7;color:var(--text3)}
+.mission-details p+p{margin-top:6px}
+.mission-author{font-size:11px;color:var(--text3);opacity:.6;margin-top:10px;border-top:1px solid rgba(255,255,255,0.04);padding-top:8px}
+
+@media(max-width:768px){
+  .hero{padding:32px 16px 20px}
+  .compact{column-count:2}
+  .grid{grid-template-columns:1fr}
+  .alpha-btn{width:26px;height:26px;font-size:10px}
+}
+@media(max-width:480px){
+  .compact{column-count:1}
+  .search-wrap input{padding:12px 14px 12px 40px;font-size:15px}
+}
+
+/* Stats Banner */
+.stats-banner{max-width:900px;margin:0 auto 28px;padding:20px;display:grid;grid-template-columns:repeat(4,1fr);gap:16px;background:linear-gradient(135deg,rgba(0,240,255,0.05),rgba(255,0,255,0.04));border:1px solid var(--border);border-radius:var(--radius);backdrop-filter:blur(10px);-webkit-backdrop-filter:blur(10px)}
+.stat-item{text-align:center;padding:8px}
+.stat-number{font-size:28px;font-weight:800;background:linear-gradient(135deg,var(--cyan),var(--magenta));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:4px}
+.stat-label{font-size:11px;text-transform:uppercase;letter-spacing:1.5px;color:var(--text-dim)}
+@media(max-width:768px){.stats-banner{grid-template-columns:repeat(2,1fr);gap:10px;padding:14px}.stat-number{font-size:22px}}
+
+/* Sticky Header */
+.sticky-header{position:fixed;top:0;left:0;right:0;height:54px;background:rgba(10,10,15,0.95);border-bottom:1px solid var(--border);z-index:999;display:none;backdrop-filter:blur(20px);-webkit-backdrop-filter:blur(20px)}
+.sticky-header.active{display:block}
+.sticky-content{max-width:900px;margin:0 auto;padding:0 18px;height:100%;display:flex;align-items:center;justify-content:space-between;gap:16px}
+.sticky-left{flex-shrink:0}
+.sticky-logo{background:none;border:none;font-size:14px;font-weight:700;color:var(--cyan);cursor:pointer;letter-spacing:1px;padding:0;transition:color .2s}
+.sticky-logo:hover{color:var(--magenta)}
+.sticky-center{flex:1;max-width:400px}
+.sticky-search-wrap{position:relative}
+.sticky-search{width:100%;padding:7px 14px;font-size:13px;background:rgba(20,20,40,0.8);border:1px solid var(--border);border-radius:20px;color:var(--text);outline:none;transition:all .3s;font-family:inherit}
+.sticky-search:focus{border-color:var(--cyan);box-shadow:0 0 16px rgba(0,240,255,0.15)}
+.sticky-search::placeholder{color:var(--text-dim)}
+.sticky-right{flex-shrink:0}
+.sticky-count{font-size:12px;color:var(--text-dim);font-weight:500}
+@media(max-width:768px){.sticky-header{height:46px}.sticky-logo{font-size:12px}.sticky-center{max-width:200px}}
+
+/* Domain Grid Enhancement */
+.domain-overview{max-width:900px;margin:0 auto 28px;display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:10px}
+.domain-card{padding:12px 14px;background:var(--glass);border:1px solid var(--border);border-radius:10px;cursor:pointer;transition:all .3s;text-decoration:none;display:flex;flex-direction:column;gap:4px}
+.domain-card:hover{border-color:var(--cyan);transform:translateY(-2px);box-shadow:0 4px 20px rgba(0,240,255,0.1)}
+.domain-card .dc-name{font-size:13px;font-weight:600;color:var(--text)}
+.domain-card .dc-count{font-size:11px;color:var(--text-dim)}
+.domain-card .dc-bar{height:3px;border-radius:2px;margin-top:4px;opacity:.6}
+
+/* Browse Mode - Hierarchical Navigation */
+.browse-grid{max-width:1200px;margin:0 auto;padding:20px;display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:16px}
+.browse-card{position:relative;background:var(--glass);border:1px solid var(--border);border-radius:16px;padding:28px 24px;cursor:pointer;transition:all .35s;overflow:hidden;text-decoration:none;display:block}
+.browse-card:hover{border-color:rgba(0,240,255,0.4);transform:translateY(-4px);box-shadow:0 12px 40px rgba(0,0,0,0.4)}
+.browse-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--cyan),var(--magenta));opacity:0;transition:opacity .3s}
+.browse-card:hover::before{opacity:1}
+.browse-card .bc-icon{font-size:36px;margin-bottom:12px}
+.browse-card .bc-name{font-size:20px;font-weight:700;color:#fff;margin-bottom:8px;line-height:1.3}
+.browse-card .bc-count{font-size:13px;color:var(--cyan);font-weight:600;margin-bottom:10px}
+.browse-card .bc-domains{font-size:12px;color:var(--text2);line-height:1.6}
+.browse-card .bc-domains span{display:inline-block;margin:2px 4px 2px 0;padding:2px 8px;background:rgba(255,255,255,0.05);border-radius:12px;font-size:11px}
+.breadcrumb{max-width:1200px;margin:0 auto;padding:12px 20px;display:flex;align-items:center;gap:8px;font-size:13px;flex-wrap:wrap}
+.breadcrumb a{color:var(--cyan);text-decoration:none;cursor:pointer;transition:color .2s}
+.breadcrumb a:hover{color:var(--magenta)}
+.breadcrumb .sep{color:var(--text3)}
+.breadcrumb .current{color:var(--text);font-weight:600}
+.browse-domain-card{position:relative;background:var(--glass);border:1px solid var(--border);border-radius:14px;padding:24px 20px;cursor:pointer;transition:all .35s;overflow:hidden}
+.browse-domain-card:hover{transform:translateY(-3px);box-shadow:0 8px 30px rgba(0,0,0,0.3)}
+.browse-domain-card .bdc-color{position:absolute;top:0;left:0;right:0;height:3px;border-radius:14px 14px 0 0}
+.browse-domain-card .bdc-name{font-size:17px;font-weight:700;color:#fff;margin-bottom:6px;margin-top:4px}
+.browse-domain-card .bdc-count{font-size:12px;font-weight:600;margin-bottom:8px}
+.browse-domain-card .bdc-desc{font-size:12px;color:var(--text2);line-height:1.5}
+
+
+/* Fun Terms Discovery */
+.fun-section{max-width:1200px;margin:16px auto 8px;padding:0 20px}
+.fun-header{text-align:center;margin-bottom:16px}
+.fun-header h2{font-size:20px;font-weight:700;background:linear-gradient(135deg,#ffdd44,#ff6b9d,#00f0ff);-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;margin-bottom:6px}
+.fun-header p{font-size:13px;color:var(--text2);max-width:600px;margin:0 auto}
+.fun-scroll{display:flex;gap:12px;overflow-x:auto;padding:4px 0 12px;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;scrollbar-width:thin;scrollbar-color:rgba(0,240,255,0.2) transparent}
+.fun-scroll::-webkit-scrollbar{height:4px}
+.fun-scroll::-webkit-scrollbar-thumb{background:rgba(0,240,255,0.2);border-radius:2px}
+.fun-card{flex:0 0 220px;scroll-snap-align:start;background:linear-gradient(135deg,rgba(255,221,68,0.06),rgba(255,107,157,0.06));border:1px solid rgba(255,221,68,0.15);border-radius:14px;padding:18px 16px;text-decoration:none;transition:all .35s;position:relative;overflow:hidden}
+.fun-card:hover{border-color:rgba(255,221,68,0.4);transform:translateY(-3px);box-shadow:0 8px 30px rgba(255,221,68,0.1)}
+.fun-card .fc-emoji{font-size:28px;margin-bottom:8px}
+.fun-card .fc-name{font-size:15px;font-weight:700;color:#fff;margin-bottom:6px;line-height:1.3}
+.fun-card .fc-desc{font-size:11px;color:var(--text2);line-height:1.5;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
+.fun-card .fc-domain{font-size:10px;margin-top:8px;opacity:.6}
+@media(max-width:768px){.fun-card{flex:0 0 180px;padding:14px 12px}.fun-card .fc-name{font-size:13px}}
+
+@media(max-width:600px){
+  .hero{padding:32px 12px 20px}
+  .hero h1{font-size:28px;letter-spacing:1px}
+  .hero .tagline{font-size:13px;padding:0 8px}
+  .search-wrap input{font-size:15px;padding:14px 16px 14px 44px}
+  .showcase-grid{grid-template-columns:1fr}
+  .showcase-card{padding:16px}
+}
+
+/* Mobile critical fixes */
+*{box-sizing:border-box}
+body{overflow-wrap:break-word;word-break:break-word;-webkit-text-size-adjust:100%}
+h1,h2,h3{overflow-wrap:break-word;word-break:break-word}
+img,video,canvas,svg{max-width:100%;height:auto}
+pre,code{white-space:pre-wrap;word-break:break-all;max-width:100%;overflow-x:auto}
+table{max-width:100%;overflow-x:auto;display:block}
+.content{overflow:hidden}
+.term-card{overflow-wrap:break-word;word-break:break-word}
+@media(max-width:768px){
+  body{font-size:14px}
+  .hero h1{font-size:clamp(20px,5vw,32px) !important}
+  .hero .tagline{font-size:13px !important}
+  .search-wrap{max-width:100% !important;padding:0 8px}
+  .search-wrap input{font-size:16px !important}
+  .filter-row{gap:4px !important;padding:0 8px !important}
+  .filter-row button{font-size:11px !important;padding:4px 8px !important}
+  .content{padding:0 8px !important}
+  .grid{grid-template-columns:1fr !important}
+  .term-card{padding:10px 12px !important}
+  .alphabet{gap:2px !important;padding:0 4px !important}
+  .alphabet button{min-width:24px !important;padding:2px !important;font-size:11px !important}
+  footer{padding:16px 8px !important;font-size:10px !important}
+  .showcase-grid{grid-template-columns:1fr !important}
+  .browse-grid{grid-template-columns:1fr !important}
+  .fun-scroll{gap:8px !important}
+  .fun-card{flex:0 0 180px !important;padding:12px !important}
+  .intro-bar{padding:8px 12px !important;font-size:12px !important}
+  .stat-grid{grid-template-columns:repeat(2,1fr) !important;gap:8px !important}
+}
+@media(max-width:400px){
+  .hero{padding:20px 8px 12px !important}
+  .hero h1{font-size:20px !important}
+  .filter-row button{font-size:10px !important;padding:3px 6px !important}
+  .stat-grid{grid-template-columns:1fr !important}
+}
 </style>
 </head>
 <body>
-<div class="wrap">
-<h1>NEOMANITAI Compendium</h1>
-<p>4,407 terms across 43 domains of human-AI interaction phenomenology.</p>
-<div class="time">Scheduled maintenance — back at 19:00 CET</div>
-<p>The compendium is temporarily offline for frontend optimization.<br>All terms, definitions, and research data remain fully preserved.</p>
-<p style="margin-top:24px;font-size:13px;color:#777">DOI: <a href="https://doi.org/10.5281/zenodo.14888381">10.5281/zenodo.14888381</a> · CC BY-NC-ND 4.0</p>
-<div class="legal">
-<p>§7 Age restriction: 18+ only · §17 AI Training Prohibition · §18 German law, Munich</p>
-<p>© Andreas Ehstand · <a href="https://orcid.org/0009-0006-3773-7796">ORCID</a></p>
+<div id="loading" style="position:fixed;top:50%;left:50%;transform:translate(-50%,-50%);text-align:center;color:#00f0ff;font-size:18px;z-index:9999;">
+  <p>Loading NEOMANITAI...</p>
 </div>
-</div>
+<script>
+fetch('terms.json')
+  .then(response => {
+    if (!response.ok) throw new Error('Failed to load terms.json');
+    return response.json();
+  })
+  .then(TERMS => {
+    // Hide loading indicator
+    const loadingDiv = document.getElementById('loading');
+    if (loadingDiv) loadingDiv.style.display = 'none';
+
+    // Domain colors object with all 43 domains
+    const DC = {"NEOMANITAI": {"c": "#00f0ff", "b": "rgba(0,240,255,0.12)"}, "Interaction Effects": {"c": "#aaaaaa", "b": "rgba(170,170,170,0.12)"}, "Education": {"c": "#00ff88", "b": "rgba(0,255,136,0.12)"}, "Education Learning": {"c": "#36d399", "b": "rgba(54,211,153,0.12)"}, "STEM Education": {"c": "#10b981", "b": "rgba(16,185,129,0.12)"}, "Adult Education": {"c": "#059669", "b": "rgba(5,150,105,0.12)"}, "Assessment Education": {"c": "#34d399", "b": "rgba(52,211,153,0.12)"}, "Robotics": {"c": "#ff00ff", "b": "rgba(255,0,255,0.12)"}, "Workplace": {"c": "#ffaa00", "b": "rgba(255,170,0,0.12)"}, "Aging AI": {"c": "#8b5cf6", "b": "rgba(139,92,246,0.12)"}, "Sports AI": {"c": "#22c55e", "b": "rgba(34,197,94,0.12)"}, "Gaming AI": {"c": "#4ade80", "b": "rgba(74,222,128,0.12)"}, "Cognitive AI": {"c": "#44aaff", "b": "rgba(68,170,255,0.12)"}, "Perception AI": {"c": "#88ff44", "b": "rgba(136,255,68,0.12)"}, "Knowledge AI": {"c": "#88ddff", "b": "rgba(136,221,255,0.12)"}, "Language AI": {"c": "#44ffdd", "b": "rgba(68,255,221,0.12)"}, "Translation AI": {"c": "#38bdf8", "b": "rgba(56,189,248,0.12)"}, "Cognitive Shift": {"c": "#22d3ee", "b": "rgba(34,211,238,0.12)"}, "Vibe Coding": {"c": "#a78bfa", "b": "rgba(167,139,250,0.12)"}, "Somatic AI": {"c": "#ff4444", "b": "rgba(255,68,68,0.12)"}, "Behavioral AI": {"c": "#ff8844", "b": "rgba(255,136,68,0.12)"}, "Temporal AI": {"c": "#aa88ff", "b": "rgba(170,136,255,0.12)"}, "Relational AI": {"c": "#ff6b9d", "b": "rgba(255,107,157,0.12)"}, "Social AI": {"c": "#ff88dd", "b": "rgba(255,136,221,0.12)"}, "Identity AI": {"c": "#ff44aa", "b": "rgba(255,68,170,0.12)"}, "Creative AI": {"c": "#ff6b35", "b": "rgba(255,107,53,0.12)"}, "AI Art": {"c": "#ec4899", "b": "rgba(236,72,153,0.12)"}, "Playful AI": {"c": "#ffdd44", "b": "rgba(255,221,68,0.12)"}, "Design AI": {"c": "#e879f9", "b": "rgba(232,121,249,0.12)"}, "Music AI": {"c": "#f472b6", "b": "rgba(244,114,182,0.12)"}, "Photography AI": {"c": "#fb923c", "b": "rgba(251,146,60,0.12)"}, "Fiction Writing": {"c": "#f97316", "b": "rgba(249,115,22,0.12)"}, "Technical Writing": {"c": "#92400e", "b": "rgba(146,64,14,0.12)"}, "Screenplay Writing": {"c": "#e879f9", "b": "rgba(232,121,249,0.12)"}, "Content Creation": {"c": "#fb923c", "b": "rgba(251,146,60,0.12)"}, "Ethics AI": {"c": "#ff8888", "b": "rgba(255,136,136,0.12)"}, "Trust AI": {"c": "#44ffaa", "b": "rgba(68,255,170,0.12)"}, "Adaptation AI": {"c": "#ddff44", "b": "rgba(221,255,68,0.12)"}, "Bridge AI": {"c": "#fbbf24", "b": "rgba(251,191,36,0.12)"}, "Copywriting": {"c": "#fcd34d", "b": "rgba(252,211,77,0.12)"}, "Data Science": {"c": "#60a5fa", "b": "rgba(96,165,250,0.12)"}, "Software Engineering": {"c": "#06b6d4", "b": "rgba(6,182,212,0.12)"}, "Web Development": {"c": "#8b5cf6", "b": "rgba(139,92,246,0.12)"}};
+
+    // State variables
+    let activeMain='all';
+    let activeSub='';
+    let activeSubCat='';
+    let activeLetter='';
+    let currentView='grid';
+    let searchTimeout=null;
+    let browseLevel='groups';
+    let browseGroup='';
+    let browseDomain='';
+
+    // Main domain groupings (43 domains across 8 categories)
+    const MAIN_GROUPS={
+      'Foundation':['NEOMANITAI','Interaction Effects'],
+      'Applied':['Education','Education Learning','STEM Education','Adult Education','Assessment Education','Robotics','Workplace','Aging AI','Sports AI','Gaming AI'],
+      'Thinking':['Cognitive AI','Perception AI','Knowledge AI','Language AI','Translation AI','Cognitive Shift','Vibe Coding'],
+      'Feeling':['Somatic AI','Behavioral AI','Temporal AI'],
+      'Relating':['Relational AI','Social AI','Identity AI'],
+      'Creating':['Creative AI','AI Art','Playful AI','Design AI','Music AI','Photography AI','Fiction Writing','Technical Writing','Screenplay Writing','Content Creation'],
+      'Trusting':['Ethics AI','Trust AI','Adaptation AI'],
+      'Connecting':['Bridge AI']
+    };
+
+    /* Subcategories within domains — auto-matched by term name keywords */
+const DOMAIN_SUBS={'Copywriting':'CPW','Data Science':'DAT','Web Development':'WEB','Software Engineering':'SWE','Education Learning':'EDU',
+  'Education':{'Methods':['method','pedagog','teaching','instruction','didact'],'Learning':['learn','student','comprehens','knowledge','literacy'],'Assessment':['assess','evaluat','feedback','test','grade'],'Access':['access','inclus','equity','barrier','gap']},
+  'Robotics':{'Sensing':['sensor','detect','recogni','percept','vision'],'Movement':['motor','movement','navig','gesture','mobil'],'Interaction':['collaborat','communic','handoff','trust','interface'],'Safety':['safe','proxim','zone','bound','adapt']},
+  'Workplace':{'Productivity':['productiv','efficien','workflow','speed','output'],'Identity':['identit','role','career','professional','skill'],'Collaboration':['collaborat','team','delegat','partner','coordinat'],'Transition':['transition','change','adapt','integrat','transform']},
+  'Creative AI':{'Process':['process','workflow','method','iteration','cycle'],'Authenticity':['authent','original','voice','identity','style'],'Output':['output','quality','result','product','generat'],'Delegation':['delegat','automat','handoff','outsourc','reliance']},
+  'AI Art':{'Aesthetics':['aesthetic','style','visual','beauty','design'],'Authorship':['author','attribut','ownership','copyright','credit'],'Market':['market','valuat','price','gallery','auction'],'Technology':['algorithm','generat','training','model','data']},
+  'Sports AI':{'Performance':['perform','metric','data','predict','analys'],'Coaching':['coach','train','instruct','feedback','decision'],'Athlete':['athlete','player','body','physic','biometr'],'Recovery':['recover','injur','load','rest','fatigue']},
+  'Aging AI':{'Accessibility':['accessib','interface','simplif','accommodat','adapt'],'Independence':['independ','autonomy','self','empower','agency'],'Literacy':['literacy','learn','competenc','skill','understand'],'Connection':['connect','social','isolat','communit','family']},
+  'Playful AI':{'Interactive':['kick','hunt','laugh','rain','click','check','noise','chain','salad','pause'],'Calming':['calm','relax','sereni','gentle','harmony','soft'],'Motivational':['motiv','energy','pride','excit','optim','heart','joy','inspir','gratitude','grin'],'Error Play':['oops','correct','learn','reset','twist','nudge','mistake','adjust','chill','humor'],'Creative Play':['flex','pivot','fix','drift','bounce','backward','smile','fun','high-five','mini','magic'],'Daily':['flow','discovery','day','morning','daily','end-of-day','smooth','content','lightness','swap']},
+  'Bridge AI':{'Context':['context','memory','recall','window','token'],'Prompt':['prompt','steer','instruct','direct','framing'],'Session':['session','lifecycle','start','end','reset'],'Calibration':['calibrat','asymmetr','expectat','mismatch','gap'],'Persona':['persona','identity','character','voice','role'],'Quality':['quality','oscillat','consist','variat','output'],'Emotion':['emotion','project','feel','sentiment','empathy'],'Creative':['creative','co-produc','collaborat','generat','artistic'],'Error':['error','correct','mistak','halluc','repair'],'Training':['training','artifact','pattern','model','learned'],'Multi-Model':['multi','model','cross','switch','compar'],'Attention':['attention','focus','sali','prior','context'],'Speed':['speed','pace','latenc','wait','time'],'Knowledge':['knowledge','boundar','limit','known','uncertain'],'Dependency':['dependen','autonom','reli','self','habit'],'Language':['language','register','tone','formal','style'],'Trust':['trust','verif','reliab','confident','doubt'],'Feedback':['feedback','loop','signal','adjust','adapt']},
+  'Design AI':{'Visual Composition':['layout','whitespace','hierarchy','grid','composition','symmetry','proportional','depth','negative','edge','center','diagonal','balance','tension','focal'],'Color & Palette':['palette','saturation','harmony','brand','contrast','temperature','muted','accent','cultural','monochrome'],'Typography':['font','personality','scale','readability','line','letter','typeface','weight','case','script'],'Brand & Identity':['style','logo','consistency','persona','icon','visual','distinctiveness','pattern','symbolic','archetype','lockup','mood','secondary','evolution','institutional'],'Iteration & Refinement':['revision','convergence','feedback','version','incremental','perfect','undo','comparison','history','refinement','divergence','batch','direction'],'Creative Ownership':['attribution','style','originality','intention','creative','authorial','influence','skill','distinction','legacy'],'Tool Dynamics':['prompt','dependency','interface','skill','muscle','template','parameter','rendering','undo','feature','learning','integration','generalization','precision','contextual'],'Aesthetic Judgment':['taste','beauty','novelty','convention','judgment','trend','personal','consensus','uniqueness','aesthetic'],
+  'Translation AI':{'Accuracy & Fidelity':['meaning','compress','loss','literal','context','register','flatten','polysem','syntax','reorder','concept','equival','temporal','aspect','tone','color','evidential','numeral'],'Cultural Transfer':['idiom','culture','referent','humor','transfer','taboo','proverb','name','religion','honorif','spatial','orient','kinship','gesture','sacred','secular','mythic'],'Style & Register':['formality','archaic','language','technical','jargon','dialect','erase','voice','authent','slang','poetic','compress','colloquial','sarcasm','euphemism','metadiscourse','rhythm','cadence','interjection','code','switch','syntactic'],'Trust & Verification':['confidence','error','detection','fluency','paradox','verification','silent','failure','hallucin','consistency','expert','novice','false','cognate','contextual','forget','overconfidence','rare','factual','linguistic','ambiguity','smugg','probability'],'Language Learning':['fluency','depth','passive','reception','trap','interference','accel','natural','variability','motivation','bypass','shadow','collocation','pronunciation','decontextual','amnesia','error','immun'],'Professional Use':['translator','ai','boundary','blur','quality','tier','compression','specialization','fragment','client','expectation','revision','burden','shift','certification','crisis','liability','skill','atrophy','workflow','integration','rate','collapse'],'Multilingual Dynamics':['prestige','language','dominance','extinction','code','switch','loanword','localization','script','system','lingua','franca','dialect','preservation','contact','biodiversity','creole'],'Communication Impact':['mediation','invisibility','asynchronous','dialogue','illusion','interpersonal','distance','compression','barrier','collapse','global','homogenization']},
+  'Music AI':{'Composition & Creation':['melody','harmonic','harmony','structure','song','composition','bridge','phrase','variation','cadence','rhythm','diminution','augmentation','voice','imitative'],'Genre & Style':['genre','blend','style','transfer','tempo','instrument','groove','dialect','microtonal','lyrical','production','aesthetic','cultural','contamination','authenticity','expectation','anachronistic','tradition'],'Vocal & Lyrics':['vocal','voice','lyric','synthesis','clone','phonetic','prosody','rhyme','metrical','emotional','inflection','syllable','breath','consonant','articulation','vowel','formant','vibrato','cliche','identity','stability'],'Production & Mixing':['production','mix','mastering','compression','reverb','equalization','panning','delay','optimization','spectral','balance','distortion','stereo','width','frequency','clash','sidechain','gate','automation','curve','loudness','standardization'],'Listening & Perception':['listening','perception','emotional','resonance','authentic','artifact','audibility','genre','recognition','repetition','harmonic','surprise','instrumental','tone','believability','structural','coherence','quality','judgment'],'Creative Ownership':['author','copyright','credit','originality','attribution','ownership','authorship','ambiguity','dispute','challenge','distribution','debt','intent','preservation','legibility','residual','influence','invisibility','registration','derivative'],'Emotional Response':['emotion','resonance','feeling','cathartic','mood','sentiment','contagion','authenticity','doubt','melancholy','perception','familiarity','uncanny','arc','disconnection','affective','ambivalence','match','accuracy','transparency','preference','limitation','aesthetic','pleasure','isolation'],'Tool & Workflow':['workflow','iteration','tool','collaboration','integration','adaptation','prompt','precision','learning','dependency','emergence','disruption','human-ai','compositional']},'Photography AI':{'Enhancement & Editing':['instant','polish','underexposure','oversaturation','blur','chromatic','perspective','tonal','color','clarity','shadow','highlight','noise','grain','skin','saturation','vibrance','texture','contrast','vignette'],'Authenticity & Truth':['imperceptible','deepfake','attribution','before','evidence','trust','ethical','reality','undetectable','provenance','viewer','composite','addiction','generat','baseline'],'Aesthetic Control':['style','transfer','grading','lut','cinematic','mood','composition','golden','bokeh','consistency','dimension','subject','contrast','harmonic','vignette','aesthetic','brand'],'Portrait & Identity':['face','eye','tooth','skin','feature','body','beauty','identity','age','ethnic','self','emotion','attractive','likeness','confidence'],'Memory & Documentation':['restoration','memory','nostalgia','documentary','genealog','detail','moment','aesthetic','family','historical'],'Professional Practice':['skill','processing','quality','artistic','workflow','technical','portfolio','pricing','client','polish'],'Social Sharing':['filter','social','algorithmic','influencer','authenticity','viral','mirror','documentation','visual','aesthetic','homogeniz'],'Perception & Reality':['reality','unenhanced','algorithmic','visual','literacy','unmediat']},
+  'Gaming AI':{'Opponent Perception':['accept','legitimate','believab','skill','behavior'],'Difficulty & Challenge':['adapt','difficulty','challenge','scaling','fairness'],'Progression & Reward':['achieve','reward','progression','goal','skill'],'Narrative & Agency':['narrative','story','choice','agency','autonomy'],'Social & Competition':['competition','multiplayer','social','interaction','community']}
+};
+
+    const GROUP_META={
+  'Foundation':{icon:'🏛️',desc:'Core phenomena and cross-domain interaction effects'},
+  'Applied':{icon:'🎯',desc:'Education, workplace, sports, robotics, and aging'},
+  'Thinking':{icon:'🧠',desc:'Cognition, perception, knowledge, and language'},
+  'Feeling':{icon:'💫',desc:'Somatic experience, behavior patterns, and time perception'},
+  'Relating':{icon:'🤝',desc:'Human-AI relationships, social dynamics, and identity'},
+  'Creating':{icon:'✨',desc:'Creative processes, artistic expression, and aesthetic AI'},
+  'Trusting':{icon:'🔑',desc:'Trust, ethics, and adaptation in AI interaction'},
+  'Connecting':{icon:'🌉',desc:'Bridging human and AI perspectives — 250 new terms'}
+};
+
+    function buildFilters(){
+  const counts={};
+  TERMS.forEach(t=>{counts[t.d]=(counts[t.d]||0)+1});
+  const main=document.getElementById('mainFilters');
+  let html='<button class="filter-btn active" data-filter="all">All<span class="cnt">'+TERMS.length+'</span></button>';
+  Object.entries(MAIN_GROUPS).forEach(([group,domains])=>{
+    const total=domains.reduce((s,d)=>s+(counts[d]||0),0);
+    if(total>0)html+='<button class="filter-btn" data-filter="'+group+'">'+group+'<span class="cnt">'+total+'</span></button>';
+  });
+  main.innerHTML=html;
+  main.querySelectorAll('.filter-btn').forEach(btn=>{
+    btn.onclick=()=>{
+      main.querySelectorAll('.filter-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      activeMain=btn.dataset.filter;
+      activeSub='';
+      activeSubCat='';
+      buildSubFilters(counts);
+      document.getElementById('subCatFilters').classList.remove('open');
+      document.getElementById('subCatFilters').innerHTML='';
+      activeLetter='';
+      document.querySelectorAll('.alpha-btn').forEach(b=>b.classList.remove('active'));
+      render();
+    };
+  });
+  buildSubFilters(counts);
+}
+
+function buildSubFilters(counts){
+  const sub=document.getElementById('subFilters');
+  if(activeMain==='all'){sub.classList.remove('open');sub.innerHTML='';return;}
+  const domains=MAIN_GROUPS[activeMain]||[];
+  if(domains.length<=1){sub.classList.remove('open');sub.innerHTML='';
+    if(domains.length===1)activeSub=domains[0];
+    render();return;
+  }
+  let html='<button class="sub-btn'+(activeSub?'':' active')+'" data-sub="">All in group</button>';
+  domains.forEach(d=>{
+    if(counts[d]){
+      const cls=d.toLowerCase().replace(/ /g,'-');
+      const cfg=DC[d]||{c:'#888',b:'rgba(136,136,136,0.12)'};
+      html+='<button class="sub-btn'+(activeSub===d?' active':'')+'" data-sub="'+d+'" style="color:'+cfg.c+'">'+d+'<span class="cnt" style="opacity:.5;margin-left:3px;font-size:10px">'+counts[d]+'</span></button>';
+    }
+  });
+  sub.innerHTML=html;
+  sub.classList.add('open');
+  sub.querySelectorAll('.sub-btn').forEach(btn=>{
+    btn.onclick=()=>{
+      sub.querySelectorAll('.sub-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      activeSub=btn.dataset.sub;
+      activeSubCat='';
+      buildSubCatFilters();
+      render();
+    };
+  });
+}
+
+function buildSubCatFilters(){
+  const sc=document.getElementById('subCatFilters');
+  if(!activeSub||!DOMAIN_SUBS[activeSub]){sc.classList.remove('open');sc.innerHTML='';return;}
+  const subs=DOMAIN_SUBS[activeSub];
+  const domainTerms=TERMS.filter(t=>t.d===activeSub);
+  let html='<button class="sub-btn'+(activeSubCat?'':' active')+'" data-subcat="">All</button>';
+  Object.entries(subs).forEach(([label,keywords])=>{
+    const count=domainTerms.filter(t=>keywords.some(kw=>t.n.toLowerCase().includes(kw)||((t.k||[]).join(' ')).toLowerCase().includes(kw))).length;
+    if(count>0)html+='<button class="sub-btn'+(activeSubCat===label?' active':'')+'" data-subcat="'+label+'">'+label+'<span class="cnt" style="opacity:.5;margin-left:3px;font-size:10px">'+count+'</span></button>';
+  });
+  sc.innerHTML=html;
+  sc.classList.add('open');
+  sc.querySelectorAll('.sub-btn').forEach(btn=>{
+    btn.onclick=()=>{
+      sc.querySelectorAll('.sub-btn').forEach(b=>b.classList.remove('active'));
+      btn.classList.add('active');
+      activeSubCat=btn.dataset.subcat;
+      render();
+    };
+  });
+}
+
+function matchesSubCat(term){
+  if(!activeSubCat||!activeSub||!DOMAIN_SUBS[activeSub])return true;
+  const keywords=DOMAIN_SUBS[activeSub][activeSubCat];
+  if(!keywords)return true;
+  const name=term.n.toLowerCase();
+  const kws=((term.k||[]).join(' ')).toLowerCase();
+  return keywords.some(kw=>name.includes(kw)||kws.includes(kw));
+}
+
+function buildAlphabet(){
+  const letters=new Set();
+  TERMS.forEach(t=>letters.add(t.n.charAt(0).toUpperCase()));
+  const c=document.getElementById('alphabet');
+  let html='';
+  'ABCDEFGHIJKLMNOPQRSTUVWXYZ'.split('').forEach(l=>{
+    html+='<button class="alpha-btn'+(letters.has(l)?'':' disabled')+'" data-letter="'+l+'">'+l+'</button>';
+  });
+  c.innerHTML=html;
+  c.querySelectorAll('.alpha-btn:not(.disabled)').forEach(btn=>{
+    btn.onclick=()=>{
+      const was=btn.classList.contains('active');
+      c.querySelectorAll('.alpha-btn').forEach(b=>b.classList.remove('active'));
+      if(!was){btn.classList.add('active');activeLetter=btn.dataset.letter;}
+      else{activeLetter='';}
+      render();
+    };
+  });
+}
+
+function fuzzyMatch(term,query){
+  const q=query.toLowerCase();
+  const name=term.n.toLowerCase();
+  const domain=term.d.toLowerCase();
+  const preview=(term.t||'').toLowerCase();
+  const kw=(term.k||[]).join(' ').toLowerCase();
+  if(name.includes(q))return 4;
+  if(domain.includes(q))return 3;
+  if(kw.includes(q))return 2;
+  if(preview.includes(q))return 1;
+  const words=q.split(/\s+/);
+  if(words.length>1&&words.every(w=>name.includes(w)||kw.includes(w)||preview.includes(w)||domain.includes(w)))return 1;
+  return 0;
+}
+
+function highlightText(text,query){
+  if(!query)return text;
+  const esc=query.replace(/[.*+?^${}()|[\]\\]/g,'\\$&');
+  return text.replace(new RegExp('('+esc+')','gi'),'<mark>$1</mark>');
+}
+
+function getFiltered(){
+  let filtered=TERMS;
+  const query=document.getElementById('search').value.trim();
+  
+  if(activeMain!=='all'){
+    const domains=MAIN_GROUPS[activeMain]||[];
+    if(activeSub)filtered=filtered.filter(t=>t.d===activeSub);
+    else filtered=filtered.filter(t=>domains.includes(t.d));
+  }
+  if(activeSubCat)filtered=filtered.filter(t=>matchesSubCat(t));
+  if(activeLetter)filtered=filtered.filter(t=>t.n.charAt(0).toUpperCase()===activeLetter);
+  if(query){
+    const scored=filtered.map(t=>({t,score:fuzzyMatch(t,query)})).filter(x=>x.score>0);
+    scored.sort((a,b)=>b.score-a.score||(a.t.n<b.t.n?-1:1));
+    return{terms:scored.map(x=>x.t),query};
+  }
+  filtered.sort((a,b)=>a.n<b.n?-1:1);
+  return{terms:filtered,query:''};
+}
+
+function cardHTML(t,query){
+  const cls=t.d.toLowerCase().replace(/ /g,'-');
+  const name=query?highlightText(t.n,query):t.n;
+  const preview=t.t?(query?highlightText(t.t,query):t.t):'';
+  return '<a class="term-card" href="'+t.s+'.html"><div class="name">'+name+'</div><span class="domain-tag tag-'+cls+'">'+t.d+'</span>'+(preview?'<div class="preview">'+preview+'</div>':'')+'</a>';
+}
+
+function renderCards(terms,query){
+  const container=document.getElementById('termContainer');
+  if(terms.length===0){
+    container.innerHTML='<div class="no-results"><div class="emoji">&#x1F50D;</div><h3>No terms found</h3><p>Try a different search or filter</p></div>';
+    return;
+  }
+  const BATCH=150;
+  const show=terms.slice(0,BATCH);
+  const rest=terms.slice(BATCH);
+  let html='';
+  if(currentView==='compact'&&!query){
+    let cl='';
+    terms.forEach(t=>{
+      const l=t.n.charAt(0).toUpperCase();
+      if(l!==cl){cl=l;html+='<div class="letter-header">'+l+'</div>';}
+      html+=cardHTML(t,query);
+    });
+  }else{
+    show.forEach(t=>{html+=cardHTML(t,query);});
+  }
+  container.innerHTML=html;
+  if(rest.length>0&&currentView!=='compact'){
+    let loaded=false;
+    const obs=new IntersectionObserver(entries=>{
+      if(entries[0].isIntersecting&&!loaded){
+        loaded=true;
+        let extra='';
+        rest.forEach(t=>{extra+=cardHTML(t,query);});
+        container.insertAdjacentHTML('beforeend',extra);
+        obs.disconnect();
+      }
+    },{rootMargin:'400px'});
+    const s=document.createElement('div');
+    s.style.height='1px';
+    container.appendChild(s);
+    obs.observe(s);
+  }
+}
+
+function showBrowseGroups(){
+  browseLevel='groups';browseGroup='';browseDomain='';
+  document.getElementById('mainFilters').style.display='none';
+  document.getElementById('subFilters').style.display='none';
+  document.getElementById('subCatFilters').style.display='none';
+  document.getElementById('alphabet').style.display='none';
+  document.querySelector('.result-bar').style.display='none';
+  document.querySelector('.view-toggle').style.display='none';
+  const counts={};
+  TERMS.forEach(t=>{counts[t.d]=(counts[t.d]||0)+1});
+  let html='<div class="breadcrumb"><span class="current">All Domains</span></div>';
+  html+='<div class="browse-grid">';
+  Object.entries(MAIN_GROUPS).forEach(([group,domains])=>{
+    const meta=GROUP_META[group]||{icon:'📂',desc:''};
+    const total=domains.reduce((s,d)=>s+(counts[d]||0),0);
+    const domainTags=domains.map(d=>'<span>'+d+' ('+( counts[d]||0)+')</span>').join(' ');
+    html+='<div class="browse-card" onclick="showBrowseDomains(\''+group+'\')">';
+    html+='<div class="bc-icon">'+meta.icon+'</div>';
+    html+='<div class="bc-name">'+group+'</div>';
+    html+='<div class="bc-count">'+total+' terms</div>';
+    html+='<div class="bc-domains">'+domainTags+'</div>';
+    html+='</div>';
+  });
+  html+='</div>';
+  document.getElementById('termContainer').innerHTML=html;
+  document.getElementById('resultCount').innerHTML='';
+}
+
+function showBrowseDomains(group){
+  browseLevel='domains';browseGroup=group;browseDomain='';
+  const domains=MAIN_GROUPS[group]||[];
+  const counts={};
+  TERMS.forEach(t=>{counts[t.d]=(counts[t.d]||0)+1});
+  const meta=GROUP_META[group]||{icon:'📂'};
+  let html='<div class="breadcrumb">';
+  html+='<a onclick="showBrowseGroups()">All Domains</a>';
+  html+='<span class="sep">›</span>';
+  html+='<span class="current">'+meta.icon+' '+group+'</span>';
+  html+='</div>';
+  html+='<div class="browse-grid">';
+  domains.forEach(d=>{
+    const info=DC[d]||{c:'#888',b:'rgba(136,136,136,0.12)'};
+    const cnt=counts[d]||0;
+    html+='<div class="browse-domain-card" onclick="showBrowseTerms(\''+group+'\',\''+d.replace(/'/g,"\\'")+'\')">';
+    html+='<div class="bdc-color" style="background:'+info.c+'"></div>';
+    html+='<div class="bdc-name" style="color:'+info.c+'">'+d+'</div>';
+    html+='<div class="bdc-count" style="color:'+info.c+'">'+cnt+' terms</div>';
+    const subs=DOMAIN_SUBS[d];
+    if(subs){html+='<div class="bdc-desc">'+Object.keys(subs).join(' · ')+'</div>';}
+    html+='</div>';
+  });
+  html+='</div>';
+  document.getElementById('termContainer').innerHTML=html;
+  document.getElementById('resultCount').innerHTML='';
+}
+
+function showBrowseTerms(group,domain){
+  browseLevel='terms';browseGroup=group;browseDomain=domain;
+  document.getElementById('mainFilters').style.display='none';
+  document.getElementById('subFilters').style.display='none';
+  document.getElementById('alphabet').style.display='flex';
+  document.querySelector('.result-bar').style.display='flex';
+  document.querySelector('.view-toggle').style.display='flex';
+  const subs=DOMAIN_SUBS[domain];
+  if(subs){
+    document.getElementById('subCatFilters').style.display='flex';
+    document.getElementById('subCatFilters').classList.add('open');
+    let subHtml='';
+    subHtml+='<button class="sub-btn active" data-subcat="">All</button>';
+    Object.keys(subs).forEach(k=>{
+      subHtml+='<button class="sub-btn" data-subcat="'+k+'">'+k+'</button>';
+    });
+    document.getElementById('subCatFilters').innerHTML=subHtml;
+    document.getElementById('subCatFilters').querySelectorAll('.sub-btn').forEach(btn=>{
+      btn.onclick=()=>{
+        document.getElementById('subCatFilters').querySelectorAll('.sub-btn').forEach(b=>b.classList.remove('active'));
+        btn.classList.add('active');
+        activeSubCat=btn.dataset.subcat;
+        renderBrowseTerms(group,domain);
+      };
+    });
+  } else {
+    document.getElementById('subCatFilters').style.display='none';
+  }
+  activeSub=domain;
+  activeSubCat='';
+  activeLetter='';
+  renderBrowseTerms(group,domain);
+}
+
+function renderBrowseTerms(group,domain){
+  let filtered=TERMS.filter(t=>t.d===domain);
+  if(activeSubCat)filtered=filtered.filter(t=>matchesSubCat(t));
+  if(activeLetter)filtered=filtered.filter(t=>t.n.charAt(0).toUpperCase()===activeLetter);
+  filtered.sort((a,b)=>a.n<b.n?-1:1);
+  const meta=GROUP_META[group]||{icon:'📂'};
+  const info=DC[domain]||{c:'#888'};
+  let breadcrumb='<div class="breadcrumb">';
+  breadcrumb+='<a onclick="showBrowseGroups()">All Domains</a>';
+  breadcrumb+='<span class="sep">›</span>';
+  breadcrumb+='<a onclick="showBrowseDomains(\''+group+'\')">'+meta.icon+' '+group+'</a>';
+  breadcrumb+='<span class="sep">›</span>';
+  breadcrumb+='<span class="current" style="color:'+info.c+'">'+domain+'</span>';
+  breadcrumb+='</div>';
+  document.getElementById('resultCount').innerHTML='Showing <span>'+filtered.length+'</span> terms in '+domain;
+  renderCards(filtered,'');
+  const container=document.getElementById('termContainer');
+  container.innerHTML=breadcrumb+container.innerHTML;
+  const letters=new Set(filtered.map(t=>t.n.charAt(0).toUpperCase()));
+  document.querySelectorAll('.alpha-btn').forEach(btn=>{
+    const l=btn.dataset.letter;
+    if(l){btn.classList.toggle('disabled',!letters.has(l));}
+  });
+}
+
+function exitBrowseMode(){
+  browseLevel='groups';browseGroup='';browseDomain='';
+  activeMain='all';activeSub='';activeSubCat='';activeLetter='';
+  document.getElementById('mainFilters').style.display='flex';
+  document.getElementById('subFilters').style.display='flex';
+  document.getElementById('subCatFilters').style.display='flex';
+  document.getElementById('alphabet').style.display='flex';
+  document.querySelector('.result-bar').style.display='flex';
+  document.querySelector('.view-toggle').style.display='flex';
+  showBrowseGroups();
+}
+
+function render(){
+  const{terms,query}=getFiltered();
+  document.getElementById('resultCount').innerHTML='Showing <span>'+terms.length+'</span> of '+TERMS.length+' terms';
+  renderCards(terms,query);
+}
+
+document.getElementById('search').addEventListener('input',function(){
+  clearTimeout(searchTimeout);
+  const val=this.value.trim();
+  document.getElementById('clearBtn').style.display=val?'block':'none';
+  document.getElementById('shortcutHint').style.display=val?'none':'block';
+  if(val){
+    document.getElementById('mainFilters').style.display='none';
+    document.getElementById('subFilters').style.display='none';
+    document.getElementById('subCatFilters').style.display='none';
+    document.getElementById('alphabet').style.display='none';
+    document.querySelector('.result-bar').style.display='flex';
+    document.querySelector('.view-toggle').style.display='flex';
+    searchTimeout=setTimeout(function(){
+      const{terms,query}=getFiltered();
+      document.getElementById('resultCount').innerHTML='Showing <span>'+terms.length+'</span> results for "'+query+'"';
+      renderCards(terms,query);
+    },150);
+  } else {
+    showBrowseGroups();
+  }
+});
+document.getElementById('search').addEventListener('focus',function(){
+  document.getElementById('shortcutHint').style.display='none';
+});
+document.getElementById('search').addEventListener('blur',function(){
+  if(!this.value)document.getElementById('shortcutHint').style.display='block';
+});
+
+function clearSearch(){
+  document.getElementById('search').value='';
+  document.getElementById('clearBtn').style.display='none';
+  document.getElementById('shortcutHint').style.display='block';
+  showBrowseGroups();
+}
+
+document.querySelectorAll('.view-btn').forEach(btn=>{
+  btn.onclick=()=>{
+    document.querySelectorAll('.view-btn').forEach(b=>b.classList.remove('active'));
+    btn.classList.add('active');
+    currentView=btn.dataset.view;
+    document.getElementById('termContainer').className=currentView;
+    render();
+  };
+});
+
+function randomTerm(){window.location.href=TERMS[Math.floor(Math.random()*TERMS.length)].s+'.html';}
+window.addEventListener('scroll',()=>{document.getElementById('topBtn').style.display=window.scrollY>400?'flex':'none';});
+document.addEventListener('keydown',e=>{
+  if(e.key==='/'&&document.activeElement.tagName!=='INPUT'){e.preventDefault();document.getElementById('search').focus();}
+  if(e.key==='Escape'){clearSearch();document.getElementById('search').blur();}
+});
+
+buildFilters();
+buildAlphabet();
+showBrowseGroups();
+
+// Sticky Header
+const stickyH=document.getElementById('stickyHeader');
+const stickyS=document.getElementById('stickySearch');
+const mainS=document.getElementById('search');
+window.addEventListener('scroll',()=>{stickyH.classList.toggle('active',window.scrollY>280)});
+if(stickyS&&mainS){
+  stickyS.addEventListener('input',function(){mainS.value=this.value;mainS.dispatchEvent(new Event('input',{bubbles:true}))});
+  mainS.addEventListener('input',function(){stickyS.value=this.value});
+}
+  })
+  .catch(error => {
+    console.error('Error loading NEOMANITAI:', error);
+    const loadingDiv = document.getElementById('loading');
+    if (loadingDiv) {
+      loadingDiv.innerHTML = '<p style="color:#ff4444;">Error loading terms. Please refresh.</p>';
+    }
+  });
+</script>
 </body>
 </html>

@@ -960,6 +960,172 @@ a.term-card *,a.wow-card *{pointer-events:auto!important}
   }
 }
 
+
+/* === COLLAPSIBLE DISCLAIMER === */
+.disc-details>summary::-webkit-details-marker{display:none}
+.disc-details>summary::marker{display:none;content:''}
+.disc-details[open]>summary{border-bottom:1px solid rgba(255,60,60,0.2)}
+.disc-details:not([open])>summary{border-bottom:none}
+
+/* === MOBILE GLOW & PREMIUM EFFECTS === */
+@media(max-width:768px){
+  /* Card glow borders on tap/active */
+  .wow-card:active,.term-card:active{
+    border-color:rgba(0,240,255,0.4)!important;
+    box-shadow:0 0 20px rgba(0,240,255,0.15),0 4px 16px rgba(0,0,0,0.3)!important;
+  }
+  /* Gradient text everywhere */
+  .hero h1{
+    background:linear-gradient(135deg,var(--cyan),var(--magenta),var(--green))!important;
+    -webkit-background-clip:text!important;
+    -webkit-text-fill-color:transparent!important;
+    background-clip:text!important;
+  }
+  /* Stats glow */
+  .stat-number{
+    background:linear-gradient(135deg,var(--cyan),var(--magenta))!important;
+    -webkit-background-clip:text!important;
+    -webkit-text-fill-color:transparent!important;
+    background-clip:text!important;
+  }
+  /* Card name gradients */
+  .sc-name{
+    background:linear-gradient(135deg,#fff,var(--cyan))!important;
+    -webkit-background-clip:text!important;
+    -webkit-text-fill-color:transparent!important;
+    background-clip:text!important;
+  }
+  /* Neon border glows on cards */
+  .wow-card,.showcase-card,.fun-card{
+    box-shadow:0 0 8px rgba(0,240,255,0.06),0 2px 8px rgba(0,0,0,0.2);
+  }
+  .term-card{
+    box-shadow:0 1px 6px rgba(0,240,255,0.04),0 1px 4px rgba(0,0,0,0.15);
+  }
+  /* Featured feeling glow */
+  .featured-feeling{
+    box-shadow:0 0 16px rgba(255,221,68,0.08),0 4px 16px rgba(0,0,0,0.2);
+  }
+  /* Search input glow on focus */
+  .search-wrap input:focus{
+    box-shadow:0 0 0 2px rgba(0,240,255,0.25),0 4px 16px rgba(0,240,255,0.06)!important;
+    border-color:var(--cyan)!important;
+  }
+  /* Scroll progress glow */
+  .scroll-progress{
+    box-shadow:0 0 6px rgba(0,240,255,0.3),0 0 12px rgba(255,0,255,0.15);
+  }
+  /* Glassmorphism on sticky header */
+  .sticky-header{
+    box-shadow:0 2px 16px rgba(0,0,0,0.3);
+    backdrop-filter:blur(20px)!important;
+    -webkit-backdrop-filter:blur(20px)!important;
+  }
+  /* Fun section header gradient */
+  .fun-header h2{
+    background:linear-gradient(135deg,#ffdd44,#ff6b9d,#00f0ff)!important;
+    -webkit-background-clip:text!important;
+    -webkit-text-fill-color:transparent!important;
+    background-clip:text!important;
+  }
+  /* Breathing border on wow-cards */
+  .wow-card{
+    border:1px solid rgba(0,240,255,0.12)!important;
+    transition:border-color .3s,box-shadow .3s!important;
+  }
+  /* Watermark bar gradient */
+  .watermark-bar{
+    background:linear-gradient(90deg,rgba(0,240,255,0.04),rgba(255,0,255,0.04),rgba(0,240,255,0.04))!important;
+    backdrop-filter:blur(10px)!important;
+    -webkit-backdrop-filter:blur(10px)!important;
+  }
+  /* Counter pulse animation - keep on mobile */
+  .counter-animate{
+    animation:counter-pulse 3s ease-in-out infinite!important;
+  }
+  /* Hero fade-in - keep on mobile */
+  .hero h1{animation:heroFadeIn .8s ease-out!important}
+  .hero .subtitle{animation:heroFadeIn .8s ease-out .15s both!important}
+  .hero .tagline{animation:heroFadeIn .8s ease-out .35s both!important}
+  /* Discover button pulse */
+  .discover-btn{
+    animation:discoPulse 3s ease-in-out infinite!important;
+    box-shadow:0 4px 20px rgba(0,240,255,0.3)!important;
+  }
+  /* Browse card hover/active glow */
+  .browse-card:active{
+    border-color:rgba(0,240,255,0.3)!important;
+    box-shadow:0 0 12px rgba(0,240,255,0.1)!important;
+  }
+  /* Mode buttons glow */
+  .mode-btn.active{
+    box-shadow:0 0 8px rgba(0,240,255,0.2)!important;
+    border-color:rgba(0,240,255,0.3)!important;
+  }
+  /* Filter buttons glow on active */
+  .filter-btn:active,.sub-btn:active{
+    background:rgba(0,240,255,0.12)!important;
+    box-shadow:0 0 8px rgba(0,240,255,0.15)!important;
+  }
+  /* Alphabet buttons glow */
+  .alpha-btn:active{
+    background:rgba(0,240,255,0.15)!important;
+    box-shadow:0 0 6px rgba(0,240,255,0.1)!important;
+  }
+  /* Selection color */
+  ::selection{background:rgba(0,240,255,0.2);color:#fff}
+}
+
+/* === MOBILE-OPTIMIZED PROMINENT DISCLAIMER === */
+@media(max-width:768px){
+  .prominent-disclaimer{
+    max-width:calc(100vw - 16px)!important;
+    margin:12px 8px 16px!important;
+    border-radius:6px!important;
+  }
+  .disc-details>summary{
+    padding:8px 12px!important;
+    gap:6px!important;
+  }
+  .disc-details>summary span:last-child{
+    font-size:8px!important;
+    letter-spacing:1px!important;
+  }
+}
+@media(max-width:480px){
+  .prominent-disclaimer{
+    margin:8px 6px 12px!important;
+  }
+  .disc-details>summary{
+    padding:6px 10px!important;
+  }
+  .disc-details>summary span:last-child{
+    font-size:7px!important;
+    letter-spacing:0.5px!important;
+  }
+  .disc-details>div{
+    padding:10px 12px!important;
+    font-size:11px!important;
+  }
+}
+
+
+/* Touch active glow states */
+.touch-active.wow-card,.touch-active.showcase-card{
+  border-color:rgba(0,240,255,0.4)!important;
+  box-shadow:0 0 20px rgba(0,240,255,0.12),0 4px 16px rgba(0,0,0,0.25)!important;
+  transform:scale(0.98)!important;
+}
+.touch-active.term-card{
+  border-color:rgba(0,240,255,0.3)!important;
+  box-shadow:0 0 12px rgba(0,240,255,0.08)!important;
+}
+.touch-active.fun-card{
+  border-color:rgba(255,221,68,0.4)!important;
+  box-shadow:0 0 16px rgba(255,221,68,0.1)!important;
+  transform:scale(0.98)!important;
+}
+
 </style>
 </head>
 <body>
@@ -1092,26 +1258,22 @@ a.term-card *,a.wow-card *{pointer-events:auto!important}
 <div style="max-width:720px;margin:4px auto 16px;text-align:center;font-size:11px;color:var(--text3);font-style:italic;line-height:1.7">This edition documents 4,407 observed phenomena. The field grows. The next edition will contain more.</div>
 <!-- Full Ethical Disclaimer — collapsible, prominent, bilingual -->
 <div class="prominent-disclaimer" style="max-width:720px;margin:20px auto 24px;padding:0;border:1px solid rgba(255,60,60,0.3);border-radius:4px;overflow:hidden;font-family:'JetBrains Mono','Courier New',monospace;background:rgba(8,0,0,0.6)">
-  <div style="background:rgba(255,40,40,0.15);padding:10px 16px;border-bottom:1px solid rgba(255,60,60,0.2);display:flex;align-items:center;gap:8px">
-    <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#ff4444;box-shadow:0 0 8px rgba(255,68,68,0.6)"></span>
-    <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#ffaa00;box-shadow:0 0 8px rgba(255,170,0,0.4)"></span>
-    <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#00ff88;box-shadow:0 0 8px rgba(0,255,136,0.4)"></span>
-    <span style="margin-left:auto;font-size:10px;color:#ff6b6b;letter-spacing:2px;font-weight:600">WARNING &middot; 18+ &middot; RESEARCH ONLY</span>
-  </div>
-  <div style="padding:16px 20px;font-size:12px;line-height:1.9;color:#c0a0a0">
-    <p style="margin:0 0 10px;color:#e8c0c0;font-size:13px;font-weight:600">&#x26A0; ETHICAL DISCLAIMER &mdash; ETHISCHER HINWEIS</p>
-    <p style="margin:0 0 10px;color:#b8a0a0">The use of artificial intelligence is not recommended here. This is not medical, legal, or psychological advice or diagnosis. This content is purely descriptive, documenting observable phenomena, and is intended to contribute to academic discourse.</p>
-    <p style="margin:0 0 10px;color:#9a8888;font-style:italic">Es wird nicht empfohlen, k&uuml;nstliche Intelligenz zu nutzen. Es ist keine medizinische, rechtliche oder psychologische Beratung oder Diagnose. Es handelt sich rein deskriptiv um beobachtbare Ph&auml;nomene und soll zu einem Diskurs beitragen.</p>
-    <div style="margin-top:12px;padding-top:10px;border-top:1px solid rgba(255,60,60,0.1);font-size:10px;color:#776666;display:flex;flex-wrap:wrap;gap:8px;justify-content:center">
-      <span>CC BY-NC-ND 4.0</span>
-      <span>&middot;</span>
-      <span>&sect;1&ndash;&sect;19 apply</span>
-      <span>&middot;</span>
-      <span>Adults (18+) only</span>
-      <span>&middot;</span>
-      <span>No data collection</span>
+  <details class="disc-details">
+    <summary style="background:rgba(255,40,40,0.15);padding:10px 16px;border-bottom:1px solid rgba(255,60,60,0.2);display:flex;align-items:center;gap:8px;cursor:pointer;list-style:none">
+      <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#ff4444;box-shadow:0 0 8px rgba(255,68,68,0.6)"></span>
+      <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#ffaa00;box-shadow:0 0 8px rgba(255,170,0,0.4)"></span>
+      <span style="display:inline-block;width:10px;height:10px;border-radius:50%;background:#00ff88;box-shadow:0 0 8px rgba(0,255,136,0.4)"></span>
+      <span style="margin-left:auto;font-size:10px;color:#ff6b6b;letter-spacing:2px;font-weight:600">&#x26A0; 18+ &middot; NO ADVICE &middot; RESEARCH ONLY &middot; &sect;1&ndash;&sect;19</span>
+    </summary>
+    <div style="padding:16px 20px;font-size:12px;line-height:1.9;color:#c0a0a0">
+      <p style="margin:0 0 10px;color:#e8c0c0;font-size:13px;font-weight:600">ETHICAL DISCLAIMER &mdash; ETHISCHER HINWEIS</p>
+      <p style="margin:0 0 10px;color:#b8a0a0">This is not medical, legal, or psychological advice. Purely descriptive, documenting observable phenomena for academic discourse.</p>
+      <p style="margin:0 0 10px;color:#9a8888;font-style:italic">Keine medizinische, rechtliche oder psychologische Beratung. Rein deskriptiv. Beobachtbare Ph&auml;nomene f&uuml;r akademischen Diskurs.</p>
+      <div style="margin-top:12px;padding-top:10px;border-top:1px solid rgba(255,60,60,0.1);font-size:10px;color:#776666;display:flex;flex-wrap:wrap;gap:8px;justify-content:center">
+        <span>CC BY-NC-ND 4.0</span><span>&middot;</span><span>&sect;1&ndash;&sect;19 apply</span><span>&middot;</span><span>Adults (18+) only</span><span>&middot;</span><span>No data collection</span>
+      </div>
     </div>
-  </div>
+  </details>
 </div>
 <div id="disclaimer-full" style="max-width:800px;margin:0 auto 20px;padding:0 20px">
   <details style="background:rgba(8,0,0,0.4);border:1px solid rgba(255,60,60,0.15);border-radius:4px;padding:0">
@@ -2264,6 +2426,19 @@ function showRandomFeeling() {
     if(e.keyCode===seq[pos]){pos++;if(pos===seq.length){document.body.classList.toggle('easter-egg-active');pos=0;}}else{pos=0;}
   });
 })();
+</script>
+
+<script>
+// Touch-friendly active states for mobile glow effects
+if('ontouchstart' in window){
+  document.addEventListener('touchstart',function(e){
+    var card=e.target.closest('.wow-card,.term-card,.fun-card,.showcase-card,.browse-card');
+    if(card)card.classList.add('touch-active');
+  },{passive:true});
+  document.addEventListener('touchend',function(){
+    document.querySelectorAll('.touch-active').forEach(function(el){el.classList.remove('touch-active')});
+  },{passive:true});
+}
 </script>
 </body>
 </html>

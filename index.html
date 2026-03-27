@@ -328,15 +328,19 @@ mark{background:rgba(0,240,255,0.25);color:var(--cyan);border-radius:2px;padding
   .showcase-card{padding:16px}
 }
 
+
+/* GLOBAL: prevent vertical text everywhere */
+*{overflow-wrap:break-word!important;word-break:normal!important}
+pre,code{word-break:break-all!important}
 /* Mobile critical fixes */
 *{box-sizing:border-box}
-body{overflow-wrap:anywhere;word-break:normal;-webkit-text-size-adjust:100%}
-h1,h2,h3{overflow-wrap:anywhere;word-break:normal}
+body{overflow-wrap:break-word;word-break:normal;-webkit-text-size-adjust:100%}
+h1,h2,h3{overflow-wrap:break-word;word-break:normal}
 img,video,canvas,svg{max-width:100%;height:auto}
 pre,code{white-space:pre-wrap;word-break:break-all;max-width:100%;overflow-x:auto}
 table{max-width:100%;overflow-x:auto;display:block}
 .content{overflow:visible}
-.term-card{overflow-wrap:anywhere;word-break:normal;min-width:0}
+.term-card{overflow-wrap:break-word;word-break:normal;min-width:0}
 @media(max-width:768px){
   body{font-size:14px}
   .hero h1{font-size:clamp(20px,5vw,32px) !important}
@@ -898,7 +902,7 @@ a.term-card *,a.wow-card *{pointer-events:auto!important}
     font-size:11px!important;
     line-height:1.6!important;
     word-break:normal!important;
-    overflow-wrap:anywhere;
+    overflow-wrap:break-word;
   }
 }
 @media(max-width:480px){

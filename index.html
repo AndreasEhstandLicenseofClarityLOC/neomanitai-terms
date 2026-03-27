@@ -211,7 +211,7 @@ mark{background:rgba(0,240,255,0.25);color:var(--cyan);border-radius:2px;padding
 .showcase-card:hover{border-color:rgba(0,240,255,0.4);transform:translateY(-3px);box-shadow:0 12px 40px rgba(0,0,0,0.4)}
 .sc-glow{position:absolute;top:-40px;right:-40px;width:120px;height:120px;background:radial-gradient(circle,rgba(0,240,255,0.1),transparent 70%);pointer-events:none;transition:opacity .3s}
 .showcase-card:hover .sc-glow{opacity:1.5}
-.sc-domain{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--cyan);margin-bottom:8px;opacity:.7}
+.sc-domain{font-size:10px;text-transform:uppercase;letter-spacing:1px;color:var(--cyan);margin-bottom:8px;opacity:.7;white-space:nowrap;flex-shrink:0}
 .sc-name{font-size:20px;font-weight:700;color:#fff;margin-bottom:10px;line-height:1.3;background:linear-gradient(135deg,#fff,var(--cyan));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
 .sc-desc{font-size:15px;color:#d0d0d8;line-height:1.7;margin-bottom:12px}
 .sc-meta{font-size:11px;color:var(--text3);letter-spacing:.5px}
@@ -316,7 +316,7 @@ mark{background:rgba(0,240,255,0.25);color:var(--cyan);border-radius:2px;padding
 .fun-card .fc-emoji{font-size:32px;margin-bottom:10px}
 .fun-card .fc-name{font-size:17px;font-weight:700;color:#fff;margin-bottom:8px;line-height:1.3}
 .fun-card .fc-desc{font-size:14px;color:#b8b8c0;line-height:1.6;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden}
-.fun-card .fc-domain{font-size:11px;margin-top:10px;opacity:.6}
+.fun-card .fc-domain{font-size:11px;margin-top:10px;opacity:.6;white-space:nowrap}
 @media(max-width:768px){.fun-card{flex:0 0 200px;padding:16px 14px}.fun-card .fc-name{font-size:15px}}
 
 @media(max-width:600px){
@@ -330,7 +330,7 @@ mark{background:rgba(0,240,255,0.25);color:var(--cyan);border-radius:2px;padding
 
 
 /* GLOBAL: prevent vertical text everywhere */
-*{overflow-wrap:break-word!important;word-break:normal!important}
+*{overflow-wrap:break-word!important;word-break:normal!important}[class*="domain"]{white-space:nowrap!important;flex-shrink:0!important}
 pre,code{word-break:break-word!important;overflow-wrap:break-word!important}
 /* Mobile critical fixes */
 *{box-sizing:border-box}
